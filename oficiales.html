@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oficiales - LINFAAAC</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            min-height: 100vh;
+        }
+        
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: #0f172a;
+            border-bottom: 4px solid #1d4ed8;
+        }
+        
+        header h1 { 
+            font-size: 2.2rem; 
+            color: #ffffff; 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            font-weight: 800;
+        }
+        
+        header p { 
+            color: #94a3b8; 
+            margin-top: 10px; 
+            font-size: 1.1rem; 
+            font-weight: 400;
+        }
+        
+        .filter-section {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+        }
+        
+        .filter-section label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: #0f172a;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        #searchInput {
+            width: 100%;
+            padding: 14px 18px;
+            font-size: 1rem;
+            border: 2px solid #cbd5e1;
+            border-radius: 8px;
+            background: #ffffff;
+            color: #1e293b;
+            outline: none;
+            transition: all 0.2s;
+        }
+        
+        #searchInput:focus { 
+            border-color: #1d4ed8; 
+            box-shadow: 0 0 0 3px rgba(29,78,216,0.1); 
+        }
+        
+        #searchInput::placeholder { 
+            color: #94a3b8; 
+        }
+        
+        .stats {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-pill {
+            background: #f8fafc;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            color: #64748b;
+            border: 1px solid #e2e8f0;
+            font-weight: 500;
+        }
+        
+        .stat-pill strong { 
+            color: #1d4ed8; 
+        }
+        
+        .day-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .day-badge {
+            display: inline-block;
+            background: #1d4ed8;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .location {
+            color: #64748b;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        
+        .assignments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .assignment-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-top: 4px solid;
+        }
+        
+        .assignment-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .card-header {
+            padding: 18px 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fafafa;
+        }
+        
+        .field-name {
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .time-badge {
+            background: #ffffff;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: 1px solid #e2e8f0;
+            color: #334155;
+        }
+        
+        .card-body {
+            padding: 22px;
+        }
+        
+        .teams {
+            font-size: 1.4rem;
+            font-weight: 800;
+            text-align: center;
+            padding: 8px 0;
+            color: #0f172a;
+            letter-spacing: 1px;
+        }
+        
+        .vs {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            margin: 0 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .card-footer {
+            padding: 14px 22px;
+            background: #f8fafc;
+            font-size: 0.8rem;
+            color: #64748b;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            border-top: 1px solid #f1f5f9;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #64748b;
+            font-size: 1.1rem;
+            grid-column: 1 / -1;
+        }
+        
+        .no-results h3 {
+            color: #334155;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        /* Colores por campo */
+        .campo-1 { border-top-color: #d97706; }
+        .campo-1 .field-name { color: #b45309; }
+        .campo-1 .card-header { background: #fffbeb; }
+        
+        .campo-2 { border-top-color: #dc2626; }
+        .campo-2 .field-name { color: #b91c1c; }
+        .campo-2 .card-header { background: #fef2f2; }
+        
+        .campo-3 { border-top-color: #16a34a; }
+        .campo-3 .field-name { color: #15803d; }
+        .campo-3 .card-header { background: #f0fdf4; }
+        
+        .campo-4 { border-top-color: #2563eb; }
+        .campo-4 .field-name { color: #1d4ed8; }
+        .campo-4 .card-header { background: #eff6ff; }
+        
+        .campo-5 { border-top-color: #7c3aed; }
+        .campo-5 .field-name { color: #6d28d9; }
+        .campo-5 .card-header { background: #f5f3ff; }
+        
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.5rem; }
+            .assignments-grid { grid-template-columns: 1fr; }
+            .filter-section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LINFAAAC Estatal</h1>
+        <p>Asignacion de Oficiales - Sabado</p>
+    </header>
+    
+    <div class="container">
+        <div class="filter-section">
+            <div class="day-info">
+                <span class="day-badge">Sabado</span>
+                <span class="location">Deportivo Caracoles</span>
+            </div>
+            <label for="searchInput">Buscar oficial por nombre:</label>
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Escribe tu nombre (ej: Abi, Jordan, Nico, Pam, Gael, Diego, Mau, Sergio, Yael, Richie, Tibi)"
+                autocomplete="off"
+            >
+            <div class="stats">
+                <div class="stat-pill">Total asignaciones: <strong id="totalCount">0</strong></div>
+                <div class="stat-pill">Mostrando: <strong id="showingCount">0</strong></div>
+            </div>
+        </div>
+        
+        <div id="assignmentsContainer" class="assignments-grid"></div>
+    </div>
+
+    <script>
+        const assignments = [
+            { campo: 1, horario: '07:00 - 07:50', equipo1: 'ABI', equipo2: 'GAEL' },
+            { campo: 1, horario: '07:55 - 08:45', equipo1: 'ABI', equipo2: 'GAEL' },
+            { campo: 1, horario: '08:50 - 09:40', equipo1: 'ABI', equipo2: 'GAEL' },
+            { campo: 1, horario: '09:45 - 10:35', equipo1: 'ABI', equipo2: 'GAEL' },
+            { campo: 1, horario: '10:40 - 11:30', equipo1: 'ABI', equipo2: 'MAU' },
+            { campo: 1, horario: '11:35 - 12:25', equipo1: 'ABI', equipo2: 'GAEL' },
+            { campo: 1, horario: '12:30 - 13:20', equipo1: 'ABI', equipo2: 'GAEL' },
+            { campo: 1, horario: '13:25 - 14:15', equipo1: 'PAM', equipo2: 'TIBI' },
+            { campo: 1, horario: '14:20 - 15:10', equipo1: 'PAM', equipo2: 'YAEL' },
+            
+            { campo: 2, horario: '07:00 - 07:50', equipo1: 'JORDAN', equipo2: 'DIEGO' },
+            { campo: 2, horario: '07:55 - 08:45', equipo1: 'JORDAN', equipo2: 'DIEGO' },
+            { campo: 2, horario: '08:50 - 09:40', equipo1: 'JORDAN', equipo2: 'DIEGO' },
+            { campo: 2, horario: '09:45 - 10:35', equipo1: 'JORDAN', equipo2: 'MAU' },
+            { campo: 2, horario: '10:40 - 11:30', equipo1: 'JORDAN', equipo2: 'DIEGO' },
+            { campo: 2, horario: '11:35 - 12:25', equipo1: 'JORDAN', equipo2: 'DIEGO' },
+            { campo: 2, horario: '12:30 - 13:20', equipo1: 'JORDAN', equipo2: 'DIEGO' },
+            { campo: 2, horario: '13:25 - 14:15', equipo1: 'NICO', equipo2: 'DIEGO' },
+            
+            { campo: 3, horario: '07:00 - 07:50', equipo1: 'NICO', equipo2: 'SERGIO' },
+            { campo: 3, horario: '07:55 - 08:45', equipo1: 'NICO', equipo2: 'SERGIO' },
+            { campo: 3, horario: '08:50 - 09:40', equipo1: 'NICO', equipo2: 'MAU' },
+            { campo: 3, horario: '09:45 - 10:35', equipo1: 'NICO', equipo2: 'SERGIO' },
+            { campo: 3, horario: '10:40 - 11:30', equipo1: 'NICO', equipo2: 'SERGIO' },
+            { campo: 3, horario: '11:35 - 12:25', equipo1: 'NICO', equipo2: 'SERGIO' },
+            { campo: 3, horario: '12:30 - 13:20', equipo1: 'NICO', equipo2: 'SERGIO' },
+            { campo: 3, horario: '13:25 - 14:15', equipo1: 'GAEL', equipo2: 'YAEL' },
+            
+            { campo: 4, horario: '07:00 - 07:50', equipo1: 'PAM', equipo2: 'YAEL' },
+            { campo: 4, horario: '07:55 - 08:45', equipo1: 'PAM', equipo2: 'MAU' },
+            { campo: 4, horario: '08:50 - 09:40', equipo1: 'PAM', equipo2: 'YAEL' },
+            { campo: 4, horario: '09:45 - 10:35', equipo1: 'PAM', equipo2: 'YAEL' },
+            { campo: 4, horario: '10:40 - 11:30', equipo1: 'PAM', equipo2: 'YAEL' },
+            { campo: 4, horario: '11:35 - 12:25', equipo1: 'PAM', equipo2: 'YAEL' },
+            { campo: 4, horario: '12:30 - 13:20', equipo1: 'PAM', equipo2: 'YAEL' },
+            
+            { campo: 5, horario: '07:00 - 07:50', equipo1: 'RICHIE', equipo2: 'MAU' },
+            { campo: 5, horario: '07:55 - 08:45', equipo1: 'RICHIE', equipo2: 'TIBI' },
+            { campo: 5, horario: '08:50 - 09:40', equipo1: 'RICHIE', equipo2: 'TIBI' },
+            { campo: 5, horario: '09:45 - 10:35', equipo1: 'RICHIE', equipo2: 'TIBI' },
+            { campo: 5, horario: '10:40 - 11:30', equipo1: 'RICHIE', equipo2: 'TIBI' },
+            { campo: 5, horario: '11:35 - 12:25', equipo1: 'RICHIE', equipo2: 'TIBI' },
+            { campo: 5, horario: '12:30 - 13:20', equipo1: 'RICHIE', equipo2: 'TIBI' },
+        ];
+
+        const container = document.getElementById('assignmentsContainer');
+        const searchInput = document.getElementById('searchInput');
+        const totalCount = document.getElementById('totalCount');
+        const showingCount = document.getElementById('showingCount');
+
+        function renderAssignments(filter = '') {
+            const term = filter.toLowerCase().trim();
+            
+            const filtered = term === '' ? [] : assignments.filter(a => 
+                a.equipo1.toLowerCase().includes(term) || 
+                a.equipo2.toLowerCase().includes(term)
+            );
+            
+            filtered.sort((a, b) => {
+                const timeA = a.horario.split(' - ')[0];
+                const timeB = b.horario.split(' - ')[0];
+                return timeA.localeCompare(timeB);
+            });
+
+            showingCount.textContent = filtered.length;
+            totalCount.textContent = assignments.length;
+
+            if (filtered.length === 0) {
+                if (term === '') {
+                    container.innerHTML = `
+                        <div class="no-results">
+                            <h3>Busqueda de asignaciones</h3>
+                            <p>Escribe tu nombre en el campo de busqueda para ver tus asignaciones</p>
+                        </div>
+                    `;
+                } else {
+                    container.innerHTML = `
+                        <div class="no-results">
+                            <h3>Sin resultados</h3>
+                            <p>No se encontraron asignaciones para "<strong>${filter}</strong>"</p>
+                            <p style="margin-top: 10px; font-size: 0.9rem;">Nombres disponibles: Abi, Jordan, Nico, Pam, Gael, Diego, Mau, Sergio, Yael, Richie, Tibi</p>
+                        </div>
+                    `;
+                }
+                return;
+            }
+
+            container.innerHTML = filtered.map(a => `
+                <div class="assignment-card campo-${a.campo}">
+                    <div class="card-header">
+                        <span class="field-name">Campo ${a.campo}</span>
+                        <span class="time-badge">${a.horario}</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="teams">
+                            ${a.equipo1} <span class="vs">vs</span> ${a.equipo2}
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        Sabado &bull; Deportivo Caracoles &bull; LINFAAAC
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            renderAssignments(e.target.value);
+        });
+
+        renderAssignments('');
+    </script>
+</body>
+</html>
