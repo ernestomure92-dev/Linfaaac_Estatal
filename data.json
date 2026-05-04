@@ -1,0 +1,2677 @@
+{
+  "teams": [
+    {
+      "id": "v1",
+      "name": "Titanes FC",
+      "abbr": "TFC",
+      "category": "Varonil",
+      "color": "#1e3a8a",
+      "casa": true,
+      "players": [
+        {
+          "number": 12,
+          "name": "Carlos Mendoza",
+          "position": "QB",
+          "age": 24
+        },
+        {
+          "number": 7,
+          "name": "Javier Torres",
+          "position": "WR",
+          "age": 22
+        },
+        {
+          "number": 23,
+          "name": "Luis Hernández",
+          "position": "RB",
+          "age": 23
+        },
+        {
+          "number": 45,
+          "name": "Andrés Vega",
+          "position": "LB",
+          "age": 25
+        },
+        {
+          "number": 88,
+          "name": "Diego Flores",
+          "position": "WR",
+          "age": 21
+        },
+        {
+          "number": 5,
+          "name": "Roberto Sánchez",
+          "position": "DB",
+          "age": 24
+        },
+        {
+          "number": 33,
+          "name": "Fernando Lima",
+          "position": "DL",
+          "age": 26
+        },
+        {
+          "number": 11,
+          "name": "Miguel Ruiz",
+          "position": "QB",
+          "age": 22
+        }
+      ]
+    },
+    {
+      "id": "v2",
+      "name": "Panteras Negras",
+      "abbr": "PNR",
+      "category": "Varonil",
+      "color": "#171717",
+      "casa": true,
+      "players": [
+        {
+          "number": 1,
+          "name": "Alejandro Gómez",
+          "position": "QB",
+          "age": 25
+        },
+        {
+          "number": 13,
+          "name": "Daniel Castro",
+          "position": "WR",
+          "age": 23
+        },
+        {
+          "number": 34,
+          "name": "Eduardo Núñez",
+          "position": "RB",
+          "age": 24
+        },
+        {
+          "number": 55,
+          "name": "Pablo Jiménez",
+          "position": "LB",
+          "age": 26
+        },
+        {
+          "number": 21,
+          "name": "Santiago Ortiz",
+          "position": "DB",
+          "age": 22
+        },
+        {
+          "number": 9,
+          "name": "Bruno Díaz",
+          "position": "WR",
+          "age": 23
+        },
+        {
+          "number": 77,
+          "name": "Emilio Vargas",
+          "position": "DL",
+          "age": 25
+        },
+        {
+          "number": 3,
+          "name": "Tomás Ríos",
+          "position": "QB",
+          "age": 21
+        }
+      ]
+    },
+    {
+      "id": "v3",
+      "name": "Águilas Reales",
+      "abbr": "ARE",
+      "category": "Varonil",
+      "color": "#991b1b",
+      "casa": true,
+      "players": [
+        {
+          "number": 8,
+          "name": "Ricardo Morales",
+          "position": "QB",
+          "age": 24
+        },
+        {
+          "number": 15,
+          "name": "Joaquín Reyes",
+          "position": "WR",
+          "age": 22
+        },
+        {
+          "number": 28,
+          "name": "Martín Delgado",
+          "position": "RB",
+          "age": 23
+        },
+        {
+          "number": 42,
+          "name": "Lucas Herrera",
+          "position": "LB",
+          "age": 25
+        },
+        {
+          "number": 19,
+          "name": "Nicolás Aguilar",
+          "position": "DB",
+          "age": 21
+        },
+        {
+          "number": 6,
+          "name": "Mateo Silva",
+          "position": "WR",
+          "age": 24
+        },
+        {
+          "number": 66,
+          "name": "Benjamín Cruz",
+          "position": "DL",
+          "age": 26
+        },
+        {
+          "number": 10,
+          "name": "Maximiliano León",
+          "position": "QB",
+          "age": 22
+        }
+      ]
+    },
+    {
+      "id": "v4",
+      "name": "Leones Dorados",
+      "abbr": "LDO",
+      "category": "Varonil",
+      "color": "#b45309",
+      "casa": true,
+      "players": [
+        {
+          "number": 14,
+          "name": "Fernando Castillo",
+          "position": "QB",
+          "age": 26
+        },
+        {
+          "number": 22,
+          "name": "Gabriel Morales",
+          "position": "WR",
+          "age": 23
+        },
+        {
+          "number": 31,
+          "name": "Hugo Sánchez",
+          "position": "RB",
+          "age": 24
+        },
+        {
+          "number": 44,
+          "name": "Iván Torres",
+          "position": "LB",
+          "age": 25
+        },
+        {
+          "number": 17,
+          "name": "Jorge Ruiz",
+          "position": "DB",
+          "age": 22
+        },
+        {
+          "number": 8,
+          "name": "Kevin Vega",
+          "position": "WR",
+          "age": 23
+        },
+        {
+          "number": 52,
+          "name": "Leonardo Díaz",
+          "position": "DL",
+          "age": 27
+        },
+        {
+          "number": 2,
+          "name": "Marco Flores",
+          "position": "QB",
+          "age": 21
+        }
+      ]
+    },
+    {
+      "id": "v5",
+      "name": "Toros Bravos",
+      "abbr": "TBR",
+      "category": "Varonil",
+      "color": "#7f1d1d",
+      "casa": false,
+      "players": [
+        {
+          "number": 18,
+          "name": "Adrián Castillo",
+          "position": "QB",
+          "age": 24
+        },
+        {
+          "number": 24,
+          "name": "Braulio Mendoza",
+          "position": "WR",
+          "age": 22
+        },
+        {
+          "number": 37,
+          "name": "César Herrera",
+          "position": "RB",
+          "age": 23
+        },
+        {
+          "number": 48,
+          "name": "Damián Ortiz",
+          "position": "LB",
+          "age": 25
+        },
+        {
+          "number": 16,
+          "name": "Esteban Ruiz",
+          "position": "DB",
+          "age": 21
+        },
+        {
+          "number": 29,
+          "name": "Francisco Vega",
+          "position": "WR",
+          "age": 24
+        },
+        {
+          "number": 61,
+          "name": "Gustavo López",
+          "position": "DL",
+          "age": 26
+        },
+        {
+          "number": 4,
+          "name": "Héctor Torres",
+          "position": "QB",
+          "age": 22
+        }
+      ]
+    },
+    {
+      "id": "v6",
+      "name": "Halcones FC",
+      "abbr": "HFC",
+      "category": "Varonil",
+      "color": "#0f766e",
+      "casa": false,
+      "players": [
+        {
+          "number": 20,
+          "name": "Ignacio Soto",
+          "position": "QB",
+          "age": 25
+        },
+        {
+          "number": 25,
+          "name": "Julián Castillo",
+          "position": "WR",
+          "age": 23
+        },
+        {
+          "number": 38,
+          "name": "Kevin Aguilar",
+          "position": "RB",
+          "age": 24
+        },
+        {
+          "number": 46,
+          "name": "Luis Vega",
+          "position": "LB",
+          "age": 25
+        },
+        {
+          "number": 19,
+          "name": "Manuel Díaz",
+          "position": "DB",
+          "age": 22
+        },
+        {
+          "number": 32,
+          "name": "Nicolás Flores",
+          "position": "WR",
+          "age": 23
+        },
+        {
+          "number": 54,
+          "name": "Óscar Ruiz",
+          "position": "DL",
+          "age": 26
+        },
+        {
+          "number": 7,
+          "name": "Pedro Torres",
+          "position": "QB",
+          "age": 21
+        }
+      ]
+    },
+    {
+      "id": "f1",
+      "name": "Fénix Femenil",
+      "abbr": "FEN",
+      "category": "Femenil",
+      "color": "#c2410c",
+      "casa": true,
+      "players": [
+        {
+          "number": 4,
+          "name": "Ana Paula Martínez",
+          "position": "QB",
+          "age": 23
+        },
+        {
+          "number": 14,
+          "name": "Sofía Ramírez",
+          "position": "WR",
+          "age": 21
+        },
+        {
+          "number": 22,
+          "name": "Valentina Castro",
+          "position": "RB",
+          "age": 22
+        },
+        {
+          "number": 33,
+          "name": "Camila Herrera",
+          "position": "LB",
+          "age": 24
+        },
+        {
+          "number": 7,
+          "name": "Mariana López",
+          "position": "DB",
+          "age": 23
+        },
+        {
+          "number": 11,
+          "name": "Daniela Torres",
+          "position": "WR",
+          "age": 22
+        },
+        {
+          "number": 88,
+          "name": "Paula Mendoza",
+          "position": "DL",
+          "age": 25
+        },
+        {
+          "number": 1,
+          "name": "Luciana Vega",
+          "position": "QB",
+          "age": 21
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "name": "Amazonas FC",
+      "abbr": "AMZ",
+      "category": "Femenil",
+      "color": "#6b21a8",
+      "casa": true,
+      "players": [
+        {
+          "number": 9,
+          "name": "Fernanda Ruiz",
+          "position": "QB",
+          "age": 24
+        },
+        {
+          "number": 17,
+          "name": "Gabriela Flores",
+          "position": "WR",
+          "age": 22
+        },
+        {
+          "number": 31,
+          "name": "Ximena Ortiz",
+          "position": "RB",
+          "age": 23
+        },
+        {
+          "number": 44,
+          "name": "Natalia Soto",
+          "position": "LB",
+          "age": 25
+        },
+        {
+          "number": 2,
+          "name": "Andrea Jiménez",
+          "position": "DB",
+          "age": 21
+        },
+        {
+          "number": 18,
+          "name": "Victoria Díaz",
+          "position": "WR",
+          "age": 24
+        },
+        {
+          "number": 55,
+          "name": "Regina Morales",
+          "position": "DL",
+          "age": 26
+        },
+        {
+          "number": 12,
+          "name": "Alejandra Lima",
+          "position": "QB",
+          "age": 22
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "name": "Guerreras FC",
+      "abbr": "GFC",
+      "category": "Femenil",
+      "color": "#be185d",
+      "casa": false,
+      "players": [
+        {
+          "number": 5,
+          "name": "Beatriz Castillo",
+          "position": "QB",
+          "age": 23
+        },
+        {
+          "number": 15,
+          "name": "Carolina Ruiz",
+          "position": "WR",
+          "age": 21
+        },
+        {
+          "number": 26,
+          "name": "Diana Torres",
+          "position": "RB",
+          "age": 22
+        },
+        {
+          "number": 39,
+          "name": "Elena Vega",
+          "position": "LB",
+          "age": 24
+        },
+        {
+          "number": 8,
+          "name": "Florencia Díaz",
+          "position": "DB",
+          "age": 23
+        },
+        {
+          "number": 19,
+          "name": "Giselle Flores",
+          "position": "WR",
+          "age": 22
+        },
+        {
+          "number": 47,
+          "name": "Helena Aguilar",
+          "position": "DL",
+          "age": 25
+        },
+        {
+          "number": 3,
+          "name": "Isabel Mendoza",
+          "position": "QB",
+          "age": 21
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "name": "Leonas FC",
+      "abbr": "LFC",
+      "category": "Femenil",
+      "color": "#ca8a04",
+      "casa": false,
+      "players": [
+        {
+          "number": 6,
+          "name": "Jimena Castillo",
+          "position": "QB",
+          "age": 24
+        },
+        {
+          "number": 16,
+          "name": "Karla Ruiz",
+          "position": "WR",
+          "age": 22
+        },
+        {
+          "number": 27,
+          "name": "Laura Torres",
+          "position": "RB",
+          "age": 23
+        },
+        {
+          "number": 40,
+          "name": "María Vega",
+          "position": "LB",
+          "age": 25
+        },
+        {
+          "number": 10,
+          "name": "Natalia Díaz",
+          "position": "DB",
+          "age": 21
+        },
+        {
+          "number": 21,
+          "name": "Olivia Flores",
+          "position": "WR",
+          "age": 24
+        },
+        {
+          "number": 53,
+          "name": "Patricia Aguilar",
+          "position": "DL",
+          "age": 26
+        },
+        {
+          "number": 1,
+          "name": "Quinta Mendoza",
+          "position": "QB",
+          "age": 22
+        }
+      ]
+    },
+    {
+      "id": "m1",
+      "name": "Cobras Mixtas",
+      "abbr": "COB",
+      "category": "Mixto",
+      "color": "#065f46",
+      "casa": true,
+      "players": [
+        {
+          "number": 3,
+          "name": "Sebastián Vargas",
+          "position": "QB",
+          "age": 25
+        },
+        {
+          "number": 16,
+          "name": "María José Castillo",
+          "position": "WR",
+          "age": 22
+        },
+        {
+          "number": 27,
+          "name": "Juan Pablo Ríos",
+          "position": "RB",
+          "age": 23
+        },
+        {
+          "number": 41,
+          "name": "Isabella Cruz",
+          "position": "LB",
+          "age": 24
+        },
+        {
+          "number": 8,
+          "name": "Diego Silva",
+          "position": "DB",
+          "age": 21
+        },
+        {
+          "number": 20,
+          "name": "Renata Delgado",
+          "position": "WR",
+          "age": 23
+        },
+        {
+          "number": 63,
+          "name": "Emiliano Aguilar",
+          "position": "DL",
+          "age": 26
+        },
+        {
+          "number": 5,
+          "name": "Antonella Reyes",
+          "position": "QB",
+          "age": 22
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "name": "Gladiadores",
+      "abbr": "GLA",
+      "category": "Mixto",
+      "color": "#92400e",
+      "casa": true,
+      "players": [
+        {
+          "number": 6,
+          "name": "Facundo Martínez",
+          "position": "QB",
+          "age": 24
+        },
+        {
+          "number": 13,
+          "name": "Carolina Herrera",
+          "position": "WR",
+          "age": 21
+        },
+        {
+          "number": 29,
+          "name": "Agustín López",
+          "position": "RB",
+          "age": 23
+        },
+        {
+          "number": 38,
+          "name": "Julieta Torres",
+          "position": "LB",
+          "age": 25
+        },
+        {
+          "number": 4,
+          "name": "Valentín Castro",
+          "position": "DB",
+          "age": 22
+        },
+        {
+          "number": 21,
+          "name": "Martina Flores",
+          "position": "WR",
+          "age": 24
+        },
+        {
+          "number": 72,
+          "name": "Ignacio Ruiz",
+          "position": "DL",
+          "age": 26
+        },
+        {
+          "number": 11,
+          "name": "Morena Díaz",
+          "position": "QB",
+          "age": 22
+        }
+      ]
+    },
+    {
+      "id": "m3",
+      "name": "Dragones FC",
+      "abbr": "DRA",
+      "category": "Mixto",
+      "color": "#4338ca",
+      "casa": false,
+      "players": [
+        {
+          "number": 2,
+          "name": "Alberto Castillo",
+          "position": "QB",
+          "age": 25
+        },
+        {
+          "number": 17,
+          "name": "Blanca Ruiz",
+          "position": "WR",
+          "age": 22
+        },
+        {
+          "number": 28,
+          "name": "Cristian Torres",
+          "position": "RB",
+          "age": 23
+        },
+        {
+          "number": 42,
+          "name": "Diana Vega",
+          "position": "LB",
+          "age": 24
+        },
+        {
+          "number": 9,
+          "name": "Eduardo Díaz",
+          "position": "DB",
+          "age": 21
+        },
+        {
+          "number": 23,
+          "name": "Fernanda Flores",
+          "position": "WR",
+          "age": 23
+        },
+        {
+          "number": 56,
+          "name": "Gerardo Aguilar",
+          "position": "DL",
+          "age": 26
+        },
+        {
+          "number": 7,
+          "name": "Hilda Mendoza",
+          "position": "QB",
+          "age": 22
+        }
+      ]
+    },
+    {
+      "id": "m4",
+      "name": "Tiburones",
+      "abbr": "TIB",
+      "category": "Mixto",
+      "color": "#0369a1",
+      "casa": false,
+      "players": [
+        {
+          "number": 10,
+          "name": "Israel Castillo",
+          "position": "QB",
+          "age": 24
+        },
+        {
+          "number": 18,
+          "name": "Julia Ruiz",
+          "position": "WR",
+          "age": 21
+        },
+        {
+          "number": 30,
+          "name": "Kevin Torres",
+          "position": "RB",
+          "age": 23
+        },
+        {
+          "number": 43,
+          "name": "Lorena Vega",
+          "position": "LB",
+          "age": 25
+        },
+        {
+          "number": 12,
+          "name": "Mario Díaz",
+          "position": "DB",
+          "age": 22
+        },
+        {
+          "number": 24,
+          "name": "Nancy Flores",
+          "position": "WR",
+          "age": 24
+        },
+        {
+          "number": 57,
+          "name": "Orlando Aguilar",
+          "position": "DL",
+          "age": 26
+        },
+        {
+          "number": 1,
+          "name": "Paola Mendoza",
+          "position": "QB",
+          "age": 22
+        }
+      ]
+    },
+    {
+      "id": "s171",
+      "name": "Juveniles FC",
+      "abbr": "JFC",
+      "category": "Sub-17",
+      "color": "#15803d",
+      "casa": true,
+      "players": [
+        {
+          "number": 1,
+          "name": "Aaron Castillo",
+          "position": "QB",
+          "age": 16
+        },
+        {
+          "number": 11,
+          "name": "Brandon Ruiz",
+          "position": "WR",
+          "age": 15
+        },
+        {
+          "number": 22,
+          "name": "Cristian Torres",
+          "position": "RB",
+          "age": 16
+        },
+        {
+          "number": 33,
+          "name": "Dylan Vega",
+          "position": "LB",
+          "age": 17
+        },
+        {
+          "number": 5,
+          "name": "Ethan Díaz",
+          "position": "DB",
+          "age": 15
+        },
+        {
+          "number": 14,
+          "name": "Fabian Flores",
+          "position": "WR",
+          "age": 16
+        },
+        {
+          "number": 44,
+          "name": "Gael Aguilar",
+          "position": "DL",
+          "age": 17
+        },
+        {
+          "number": 8,
+          "name": "Hugo Mendoza",
+          "position": "QB",
+          "age": 15
+        }
+      ]
+    },
+    {
+      "id": "s172",
+      "name": "Estrellas Sub-17",
+      "abbr": "ES17",
+      "category": "Sub-17",
+      "color": "#0e7490",
+      "casa": true,
+      "players": [
+        {
+          "number": 2,
+          "name": "Ian Castillo",
+          "position": "QB",
+          "age": 16
+        },
+        {
+          "number": 12,
+          "name": "Javier Ruiz",
+          "position": "WR",
+          "age": 15
+        },
+        {
+          "number": 23,
+          "name": "Kevin Torres",
+          "position": "RB",
+          "age": 16
+        },
+        {
+          "number": 34,
+          "name": "Leonardo Vega",
+          "position": "LB",
+          "age": 17
+        },
+        {
+          "number": 6,
+          "name": "Mateo Díaz",
+          "position": "DB",
+          "age": 15
+        },
+        {
+          "number": 15,
+          "name": "Nathan Flores",
+          "position": "WR",
+          "age": 16
+        },
+        {
+          "number": 45,
+          "name": "Oliver Aguilar",
+          "position": "DL",
+          "age": 17
+        },
+        {
+          "number": 9,
+          "name": "Pablo Mendoza",
+          "position": "QB",
+          "age": 15
+        }
+      ]
+    },
+    {
+      "id": "s173",
+      "name": "Promesas FC",
+      "abbr": "PRO",
+      "category": "Sub-17",
+      "color": "#a21caf",
+      "casa": false,
+      "players": [
+        {
+          "number": 3,
+          "name": "Quentin Castillo",
+          "position": "QB",
+          "age": 16
+        },
+        {
+          "number": 13,
+          "name": "Rafael Ruiz",
+          "position": "WR",
+          "age": 15
+        },
+        {
+          "number": 24,
+          "name": "Samuel Torres",
+          "position": "RB",
+          "age": 16
+        },
+        {
+          "number": 35,
+          "name": "Theo Vega",
+          "position": "LB",
+          "age": 17
+        },
+        {
+          "number": 7,
+          "name": "Uriel Díaz",
+          "position": "DB",
+          "age": 15
+        },
+        {
+          "number": 16,
+          "name": "Victor Flores",
+          "position": "WR",
+          "age": 16
+        },
+        {
+          "number": 46,
+          "name": "William Aguilar",
+          "position": "DL",
+          "age": 17
+        },
+        {
+          "number": 10,
+          "name": "Xavier Mendoza",
+          "position": "QB",
+          "age": 15
+        }
+      ]
+    },
+    {
+      "id": "s174",
+      "name": "Futuros FC",
+      "abbr": "FUT",
+      "category": "Sub-17",
+      "color": "#ea580c",
+      "casa": false,
+      "players": [
+        {
+          "number": 4,
+          "name": "Yael Castillo",
+          "position": "QB",
+          "age": 16
+        },
+        {
+          "number": 14,
+          "name": "Zaid Ruiz",
+          "position": "WR",
+          "age": 15
+        },
+        {
+          "number": 25,
+          "name": "Adrian Torres",
+          "position": "RB",
+          "age": 16
+        },
+        {
+          "number": 36,
+          "name": "Bruno Vega",
+          "position": "LB",
+          "age": 17
+        },
+        {
+          "number": 8,
+          "name": "Carlos Díaz",
+          "position": "DB",
+          "age": 15
+        },
+        {
+          "number": 17,
+          "name": "David Flores",
+          "position": "WR",
+          "age": 16
+        },
+        {
+          "number": 47,
+          "name": "Elias Aguilar",
+          "position": "DL",
+          "age": 17
+        },
+        {
+          "number": 11,
+          "name": "Felipe Mendoza",
+          "position": "QB",
+          "age": 15
+        }
+      ]
+    },
+    {
+      "id": "s151",
+      "name": "Semilleros FC",
+      "abbr": "SEM",
+      "category": "Sub-15",
+      "color": "#2563eb",
+      "casa": true,
+      "players": [
+        {
+          "number": 1,
+          "name": "Gabriel Castillo",
+          "position": "QB",
+          "age": 14
+        },
+        {
+          "number": 10,
+          "name": "Hector Ruiz",
+          "position": "WR",
+          "age": 13
+        },
+        {
+          "number": 20,
+          "name": "Ivan Torres",
+          "position": "RB",
+          "age": 14
+        },
+        {
+          "number": 30,
+          "name": "Julian Vega",
+          "position": "LB",
+          "age": 15
+        },
+        {
+          "number": 5,
+          "name": "Kevin Díaz",
+          "position": "DB",
+          "age": 13
+        },
+        {
+          "number": 12,
+          "name": "Lucas Flores",
+          "position": "WR",
+          "age": 14
+        },
+        {
+          "number": 40,
+          "name": "Marcos Aguilar",
+          "position": "DL",
+          "age": 15
+        },
+        {
+          "number": 7,
+          "name": "Nicolas Mendoza",
+          "position": "QB",
+          "age": 13
+        }
+      ]
+    },
+    {
+      "id": "s152",
+      "name": "Talentos FC",
+      "abbr": "TAL",
+      "category": "Sub-15",
+      "color": "#0891b2",
+      "casa": true,
+      "players": [
+        {
+          "number": 2,
+          "name": "Oscar Castillo",
+          "position": "QB",
+          "age": 14
+        },
+        {
+          "number": 11,
+          "name": "Pedro Ruiz",
+          "position": "WR",
+          "age": 13
+        },
+        {
+          "number": 21,
+          "name": "Quentin Torres",
+          "position": "RB",
+          "age": 14
+        },
+        {
+          "number": 31,
+          "name": "Rafael Vega",
+          "position": "LB",
+          "age": 15
+        },
+        {
+          "number": 6,
+          "name": "Santiago Díaz",
+          "position": "DB",
+          "age": 13
+        },
+        {
+          "number": 13,
+          "name": "Tomas Flores",
+          "position": "WR",
+          "age": 14
+        },
+        {
+          "number": 41,
+          "name": "Ulises Aguilar",
+          "position": "DL",
+          "age": 15
+        },
+        {
+          "number": 8,
+          "name": "Victor Mendoza",
+          "position": "QB",
+          "age": 13
+        }
+      ]
+    },
+    {
+      "id": "s153",
+      "name": "Esperanzas FC",
+      "abbr": "ESP",
+      "category": "Sub-15",
+      "color": "#65a30d",
+      "casa": false,
+      "players": [
+        {
+          "number": 3,
+          "name": "Walter Castillo",
+          "position": "QB",
+          "age": 14
+        },
+        {
+          "number": 14,
+          "name": "Xavier Ruiz",
+          "position": "WR",
+          "age": 13
+        },
+        {
+          "number": 22,
+          "name": "Yael Torres",
+          "position": "RB",
+          "age": 14
+        },
+        {
+          "number": 32,
+          "name": "Zaid Vega",
+          "position": "LB",
+          "age": 15
+        },
+        {
+          "number": 9,
+          "name": "Adrian Díaz",
+          "position": "DB",
+          "age": 13
+        },
+        {
+          "number": 15,
+          "name": "Bruno Flores",
+          "position": "WR",
+          "age": 14
+        },
+        {
+          "number": 42,
+          "name": "Carlos Aguilar",
+          "position": "DL",
+          "age": 15
+        },
+        {
+          "number": 10,
+          "name": "Daniel Mendoza",
+          "position": "QB",
+          "age": 13
+        }
+      ]
+    },
+    {
+      "id": "s154",
+      "name": "Pioneros FC",
+      "abbr": "PIO",
+      "category": "Sub-15",
+      "color": "#db2777",
+      "casa": false,
+      "players": [
+        {
+          "number": 4,
+          "name": "Elias Castillo",
+          "position": "QB",
+          "age": 14
+        },
+        {
+          "number": 16,
+          "name": "Fabian Ruiz",
+          "position": "WR",
+          "age": 13
+        },
+        {
+          "number": 23,
+          "name": "Gael Torres",
+          "position": "RB",
+          "age": 14
+        },
+        {
+          "number": 33,
+          "name": "Hugo Vega",
+          "position": "LB",
+          "age": 15
+        },
+        {
+          "number": 10,
+          "name": "Ian Díaz",
+          "position": "DB",
+          "age": 13
+        },
+        {
+          "number": 17,
+          "name": "Javier Flores",
+          "position": "WR",
+          "age": 14
+        },
+        {
+          "number": 43,
+          "name": "Kevin Aguilar",
+          "position": "DL",
+          "age": 15
+        },
+        {
+          "number": 11,
+          "name": "Leonardo Mendoza",
+          "position": "QB",
+          "age": 13
+        }
+      ]
+    },
+    {
+      "id": "vet1",
+      "name": "Veteranos FC",
+      "abbr": "VFC",
+      "category": "Veteranos",
+      "color": "#475569",
+      "casa": true,
+      "players": [
+        {
+          "number": 1,
+          "name": "Roberto Castillo",
+          "position": "QB",
+          "age": 38
+        },
+        {
+          "number": 12,
+          "name": "Alberto Ruiz",
+          "position": "WR",
+          "age": 36
+        },
+        {
+          "number": 23,
+          "name": "Carlos Torres",
+          "position": "RB",
+          "age": 40
+        },
+        {
+          "number": 34,
+          "name": "Daniel Vega",
+          "position": "LB",
+          "age": 37
+        },
+        {
+          "number": 5,
+          "name": "Eduardo Díaz",
+          "position": "DB",
+          "age": 39
+        },
+        {
+          "number": 16,
+          "name": "Fernando Flores",
+          "position": "WR",
+          "age": 41
+        },
+        {
+          "number": 45,
+          "name": "Guillermo Aguilar",
+          "position": "DL",
+          "age": 42
+        },
+        {
+          "number": 8,
+          "name": "Hector Mendoza",
+          "position": "QB",
+          "age": 35
+        }
+      ]
+    },
+    {
+      "id": "vet2",
+      "name": "Leyendas FC",
+      "abbr": "LEY",
+      "category": "Veteranos",
+      "color": "#78716c",
+      "casa": true,
+      "players": [
+        {
+          "number": 2,
+          "name": "Ignacio Castillo",
+          "position": "QB",
+          "age": 39
+        },
+        {
+          "number": 13,
+          "name": "Javier Ruiz",
+          "position": "WR",
+          "age": 37
+        },
+        {
+          "number": 24,
+          "name": "Kevin Torres",
+          "position": "RB",
+          "age": 41
+        },
+        {
+          "number": 35,
+          "name": "Leonardo Vega",
+          "position": "LB",
+          "age": 38
+        },
+        {
+          "number": 6,
+          "name": "Mario Díaz",
+          "position": "DB",
+          "age": 40
+        },
+        {
+          "number": 17,
+          "name": "Nathan Flores",
+          "position": "WR",
+          "age": 42
+        },
+        {
+          "number": 46,
+          "name": "Orlando Aguilar",
+          "position": "DL",
+          "age": 43
+        },
+        {
+          "number": 9,
+          "name": "Pablo Mendoza",
+          "position": "QB",
+          "age": 36
+        }
+      ]
+    },
+    {
+      "id": "vet3",
+      "name": "Maestros FC",
+      "abbr": "MAE",
+      "category": "Veteranos",
+      "color": "#854d0e",
+      "casa": false,
+      "players": [
+        {
+          "number": 3,
+          "name": "Quentin Castillo",
+          "position": "QB",
+          "age": 40
+        },
+        {
+          "number": 14,
+          "name": "Rafael Ruiz",
+          "position": "WR",
+          "age": 38
+        },
+        {
+          "number": 25,
+          "name": "Samuel Torres",
+          "position": "RB",
+          "age": 42
+        },
+        {
+          "number": 36,
+          "name": "Theo Vega",
+          "position": "LB",
+          "age": 39
+        },
+        {
+          "number": 7,
+          "name": "Uriel Díaz",
+          "position": "DB",
+          "age": 41
+        },
+        {
+          "number": 18,
+          "name": "Victor Flores",
+          "position": "WR",
+          "age": 43
+        },
+        {
+          "number": 47,
+          "name": "William Aguilar",
+          "position": "DL",
+          "age": 44
+        },
+        {
+          "number": 10,
+          "name": "Xavier Mendoza",
+          "position": "QB",
+          "age": 37
+        }
+      ]
+    },
+    {
+      "id": "vet4",
+      "name": "Inmortales",
+      "abbr": "INM",
+      "category": "Veteranos",
+      "color": "#3f6212",
+      "casa": false,
+      "players": [
+        {
+          "number": 4,
+          "name": "Yael Castillo",
+          "position": "QB",
+          "age": 41
+        },
+        {
+          "number": 15,
+          "name": "Zaid Ruiz",
+          "position": "WR",
+          "age": 39
+        },
+        {
+          "number": 26,
+          "name": "Adrian Torres",
+          "position": "RB",
+          "age": 43
+        },
+        {
+          "number": 37,
+          "name": "Bruno Vega",
+          "position": "LB",
+          "age": 40
+        },
+        {
+          "number": 8,
+          "name": "Carlos Díaz",
+          "position": "DB",
+          "age": 42
+        },
+        {
+          "number": 19,
+          "name": "David Flores",
+          "position": "WR",
+          "age": 44
+        },
+        {
+          "number": 48,
+          "name": "Elias Aguilar",
+          "position": "DL",
+          "age": 45
+        },
+        {
+          "number": 11,
+          "name": "Felipe Mendoza",
+          "position": "QB",
+          "age": 38
+        }
+      ]
+    }
+  ],
+  "schedule": [
+    {
+      "id": 1,
+      "day": 1,
+      "time": "07:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v1",
+      "team2": "v5",
+      "status": "finished",
+      "score1": 15,
+      "score2": 8
+    },
+    {
+      "id": 2,
+      "day": 1,
+      "time": "08:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v1",
+      "team2": "v6",
+      "status": "finished",
+      "score1": 16,
+      "score2": 9
+    },
+    {
+      "id": 3,
+      "day": 1,
+      "time": "09:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v2",
+      "team2": "v5",
+      "status": "finished",
+      "score1": 17,
+      "score2": 10
+    },
+    {
+      "id": 4,
+      "day": 1,
+      "time": "10:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v2",
+      "team2": "v6",
+      "status": "live",
+      "score1": 14,
+      "score2": 10
+    },
+    {
+      "id": 5,
+      "day": 1,
+      "time": "11:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v3",
+      "team2": "v5",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 6,
+      "day": 1,
+      "time": "12:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v3",
+      "team2": "v6",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 7,
+      "day": 1,
+      "time": "13:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v4",
+      "team2": "v5",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 8,
+      "day": 1,
+      "time": "14:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v4",
+      "team2": "v6",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 9,
+      "day": 1,
+      "time": "15:00",
+      "field": "Cancha 1",
+      "category": "Femenil",
+      "team1": "f1",
+      "team2": "f3",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 10,
+      "day": 1,
+      "time": "07:00",
+      "field": "Cancha 2",
+      "category": "Femenil",
+      "team1": "f1",
+      "team2": "f4",
+      "status": "finished",
+      "score1": 24,
+      "score2": 17
+    },
+    {
+      "id": 11,
+      "day": 1,
+      "time": "08:00",
+      "field": "Cancha 2",
+      "category": "Femenil",
+      "team1": "f2",
+      "team2": "f3",
+      "status": "finished",
+      "score1": 25,
+      "score2": 18
+    },
+    {
+      "id": 12,
+      "day": 1,
+      "time": "09:00",
+      "field": "Cancha 2",
+      "category": "Femenil",
+      "team1": "f2",
+      "team2": "f4",
+      "status": "finished",
+      "score1": 26,
+      "score2": 19
+    },
+    {
+      "id": 13,
+      "day": 1,
+      "time": "10:00",
+      "field": "Cancha 2",
+      "category": "Mixto",
+      "team1": "m1",
+      "team2": "m3",
+      "status": "live",
+      "score1": 14,
+      "score2": 10
+    },
+    {
+      "id": 14,
+      "day": 1,
+      "time": "11:00",
+      "field": "Cancha 2",
+      "category": "Mixto",
+      "team1": "m1",
+      "team2": "m4",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 15,
+      "day": 1,
+      "time": "12:00",
+      "field": "Cancha 2",
+      "category": "Mixto",
+      "team1": "m2",
+      "team2": "m3",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 16,
+      "day": 1,
+      "time": "13:00",
+      "field": "Cancha 2",
+      "category": "Mixto",
+      "team1": "m2",
+      "team2": "m4",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 17,
+      "day": 1,
+      "time": "14:00",
+      "field": "Cancha 2",
+      "category": "Sub-17",
+      "team1": "s171",
+      "team2": "s173",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 18,
+      "day": 1,
+      "time": "15:00",
+      "field": "Cancha 2",
+      "category": "Sub-17",
+      "team1": "s171",
+      "team2": "s174",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 19,
+      "day": 1,
+      "time": "07:00",
+      "field": "Cancha 3",
+      "category": "Sub-17",
+      "team1": "s172",
+      "team2": "s173",
+      "status": "finished",
+      "score1": 33,
+      "score2": 9
+    },
+    {
+      "id": 20,
+      "day": 1,
+      "time": "08:00",
+      "field": "Cancha 3",
+      "category": "Sub-17",
+      "team1": "s172",
+      "team2": "s174",
+      "status": "finished",
+      "score1": 34,
+      "score2": 10
+    },
+    {
+      "id": 21,
+      "day": 1,
+      "time": "09:00",
+      "field": "Cancha 3",
+      "category": "Sub-15",
+      "team1": "s151",
+      "team2": "s153",
+      "status": "finished",
+      "score1": 14,
+      "score2": 11
+    },
+    {
+      "id": 22,
+      "day": 1,
+      "time": "10:00",
+      "field": "Cancha 3",
+      "category": "Sub-15",
+      "team1": "s151",
+      "team2": "s154",
+      "status": "live",
+      "score1": 14,
+      "score2": 10
+    },
+    {
+      "id": 23,
+      "day": 1,
+      "time": "11:00",
+      "field": "Cancha 3",
+      "category": "Sub-15",
+      "team1": "s152",
+      "team2": "s153",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 24,
+      "day": 1,
+      "time": "12:00",
+      "field": "Cancha 3",
+      "category": "Sub-15",
+      "team1": "s152",
+      "team2": "s154",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 25,
+      "day": 1,
+      "time": "13:00",
+      "field": "Cancha 3",
+      "category": "Veteranos",
+      "team1": "vet1",
+      "team2": "vet3",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 26,
+      "day": 1,
+      "time": "14:00",
+      "field": "Cancha 3",
+      "category": "Veteranos",
+      "team1": "vet1",
+      "team2": "vet4",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 27,
+      "day": 1,
+      "time": "15:00",
+      "field": "Cancha 3",
+      "category": "Veteranos",
+      "team1": "vet2",
+      "team2": "vet3",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 28,
+      "day": 1,
+      "time": "07:00",
+      "field": "Cancha 4",
+      "category": "Veteranos",
+      "team1": "vet2",
+      "team2": "vet4",
+      "status": "finished",
+      "score1": 21,
+      "score2": 18
+    },
+    {
+      "id": 29,
+      "day": 2,
+      "time": "07:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v1",
+      "team2": "v5",
+      "status": "finished",
+      "score1": 22,
+      "score2": 21
+    },
+    {
+      "id": 30,
+      "day": 2,
+      "time": "08:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v1",
+      "team2": "v6",
+      "status": "finished",
+      "score1": 23,
+      "score2": 22
+    },
+    {
+      "id": 31,
+      "day": 2,
+      "time": "09:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v2",
+      "team2": "v5",
+      "status": "live",
+      "score1": 7,
+      "score2": 7
+    },
+    {
+      "id": 32,
+      "day": 2,
+      "time": "10:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v2",
+      "team2": "v6",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 33,
+      "day": 2,
+      "time": "11:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v3",
+      "team2": "v5",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 34,
+      "day": 2,
+      "time": "12:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v3",
+      "team2": "v6",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 35,
+      "day": 2,
+      "time": "13:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v4",
+      "team2": "v5",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 36,
+      "day": 2,
+      "time": "14:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v4",
+      "team2": "v6",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 37,
+      "day": 2,
+      "time": "15:00",
+      "field": "Cancha 1",
+      "category": "Femenil",
+      "team1": "f1",
+      "team2": "f3",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 38,
+      "day": 2,
+      "time": "07:00",
+      "field": "Cancha 2",
+      "category": "Femenil",
+      "team1": "f1",
+      "team2": "f4",
+      "status": "finished",
+      "score1": 31,
+      "score2": 19
+    },
+    {
+      "id": 39,
+      "day": 2,
+      "time": "08:00",
+      "field": "Cancha 2",
+      "category": "Femenil",
+      "team1": "f2",
+      "team2": "f3",
+      "status": "finished",
+      "score1": 32,
+      "score2": 20
+    },
+    {
+      "id": 40,
+      "day": 2,
+      "time": "09:00",
+      "field": "Cancha 2",
+      "category": "Femenil",
+      "team1": "f2",
+      "team2": "f4",
+      "status": "live",
+      "score1": 7,
+      "score2": 7
+    },
+    {
+      "id": 41,
+      "day": 2,
+      "time": "10:00",
+      "field": "Cancha 2",
+      "category": "Mixto",
+      "team1": "m1",
+      "team2": "m3",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 42,
+      "day": 2,
+      "time": "11:00",
+      "field": "Cancha 2",
+      "category": "Mixto",
+      "team1": "m1",
+      "team2": "m4",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 43,
+      "day": 2,
+      "time": "12:00",
+      "field": "Cancha 2",
+      "category": "Mixto",
+      "team1": "m2",
+      "team2": "m3",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 44,
+      "day": 2,
+      "time": "13:00",
+      "field": "Cancha 2",
+      "category": "Mixto",
+      "team1": "m2",
+      "team2": "m4",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 45,
+      "day": 2,
+      "time": "14:00",
+      "field": "Cancha 2",
+      "category": "Sub-17",
+      "team1": "s171",
+      "team2": "s173",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 46,
+      "day": 2,
+      "time": "15:00",
+      "field": "Cancha 2",
+      "category": "Sub-17",
+      "team1": "s171",
+      "team2": "s174",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 47,
+      "day": 2,
+      "time": "07:00",
+      "field": "Cancha 3",
+      "category": "Sub-17",
+      "team1": "s172",
+      "team2": "s173",
+      "status": "finished",
+      "score1": 26,
+      "score2": 17
+    },
+    {
+      "id": 48,
+      "day": 2,
+      "time": "08:00",
+      "field": "Cancha 3",
+      "category": "Sub-17",
+      "team1": "s172",
+      "team2": "s174",
+      "status": "finished",
+      "score1": 27,
+      "score2": 18
+    },
+    {
+      "id": 49,
+      "day": 2,
+      "time": "09:00",
+      "field": "Cancha 3",
+      "category": "Sub-15",
+      "team1": "s151",
+      "team2": "s153",
+      "status": "live",
+      "score1": 7,
+      "score2": 7
+    },
+    {
+      "id": 50,
+      "day": 2,
+      "time": "10:00",
+      "field": "Cancha 3",
+      "category": "Sub-15",
+      "team1": "s151",
+      "team2": "s154",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 51,
+      "day": 2,
+      "time": "11:00",
+      "field": "Cancha 3",
+      "category": "Sub-15",
+      "team1": "s152",
+      "team2": "s153",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 52,
+      "day": 2,
+      "time": "12:00",
+      "field": "Cancha 3",
+      "category": "Sub-15",
+      "team1": "s152",
+      "team2": "s154",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 53,
+      "day": 2,
+      "time": "13:00",
+      "field": "Cancha 3",
+      "category": "Veteranos",
+      "team1": "vet1",
+      "team2": "vet3",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 54,
+      "day": 2,
+      "time": "14:00",
+      "field": "Cancha 3",
+      "category": "Veteranos",
+      "team1": "vet1",
+      "team2": "vet4",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 55,
+      "day": 2,
+      "time": "15:00",
+      "field": "Cancha 3",
+      "category": "Veteranos",
+      "team1": "vet2",
+      "team2": "vet3",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 56,
+      "day": 2,
+      "time": "07:00",
+      "field": "Cancha 4",
+      "category": "Veteranos",
+      "team1": "vet2",
+      "team2": "vet4",
+      "status": "finished",
+      "score1": 21,
+      "score2": 15
+    },
+    {
+      "id": 57,
+      "day": 3,
+      "time": "07:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v1",
+      "team2": "v5",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 58,
+      "day": 3,
+      "time": "08:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v1",
+      "team2": "v6",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 59,
+      "day": 3,
+      "time": "09:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v2",
+      "team2": "v5",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 60,
+      "day": 3,
+      "time": "10:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v2",
+      "team2": "v6",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 61,
+      "day": 3,
+      "time": "11:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v3",
+      "team2": "v5",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 62,
+      "day": 3,
+      "time": "12:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v3",
+      "team2": "v6",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 63,
+      "day": 3,
+      "time": "13:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v4",
+      "team2": "v5",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 64,
+      "day": 3,
+      "time": "14:00",
+      "field": "Cancha 1",
+      "category": "Varonil",
+      "team1": "v4",
+      "team2": "v6",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 65,
+      "day": 3,
+      "time": "15:00",
+      "field": "Cancha 1",
+      "category": "Femenil",
+      "team1": "f1",
+      "team2": "f3",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 66,
+      "day": 3,
+      "time": "07:00",
+      "field": "Cancha 2",
+      "category": "Femenil",
+      "team1": "f1",
+      "team2": "f4",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 67,
+      "day": 3,
+      "time": "08:00",
+      "field": "Cancha 2",
+      "category": "Femenil",
+      "team1": "f2",
+      "team2": "f3",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 68,
+      "day": 3,
+      "time": "09:00",
+      "field": "Cancha 2",
+      "category": "Femenil",
+      "team1": "f2",
+      "team2": "f4",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 69,
+      "day": 3,
+      "time": "10:00",
+      "field": "Cancha 2",
+      "category": "Mixto",
+      "team1": "m1",
+      "team2": "m3",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 70,
+      "day": 3,
+      "time": "11:00",
+      "field": "Cancha 2",
+      "category": "Mixto",
+      "team1": "m1",
+      "team2": "m4",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 71,
+      "day": 3,
+      "time": "12:00",
+      "field": "Cancha 2",
+      "category": "Mixto",
+      "team1": "m2",
+      "team2": "m3",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 72,
+      "day": 3,
+      "time": "13:00",
+      "field": "Cancha 2",
+      "category": "Mixto",
+      "team1": "m2",
+      "team2": "m4",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 73,
+      "day": 3,
+      "time": "14:00",
+      "field": "Cancha 2",
+      "category": "Sub-17",
+      "team1": "s171",
+      "team2": "s173",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 74,
+      "day": 3,
+      "time": "15:00",
+      "field": "Cancha 2",
+      "category": "Sub-17",
+      "team1": "s171",
+      "team2": "s174",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 75,
+      "day": 3,
+      "time": "07:00",
+      "field": "Cancha 3",
+      "category": "Sub-17",
+      "team1": "s172",
+      "team2": "s173",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 76,
+      "day": 3,
+      "time": "08:00",
+      "field": "Cancha 3",
+      "category": "Sub-17",
+      "team1": "s172",
+      "team2": "s174",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 77,
+      "day": 3,
+      "time": "09:00",
+      "field": "Cancha 3",
+      "category": "Sub-15",
+      "team1": "s151",
+      "team2": "s153",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 78,
+      "day": 3,
+      "time": "10:00",
+      "field": "Cancha 3",
+      "category": "Sub-15",
+      "team1": "s151",
+      "team2": "s154",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 79,
+      "day": 3,
+      "time": "11:00",
+      "field": "Cancha 3",
+      "category": "Sub-15",
+      "team1": "s152",
+      "team2": "s153",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 80,
+      "day": 3,
+      "time": "12:00",
+      "field": "Cancha 3",
+      "category": "Sub-15",
+      "team1": "s152",
+      "team2": "s154",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 81,
+      "day": 3,
+      "time": "13:00",
+      "field": "Cancha 3",
+      "category": "Veteranos",
+      "team1": "vet1",
+      "team2": "vet3",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 82,
+      "day": 3,
+      "time": "14:00",
+      "field": "Cancha 3",
+      "category": "Veteranos",
+      "team1": "vet1",
+      "team2": "vet4",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 83,
+      "day": 3,
+      "time": "15:00",
+      "field": "Cancha 3",
+      "category": "Veteranos",
+      "team1": "vet2",
+      "team2": "vet3",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    },
+    {
+      "id": 84,
+      "day": 3,
+      "time": "07:00",
+      "field": "Cancha 4",
+      "category": "Veteranos",
+      "team1": "vet2",
+      "team2": "vet4",
+      "status": "upcoming",
+      "score1": null,
+      "score2": null
+    }
+  ],
+  "playoffs": [
+    {
+      "category": "Varonil",
+      "rounds": [
+        {
+          "round": "Semifinal",
+          "matches": [
+            {
+              "id": "v_sf1",
+              "name": "Semifinal 1",
+              "team1": "v1",
+              "team2": "v5",
+              "score1": 21,
+              "score2": 14,
+              "status": "finished",
+              "winner": "v1",
+              "field": "Cancha 1",
+              "time": "16:00"
+            },
+            {
+              "id": "v_sf2",
+              "name": "Semifinal 2",
+              "team1": "v2",
+              "team2": "v6",
+              "score1": 17,
+              "score2": 24,
+              "status": "finished",
+              "winner": "v6",
+              "field": "Cancha 2",
+              "time": "16:00"
+            }
+          ]
+        },
+        {
+          "round": "Final",
+          "matches": [
+            {
+              "id": "v_f1",
+              "name": "Gran Final",
+              "team1": "v1",
+              "team2": "v6",
+              "score1": null,
+              "score2": null,
+              "status": "upcoming",
+              "winner": null,
+              "field": "Cancha Principal",
+              "time": "18:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Femenil",
+      "rounds": [
+        {
+          "round": "Semifinal",
+          "matches": [
+            {
+              "id": "f_sf1",
+              "name": "Semifinal 1",
+              "team1": "f1",
+              "team2": "f3",
+              "score1": 28,
+              "score2": 21,
+              "status": "finished",
+              "winner": "f1",
+              "field": "Cancha 3",
+              "time": "16:00"
+            },
+            {
+              "id": "f_sf2",
+              "name": "Semifinal 2",
+              "team1": "f2",
+              "team2": "f4",
+              "score1": 14,
+              "score2": 14,
+              "status": "live",
+              "winner": null,
+              "field": "Cancha 4",
+              "time": "16:00"
+            }
+          ]
+        },
+        {
+          "round": "Final",
+          "matches": [
+            {
+              "id": "f_f1",
+              "name": "Gran Final",
+              "team1": "f1",
+              "team2": null,
+              "score1": null,
+              "score2": null,
+              "status": "upcoming",
+              "winner": null,
+              "field": "Cancha Principal",
+              "time": "17:30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Mixto",
+      "rounds": [
+        {
+          "round": "Semifinal",
+          "matches": [
+            {
+              "id": "m_sf1",
+              "name": "Semifinal 1",
+              "team1": "m1",
+              "team2": "m3",
+              "score1": null,
+              "score2": null,
+              "status": "upcoming",
+              "winner": null,
+              "field": "Cancha 5",
+              "time": "16:00"
+            },
+            {
+              "id": "m_sf2",
+              "name": "Semifinal 2",
+              "team1": "m2",
+              "team2": "m4",
+              "score1": null,
+              "score2": null,
+              "status": "upcoming",
+              "winner": null,
+              "field": "Cancha 6",
+              "time": "16:00"
+            }
+          ]
+        },
+        {
+          "round": "Final",
+          "matches": [
+            {
+              "id": "m_f1",
+              "name": "Gran Final",
+              "team1": null,
+              "team2": null,
+              "score1": null,
+              "score2": null,
+              "status": "upcoming",
+              "winner": null,
+              "field": "Cancha Principal",
+              "time": "17:30"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
