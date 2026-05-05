@@ -22,7 +22,24 @@
     "Campo 11",
     "Campo 12"
   ],
-  "teams": [],
+  "teams": [
+    {
+      "id": "t_1778011988437",
+      "name": "Baymax",
+      "abbr": "BAY",
+      "category": "Varonil",
+      "color": "#c21919",
+      "casa": false,
+      "players": [
+        {
+          "number": "32",
+          "name": "Holahola",
+          "position": "WE",
+          "age": 10
+        }
+      ]
+    }
+  ],
   "schedule": [],
   "playoffs": []
 }
