@@ -33,7 +33,21 @@
       ]
     }
   ],
-  "schedule": [],
+  "schedule": [
+    {
+      "id": "m_1778008746798",
+      "day": 1,
+      "time": "08:00:00",
+      "category": "Libre Varonil",
+      "field": "Campo 1",
+      "team1": "t_1778008668784",
+      "team2": "t_1778008721350",
+      "score1": 0,
+      "score2": 7,
+      "status": "live",
+      "winner": null
+    }
+  ],
   "playoffs": [],
   "categories": [
     "Under -8",
