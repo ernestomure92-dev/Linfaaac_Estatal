@@ -532,16 +532,7 @@
         <section id="schedule" class="section active">
             <div class="section-header">
                 <h2 class="section-title"><i class="fas fa-calendar-alt"></i> Calendario de Partidos</h2>
-                <div class="filters">
-                    <button class="filter-btn active" onclick="filterSchedule('all')">Todos</button>
-                    <button class="filter-btn" onclick="filterSchedule('Varonil')">Varonil</button>
-                    <button class="filter-btn" onclick="filterSchedule('Femenil')">Femenil</button>
-                    <button class="filter-btn" onclick="filterSchedule('Mixto')">Mixto</button>
-                    <button class="filter-btn" onclick="filterSchedule('Under-17')">Under-17</button>
-                    <button class="filter-btn" onclick="filterSchedule('Under-15')">Under-15</button>
-                    <button class="filter-btn" onclick="filterSchedule('+35 Varonil')">+35Varonil</button>
-                    <button class="filter-btn" onclick="filterResults('+35 Femenil')">+35Femenil</button>                    
-                </div>
+                <div class="filters" id="schedule-filters"></div>
             </div>
             <div class="day-tabs">
                 <button class="day-tab active" onclick="filterDay(1)">
@@ -562,15 +553,7 @@
         <section id="results" class="section">
             <div class="section-header">
                 <h2 class="section-title"><i class="fas fa-trophy"></i> Resultados y Posiciones</h2>
-                <div class="filters">
-                    <button class="filter-btn active" onclick="filterResults('all')">Todos</button>
-                    <button class="filter-btn" onclick="filterResults('Varonil')">Varonil</button>
-                    <button class="filter-btn" onclick="filterResults('Femenil')">Femenil</button>
-                    <button class="filter-btn" onclick="filterResults('Mixto')">Mixto</button>
-                    <button class="filter-btn" onclick="filterResults('-17')">Under-17</button>
-                    <button class="filter-btn" onclick="filterResults('Under-15')">Under-15</button>
-                    <button class="filter-btn" onclick="filterResults('+35 Varonil')">+35Varonil</button>
-                </div>
+                <div class="filters" id="results-filters"></div>
             </div>
             <div id="results-grid" class="grid">
                 <div class="loading"><i class="fas fa-circle-notch"></i><p>Cargando resultados...</p></div>
@@ -598,16 +581,7 @@
         <section id="playoffs" class="section">
             <div class="section-header">
                 <h2 class="section-title"><i class="fas fa-sitemap"></i> Fase Eliminatoria</h2>
-                <div class="filters">
-                    <button class="filter-btn active" onclick="filterPlayoffs('all')">Todos</button>
-                    <button class="filter-btn" onclick="filterPlayoffs('Varonil')">Varonil</button>
-                    <button class="filter-btn" onclick="filterPlayoffs('Femenil')">Femenil</button>
-                    <button class="filter-btn" onclick="filterPlayoffs('Mixto')">Mixto</button>
-                    <button class="filter-btn" onclick="filterPlayoffs('Under-17')">Under-17</button>
-                    <button class="filter-btn" onclick="filterPlayoffs('Under-15')">Under-15</button>
-                    <button class="filter-btn" onclick="filterPlayoffs('+35 Varonil')">+35Varonil</button>
-                    <button class="filter-btn" onclick="filterPlayoffs('+35 Femelil')">+35Femenil</button>                    
-                </div>
+                <div class="filters" id="playoffs-filters"></div>
             </div>
             <div id="playoffs-grid" class="playoffs-grid">
                 <div class="loading"><i class="fas fa-circle-notch"></i><p>Cargando playoffs...</p></div>
@@ -618,16 +592,7 @@
             <div class="section-header">
                 <h2 class="section-title"><i class="fas fa-users"></i> Rosters de Equipos</h2>
                 <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
-                    <div class="filters">
-                        <button class="filter-btn active" onclick="filterRosters('all')">Todos</button>
-                        <button class="filter-btn" onclick="filterRosters('Varonil')">Varonil</button>
-                        <button class="filter-btn" onclick="filterRosters('Femenil')">Femenil</button>
-                        <button class="filter-btn" onclick="filterRosters('Mixto')">Mixto</button>
-                        <button class="filter-btn" onclick="filterRosters('Under-17')">Under-17</button>
-                        <button class="filter-btn" onclick="filterRosters('Under-15')">Under-15</button>
-                        <button class="filter-btn" onclick="filterRosters('+35 Varonil')">+35Varonil</button>
-                        <button class="filter-btn" onclick="filterRosters('+35 Femenil')">+35Femenil</button>                        
-                    </div>
+                    <div class="filters" id="rosters-filters"></div>
                     <div class="toggle-container" id="casa-toggle" onclick="toggleCasaFilter()">
                         <div class="toggle-switch"></div>
                         <span class="toggle-label">Solo equipos de casa</span>
@@ -650,7 +615,7 @@
     </footer>
 
     <script>
-        let LINFAAAC_DATA = { teams: [], schedule: [], playoffs: [] };
+        let LINFAAAC_DATA = { categories: ["Varonil", "Femenil", "Mixto", "Sub-17", "Sub-15", "Veteranos"], teams: [], schedule: [], playoffs: [] };
         let currentSection = 'schedule';
         let currentDay = 1;
         let scheduleFilter = 'all';
@@ -681,6 +646,10 @@
                     lastDataHash = newHash;
                     LINFAAAC_DATA = JSON.parse(text);
 
+                    if (!LINFAAAC_DATA.categories || !Array.isArray(LINFAAAC_DATA.categories)) {
+                        LINFAAAC_DATA.categories = ["Varonil", "Femenil", "Mixto", "Sub-17", "Sub-15", "Veteranos"];
+                    }
+                    renderFilterButtons();
                     if (!silent) {
                         renderSchedule();
                         renderResults();
@@ -1098,6 +1067,26 @@
             `).join('');
         }
 
+        
+        // ==========================================
+        // DYNAMIC FILTERS FROM categories IN JSON
+        // ==========================================
+        function renderFilterButtons() {
+            const cats = LINFAAAC_DATA.categories || [];
+            [
+                { id: 'schedule-filters', fn: 'filterSchedule' },
+                { id: 'results-filters',  fn: 'filterResults'  },
+                { id: 'playoffs-filters',  fn: 'filterPlayoffs' },
+                { id: 'rosters-filters',   fn: 'filterRosters'  }
+            ].forEach(cfg => {
+                const el = document.getElementById(cfg.id);
+                if (!el) return;
+                el.innerHTML = `<button class="filter-btn active" onclick="${cfg.fn}('all')">Todos</button>` +
+                    cats.map(c => `<button class="filter-btn" onclick="${cfg.fn}('${c}')">${c}</button>`).join('');
+            });
+        }
+
+        renderFilterButtons();
         loadData(false);
         startAutoRefresh();
     </script>
