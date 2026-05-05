@@ -81,6 +81,22 @@
           "age": 10
         }
       ]
+    },
+    {
+      "id": "t_1778012853270",
+      "name": "Aguilas",
+      "abbr": "AGU",
+      "category": "Mixto",
+      "color": "#289f30",
+      "casa": true,
+      "players": [
+        {
+          "number": "32",
+          "name": "Holahola",
+          "position": "WE",
+          "age": 10
+        }
+      ]
     }
   ],
   "schedule": [
