@@ -38,9 +38,9 @@
       "id": "t_1778012376001",
       "name": "Aguilas",
       "abbr": "AGU",
-      "category": "Varonil",
+      "category": "",
       "color": "#289f30",
-      "casa": false,
+      "casa": true,
       "players": [
         {
           "number": "32",
