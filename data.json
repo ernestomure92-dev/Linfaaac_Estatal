@@ -1,38 +1,5 @@
 {
-  "teams": [
-    {
-      "id": "t_1777960425121",
-      "name": "Baymax",
-      "abbr": "BAY",
-      "category": "Varonil",
-      "color": "#c00707",
-      "casa": true,
-      "players": [
-        {
-          "number": "3",
-          "name": "Ernesto Muñoz",
-          "position": "WR",
-          "age": 33
-        }
-      ]
-    },
-    {
-      "id": "t_1777960463817",
-      "name": "Aguilas",
-      "abbr": "AGU",
-      "category": "Varonil",
-      "color": "#1f5d13",
-      "casa": false,
-      "players": [
-        {
-          "number": "21",
-          "name": "Hola hola",
-          "position": "WR",
-          "age": 33
-        }
-      ]
-    }
-  ],
+  "teams": [],
   "schedule": [],
   "playoffs": [],
   "categories": [
