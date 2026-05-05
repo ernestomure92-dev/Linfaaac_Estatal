@@ -405,6 +405,12 @@
                      Importar
                 </button>
                 <input type="file" id="importFile" style="display: none;" accept=".json" onchange="handleImport(event)">
+                <button class="btn btn-info" onclick="openModal('githubConfigModal')">
+                    ⚙ Configurar GitHub
+                </button>
+                <button class="btn btn-primary" id="publish-btn" style="display: none;" onclick="publishToGitHub()">
+                    🚀 Publicar en Vivo
+                </button>
             </div>
         </div>
     </header>
@@ -1446,6 +1452,7 @@
 
         function updatePublishButton() {
             const btn = document.getElementById('publish-btn');
+            if (!btn) return;
             if (githubConfig.token && githubConfig.owner && githubConfig.repo) {
                 btn.style.display = 'inline-flex';
                 btn.textContent = 'Publicar en vivo';
@@ -1462,6 +1469,7 @@
             }
 
             const btn = document.getElementById('publish-btn');
+            if (!btn) return;
             const originalText = btn.textContent;
             btn.textContent = 'Publicando...';
             btn.disabled = true;
