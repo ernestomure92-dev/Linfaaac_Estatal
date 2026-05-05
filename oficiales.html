@@ -406,19 +406,19 @@
 
         // SOLO carga automatica - sin opcion manual
         window.addEventListener('DOMContentLoaded', () => {
-            autoStatus.innerHTML = '<div class="auto-load-status status-loading">Cargando horario.xls desde el repositorio...</div>';
+            autoStatus.innerHTML = '<div class="auto-load-status status-loading">Cargando horario.xlsx desde el repositorio...</div>';
             
-            fetch('./horario.xls')
+            fetch('./horario.xlsx')
                 .then(response => {
                     if (!response.ok) throw new Error('Archivo no encontrado');
                     return response.arrayBuffer();
                 })
                 .then(data => {
                     processExcel(data);
-                    autoStatus.innerHTML = '<div class="auto-load-status status-success">Archivo horario.xls cargado correctamente</div>';
+                    autoStatus.innerHTML = '<div class="auto-load-status status-success">Archivo horario.xlsx cargado correctamente</div>';
                 })
                 .catch((error) => {
-                    autoStatus.innerHTML = '<div class="auto-load-status status-error">Error: ' + escapeHtml(error.message) + '. Verifica que horario.xls este en el repositorio.</div>';
+                    autoStatus.innerHTML = '<div class="auto-load-status status-error">Error: ' + escapeHtml(error.message) + '. Verifica que horario.xlsx este en el repositorio.</div>';
                     dayLabel.textContent = 'Error';
                     locationLabel.textContent = 'No se pudo cargar el archivo';
                     showEmptyState();
@@ -615,7 +615,7 @@
         }
 
         function showEmptyState() {
-            container.innerHTML = '<div class="no-results"><h3>Sin datos</h3><p>Esperando carga del archivo horario.xls</p></div>';
+            container.innerHTML = '<div class="no-results"><h3>Sin datos</h3><p>Esperando carga del archivo horario.xlsx</p></div>';
             showingCount.textContent = '0';
             totalCount.textContent = '0';
             fieldsCount.textContent = '0';
