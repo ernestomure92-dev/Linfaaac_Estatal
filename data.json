@@ -1,196 +1,57 @@
 {
-  "categories": [
-    "Varonil",
-    "Femenil",
-    "Mixto",
-    "Under-17",
-    "Under-15",
-    "+35 Varonil",
-    "+35 Femenil"
-  ],
-  "fields": [
-    "Campo 1",
-    "Campo 2",
-    "Campo 3",
-    "Campo 4",
-    "Campo 5",
-    "Campo 6",
-    "Campo 7"
-  ],
   "teams": [
     {
-      "id": "t_1778012658964",
-      "name": "Aguilas",
-      "abbr": "AGU",
-      "category": "Femenil",
-      "color": "#289f30",
-      "casa": true,
-      "players": [
-        {
-          "number": "32",
-          "name": "Holahola",
-          "position": "WE",
-          "age": 10
-        }
-      ]
-    },
-    {
-      "id": "t_1778012670412",
-      "name": "Aguilas",
-      "abbr": "AGU",
-      "category": "Under-15",
-      "color": "#289f30",
-      "casa": true,
-      "players": [
-        {
-          "number": "32",
-          "name": "Holahola",
-          "position": "WE",
-          "age": 10
-        }
-      ]
-    },
-    {
-      "id": "t_1778012853270",
-      "name": "Aguilas",
-      "abbr": "AGU",
-      "category": "Mixto",
-      "color": "#289f30",
-      "casa": true,
-      "players": [
-        {
-          "number": "32",
-          "name": "Holahola",
-          "position": "WE",
-          "age": 10
-        }
-      ]
-    },
-    {
-      "id": "t_1778012863327",
-      "name": "Aguilas",
-      "abbr": "AGU",
-      "category": "Under-17",
-      "color": "#289f30",
-      "casa": true,
-      "players": [
-        {
-          "number": "32",
-          "name": "Holahola",
-          "position": "WE",
-          "age": 10
-        }
-      ]
-    },
-    {
-      "id": "t_1778012884991",
-      "name": "Aguilas",
-      "abbr": "AGU",
-      "category": "Varonil",
-      "color": "#289f30",
-      "casa": true,
-      "players": [
-        {
-          "number": "32",
-          "name": "Holahola",
-          "position": "WE",
-          "age": 10
-        }
-      ]
-    },
-    {
-      "id": "t_1778013159282",
+      "id": "t_1778008668784",
       "name": "Baymax",
       "abbr": "BAY",
-      "category": "Varonil",
-      "color": "#c41717",
-      "casa": true,
-      "players": [
-        {
-          "number": "32",
-          "name": "",
-          "position": "",
-          "age": 0
-        },
-        {
-          "number": "10",
-          "name": "",
-          "position": "",
-          "age": 0
-        },
-        {
-          "number": "03",
-          "name": "",
-          "position": "",
-          "age": 0
-        }
-      ]
-    },
-    {
-      "id": "t_1778013979818",
-      "name": "Tigres",
-      "abbr": "TIG",
-      "category": "Varonil",
-      "color": "#e0a31f",
+      "category": "Libre Varonil",
+      "color": "#cc0f0f",
       "casa": false,
       "players": [
         {
-          "number": "32",
-          "name": "",
-          "position": "",
-          "age": 0
-        },
+          "number": "3",
+          "name": "Hola hola",
+          "position": "WR",
+          "age": 33
+        }
+      ]
+    },
+    {
+      "id": "t_1778008721350",
+      "name": "Hola",
+      "abbr": "HOL",
+      "category": "Libre Varonil",
+      "color": "#1a4174",
+      "casa": true,
+      "players": [
         {
-          "number": "10",
-          "name": "",
-          "position": "",
-          "age": 0
-        },
-        {
-          "number": "03",
-          "name": "",
-          "position": "",
-          "age": 0
-        },
-        {
-          "number": "2",
-          "name": "",
-          "position": "",
-          "age": 0
-        },
-        {
-          "number": "10",
-          "name": "",
-          "position": "",
-          "age": 0
-        },
-        {
-          "number": "03",
-          "name": "",
-          "position": "",
-          "age": 0
-        },
-        {
-          "number": "2",
-          "name": "",
-          "position": "",
-          "age": 0
-        },
-        {
-          "number": "10",
-          "name": "",
-          "position": "",
-          "age": 0
-        },
-        {
-          "number": "03",
-          "name": "",
-          "position": "",
-          "age": 0
+          "number": "3",
+          "name": "Hola hola",
+          "position": "WR",
+          "age": 33
         }
       ]
     }
   ],
-  "schedule": [],
-  "playoffs": []
+  "schedule": [
+    {
+      "id": "m_1778008746798",
+      "day": 1,
+      "time": "08:00:00",
+      "category": "Libre Varonil",
+      "field": "Campo 1",
+      "team1": "t_1778008668784",
+      "team2": "t_1778008721350",
+      "score1": 0,
+      "score2": 7,
+      "status": "finished",
+      "winner": "t_1778008721350"
+    }
+  ],
+  "playoffs": [],
+  "categories": [
+    "Under -8",
+    "Libre Varonil",
+    "Libre Femenil"
+  ]
 }
