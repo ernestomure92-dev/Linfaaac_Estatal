@@ -364,10 +364,10 @@
                 <input 
                     type="text" 
                     id="searchInput" 
-                    placeholder="Escribe nombre de oficial o numero de campo (ej: Juan o 3)"
+                    placeholder="Escribe nombre de oficial o numero de campo"
                     autocomplete="off"
                 >
-                <p class="search-hint">Puedes buscar por nombre de oficial o numero de campo</p>
+                <p class="search-hint">Puedes buscar por nombre de oficial o nÚmero de campo</p>
             </div>
 
             <div class="stats">
@@ -569,11 +569,7 @@
                 const campoClass = campoMatch ? 'highlight' : '';
 
                 const companion = oficial1Match ? a.oficial2 : (oficial2Match ? a.oficial1 : null);
-
-                let companionHtml = '';
-                if (companion && searchTerm && !campoMatch) {
-                    companionHtml = '<div style="text-align:center;"><span class="companion-badge">Companero: ' + escapeHtml(companion) + '</span></div>';
-                }
+        }
 
                 return '<div class="assignment-card campo-' + a.campo + '">' +
                     '<div class="card-header">' +
