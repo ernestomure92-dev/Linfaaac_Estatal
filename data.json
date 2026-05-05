@@ -65,6 +65,22 @@
           "age": 10
         }
       ]
+    },
+    {
+      "id": "t_1778012670412",
+      "name": "Aguilas",
+      "abbr": "AGU",
+      "category": "Under-15",
+      "color": "#289f30",
+      "casa": true,
+      "players": [
+        {
+          "number": "32",
+          "name": "Holahola",
+          "position": "WE",
+          "age": 10
+        }
+      ]
     }
   ],
   "schedule": [
