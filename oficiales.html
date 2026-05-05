@@ -345,8 +345,8 @@
 </head>
 <body>
     <header>
-        <h1>LINFAAAC Estatal</h1>
-        <p>Asignacion de Oficiales Arbitrales</p>
+        <h1>LINFAAAC</h1>
+        <p>Asignacion de Oficiales</p>
     </header>
     
     <div class="container">
@@ -366,7 +366,7 @@
                     <input 
                         type="text" 
                         id="searchInput" 
-                        placeholder="Escribe tu nombre (ej: Abi, Jordan, Nico...)"
+                        placeholder="Escribe tu nombre "
                         autocomplete="off"
                     >
                 </div>
@@ -375,7 +375,7 @@
                     <input 
                         type="text" 
                         id="fieldFilter" 
-                        placeholder="Ej: 1, 2, 3 o 'todos'"
+                        placeholder=""
                         autocomplete="off"
                     >
                 </div>
@@ -408,7 +408,7 @@
         window.addEventListener('DOMContentLoaded', () => {
             autoStatus.innerHTML = '<div class="auto-load-status status-loading">Cargando horario.xlsx desde el repositorio...</div>';
             
-            fetch('./horario.xlsx')
+            fetch('Linfaaac_Estatal/horario.xlsx')
                 .then(response => {
                     if (!response.ok) throw new Error('Archivo no encontrado');
                     return response.arrayBuffer();
