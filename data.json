@@ -97,6 +97,22 @@
           "age": 10
         }
       ]
+    },
+    {
+      "id": "t_1778013051974",
+      "name": "Baymax",
+      "abbr": "BAY",
+      "category": "Varonil",
+      "color": "#289f30",
+      "casa": true,
+      "players": [
+        {
+          "number": "32",
+          "name": "",
+          "position": "",
+          "age": 0
+        }
+      ]
     }
   ],
   "schedule": [],
