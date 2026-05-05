@@ -690,7 +690,7 @@
 
         function startAutoRefresh() {
             if (autoRefreshInterval) clearInterval(autoRefreshInterval);
-            autoRefreshInterval = setInterval(() => loadData(true), 30000);
+            autoRefreshInterval = setInterval(() => loadData(true), 15000);
         }
 
         function getTeam(id) {
@@ -1068,16 +1068,10 @@
         }
 
         
-        // ==========================================
-        // DYNAMIC FILTERS FROM categories IN JSON
-        // ==========================================
         function renderFilterButtons() {
             const cats = LINFAAAC_DATA.categories || [];
-            [
-                { id: 'schedule-filters', fn: 'filterSchedule' },
-                { id: 'results-filters',  fn: 'filterResults'  },
-                { id: 'playoffs-filters',  fn: 'filterPlayoffs' },
-                { id: 'rosters-filters',   fn: 'filterRosters'  }
+            [{id:'schedule-filters',fn:'filterSchedule'},{id:'results-filters',fn:'filterResults'},
+             {id:'playoffs-filters',fn:'filterPlayoffs'},{id:'rosters-filters',fn:'filterRosters'}
             ].forEach(cfg => {
                 const el = document.getElementById(cfg.id);
                 if (!el) return;
