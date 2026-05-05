@@ -33,6 +33,22 @@
           "age": 10
         }
       ]
+    },
+    {
+      "id": "t_1778012376001",
+      "name": "Aguilas",
+      "abbr": "AGU",
+      "category": "Varonil",
+      "color": "#289f30",
+      "casa": false,
+      "players": [
+        {
+          "number": "32",
+          "name": "Holahola",
+          "position": "WE",
+          "age": 10
+        }
+      ]
     }
   ],
   "schedule": [],
