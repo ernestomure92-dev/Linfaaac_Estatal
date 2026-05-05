@@ -482,6 +482,36 @@
             font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
             letter-spacing: 0.5px; border: 1px solid var(--card-border);
         }
+    
+        /* Collapsible Roster Cards */
+        .roster-toggle { cursor: pointer; transition: all 0.3s; }
+        .roster-toggle:hover { border-color: var(--accent); }
+        .roster-summary {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 1rem 1.25rem; gap: 1rem;
+        }
+        .roster-summary-left { display: flex; align-items: center; gap: 1rem; flex: 1; }
+        .roster-summary-right { display: flex; align-items: center; gap: 1rem; }
+        .roster-player-count {
+            font-family: 'Oswald', sans-serif; font-size: 1.1rem;
+            color: var(--accent); font-weight: 700;
+        }
+        .roster-expand-icon {
+            color: var(--text-muted); font-size: 0.9rem;
+            transition: transform 0.3s;
+        }
+        .roster-toggle.expanded .roster-expand-icon { transform: rotate(180deg); }
+        .roster-players-container {
+            max-height: 0; overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+        .roster-toggle.expanded .roster-players-container {
+            max-height: 2000px;
+            transition: max-height 0.6s ease-in;
+        }
+        .roster-players-inner {
+            border-top: 1px solid var(--card-border);
+        }
     </style>
 <base target="_blank">
 </head>
@@ -1027,7 +1057,6 @@
         function renderRosters() {
             const grid = document.getElementById('rosters-grid');
             let teams = LINFAAAC_DATA.teams;
-
             if (rostersFilter !== 'all') teams = teams.filter(t => t.category === rostersFilter);
             if (casaFilter) teams = teams.filter(t => t.casa === true);
 
@@ -1041,30 +1070,43 @@
             }
 
             grid.innerHTML = teams.map(team => `
-                <div class="team-roster-card">
-                    <div class="roster-header">
-                        <div class="team-abbr" style="background: ${team.color}; border-color: var(--accent);">${team.abbr}</div>
-                        <div>
-                            <h3>${team.name}
-                                ${team.casa ? '<span class="casa-tag"><i class="fas fa-home" style="font-size:0.6rem;"></i> Casa</span>' : ''}
-                            </h3>
-                            <span class="category-tag">${team.category}</span>
+                <div class="team-roster-card roster-toggle" onclick="toggleRoster(this)">
+                    <div class="roster-summary">
+                        <div class="roster-summary-left">
+                            <div class="team-abbr" style="background: ${team.color}; border-color: ${team.color}; width:50px; height:50px; font-size:1.2rem; margin:0;">${team.abbr}</div>
+                            <div>
+                                <h3 style="font-size:1.1rem; color:white; margin-bottom:0.2rem;">
+                                    ${team.name}
+                                    ${team.casa ? '<span class="casa-tag"><i class="fas fa-home" style="font-size:0.6rem;"></i> Casa</span>' : ''}
+                                </h3>
+                                <span class="category-tag" style="border-bottom:none; font-size:0.75rem;">${team.category}</span>
+                            </div>
+                        </div>
+                        <div class="roster-summary-right">
+                            <span class="roster-player-count">${team.players ? team.players.length : 0} <span style="font-size:0.75rem; color:var(--text-secondary); font-family:'Inter',sans-serif; font-weight:500;">jugadores</span></span>
+                            <i class="fas fa-chevron-down roster-expand-icon"></i>
                         </div>
                     </div>
-                    <div class="roster-list">
-                        ${team.players.map(p => `
-                            <div class="player-row">
-                                <div class="player-number">${p.number}</div>
-                                <div class="player-info">
-                                    <div class="player-name">${p.name}</div>
-                                    <div class="player-position">${p.position}</div>
+                    <div class="roster-players-container">
+                        <div class="roster-players-inner roster-list">
+                            ${(team.players || []).map(p => `
+                                <div class="player-row">
+                                    <div class="player-number">${p.number}</div>
+                                    <div class="player-info">
+                                        <div class="player-name">${p.name}</div>
+                                        <div class="player-position">${p.position}</div>
+                                    </div>
+                                    <div class="player-stats">${p.age} años</div>
                                 </div>
-                                <div class="player-stats">${p.age} años</div>
-                            </div>
-                        `).join('')}
+                            `).join('')}
+                        </div>
                     </div>
                 </div>
             `).join('');
+        }
+
+        function toggleRoster(card) {
+            card.classList.toggle('expanded');
         }
 
         
