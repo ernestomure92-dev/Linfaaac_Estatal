@@ -1,57 +1,28 @@
 {
-  "teams": [
-    {
-      "id": "t_1778008668784",
-      "name": "Baymax",
-      "abbr": "BAY",
-      "category": "Libre Varonil",
-      "color": "#cc0f0f",
-      "casa": false,
-      "players": [
-        {
-          "number": "3",
-          "name": "Hola hola",
-          "position": "WR",
-          "age": 33
-        }
-      ]
-    },
-    {
-      "id": "t_1778008721350",
-      "name": "Hola",
-      "abbr": "HOL",
-      "category": "Libre Varonil",
-      "color": "#1a4174",
-      "casa": true,
-      "players": [
-        {
-          "number": "3",
-          "name": "Hola hola",
-          "position": "WR",
-          "age": 33
-        }
-      ]
-    }
-  ],
-  "schedule": [
-    {
-      "id": "m_1778008746798",
-      "day": 1,
-      "time": "08:00:00",
-      "category": "Libre Varonil",
-      "field": "Campo 1",
-      "team1": "t_1778008668784",
-      "team2": "t_1778008721350",
-      "score1": 0,
-      "score2": 7,
-      "status": "finished",
-      "winner": "t_1778008721350"
-    }
-  ],
-  "playoffs": [],
   "categories": [
-    "Under -8",
-    "Libre Varonil",
-    "Libre Femenil"
-  ]
+    "Varonil",
+    "Femenil",
+    "Mixto",
+    "Under-17",
+    "Under-15",
+    "+35 Varonil",
+    "+35 Femenil"
+  ],
+  "fields": [
+    "Campo 1",
+    "Campo 2",
+    "Campo 3",
+    "Campo 4",
+    "Campo 5",
+    "Campo 6",
+    "Campo 7",
+    "Campo 8",
+    "Campo 9",
+    "Campo 10",
+    "Campo 11",
+    "Campo 12"
+  ],
+  "teams": [],
+  "schedule": [],
+  "playoffs": []
 }
