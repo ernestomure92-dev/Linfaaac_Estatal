@@ -102,12 +102,24 @@
       "id": "t_1778013051974",
       "name": "Baymax",
       "abbr": "BAY",
-      "category": "Varonil",
-      "color": "#289f30",
+      "category": "",
+      "color": "#d60a0a",
       "casa": true,
       "players": [
         {
           "number": "32",
+          "name": "",
+          "position": "",
+          "age": 0
+        },
+        {
+          "number": "10",
+          "name": "",
+          "position": "",
+          "age": 0
+        },
+        {
+          "number": "03",
           "name": "",
           "position": "",
           "age": 0
