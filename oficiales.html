@@ -16,32 +16,30 @@
             --text-primary: #f1f5f9;
             --text-secondary: #94a3b8;
             --text-muted: #64748b;
-            --success: #059669;
-            --danger: #dc2626;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: var(--darker);
             color: var(--text-primary);
             min-height: 100vh;
         }
-
+        
         .container { 
             max-width: 1200px; 
             margin: 0 auto; 
             padding: 20px; 
         }
-
+        
         header {
             text-align: center;
             padding: 40px 20px;
             background: var(--primary);
             border-bottom: 3px solid var(--accent);
         }
-
+        
         header h1 { 
             font-size: 2rem; 
             color: #f8fafc; 
@@ -49,72 +47,49 @@
             letter-spacing: 3px; 
             font-weight: 800;
         }
-
+        
         header p { 
             color: var(--text-secondary); 
             margin-top: 8px; 
             font-size: 1.1rem; 
         }
-
-        .upload-section {
+        
+        .status-section {
             background: var(--card-bg);
-            padding: 25px;
+            padding: 20px 25px;
             border-radius: 12px;
             margin: 25px 0;
             border: 1px solid var(--card-border);
         }
-
-        .drop-zone {
-            border: 2px dashed #475569;
-            border-radius: 10px;
-            padding: 35px;
-            text-align: center;
-            transition: all 0.2s;
-            cursor: pointer;
-            background: var(--dark);
-        }
-
-        .drop-zone:hover, .drop-zone.dragover {
-            border-color: var(--accent);
-            background: rgba(201,162,39,0.05);
-        }
-
-        .drop-zone p {
-            color: var(--text-secondary);
-            font-size: 1rem;
-            margin-bottom: 8px;
-        }
-
-        .drop-zone .file-types {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        #fileInput { display: none; }
-
+        
         .auto-load-status {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 8px 16px;
+            padding: 10px 18px;
             border-radius: 6px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 600;
-            margin-bottom: 15px;
         }
-
+        
         .status-success {
             background: rgba(34,197,94,0.15);
             color: #4ade80;
             border: 1px solid rgba(34,197,94,0.3);
         }
-
-        .status-info {
-            background: rgba(148,163,184,0.1);
-            color: var(--text-secondary);
-            border: 1px solid var(--card-border);
+        
+        .status-error {
+            background: rgba(220,38,38,0.15);
+            color: #f87171;
+            border: 1px solid rgba(220,38,38,0.3);
         }
-
+        
+        .status-loading {
+            background: rgba(59,130,246,0.15);
+            color: #60a5fa;
+            border: 1px solid rgba(59,130,246,0.3);
+        }
+        
         .filter-section {
             background: var(--card-bg);
             padding: 25px;
@@ -122,15 +97,15 @@
             margin: 20px 0;
             border: 1px solid var(--card-border);
         }
-
+        
         .day-info {
             display: flex;
             align-items: center;
             gap: 15px;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
             flex-wrap: wrap;
         }
-
+        
         .day-badge {
             display: inline-block;
             background: var(--accent);
@@ -142,27 +117,40 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-
+        
         .location {
             color: var(--text-secondary);
             font-size: 0.9rem;
             font-weight: 500;
         }
-
-        .filter-section label {
+        
+        .filters-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .filters-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .filter-group label {
             display: block;
             margin-bottom: 8px;
             font-weight: 700;
             color: #f8fafc;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-
-        #searchInput {
+        
+        #searchInput, #fieldFilter {
             width: 100%;
             padding: 14px 18px;
-            font-size: 1.1rem;
+            font-size: 1rem;
             border: 2px solid #334155;
             border-radius: 10px;
             background: var(--dark);
@@ -170,23 +158,23 @@
             outline: none;
             transition: all 0.2s;
         }
-
-        #searchInput:focus { 
+        
+        #searchInput:focus, #fieldFilter:focus { 
             border-color: var(--accent); 
             box-shadow: 0 0 0 3px rgba(201,162,39,0.15); 
         }
-
-        #searchInput::placeholder { 
+        
+        #searchInput::placeholder, #fieldFilter::placeholder { 
             color: #64748b; 
         }
-
+        
         .stats {
             display: flex;
             gap: 15px;
             margin-top: 15px;
             flex-wrap: wrap;
         }
-
+        
         .stat-pill {
             background: var(--dark);
             padding: 8px 16px;
@@ -196,18 +184,18 @@
             border: 1px solid var(--card-border);
             font-weight: 500;
         }
-
+        
         .stat-pill strong { 
             color: var(--accent); 
         }
-
+        
         .assignments-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
             gap: 20px;
             margin-top: 20px;
         }
-
+        
         .assignment-card {
             background: var(--card-bg);
             border-radius: 12px;
@@ -216,12 +204,12 @@
             transition: transform 0.2s, box-shadow 0.2s;
             border-left: 4px solid;
         }
-
+        
         .assignment-card:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 30px rgba(0,0,0,0.3);
         }
-
+        
         .card-header {
             padding: 18px 22px;
             display: flex;
@@ -229,14 +217,14 @@
             align-items: center;
             background: rgba(255,255,255,0.02);
         }
-
+        
         .field-name {
             font-weight: 800;
             font-size: 1.1rem;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-
+        
         .time-badge {
             background: var(--dark);
             padding: 6px 14px;
@@ -246,11 +234,11 @@
             border: 1px solid var(--card-border);
             color: #f8fafc;
         }
-
+        
         .card-body {
             padding: 22px;
         }
-
+        
         .officials-pair {
             font-size: 1.4rem;
             font-weight: 800;
@@ -259,12 +247,12 @@
             color: #f8fafc;
             letter-spacing: 1px;
         }
-
+        
         .officials-pair .highlight {
             color: #fbbf24;
             text-shadow: 0 0 20px rgba(251,191,36,0.3);
         }
-
+        
         .vs {
             color: #64748b;
             font-size: 0.85rem;
@@ -272,7 +260,7 @@
             font-weight: 600;
             text-transform: uppercase;
         }
-
+        
         .companion-badge {
             display: inline-block;
             margin-top: 12px;
@@ -284,7 +272,7 @@
             color: #60a5fa;
             border: 1px solid rgba(59,130,246,0.3);
         }
-
+        
         .card-footer {
             padding: 14px 22px;
             background: var(--dark);
@@ -294,7 +282,7 @@
             font-weight: 600;
             border-top: 1px solid var(--card-border);
         }
-
+        
         .no-results {
             text-align: center;
             padding: 50px 20px;
@@ -305,166 +293,143 @@
             border-radius: 12px;
             border: 1px solid var(--card-border);
         }
-
+        
         .no-results h3 {
             color: #94a3b8;
             margin-bottom: 10px;
             font-size: 1.3rem;
         }
-
-        /* Colores por campo - hasta 12 campos */
+        
         .campo-1 { border-left-color: #f59e0b; }
         .campo-1 .field-name { color: #fbbf24; }
-
+        
         .campo-2 { border-left-color: #ef4444; }
         .campo-2 .field-name { color: #f87171; }
-
+        
         .campo-3 { border-left-color: #22c55e; }
         .campo-3 .field-name { color: #4ade80; }
-
+        
         .campo-4 { border-left-color: #3b82f6; }
         .campo-4 .field-name { color: #60a5fa; }
-
+        
         .campo-5 { border-left-color: #a855f7; }
         .campo-5 .field-name { color: #c084fc; }
-
+        
         .campo-6 { border-left-color: #06b6d4; }
         .campo-6 .field-name { color: #22d3ee; }
-
+        
         .campo-7 { border-left-color: #ec4899; }
         .campo-7 .field-name { color: #f472b6; }
-
+        
         .campo-8 { border-left-color: #6366f1; }
         .campo-8 .field-name { color: #818cf8; }
-
+        
         .campo-9 { border-left-color: #f97316; }
         .campo-9 .field-name { color: #fb923c; }
-
+        
         .campo-10 { border-left-color: #14b8a6; }
         .campo-10 .field-name { color: #2dd4bf; }
-
+        
         .campo-11 { border-left-color: #e11d48; }
         .campo-11 .field-name { color: #fb7185; }
-
+        
         .campo-12 { border-left-color: #8b5cf6; }
         .campo-12 .field-name { color: #a78bfa; }
-
+        
         @media (max-width: 600px) {
             header h1 { font-size: 1.5rem; }
             .assignments-grid { grid-template-columns: 1fr; }
             .officials-pair { font-size: 1.2rem; }
         }
     </style>
-<base target="_blank">
 </head>
 <body>
     <header>
         <h1>LINFAAAC Estatal</h1>
         <p>Asignacion de Oficiales Arbitrales</p>
     </header>
-
+    
     <div class="container">
-        <div class="upload-section">
+        <div class="status-section">
             <div id="autoStatus"></div>
-            <div class="drop-zone" id="dropZone">
-                <p><strong>Arrastra aqui tu archivo Excel de asignaciones</strong> o haz clic para seleccionarlo</p>
-                <p class="file-types">Formatos soportados: .xlsx, .xls, .csv</p>
-                <input type="file" id="fileInput" accept=".xlsx,.xls,.csv">
-            </div>
         </div>
-
+        
         <div class="filter-section">
             <div class="day-info">
                 <span class="day-badge" id="dayLabel">Cargando...</span>
                 <span class="location" id="locationLabel">Esperando archivo</span>
             </div>
-            <label for="searchInput">Buscar oficial por nombre:</label>
-            <input 
-                type="text" 
-                id="searchInput" 
-                placeholder="Escribe tu nombre (ej: Abi, Jordan, Nico, Pam, Gael...)"
-                autocomplete="off"
-            >
+            
+            <div class="filters-row">
+                <div class="filter-group">
+                    <label for="searchInput">Buscar oficial por nombre:</label>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Escribe tu nombre (ej: Abi, Jordan, Nico...)"
+                        autocomplete="off"
+                    >
+                </div>
+                <div class="filter-group">
+                    <label for="fieldFilter">Filtrar por campo:</label>
+                    <input 
+                        type="text" 
+                        id="fieldFilter" 
+                        placeholder="Ej: 1, 2, 3 o 'todos'"
+                        autocomplete="off"
+                    >
+                </div>
+            </div>
+            
             <div class="stats">
                 <div class="stat-pill">Total asignaciones: <strong id="totalCount">0</strong></div>
                 <div class="stat-pill">Mostrando: <strong id="showingCount">0</strong></div>
                 <div class="stat-pill">Campos activos: <strong id="fieldsCount">0</strong></div>
             </div>
         </div>
-
+        
         <div id="assignmentsContainer" class="assignments-grid"></div>
     </div>
 
     <script>
         let allAssignments = [];
-
+        
         const container = document.getElementById('assignmentsContainer');
         const searchInput = document.getElementById('searchInput');
+        const fieldFilter = document.getElementById('fieldFilter');
         const totalCount = document.getElementById('totalCount');
         const showingCount = document.getElementById('showingCount');
         const fieldsCount = document.getElementById('fieldsCount');
         const dayLabel = document.getElementById('dayLabel');
         const locationLabel = document.getElementById('locationLabel');
         const autoStatus = document.getElementById('autoStatus');
-        const dropZone = document.getElementById('dropZone');
-        const fileInput = document.getElementById('fileInput');
 
-        // Cargar horario.xls automaticamente
+        // SOLO carga automatica - sin opcion manual
         window.addEventListener('DOMContentLoaded', () => {
+            autoStatus.innerHTML = '<div class="auto-load-status status-loading">Cargando horario.xls desde el repositorio...</div>';
+            
             fetch('./horario.xls')
                 .then(response => {
-                    if (!response.ok) throw new Error('No encontrado');
+                    if (!response.ok) throw new Error('Archivo no encontrado');
                     return response.arrayBuffer();
                 })
                 .then(data => {
-                    processExcel(data, 'horario.xls');
-                    autoStatus.innerHTML = '<div class="auto-load-status status-success">Archivo horario.xls cargado automaticamente</div>';
+                    processExcel(data);
+                    autoStatus.innerHTML = '<div class="auto-load-status status-success">Archivo horario.xls cargado correctamente</div>';
                 })
-                .catch(() => {
-                    autoStatus.innerHTML = '<div class="auto-load-status status-info">No se encontro horario.xls. Sube tu archivo manualmente.</div>';
-                    dayLabel.textContent = 'Sin datos';
-                    locationLabel.textContent = 'Sube un archivo para comenzar';
+                .catch((error) => {
+                    autoStatus.innerHTML = '<div class="auto-load-status status-error">Error: ' + escapeHtml(error.message) + '. Verifica que horario.xls este en el repositorio.</div>';
+                    dayLabel.textContent = 'Error';
+                    locationLabel.textContent = 'No se pudo cargar el archivo';
                     showEmptyState();
                 });
         });
 
-        // Drag and drop
-        dropZone.addEventListener('click', () => fileInput.click());
-
-        dropZone.addEventListener('dragover', (e) => {
-            e.preventDefault();
-            dropZone.classList.add('dragover');
-        });
-
-        dropZone.addEventListener('dragleave', () => {
-            dropZone.classList.remove('dragover');
-        });
-
-        dropZone.addEventListener('drop', (e) => {
-            e.preventDefault();
-            dropZone.classList.remove('dragover');
-            const files = e.dataTransfer.files;
-            if (files.length > 0) handleFile(files[0]);
-        });
-
-        fileInput.addEventListener('change', (e) => {
-            if (e.target.files.length > 0) handleFile(e.target.files[0]);
-        });
-
-        function handleFile(file) {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                processExcel(e.target.result, file.name);
-                autoStatus.innerHTML = '<div class="auto-load-status status-success">Archivo cargado: ' + file.name + '</div>';
-            };
-            reader.readAsArrayBuffer(file);
-        }
-
-        function processExcel(data, filename) {
+        function processExcel(data) {
             const workbook = XLSX.read(data, { type: 'array' });
             const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
             const jsonData = XLSX.utils.sheet_to_json(firstSheet, { header: 1, defval: '' });
-
+            
             parseScheduleData(jsonData);
         }
 
@@ -473,16 +438,15 @@
             let headerRowIndex = -1;
             let dayName = 'SABADO';
             let locationName = 'Deportivo Caracoles';
-
+            
             // Buscar metadatos en primeras filas
             for (let i = 0; i < Math.min(rows.length, 5); i++) {
                 const row = rows[i];
                 if (!row) continue;
-
+                
                 const firstCell = String(row[0] || '').trim();
                 const upperCell = firstCell.toUpperCase();
-
-                // Detectar dia
+                
                 if (upperCell && !upperCell.includes('HORARIO') && !upperCell.includes(':') && 
                     !upperCell.includes('CAMPO') && upperCell.length > 2 &&
                     (upperCell === 'SABADO' || upperCell === 'DOMINGO' || upperCell === 'VIERNES' ||
@@ -490,8 +454,7 @@
                      upperCell === 'JUEVES')) {
                     dayName = firstCell;
                 }
-
-                // Detectar ubicacion
+                
                 const rowText = row.map(c => String(c).toUpperCase()).join(' ');
                 if (rowText.includes('DEPORTIVO') || rowText.includes('CARACOLES') || 
                     rowText.includes('ESTADIO') || rowText.includes('CAMPO')) {
@@ -500,28 +463,27 @@
                     if (loc) locationName = String(loc).trim();
                 }
             }
-
+            
             // Encontrar fila de encabezados
             for (let i = 0; i < rows.length; i++) {
                 const row = rows[i];
                 if (!row || row.length === 0) continue;
-
+                
                 const firstCell = String(row[0] || '').trim().toUpperCase();
                 if (firstCell === 'HORARIO' || firstCell.includes('HORA')) {
                     headerRowIndex = i;
                     break;
                 }
             }
-
+            
             if (headerRowIndex === -1) {
                 showError('No se encontro la columna HORARIO. Verifica el formato.');
                 return;
             }
-
+            
             const headerRow = rows[headerRowIndex];
             const fields = [];
-
-            // Identificar columnas de campos (hasta 12)
+            
             for (let j = 1; j < headerRow.length; j++) {
                 const cell = String(headerRow[j] || '').trim().toUpperCase();
                 const match = cell.match(/CAMPO\s*(\d+)/i);
@@ -532,25 +494,23 @@
                     }
                 }
             }
-
+            
             if (fields.length === 0) {
                 showError('No se encontraron columnas CAMPO. Asegurate de tener CAMPO 1, CAMPO 2, etc.');
                 return;
             }
-
-            // Procesar filas de asignaciones
+            
             for (let i = headerRowIndex + 1; i < rows.length; i++) {
                 const row = rows[i];
                 if (!row || row.length === 0) continue;
-
+                
                 const horario = String(row[0] || '').trim();
                 if (!horario || !horario.includes('-')) continue;
-
+                
                 fields.forEach(field => {
                     const cellValue = String(row[field.index] || '').trim();
                     if (!cellValue) return;
-
-                    // Formato: "OFICIAL1-OFICIAL2"
+                    
                     const parts = cellValue.split('-').map(p => p.trim().toUpperCase());
                     if (parts.length >= 2) {
                         allAssignments.push({
@@ -563,26 +523,40 @@
                     }
                 });
             }
-
+            
             dayLabel.textContent = dayName;
             locationLabel.textContent = locationName;
-
+            
             if (allAssignments.length === 0) {
                 showError('No se encontraron asignaciones. Formato esperado: OFICIAL1-OFICIAL2');
                 return;
             }
-
-            renderAssignments(searchInput.value);
+            
+            renderAssignments();
         }
 
-        function renderAssignments(filter = '') {
-            const term = filter.toLowerCase().trim();
-
-            const filtered = term === '' ? [] : allAssignments.filter(a => 
-                a.oficial1.toLowerCase().includes(term) || 
-                a.oficial2.toLowerCase().includes(term)
-            );
-
+        function renderAssignments() {
+            const nameTerm = searchInput.value.toLowerCase().trim();
+            const fieldTerm = fieldFilter.value.toLowerCase().trim();
+            
+            let filtered = allAssignments;
+            
+            // Filtro por nombre
+            if (nameTerm !== '') {
+                filtered = filtered.filter(a => 
+                    a.oficial1.toLowerCase().includes(nameTerm) || 
+                    a.oficial2.toLowerCase().includes(nameTerm)
+                );
+            }
+            
+            // Filtro por campo
+            if (fieldTerm !== '' && fieldTerm !== 'todos') {
+                filtered = filtered.filter(a => {
+                    const campoStr = String(a.campo);
+                    return campoStr === fieldTerm;
+                });
+            }
+            
             // Ordenar por horario
             filtered.sort((a, b) => {
                 const timeA = a.horario.split('-')[0].trim();
@@ -595,24 +569,25 @@
             fieldsCount.textContent = [...new Set(allAssignments.map(a => a.campo))].length;
 
             if (filtered.length === 0) {
-                if (term === '') {
-                    showEmptyState();
-                } else {
-                    container.innerHTML = '<div class="no-results"><h3>Sin resultados</h3><p>No se encontraron asignaciones para "' + escapeHtml(filter) + '"</p></div>';
-                }
+                container.innerHTML = '<div class="no-results"><h3>Sin resultados</h3><p>No hay asignaciones con los filtros seleccionados</p></div>';
                 return;
             }
 
             container.innerHTML = filtered.map(a => {
-                const searchTerm = term.toLowerCase();
-                const oficial1Match = a.oficial1.toLowerCase().includes(searchTerm);
-                const oficial2Match = a.oficial2.toLowerCase().includes(searchTerm);
-
+                const searchTerm = nameTerm;
+                const oficial1Match = searchTerm && a.oficial1.toLowerCase().includes(searchTerm);
+                const oficial2Match = searchTerm && a.oficial2.toLowerCase().includes(searchTerm);
+                
                 const oficial1Class = oficial1Match ? 'highlight' : '';
                 const oficial2Class = oficial2Match ? 'highlight' : '';
-
-                const companion = oficial1Match ? a.oficial2 : a.oficial1;
-
+                
+                const companion = oficial1Match ? a.oficial2 : (oficial2Match ? a.oficial1 : null);
+                
+                let companionHtml = '';
+                if (companion && nameTerm) {
+                    companionHtml = '<div style="text-align:center;"><span class="companion-badge">Companero: ' + escapeHtml(companion) + '</span></div>';
+                }
+                
                 return '<div class="assignment-card campo-' + a.campo + '">' +
                     '<div class="card-header">' +
                         '<span class="field-name">Campo ' + a.campo + '</span>' +
@@ -624,9 +599,7 @@
                             ' <span class="vs">y</span> ' +
                             '<span class="' + oficial2Class + '">' + escapeHtml(a.oficial2) + '</span>' +
                         '</div>' +
-                        '<div style="text-align:center;">' +
-                            '<span class="companion-badge">Companero: ' + escapeHtml(companion) + '</span>' +
-                        '</div>' +
+                        companionHtml +
                     '</div>' +
                     '<div class="card-footer">' +
                         escapeHtml(dayLabel.textContent) + ' &bull; ' + escapeHtml(locationLabel.textContent) +
@@ -642,19 +615,19 @@
         }
 
         function showEmptyState() {
-            container.innerHTML = '<div class="no-results"><h3>Busqueda de asignaciones</h3><p>Escribe tu nombre para ver tus asignaciones de arbitraje</p></div>';
+            container.innerHTML = '<div class="no-results"><h3>Sin datos</h3><p>Esperando carga del archivo horario.xls</p></div>';
             showingCount.textContent = '0';
-            totalCount.textContent = allAssignments.length;
-            fieldsCount.textContent = [...new Set(allAssignments.map(a => a.campo))].length;
+            totalCount.textContent = '0';
+            fieldsCount.textContent = '0';
         }
 
         function showError(msg) {
-            container.innerHTML = '<div class="no-results" style="border-left: 4px solid #ef4444;"><h3 style="color: #f87171;">Error al procesar archivo</h3><p>' + escapeHtml(msg) + '</p></div>';
+            container.innerHTML = '<div class="no-results" style="border-left: 4px solid #ef4444;"><h3 style="color: #f87171;">Error</h3><p>' + escapeHtml(msg) + '</p></div>';
         }
 
-        searchInput.addEventListener('input', (e) => {
-            renderAssignments(e.target.value);
-        });
+        // Event listeners
+        searchInput.addEventListener('input', renderAssignments);
+        fieldFilter.addEventListener('input', renderAssignments);
     </script>
 </body>
 </html>
