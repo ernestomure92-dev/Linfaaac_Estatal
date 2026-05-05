@@ -434,8 +434,8 @@
             <button class="nav-item" onclick="showSection('playoffs')">
                  Playoffs
             </button>
-            <button class="nav-item" onclick="showSection('categories')">
-                Categorías
+            <button class="nav-item" onclick="showSection('config')">
+                Configuración
             </button>
         </div>
     </nav>
@@ -632,18 +632,17 @@
             </div>
         </section>
     
-        <!-- CATEGORIES -->
-        <section id="categories" class="section">
+        <!-- CONFIGURATION: Categories + Fields -->
+        <section id="config" class="section">
             <div class="section-header">
-                <h2 class="section-title">Categorías</h2>
+                <h2 class="section-title">Configuración del Torneo</h2>
             </div>
-            <div class="card">
-                <div class="card-header"><span class="card-title">Gestión de Categorías</span></div>
+
+            <!-- CATEGORIES CARD -->
+            <div class="card" style="margin-bottom: 1.5rem;">
+                <div class="card-header"><span class="card-title">📋 Categorías</span></div>
                 <div class="card-body">
-                    <div class="alert alert-warning" style="margin-bottom:1rem;">
-                        <strong>💡 Centralizado:</strong> Estas categorías se usan en admin + web pública. Se sincronizan automáticamente.
-                    </div>
-                    <div id="categories-list" style="margin-bottom:1.5rem;"></div>
+                    <div id="categories-list" style="margin-bottom:1rem;"></div>
                     <div class="form-row" style="max-width:500px;">
                         <div class="form-group">
                             <label>Nueva Categoría</label>
@@ -652,6 +651,29 @@
                         <div class="form-group" style="display:flex;align-items:flex-end;">
                             <button class="btn btn-primary" onclick="addCategory()">+ Agregar</button>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FIELDS CARD -->
+            <div class="card">
+                <div class="card-header"><span class="card-title">🏟️ Campos</span></div>
+                <div class="card-body">
+                    <div id="fields-list" style="margin-bottom:1rem;"></div>
+                    <div class="form-row" style="max-width:500px;">
+                        <div class="form-group">
+                            <label>Nuevo Campo</label>
+                            <input type="text" class="form-control" id="new-field-name" placeholder="Ej: Campo 13">
+                        </div>
+                        <div class="form-group" style="display:flex;align-items:flex-end;">
+                            <button class="btn btn-primary" onclick="addField()">+ Agregar</button>
+                        </div>
+                    </div>
+                    <div style="margin-top:1rem; display:flex; gap:0.5rem; flex-wrap:wrap;">
+                        <button class="btn btn-sm btn-secondary" onclick="autoGenerateFields(6)">Generar 6 campos</button>
+                        <button class="btn btn-sm btn-secondary" onclick="autoGenerateFields(8)">Generar 8 campos</button>
+                        <button class="btn btn-sm btn-secondary" onclick="autoGenerateFields(10)">Generar 10 campos</button>
+                        <button class="btn btn-sm btn-secondary" onclick="autoGenerateFields(12)">Generar 12 campos</button>
                     </div>
                 </div>
             </div>
@@ -689,20 +711,7 @@
                     </div>
                     <div class="form-group">
                         <label>Campo</label>
-                        <select class="form-control" id="qm-field">
-                            <option value="Campo 1">Campo 1</option>
-                            <option value="Campo 2">Campo 2</option>
-                            <option value="Campo 3">Campo 3</option>
-                            <option value="Campo 4">Campo 4</option>
-                            <option value="Campo 5">Campo 5</option>
-                            <option value="Campo 6">Campo 6</option>
-                            <option value="Campo 7">Campo 7</option>
-                            <option value="Campo 8">Campo 8</option>
-                            <option value="Campo 9">Campo 9</option>
-                            <option value="Campo 10">Campo 10</option>
-                            <option value="Campo 11">Campo 11</option>
-                            <option value="Campo 12">Campo 12</option>
-                        </select>
+                        <select class="form-control" id="qm-field"></select>
                     </div>
                 </div>
                 <div class="form-row">
@@ -790,7 +799,8 @@
     <script>
         // DATA
         let LINFAAAC_DATA = {
-            categories: ["Varonil", "Femenil", "Mixto", "Sub-17", "Sub-15", "Veteranos"],
+            categories: ["Varonil", "Femenil", "Mixto", "Under-17", "Under-15", "+35 Varonil", "+35 Femenil"],
+            fields: ["Campo 1", "Campo 2", "Campo 3", "Campo 4", "Campo 5", "Campo 6", "Campo 7", "Campo 8", "Campo 9", "Campo 10", "Campo 11", "Campo 12"],
             teams: [],
             schedule: [],
             playoffs: []
@@ -825,11 +835,11 @@
         }
 
         // ==========================================
-        // AUTO-SYNC TO GITHUB (debounced 2s)
+        // AUTO-SYNC TO GITHUB (debounced + retry)
         // ==========================================
         let autoPublishTimer = null;
         let isPublishing = false;
-        const AUTO_PUBLISH_DELAY = 2000;
+        const AUTO_PUBLISH_DELAY = 3000;
 
         function scheduleAutoPublish() {
             if (!githubConfig.token || !githubConfig.owner || !githubConfig.repo) {
@@ -838,23 +848,24 @@
             }
             if (autoPublishTimer) clearTimeout(autoPublishTimer);
             updateSyncStatus('saving', '⏳ Pendiente...');
-            autoPublishTimer = setTimeout(() => autoPublishToGitHub(), AUTO_PUBLISH_DELAY);
+            autoPublishTimer = setTimeout(() => autoPublishToGitHub(0), AUTO_PUBLISH_DELAY);
         }
 
-        async function autoPublishToGitHub() {
-            if (isPublishing) {
-                autoPublishTimer = setTimeout(() => autoPublishToGitHub(), 1000);
+        async function autoPublishToGitHub(retryCount) {
+            const MAX_RETRIES = 3;
+            if (isPublishing && retryCount === 0) {
+                autoPublishTimer = setTimeout(() => autoPublishToGitHub(0), 2000);
                 return;
             }
             if (!githubConfig.token) return;
             isPublishing = true;
-            updateSyncStatus('saving', '🔄 Publicando...');
+            updateSyncStatus('saving', retryCount > 0 ? '🔄 Reintentando (' + retryCount + ')...' : '🔄 Publicando...');
             try {
                 let sha = null;
                 try {
                     const getResp = await fetch(
-                        `https://api.github.com/repos/${githubConfig.owner}/${githubConfig.repo}/contents/${githubConfig.path}?ref=${githubConfig.branch}`,
-                        { headers: { 'Authorization': `token ${githubConfig.token}`, 'Accept': 'application/vnd.github.v3+json' } }
+                        `https://api.github.com/repos/${githubConfig.owner}/${githubConfig.repo}/contents/${githubConfig.path}?ref=${githubConfig.branch}&t=${Date.now()}`,
+                        { headers: { 'Authorization': `token ${githubConfig.token}`, 'Accept': 'application/vnd.github.v3+json' }, cache: 'no-store' }
                     );
                     if (getResp.ok) { sha = (await getResp.json()).sha; }
                 } catch (e) {}
@@ -867,12 +878,22 @@
                 );
                 if (resp.ok) {
                     updateSyncStatus('ok', '✅ En vivo');
+                } else if (resp.status === 409 && retryCount < MAX_RETRIES) {
+                    console.warn('SHA conflict, retry ' + (retryCount+1) + '/' + MAX_RETRIES);
+                    isPublishing = false;
+                    await new Promise(r => setTimeout(r, 1500 * (retryCount+1)));
+                    return autoPublishToGitHub(retryCount + 1);
                 } else {
                     console.error('Auto-sync error:', await resp.json());
                     updateSyncStatus('error', '❌ Error sync');
                 }
             } catch (error) {
                 console.error('Auto-sync network error:', error);
+                if (retryCount < MAX_RETRIES) {
+                    isPublishing = false;
+                    await new Promise(r => setTimeout(r, 2000));
+                    return autoPublishToGitHub(retryCount + 1);
+                }
                 updateSyncStatus('error', '❌ Sin conexión');
             } finally {
                 isPublishing = false;
@@ -1094,7 +1115,7 @@
             const container = document.getElementById('field-schedule-container');
             const dayMatches = LINFAAAC_DATA.schedule.filter(m => m.day === currentScheduleDay);
 
-            const fields = ['Campo 1', 'Campo 2', 'Campo 3', 'Campo 4', 'Campo 5', 'Campo 6', 'Campo 7', 'Campo 8', 'Campo 9', 'Campo 10', 'Campo 11', 'Campo 12'];
+            const fields = LINFAAAC_DATA.fields || ['Campo 1'];
             const times = ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00'];
 
             let html = '<div class="field-schedule">';
@@ -1645,9 +1666,9 @@
             const cats = LINFAAAC_DATA.categories || [];
             if (!cats.length) { el.innerHTML = '<div class="empty-state"><p>Sin categorías</p></div>'; return; }
             el.innerHTML = cats.map((c,i) => `
-                <div style="display:flex;align-items:center;gap:1rem;padding:0.75rem 1rem;background:var(--dark);border:1px solid var(--card-border);border-radius:6px;margin-bottom:0.5rem;">
+                <div style="display:flex;align-items:center;gap:1rem;padding:0.6rem 1rem;background:var(--dark);border:1px solid var(--card-border);border-radius:6px;margin-bottom:0.4rem;">
                     <span style="flex:1;font-weight:600;color:white;">${c}</span>
-                    <span style="color:var(--text-muted);font-size:0.8rem;">${LINFAAAC_DATA.teams.filter(t=>t.category===c).length} equipos · ${LINFAAAC_DATA.schedule.filter(m=>m.category===c).length} partidos</span>
+                    <span style="color:var(--text-muted);font-size:0.8rem;">${LINFAAAC_DATA.teams.filter(t=>t.category===c).length} equipos</span>
                     <button class="btn btn-sm btn-danger" onclick="removeCategory(${i})">Eliminar</button>
                 </div>`).join('');
         }
@@ -1665,13 +1686,66 @@
         function removeCategory(i) {
             const c = LINFAAAC_DATA.categories[i];
             const tc = LINFAAAC_DATA.teams.filter(t=>t.category===c).length;
-            const mc = LINFAAAC_DATA.schedule.filter(m=>m.category===c).length;
-            let msg = '¿Eliminar "'+c+'"?';
-            if (tc||mc) msg = '"'+c+'" tiene '+tc+' equipos y '+mc+' partidos. ¿Eliminar?';
-            if (!confirm(msg)) return;
+            if (tc > 0 && !confirm('"'+c+'" tiene '+tc+' equipos. ¿Eliminar?')) return;
+            if (tc === 0 && !confirm('¿Eliminar "'+c+'"?')) return;
             LINFAAAC_DATA.categories.splice(i,1);
             saveToStorage(); renderCategories(); populateCategorySelects();
         }
+
+        // ==========================================
+        // FIELDS (Centralized)
+        // ==========================================
+        function populateFieldSelects() {
+            const fields = LINFAAAC_DATA.fields || [];
+            const s = document.getElementById('qm-field');
+            if (!s) return;
+            const cur = s.value;
+            s.innerHTML = fields.map(f => `<option value="${f}">${f}</option>`).join('');
+            if (cur && fields.includes(cur)) s.value = cur;
+        }
+        function renderFields() {
+            const el = document.getElementById('fields-list');
+            if (!el) return;
+            const fields = LINFAAAC_DATA.fields || [];
+            if (!fields.length) { el.innerHTML = '<div class="empty-state"><p>Sin campos</p></div>'; return; }
+            el.innerHTML = fields.map((f,i) => {
+                const mc = LINFAAAC_DATA.schedule.filter(m=>m.field===f).length;
+                return `
+                <div style="display:flex;align-items:center;gap:1rem;padding:0.6rem 1rem;background:var(--dark);border:1px solid var(--card-border);border-radius:6px;margin-bottom:0.4rem;">
+                    <span style="flex:1;font-weight:600;color:white;">${f}</span>
+                    <span style="color:var(--text-muted);font-size:0.8rem;">${mc} partidos</span>
+                    <button class="btn btn-sm btn-danger" onclick="removeField(${i})">Eliminar</button>
+                </div>`;
+            }).join('');
+        }
+        function addField() {
+            const inp = document.getElementById('new-field-name');
+            const n = inp.value.trim();
+            if (!n) { showAlert('Escribe un nombre','error'); return; }
+            if (!LINFAAAC_DATA.fields) LINFAAAC_DATA.fields = [];
+            if (LINFAAAC_DATA.fields.includes(n)) { showAlert('Ya existe','error'); return; }
+            LINFAAAC_DATA.fields.push(n);
+            saveToStorage(); inp.value = '';
+            renderFields(); populateFieldSelects(); renderScheduleGrid();
+            showAlert('Campo "'+n+'" agregado','success');
+        }
+        function removeField(i) {
+            const f = LINFAAAC_DATA.fields[i];
+            const mc = LINFAAAC_DATA.schedule.filter(m=>m.field===f).length;
+            if (mc > 0 && !confirm('"'+f+'" tiene '+mc+' partidos. ¿Eliminar?')) return;
+            if (mc === 0 && !confirm('¿Eliminar "'+f+'"?')) return;
+            LINFAAAC_DATA.fields.splice(i,1);
+            saveToStorage(); renderFields(); populateFieldSelects(); renderScheduleGrid();
+        }
+        function autoGenerateFields(count) {
+            if (!confirm('Esto reemplazará los campos actuales con Campo 1 a Campo '+count+'. ¿Continuar?')) return;
+            LINFAAAC_DATA.fields = [];
+            for (let i = 1; i <= count; i++) LINFAAAC_DATA.fields.push('Campo ' + i);
+            saveToStorage(); renderFields(); populateFieldSelects(); renderScheduleGrid();
+            showAlert(count + ' campos generados', 'success');
+        }
+
+        // Override showSection
         const _origShowSection = showSection;
         showSection = function(section) {
             document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
@@ -1683,12 +1757,18 @@
             if(section==='schedule')renderScheduleGrid();
             if(section==='teams')renderTeams();
             if(section==='playoffs')renderPlayoffs();
-            if(section==='categories')renderCategories();
+            if(section==='config'){ renderCategories(); renderFields(); }
         };
+
+        // Ensure defaults on load
         if(!LINFAAAC_DATA.categories||!Array.isArray(LINFAAAC_DATA.categories)){
-            LINFAAAC_DATA.categories=["Varonil", "Femenil", "Mixto", "Sub-17", "Sub-15", "Veteranos"]; saveToStorage();
+            LINFAAAC_DATA.categories=["Varonil", "Femenil", "Mixto", "Under-17", "Under-15", "+35 Varonil", "+35 Femenil"]; saveToStorage();
+        }
+        if(!LINFAAAC_DATA.fields||!Array.isArray(LINFAAAC_DATA.fields)){
+            LINFAAAC_DATA.fields=["Campo 1", "Campo 2", "Campo 3", "Campo 4", "Campo 5", "Campo 6", "Campo 7", "Campo 8", "Campo 9", "Campo 10", "Campo 11", "Campo 12"]; saveToStorage();
         }
         populateCategorySelects();
+        populateFieldSelects();
 
     </script>
     <!-- Edit Team Modal -->
