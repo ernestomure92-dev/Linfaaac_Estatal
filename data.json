@@ -35,22 +35,6 @@
       ]
     },
     {
-      "id": "t_1778012376001",
-      "name": "Aguilas",
-      "abbr": "AGU",
-      "category": "",
-      "color": "#289f30",
-      "casa": true,
-      "players": [
-        {
-          "number": "32",
-          "name": "Holahola",
-          "position": "WE",
-          "age": 10
-        }
-      ]
-    },
-    {
       "id": "t_1778012658964",
       "name": "Aguilas",
       "abbr": "AGU",
@@ -115,33 +99,6 @@
       ]
     }
   ],
-  "schedule": [
-    {
-      "id": "m_1778012410096",
-      "day": 1,
-      "time": "08:00:00",
-      "category": "Varonil",
-      "field": "Campo 1",
-      "team1": "t_1778011988437",
-      "team2": "t_1778012376001",
-      "score1": 0,
-      "score2": 0,
-      "status": "scheduled",
-      "winner": null
-    },
-    {
-      "id": "m_1778012423184",
-      "day": 1,
-      "time": "09:00:00",
-      "category": "Varonil",
-      "field": "Campo 3",
-      "team1": "t_1778012376001",
-      "team2": "t_1778011988437",
-      "score1": 0,
-      "score2": 0,
-      "status": "scheduled",
-      "winner": null
-    }
-  ],
+  "schedule": [],
   "playoffs": []
 }
