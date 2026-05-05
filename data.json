@@ -1,9 +1,43 @@
 {
-  "teams": [],
+  "teams": [
+    {
+      "id": "t_1778008668784",
+      "name": "Baymax",
+      "abbr": "BAY",
+      "category": "Libre Varonil",
+      "color": "#cc0f0f",
+      "casa": false,
+      "players": [
+        {
+          "number": "3",
+          "name": "Hola hola",
+          "position": "WR",
+          "age": 33
+        }
+      ]
+    },
+    {
+      "id": "t_1778008721350",
+      "name": "Hola",
+      "abbr": "HOL",
+      "category": "Libre Varonil",
+      "color": "#1a4174",
+      "casa": true,
+      "players": [
+        {
+          "number": "3",
+          "name": "Hola hola",
+          "position": "WR",
+          "age": 33
+        }
+      ]
+    }
+  ],
   "schedule": [],
   "playoffs": [],
   "categories": [
     "Under -8",
-    "Libre Varonil"
+    "Libre Varonil",
+    "Libre Femenil"
   ]
 }
