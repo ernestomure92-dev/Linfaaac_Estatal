@@ -259,18 +259,6 @@
             text-transform: uppercase;
         }
 
-        .companion-badge {
-            display: inline-block;
-            margin-top: 12px;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            background: rgba(59,130,246,0.15);
-            color: #60a5fa;
-            border: 1px solid rgba(59,130,246,0.3);
-        }
-
         .card-footer {
             padding: 14px 22px;
             background: var(--dark);
@@ -364,10 +352,10 @@
                 <input 
                     type="text" 
                     id="searchInput" 
-                    placeholder="Escribe nombre de oficial o numero de campo"
+                    placeholder="Escribe nombre de oficial o numero de campo (ej: Juan o 3)"
                     autocomplete="off"
                 >
-                <p class="search-hint">Puedes buscar por nombre de oficial o nÚmero de campo</p>
+                <p class="search-hint">Puedes buscar por nombre de oficial o numero de campo</p>
             </div>
 
             <div class="stats">
@@ -568,9 +556,6 @@
                 const oficial2Class = oficial2Match ? 'highlight' : '';
                 const campoClass = campoMatch ? 'highlight' : '';
 
-                const companion = oficial1Match ? a.oficial2 : (oficial2Match ? a.oficial1 : null);
-        }
-
                 return '<div class="assignment-card campo-' + a.campo + '">' +
                     '<div class="card-header">' +
                         '<span class="field-name ' + campoClass + '">Campo ' + a.campo + '</span>' +
@@ -582,7 +567,6 @@
                             ' <span class="vs">y</span> ' +
                             '<span class="' + oficial2Class + '">' + escapeHtml(a.oficial2) + '</span>' +
                         '</div>' +
-                        companionHtml +
                     '</div>' +
                     '<div class="card-footer">' +
                         escapeHtml(dayLabel.textContent) + ' &bull; ' + escapeHtml(locationLabel.textContent) +
