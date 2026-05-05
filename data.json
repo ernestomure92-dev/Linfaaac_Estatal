@@ -22,9 +22,9 @@
       "id": "t_1778011988437",
       "name": "Baymax",
       "abbr": "BAY",
-      "category": "Varonil",
+      "category": "",
       "color": "#c21919",
-      "casa": false,
+      "casa": true,
       "players": [
         {
           "number": "32",
