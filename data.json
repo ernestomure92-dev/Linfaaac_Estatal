@@ -133,6 +133,40 @@
           "age": 0
         }
       ]
+    },
+    {
+      "id": "t_1778017745245",
+      "name": "Aguilas",
+      "abbr": "AGU",
+      "category": "Libre Femenil",
+      "color": "#8c6f08",
+      "casa": true,
+      "players": [
+        {
+          "number": "10",
+          "name": "",
+          "position": "",
+          "age": 0
+        },
+        {
+          "number": "0",
+          "name": "",
+          "position": "",
+          "age": 0
+        },
+        {
+          "number": "02",
+          "name": "",
+          "position": "",
+          "age": 0
+        },
+        {
+          "number": "03",
+          "name": "",
+          "position": "",
+          "age": 0
+        }
+      ]
     }
   ],
   "schedule": [
