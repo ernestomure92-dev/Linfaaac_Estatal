@@ -483,35 +483,24 @@
             letter-spacing: 0.5px; border: 1px solid var(--card-border);
         }
     
-        /* Collapsible Roster Cards */
-        .roster-toggle { cursor: pointer; transition: all 0.3s; }
-        .roster-toggle:hover { border-color: var(--accent); }
-        .roster-summary {
-            display: flex; align-items: center; justify-content: space-between;
-            padding: 1rem 1.25rem; gap: 1rem;
-        }
-        .roster-summary-left { display: flex; align-items: center; gap: 1rem; flex: 1; }
-        .roster-summary-right { display: flex; align-items: center; gap: 1rem; }
-        .roster-player-count {
-            font-family: 'Oswald', sans-serif; font-size: 1.1rem;
-            color: var(--accent); font-weight: 700;
-        }
-        .roster-expand-icon {
-            color: var(--text-muted); font-size: 0.9rem;
-            transition: transform 0.3s;
-        }
-        .roster-toggle.expanded .roster-expand-icon { transform: rotate(180deg); }
-        .roster-players-container {
-            max-height: 0; overflow: hidden;
-            transition: max-height 0.4s ease-out;
-        }
-        .roster-toggle.expanded .roster-players-container {
-            max-height: 2000px;
-            transition: max-height 0.6s ease-in;
-        }
-        .roster-players-inner {
-            border-top: 1px solid var(--card-border);
-        }
+        /* Collapsible Rosters */
+        .roster-toggle{cursor:pointer;transition:all 0.3s}
+        .roster-toggle:hover{border-color:var(--accent)}
+        .roster-summary{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;gap:1rem}
+        .roster-summary-left{display:flex;align-items:center;gap:1rem;flex:1}
+        .roster-summary-right{display:flex;align-items:center;gap:1rem}
+        .roster-player-count{font-family:'Oswald',sans-serif;font-size:1.1rem;color:var(--accent);font-weight:700}
+        .roster-expand-icon{color:var(--text-muted);font-size:0.9rem;transition:transform 0.3s}
+        .roster-toggle.expanded .roster-expand-icon{transform:rotate(180deg)}
+        .roster-players-container{max-height:0;overflow:hidden;transition:max-height 0.4s ease-out}
+        .roster-toggle.expanded .roster-players-container{max-height:2000px;transition:max-height 0.6s ease-in}
+        .roster-players-inner{border-top:1px solid var(--card-border)}
+        /* Search Bar */
+        .search-bar{position:relative;min-width:250px}
+        .search-bar input{width:100%;padding:0.5rem 1rem 0.5rem 2.5rem;background:var(--card-bg);border:1px solid var(--card-border);border-radius:4px;color:var(--text-primary);font-size:0.9rem;transition:border-color 0.2s}
+        .search-bar input:focus{outline:none;border-color:var(--accent)}
+        .search-bar input::placeholder{color:var(--text-muted)}
+        .search-bar i{position:absolute;left:0.85rem;top:50%;transform:translateY(-50%);color:var(--text-muted);font-size:0.85rem}
     </style>
 <base target="_blank">
 </head>
@@ -562,6 +551,10 @@
         <section id="schedule" class="section active">
             <div class="section-header">
                 <h2 class="section-title"><i class="fas fa-calendar-alt"></i> Calendario de Partidos</h2>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="schedule-search" placeholder="Buscar equipo..." oninput="renderSchedule()">
+                </div>
                 <div class="filters" id="schedule-filters"></div>
             </div>
             <div class="day-tabs">
@@ -583,6 +576,10 @@
         <section id="results" class="section">
             <div class="section-header">
                 <h2 class="section-title"><i class="fas fa-trophy"></i> Resultados y Posiciones</h2>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="results-search" placeholder="Buscar equipo..." oninput="renderResults()">
+                </div>
                 <div class="filters" id="results-filters"></div>
             </div>
             <div id="results-grid" class="grid">
@@ -621,6 +618,10 @@
         <section id="rosters" class="section">
             <div class="section-header">
                 <h2 class="section-title"><i class="fas fa-users"></i> Rosters de Equipos</h2>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="rosters-search" placeholder="Buscar equipo o jugador..." oninput="renderRosters()">
+                </div>
                 <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
                     <div class="filters" id="rosters-filters"></div>
                     <div class="toggle-container" id="casa-toggle" onclick="toggleCasaFilter()">
@@ -758,6 +759,15 @@
         function renderSchedule() {
             const grid = document.getElementById('schedule-grid');
             let matches = LINFAAAC_DATA.schedule.filter(m => m.day === currentDay);
+            const schedSearch = (document.getElementById('schedule-search') || {}).value || '';
+            if (schedSearch.trim()) {
+                const q = schedSearch.trim().toLowerCase();
+                matches = matches.filter(m => {
+                    const t1 = getTeam(m.team1); const t2 = getTeam(m.team2);
+                    return t1.name.toLowerCase().includes(q) || t2.name.toLowerCase().includes(q) ||
+                           t1.abbr.toLowerCase().includes(q) || t2.abbr.toLowerCase().includes(q);
+                });
+            }
             if (scheduleFilter !== 'all') matches = matches.filter(m => m.category === scheduleFilter);
 
             if (matches.length === 0) {
@@ -822,6 +832,15 @@
         function renderResults() {
             const grid = document.getElementById('results-grid');
             let matches = LINFAAAC_DATA.schedule.filter(m => m.status === 'finished' || m.status === 'live');
+            const resSearch = (document.getElementById('results-search') || {}).value || '';
+            if (resSearch.trim()) {
+                const q = resSearch.trim().toLowerCase();
+                matches = matches.filter(m => {
+                    const t1 = getTeam(m.team1); const t2 = getTeam(m.team2);
+                    return t1.name.toLowerCase().includes(q) || t2.name.toLowerCase().includes(q) ||
+                           t1.abbr.toLowerCase().includes(q) || t2.abbr.toLowerCase().includes(q);
+                });
+            }
             if (resultsFilter !== 'all') matches = matches.filter(m => m.category === resultsFilter);
 
             if (matches.length === 0) {
@@ -1060,12 +1079,21 @@
             if (rostersFilter !== 'all') teams = teams.filter(t => t.category === rostersFilter);
             if (casaFilter) teams = teams.filter(t => t.casa === true);
 
+            // Search by team name, abbr, or player name
+            const rSearch = (document.getElementById('rosters-search') || {}).value || '';
+            if (rSearch.trim()) {
+                const q = rSearch.trim().toLowerCase();
+                teams = teams.filter(t =>
+                    t.name.toLowerCase().includes(q) ||
+                    t.abbr.toLowerCase().includes(q) ||
+                    (t.players || []).some(p => p.name.toLowerCase().includes(q))
+                );
+            }
+
             if (teams.length === 0) {
                 grid.innerHTML = `<div class="empty-state">
-                    <i class="fas fa-users-slash"></i>
-                    <h3>No hay equipos</h3>
-                    <p>No se encontraron equipos con los filtros seleccionados.</p>
-                </div>`;
+                    <i class="fas fa-users-slash"></i><h3>No hay equipos</h3>
+                    <p>No se encontraron equipos con los filtros seleccionados.</p></div>`;
                 return;
             }
 
@@ -1073,17 +1101,17 @@
                 <div class="team-roster-card roster-toggle" onclick="toggleRoster(this)">
                     <div class="roster-summary">
                         <div class="roster-summary-left">
-                            <div class="team-abbr" style="background: ${team.color}; border-color: ${team.color}; width:50px; height:50px; font-size:1.2rem; margin:0;">${team.abbr}</div>
+                            <div class="team-abbr" style="background:${team.color};border-color:${team.color};width:50px;height:50px;font-size:1.2rem;margin:0;">${team.abbr}</div>
                             <div>
-                                <h3 style="font-size:1.1rem; color:white; margin-bottom:0.2rem;">
+                                <h3 style="font-size:1.1rem;color:white;margin-bottom:0.2rem;">
                                     ${team.name}
                                     ${team.casa ? '<span class="casa-tag"><i class="fas fa-home" style="font-size:0.6rem;"></i> Casa</span>' : ''}
                                 </h3>
-                                <span class="category-tag" style="border-bottom:none; font-size:0.75rem;">${team.category}</span>
+                                <span class="category-tag" style="border-bottom:none;font-size:0.75rem;">${team.category}</span>
                             </div>
                         </div>
                         <div class="roster-summary-right">
-                            <span class="roster-player-count">${team.players ? team.players.length : 0} <span style="font-size:0.75rem; color:var(--text-secondary); font-family:'Inter',sans-serif; font-weight:500;">jugadores</span></span>
+                            <span class="roster-player-count">${team.players ? team.players.length : 0} <span style="font-size:0.75rem;color:var(--text-secondary);font-family:'Inter',sans-serif;font-weight:500;">jugadores</span></span>
                             <i class="fas fa-chevron-down roster-expand-icon"></i>
                         </div>
                     </div>
