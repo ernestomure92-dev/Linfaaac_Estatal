@@ -388,9 +388,9 @@
         .tab:hover { color: white; }
         .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
     
-        .sync-saving { background: rgba(217,119,6,0.15); color: #fbbf24; border: 1px solid rgba(217,119,6,0.3); animation: pulse 1s infinite; }
-        .sync-ok { background: rgba(5,150,105,0.15); color: #4ade80; border: 1px solid rgba(5,150,105,0.3); }
-        .sync-error { background: rgba(220,38,38,0.15); color: #f87171; border: 1px solid rgba(220,38,38,0.3); }
+        .sync-saving{background:rgba(217,119,6,0.15);color:#fbbf24;border:1px solid rgba(217,119,6,0.3);animation:pulse 1s infinite}
+        .sync-ok{background:rgba(5,150,105,0.15);color:#4ade80;border:1px solid rgba(5,150,105,0.3)}
+        .sync-error{background:rgba(220,38,38,0.15);color:#f87171;border:1px solid rgba(220,38,38,0.3)}
     </style>
 <base target="_blank">
 </head>
@@ -409,9 +409,9 @@
                      Importar
                 </button>
                 <input type="file" id="importFile" style="display: none;" accept=".json" onchange="handleImport(event)">
-                <button class="btn btn-info" onclick="openModal('githubConfigModal')">⚙ Configurar GitHub</button>
-                <button class="btn btn-primary" id="publish-btn" style="display: none;" onclick="publishToGitHub()">🚀 Publicar Ahora</button>
-                <span id="sync-status" style="display:none; font-size:0.75rem; padding:0.4rem 0.75rem; border-radius:4px; font-weight:600; letter-spacing:0.5px;"></span>
+                <button class="btn btn-info" onclick="openModal('githubConfigModal')">⚙ GitHub</button>
+                <button class="btn btn-primary" id="publish-btn" style="display:none;" onclick="publishToGitHub()">🚀 Publicar</button>
+                <span id="sync-status" style="display:none;font-size:0.75rem;padding:0.4rem 0.75rem;border-radius:4px;font-weight:600;"></span>
             </div>
         </div>
     </header>
@@ -652,10 +652,10 @@
                         <div class="form-group" style="display:flex;align-items:flex-end;"><button class="btn btn-primary" onclick="addField()">+ Agregar</button></div>
                     </div>
                     <div style="margin-top:1rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
-                        <button class="btn btn-sm btn-secondary" onclick="autoGenerateFields(6)">Generar 6</button>
-                        <button class="btn btn-sm btn-secondary" onclick="autoGenerateFields(8)">Generar 8</button>
-                        <button class="btn btn-sm btn-secondary" onclick="autoGenerateFields(10)">Generar 10</button>
-                        <button class="btn btn-sm btn-secondary" onclick="autoGenerateFields(12)">Generar 12</button>
+                        <button class="btn btn-sm btn-secondary" onclick="autoGenerateFields(6)">6 campos</button>
+                        <button class="btn btn-sm btn-secondary" onclick="autoGenerateFields(8)">8 campos</button>
+                        <button class="btn btn-sm btn-secondary" onclick="autoGenerateFields(10)">10 campos</button>
+                        <button class="btn btn-sm btn-secondary" onclick="autoGenerateFields(12)">12 campos</button>
                     </div>
                 </div>
             </div>
@@ -816,8 +816,7 @@
             scheduleAutoPublish();
         }
 
-        let autoPublishTimer = null;
-        let isPublishing = false;
+        let autoPublishTimer = null, isPublishing = false;
         const AUTO_PUBLISH_DELAY = 3000;
 
         function scheduleAutoPublish() {
@@ -827,40 +826,36 @@
             autoPublishTimer = setTimeout(() => autoPublishToGitHub(0), AUTO_PUBLISH_DELAY);
         }
 
-        async function autoPublishToGitHub(retryCount) {
-            const MAX_RETRIES = 3;
-            if (isPublishing && retryCount === 0) { autoPublishTimer = setTimeout(() => autoPublishToGitHub(0), 2000); return; }
+        async function autoPublishToGitHub(retry) {
+            if (isPublishing && retry === 0) { autoPublishTimer = setTimeout(() => autoPublishToGitHub(0), 2000); return; }
             if (!githubConfig.token) return;
             isPublishing = true;
-            updateSyncStatus('saving', retryCount > 0 ? '🔄 Reintentando...' : '🔄 Publicando...');
+            updateSyncStatus('saving', retry > 0 ? '🔄 Reintentando...' : '🔄 Publicando...');
             try {
                 let sha = null;
                 try {
                     const r = await fetch(`https://api.github.com/repos/${githubConfig.owner}/${githubConfig.repo}/contents/${githubConfig.path}?ref=${githubConfig.branch}&t=${Date.now()}`,
-                        { headers: { 'Authorization': `token ${githubConfig.token}`, 'Accept': 'application/vnd.github.v3+json' }, cache: 'no-store' });
+                        {headers:{'Authorization':`token ${githubConfig.token}`,'Accept':'application/vnd.github.v3+json'},cache:'no-store'});
                     if (r.ok) sha = (await r.json()).sha;
                 } catch(e){}
                 const content = btoa(unescape(encodeURIComponent(JSON.stringify(LINFAAAC_DATA, null, 2))));
-                const body = { message: `Auto-sync ${new Date().toLocaleString('es-MX')}`, content, branch: githubConfig.branch };
+                const body = {message:`Auto-sync ${new Date().toLocaleString('es-MX')}`,content,branch:githubConfig.branch};
                 if (sha) body.sha = sha;
                 const resp = await fetch(`https://api.github.com/repos/${githubConfig.owner}/${githubConfig.repo}/contents/${githubConfig.path}`,
-                    { method: 'PUT', headers: { 'Authorization': `token ${githubConfig.token}`, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
-                if (resp.ok) { updateSyncStatus('ok', '✅ En vivo'); }
-                else if (resp.status === 409 && retryCount < MAX_RETRIES) {
-                    isPublishing = false; await new Promise(r => setTimeout(r, 1500*(retryCount+1)));
-                    return autoPublishToGitHub(retryCount + 1);
-                } else { updateSyncStatus('error', '❌ Error sync'); }
+                    {method:'PUT',headers:{'Authorization':`token ${githubConfig.token}`,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify(body)});
+                if (resp.ok) updateSyncStatus('ok','✅ En vivo');
+                else if (resp.status===409 && retry<3) { isPublishing=false; await new Promise(r=>setTimeout(r,1500*(retry+1))); return autoPublishToGitHub(retry+1); }
+                else updateSyncStatus('error','❌ Error');
             } catch(e) {
-                if (retryCount < MAX_RETRIES) { isPublishing = false; await new Promise(r => setTimeout(r, 2000)); return autoPublishToGitHub(retryCount+1); }
-                updateSyncStatus('error', '❌ Sin conexión');
+                if (retry<3) { isPublishing=false; await new Promise(r=>setTimeout(r,2000)); return autoPublishToGitHub(retry+1); }
+                updateSyncStatus('error','❌ Sin conexión');
             } finally { isPublishing = false; }
         }
 
-        function updateSyncStatus(status, text) {
+        function updateSyncStatus(s, t) {
             const el = document.getElementById('sync-status');
-            if (!el) return;
-            if (!githubConfig.token) { el.style.display = 'none'; return; }
-            el.style.display = 'inline-block'; el.className = 'sync-' + status; el.textContent = text;
+            if (!el || !githubConfig.token) { if(el) el.style.display='none'; return; }
+            el.style.display='inline-block'; el.className='sync-'+s; el.textContent=t;
         }
 
         // NAVIGATION
@@ -1363,30 +1358,32 @@
             const cur1 = sel1.value;
             const cur2 = sel2.value;
 
-            // Filter by category
+            // 1) Filter by category
             let teams = LINFAAAC_DATA.teams;
             if (category) teams = teams.filter(t => t.category === category);
 
-            // Find busy teams at this day+time
+            // 2) Find busy teams at same day+time
             const busy = new Set();
             if (day && time) {
                 LINFAAAC_DATA.schedule.forEach(m => {
-                    if (m.day === day && m.time === time) {
+                    if (m.day == day && m.time === time) {
                         busy.add(m.team1);
                         busy.add(m.team2);
                     }
                 });
             }
 
-            // Available = category match + not busy
+            // 3) Available = matches category + not busy
             const free = teams.filter(t => !busy.has(t.id));
 
+            // 4) Build options excluding the other selection
             const opts = (exclude) => '<option value="">Seleccionar equipo...</option>' +
                 free.filter(t => t.id !== exclude).map(t => `<option value="${t.id}">${t.name}</option>`).join('');
 
             sel1.innerHTML = opts(cur2);
             sel2.innerHTML = opts(cur1);
 
+            // Restore if still valid
             if (cur1 && free.some(t => t.id === cur1)) sel1.value = cur1;
             if (cur2 && free.some(t => t.id === cur2)) sel2.value = cur2;
         }
@@ -1614,7 +1611,7 @@
                 );
 
                 if (response.ok) {
-                    showAlert('Publicado', 'success'); updateSyncStatus('ok', '✅ En vivo');
+                    showAlert('Publicado','success'); updateSyncStatus('ok','✅ En vivo');
                 } else {
                     const error = await response.json();
                     showAlert('Error: ' + (error.message || 'No se pudo publicar'), 'error');
@@ -1637,9 +1634,7 @@
         // Load GitHub config on startup
         loadGitHubConfig();
 
-        // ==========================================
-        // CATEGORIES
-        // ==========================================
+        // === CATEGORIES ===
         function populateCategorySelects() {
             const cats = LINFAAAC_DATA.categories || [];
             ['qm-category','team-category','edit-team-category'].forEach(id => {
@@ -1648,10 +1643,11 @@
                 s.innerHTML = cats.map(c => `<option value="${c}">${c}</option>`).join('');
                 if (cur && cats.includes(cur)) s.value = cur;
             });
+            // Hook category change to refresh teams
             const qmCat = document.getElementById('qm-category');
-            if (qmCat && !qmCat._hasListener) {
+            if (qmCat && !qmCat._listener) {
                 qmCat.addEventListener('change', filterQuickMatchTeams);
-                qmCat._hasListener = true;
+                qmCat._listener = true;
             }
         }
         function renderCategories() {
@@ -1664,74 +1660,61 @@
                 <button class="btn btn-sm btn-danger" onclick="removeCategory(${i})">Eliminar</button></div>`).join('');
         }
         function addCategory() {
-            const inp = document.getElementById('new-category-name'); const n = inp.value.trim();
-            if (!n) { showAlert('Escribe un nombre','error'); return; }
-            if (!LINFAAAC_DATA.categories) LINFAAAC_DATA.categories = [];
+            const n = document.getElementById('new-category-name').value.trim();
+            if (!n) return; if (!LINFAAAC_DATA.categories) LINFAAAC_DATA.categories = [];
             if (LINFAAAC_DATA.categories.includes(n)) { showAlert('Ya existe','error'); return; }
-            LINFAAAC_DATA.categories.push(n); saveToStorage(); inp.value = '';
+            LINFAAAC_DATA.categories.push(n); saveToStorage(); document.getElementById('new-category-name').value='';
             renderCategories(); populateCategorySelects();
         }
         function removeCategory(i) {
-            const c = LINFAAAC_DATA.categories[i];
-            if (!confirm('¿Eliminar "'+c+'"?')) return;
+            if (!confirm('¿Eliminar "'+LINFAAAC_DATA.categories[i]+'"?')) return;
             LINFAAAC_DATA.categories.splice(i,1); saveToStorage(); renderCategories(); populateCategorySelects();
         }
 
-        // ==========================================
-        // FIELDS
-        // ==========================================
+        // === FIELDS ===
         function populateFieldSelects() {
-            const fields = LINFAAAC_DATA.fields || [];
+            const f = LINFAAAC_DATA.fields || [];
             const s = document.getElementById('qm-field'); if (!s) return;
             const cur = s.value;
-            s.innerHTML = fields.map(f => `<option value="${f}">${f}</option>`).join('');
-            if (cur && fields.includes(cur)) s.value = cur;
+            s.innerHTML = f.map(x => `<option value="${x}">${x}</option>`).join('');
+            if (cur && f.includes(cur)) s.value = cur;
         }
         function renderFields() {
             const el = document.getElementById('fields-list'); if (!el) return;
-            const fields = LINFAAAC_DATA.fields || [];
-            if (!fields.length) { el.innerHTML = '<p style="color:var(--text-muted)">Sin campos</p>'; return; }
-            el.innerHTML = fields.map((f,i) => {
-                const mc = LINFAAAC_DATA.schedule.filter(m=>m.field===f).length;
-                return `<div style="display:flex;align-items:center;gap:1rem;padding:0.6rem 1rem;background:var(--dark);border:1px solid var(--card-border);border-radius:6px;margin-bottom:0.4rem;">
-                    <span style="flex:1;font-weight:600;color:white;">${f}</span>
-                    <span style="color:var(--text-muted);font-size:0.8rem;">${mc} partidos</span>
-                    <button class="btn btn-sm btn-danger" onclick="removeField(${i})">Eliminar</button></div>`;
-            }).join('');
+            const f = LINFAAAC_DATA.fields || [];
+            if (!f.length) { el.innerHTML = '<p style="color:var(--text-muted)">Sin campos</p>'; return; }
+            el.innerHTML = f.map((x,i) => `<div style="display:flex;align-items:center;gap:1rem;padding:0.6rem 1rem;background:var(--dark);border:1px solid var(--card-border);border-radius:6px;margin-bottom:0.4rem;">
+                <span style="flex:1;font-weight:600;color:white;">${x}</span>
+                <span style="color:var(--text-muted);font-size:0.8rem;">${LINFAAAC_DATA.schedule.filter(m=>m.field===x).length} partidos</span>
+                <button class="btn btn-sm btn-danger" onclick="removeField(${i})">Eliminar</button></div>`).join('');
         }
         function addField() {
-            const inp = document.getElementById('new-field-name'); const n = inp.value.trim();
-            if (!n) { showAlert('Escribe un nombre','error'); return; }
-            if (!LINFAAAC_DATA.fields) LINFAAAC_DATA.fields = [];
+            const n = document.getElementById('new-field-name').value.trim();
+            if (!n) return; if (!LINFAAAC_DATA.fields) LINFAAAC_DATA.fields = [];
             if (LINFAAAC_DATA.fields.includes(n)) { showAlert('Ya existe','error'); return; }
-            LINFAAAC_DATA.fields.push(n); saveToStorage(); inp.value = '';
+            LINFAAAC_DATA.fields.push(n); saveToStorage(); document.getElementById('new-field-name').value='';
             renderFields(); populateFieldSelects(); renderScheduleGrid();
         }
         function removeField(i) {
-            const f = LINFAAAC_DATA.fields[i];
-            if (!confirm('¿Eliminar "'+f+'"?')) return;
+            if (!confirm('¿Eliminar "'+LINFAAAC_DATA.fields[i]+'"?')) return;
             LINFAAAC_DATA.fields.splice(i,1); saveToStorage(); renderFields(); populateFieldSelects(); renderScheduleGrid();
         }
         function autoGenerateFields(n) {
-            if (!confirm('Reemplazar campos con Campo 1-'+n+'?')) return;
-            LINFAAAC_DATA.fields = [];
-            for (let i=1;i<=n;i++) LINFAAAC_DATA.fields.push('Campo '+i);
+            if (!confirm('Reemplazar con Campo 1-'+n+'?')) return;
+            LINFAAAC_DATA.fields=[]; for(let i=1;i<=n;i++) LINFAAAC_DATA.fields.push('Campo '+i);
             saveToStorage(); renderFields(); populateFieldSelects(); renderScheduleGrid();
         }
 
-        // showSection override
-        const _origShowSection = showSection;
-        showSection = function(section) {
-            document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-            document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
-            document.getElementById(section).classList.add('active');
+        // Override showSection
+        const _origSS = showSection;
+        showSection = function(s) {
+            document.querySelectorAll('.section').forEach(x=>x.classList.remove('active'));
+            document.querySelectorAll('.nav-item').forEach(x=>x.classList.remove('active'));
+            document.getElementById(s).classList.add('active');
             event.target.closest('.nav-item').classList.add('active');
-            if(section==='dashboard')updateDashboard();
-            if(section==='matches')renderMatches();
-            if(section==='schedule')renderScheduleGrid();
-            if(section==='teams')renderTeams();
-            if(section==='playoffs')renderPlayoffs();
-            if(section==='config'){ renderCategories(); renderFields(); }
+            if(s==='dashboard')updateDashboard(); if(s==='matches')renderMatches();
+            if(s==='schedule')renderScheduleGrid(); if(s==='teams')renderTeams();
+            if(s==='playoffs')renderPlayoffs(); if(s==='config'){renderCategories();renderFields();}
         };
 
         if(!LINFAAAC_DATA.categories||!Array.isArray(LINFAAAC_DATA.categories)){ LINFAAAC_DATA.categories=["Varonil", "Femenil", "Mixto", "Under-17", "Under-15", "+35 Varonil", "+35 Femenil"]; saveToStorage(); }
