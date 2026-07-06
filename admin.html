@@ -312,9 +312,10 @@
         /* Field Schedule Grid */
         .field-schedule {
             display: grid;
-            grid-template-columns: 100px repeat(auto-fit, minmax(150px, 1fr));
             gap: 0.5rem;
             margin-top: 1rem;
+            width: max-content;
+            min-width: 100%;
         }
         .field-schedule-header {
             background: var(--primary); color: var(--accent);
@@ -395,6 +396,17 @@
 <base target="_blank">
 </head>
 <body>
+    <div id="auth-gate" style="position:fixed;inset:0;background:var(--dark,#0f1115);z-index:99999;display:flex;align-items:center;justify-content:center;">
+        <div style="background:var(--card-bg,#1a1d24);border:1px solid var(--card-border,#2a2d35);padding:2.5rem;border-radius:8px;width:320px;max-width:90%;text-align:center;">
+            <h2 style="color:white;margin-bottom:0.25rem;">Panel Admin</h2>
+            <p style="color:var(--text-muted,#888);font-size:0.85rem;margin-bottom:1.5rem;">LINFAAAC · Acceso restringido</p>
+            <input type="password" id="auth-password" placeholder="Contraseña" autocomplete="off"
+                style="width:100%;padding:0.6rem;margin-bottom:1rem;border-radius:4px;border:1px solid var(--card-border,#333);background:var(--dark,#0f1115);color:white;box-sizing:border-box;"
+                onkeydown="if(event.key==='Enter')checkAdminPassword()">
+            <button class="btn btn-primary" style="width:100%;" onclick="checkAdminPassword()">Entrar</button>
+            <p id="auth-error" style="color:#e74c3c;margin-top:0.75rem;display:none;font-size:0.85rem;">Contraseña incorrecta</p>
+        </div>
+    </div>
     <header>
         <div class="header-content">
             <div class="logo">
@@ -560,13 +572,13 @@
                     <div class="card-header">
                         <span class="card-title">Día 1 - Viernes 15 Mayo</span>
                         <div class="match-actions">
-                            <button class="btn btn-sm btn-secondary" onclick="changeScheduleDay(-1)"></button>
+                            <button class="btn btn-sm btn-secondary" onclick="changeScheduleDay(-1)">◀ Día anterior</button>
                             <span id="schedule-day-label" style="color: var(--text-secondary); font-weight: 600;">Día 1</span>
-                            <button class="btn btn-sm btn-secondary" onclick="changeScheduleDay(1)"></button>
+                            <button class="btn btn-sm btn-secondary" onclick="changeScheduleDay(1)">Día siguiente ▶</button>
                         </div>
                     </div>
                     <div class="card-body">
-                        <div id="field-schedule-container">
+                        <div id="field-schedule-container" style="overflow-x: auto;">
                             <div class="empty-state"><p>Cargando horarios...</p></div>
                         </div>
                     </div>
@@ -787,6 +799,35 @@
             schedule: [],
             playoffs: []
         };
+
+        // AUTENTICACIÓN (candado de acceso — ver nota de seguridad: es solo una cortina,
+        // no seguridad real, ya que el código es visible para cualquiera en un sitio estático)
+        const ADMIN_PASSWORD_HASH = 'a9e0496c1b626f92882aca583334205d67a13ff7366ff9f60098e93eb598bc63';
+
+        async function sha256(str) {
+            const enc = new TextEncoder().encode(str);
+            const buf = await crypto.subtle.digest('SHA-256', enc);
+            return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        async function checkAdminPassword() {
+            const val = document.getElementById('auth-password').value;
+            const hash = await sha256(val);
+            if (hash === ADMIN_PASSWORD_HASH) {
+                sessionStorage.setItem('linfaaac_admin_auth', '1');
+                document.getElementById('auth-gate').remove();
+            } else {
+                document.getElementById('auth-error').style.display = 'block';
+                document.getElementById('auth-password').value = '';
+            }
+        }
+
+        if (sessionStorage.getItem('linfaaac_admin_auth') === '1') {
+            document.addEventListener('DOMContentLoaded', () => {
+                const g = document.getElementById('auth-gate');
+                if (g) g.remove();
+            });
+        }
 
         let currentScheduleDay = 1;
         let editingMatchId = null;
@@ -1067,7 +1108,7 @@
             const fields = LINFAAAC_DATA.fields || ['Campo 1'];
             const times = ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00'];
 
-            let html = '<div class="field-schedule">';
+            let html = `<div class="field-schedule" style="grid-template-columns: 90px repeat(${fields.length}, 160px);">`;
             html += '<div class="field-schedule-header">Hora</div>';
             fields.forEach(f => html += `<div class="field-schedule-header">${f}</div>`);
 
