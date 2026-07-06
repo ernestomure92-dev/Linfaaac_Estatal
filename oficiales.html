@@ -331,6 +331,17 @@
 <base target="_blank">
 </head>
 <body>
+    <div id="auth-gate" style="position:fixed;inset:0;background:#0f1115;z-index:99999;display:flex;align-items:center;justify-content:center;">
+        <div style="background:#1a1d24;border:1px solid #2a2d35;padding:2.5rem;border-radius:8px;width:320px;max-width:90%;text-align:center;">
+            <h2 style="color:white;margin-bottom:0.25rem;">Oficiales</h2>
+            <p style="color:#888;font-size:0.85rem;margin-bottom:1.5rem;">LINFAAAC · Acceso restringido</p>
+            <input type="password" id="auth-password" placeholder="Contraseña" autocomplete="off"
+                style="width:100%;padding:0.6rem;margin-bottom:1rem;border-radius:4px;border:1px solid #333;background:#0f1115;color:white;box-sizing:border-box;"
+                onkeydown="if(event.key==='Enter')checkAdminPassword()">
+            <button style="width:100%;padding:0.6rem;border-radius:4px;border:none;background:#3a7bd5;color:white;cursor:pointer;font-weight:600;" onclick="checkAdminPassword()">Entrar</button>
+            <p id="auth-error" style="color:#e74c3c;margin-top:0.75rem;display:none;font-size:0.85rem;">Contraseña incorrecta</p>
+        </div>
+    </div>
     <header>
         <h1>LINFAAAC</h1>
         <p>Asignacion de Oficiales</p>
@@ -369,6 +380,34 @@
     </div>
 
     <script>
+        // AUTENTICACIÓN (candado de acceso — solo una cortina, no seguridad real)
+        const ADMIN_PASSWORD_HASH = 'e0f1a9c3495ee7a265c070e74724264d2cec2fc0a9dfb03b2f833eebf5cc4889';
+
+        async function sha256(str) {
+            const enc = new TextEncoder().encode(str);
+            const buf = await crypto.subtle.digest('SHA-256', enc);
+            return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        async function checkAdminPassword() {
+            const val = document.getElementById('auth-password').value;
+            const hash = await sha256(val);
+            if (hash === ADMIN_PASSWORD_HASH) {
+                sessionStorage.setItem('linfaaac_oficiales_auth', '1');
+                document.getElementById('auth-gate').remove();
+            } else {
+                document.getElementById('auth-error').style.display = 'block';
+                document.getElementById('auth-password').value = '';
+            }
+        }
+
+        if (sessionStorage.getItem('linfaaac_oficiales_auth') === '1') {
+            document.addEventListener('DOMContentLoaded', () => {
+                const g = document.getElementById('auth-gate');
+                if (g) g.remove();
+            });
+        }
+
         let allAssignments = [];
 
         const container = document.getElementById('assignmentsContainer');
