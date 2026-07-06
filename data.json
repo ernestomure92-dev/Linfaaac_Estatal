@@ -106,8 +106,8 @@
       "team2": "t_1783377720101",
       "score1": 40,
       "score2": 6,
-      "status": "live",
-      "winner": null
+      "status": "finished",
+      "winner": "t_1783377627557"
     }
   ],
   "playoffs": []
