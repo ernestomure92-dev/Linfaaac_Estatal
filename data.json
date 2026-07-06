@@ -44,6 +44,22 @@
           "age": 0
         }
       ]
+    },
+    {
+      "id": "t_1783377627557",
+      "name": "A",
+      "abbr": "A",
+      "category": "Femenil",
+      "color": "#5e3a31",
+      "casa": false,
+      "players": [
+        {
+          "number": "1",
+          "name": "A",
+          "position": "TEWQ9384383VSDFS",
+          "age": 0
+        }
+      ]
     }
   ],
   "schedule": [
