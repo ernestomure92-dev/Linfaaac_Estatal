@@ -64,6 +64,22 @@
           "age": 0
         }
       ]
+    },
+    {
+      "id": "t_1783377720101",
+      "name": "Z",
+      "abbr": "Z",
+      "category": "Femenil",
+      "color": "#9b3217",
+      "casa": true,
+      "players": [
+        {
+          "number": "10",
+          "name": "A",
+          "position": "TEWQ9384383VSDFS",
+          "age": 0
+        }
+      ]
     }
   ],
   "schedule": [
