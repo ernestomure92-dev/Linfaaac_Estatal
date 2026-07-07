@@ -80,6 +80,22 @@
           "age": 0
         }
       ]
+    },
+    {
+      "id": "t_1783386221555",
+      "name": "C",
+      "abbr": "CCC",
+      "category": "Varonil",
+      "color": "#14b835",
+      "casa": true,
+      "players": [
+        {
+          "number": "10",
+          "name": "h0la hola",
+          "position": "nmwerwe5345",
+          "age": 10
+        }
+      ]
     }
   ],
   "schedule": [
