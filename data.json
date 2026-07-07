@@ -17,7 +17,24 @@
     "Campo 10",
     "Campo 11"
   ],
-  "teams": [],
+  "teams": [
+    {
+      "id": "t_1783387883004",
+      "name": "IZCALLI TIGERS",
+      "abbr": "TIG",
+      "category": "Femenil",
+      "color": "#292829",
+      "casa": true,
+      "players": [
+        {
+          "number": "6",
+          "name": "KARLA FERNANDA ARENAS GALAN",
+          "position": "AEGK050915MMCRLRA7",
+          "age": 21
+        }
+      ]
+    }
+  ],
   "schedule": [],
   "playoffs": []
 }
