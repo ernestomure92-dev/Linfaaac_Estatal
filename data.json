@@ -2,8 +2,7 @@
   "categories": [
     "Varonil",
     "Femenil",
-    "under 17",
-    "17 varonil"
+    "17 Femenil"
   ],
   "fields": [
     "Campo 1",
@@ -19,22 +18,6 @@
     "Campo 11"
   ],
   "teams": [
-    {
-      "id": "t_1783369599425",
-      "name": "A",
-      "abbr": "A",
-      "category": "Varonil",
-      "color": "#3b82f6",
-      "casa": false,
-      "players": [
-        {
-          "number": "1",
-          "name": "A",
-          "position": "ERTY09458NF95",
-          "age": 0
-        }
-      ]
-    },
     {
       "id": "t_1783369634208",
       "name": "B",
@@ -133,19 +116,6 @@
     }
   ],
   "schedule": [
-    {
-      "id": "m_1783369790757",
-      "day": 1,
-      "time": "08:00:00",
-      "category": "Varonil",
-      "field": "Campo 1",
-      "team1": "t_1783369599425",
-      "team2": "t_1783369634208",
-      "score1": 6,
-      "score2": 7,
-      "status": "finished",
-      "winner": "t_1783369634208"
-    },
     {
       "id": "m_1783386816350",
       "day": 1,
