@@ -157,6 +157,19 @@
       "score2": 6,
       "status": "finished",
       "winner": "t_1783377627557"
+    },
+    {
+      "id": "m_1783386816350",
+      "day": 1,
+      "time": "11:00:00",
+      "category": "under 17",
+      "field": "Campo 5",
+      "team1": "t_1783386628640",
+      "team2": "t_1783386725598",
+      "score1": 0,
+      "score2": 0,
+      "status": "scheduled",
+      "winner": null
     }
   ],
   "playoffs": []
