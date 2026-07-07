@@ -19,22 +19,6 @@
   ],
   "teams": [
     {
-      "id": "t_1783369634208",
-      "name": "B",
-      "abbr": "B",
-      "category": "Varonil",
-      "color": "#3b82f6",
-      "casa": false,
-      "players": [
-        {
-          "number": "10",
-          "name": "A",
-          "position": "ERTY09458NF95",
-          "age": 0
-        }
-      ]
-    },
-    {
       "id": "t_1783377627557",
       "name": "A",
       "abbr": "A",
