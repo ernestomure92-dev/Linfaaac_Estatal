@@ -1423,8 +1423,11 @@
             }
         }
 
-        async function uploadFileToGitHub(path, base64Content, message) {
-            if (!githubConfig.token || !githubConfig.owner || !githubConfig.repo) return false;
+        function sleep(ms) { return new Promise(res => setTimeout(res, ms)); }
+
+        async function uploadFileToGitHub(path, base64Content, message, attempt) {
+            attempt = attempt || 1;
+            if (!githubConfig.token || !githubConfig.owner || !githubConfig.repo) return { ok: false, error: 'GitHub no configurado' };
             try {
                 let sha = null;
                 try {
@@ -1450,10 +1453,27 @@
                         body: JSON.stringify(body)
                     }
                 );
-                return resp.ok;
+
+                if (resp.ok) return { ok: true };
+
+                // Rate limit (primario 403/429 con cabecera, o secundario "abuse" 403) -> esperar y reintentar
+                if ((resp.status === 403 || resp.status === 429) && attempt <= 5) {
+                    const retryAfter = parseInt(resp.headers.get('retry-after')) || 0;
+                    const resetHeader = parseInt(resp.headers.get('x-ratelimit-reset')) || 0;
+                    let waitMs = retryAfter ? retryAfter * 1000 : 2000 * attempt;
+                    if (!retryAfter && resetHeader) {
+                        const secs = resetHeader - Math.floor(Date.now() / 1000);
+                        if (secs > 0 && secs < 120) waitMs = secs * 1000 + 500;
+                    }
+                    await sleep(waitMs);
+                    return uploadFileToGitHub(path, base64Content, message, attempt + 1);
+                }
+
+                const errData = await resp.json().catch(() => ({}));
+                return { ok: false, error: errData.message || `HTTP ${resp.status}` };
             } catch (e) {
-                console.error('Error subiendo ' + path, e);
-                return false;
+                if (attempt <= 3) { await sleep(1500 * attempt); return uploadFileToGitHub(path, base64Content, message, attempt + 1); }
+                return { ok: false, error: e.message };
             }
         }
 
@@ -1464,17 +1484,21 @@
                 showAlert('Fotos no subidas: configura GitHub primero. Los datos del equipo sí se guardaron.', 'error');
                 return;
             }
-            showAlert(`Subiendo ${pending.length} fotos a GitHub, esto puede tardar un poco...`, 'success');
+            showAlert(`Subiendo ${pending.length} fotos a GitHub, esto puede tardar un par de minutos (con pausas para no saturar el limite de GitHub)...`, 'success');
             let ok = 0;
+            const fallos = [];
             for (const p of pending) {
                 const photo = _importedPhotos[p.curp];
                 const path = `fotos/${p.curp}.${photo.ext}`;
-                const success = await uploadFileToGitHub(path, photo.base64, `Foto jugador ${p.curp}`);
-                if (success) { p.photo = path; ok++; }
+                const result = await uploadFileToGitHub(path, photo.base64, `Foto jugador ${p.curp}`);
+                if (result.ok) { p.photo = path; ok++; }
+                else { fallos.push(`${p.name}: ${result.error}`); }
+                saveToStorage();
+                await sleep(900); // pausa entre fotos para no disparar el rate-limit de GitHub
             }
-            saveToStorage();
             renderTeams();
-            showAlert(`${ok}/${pending.length} fotos subidas correctamente.`, ok === pending.length ? 'success' : 'error');
+            if (fallos.length) console.error('Fotos que fallaron:', fallos);
+            showAlert(`${ok}/${pending.length} fotos subidas correctamente.` + (fallos.length ? ' Revisa la consola (F12) para ver el detalle de las que fallaron.' : ''), ok === pending.length ? 'success' : 'error');
             autoPublishToGitHub();
         }
         // ===================== FIN IMPORTAR ROSTER =====================
@@ -1558,7 +1582,7 @@
 
             // Format players back to text
             const playersText = team.players.map(p => 
-                `${p.number} - ${p.name} - ${p.position} - ${p.age}`
+                `${p.number} - ${p.name} - ${p.position} - ${p.age}${p.curp ? ' - ' + p.curp : ''}`
             ).join('\n');
             document.getElementById('edit-team-players').value = playersText;
 
@@ -1581,16 +1605,22 @@
                 return;
             }
 
+            const oldPhotosByCurp = {};
+            (team.players || []).forEach(p => { if (p.curp && p.photo) oldPhotosByCurp[p.curp] = p.photo; });
+
             const players = [];
             if (playersText) {
                 playersText.split('\n').forEach(line => {
                     const parts = line.split('-').map(p => p.trim());
                     if (parts.length >= 2) {
+                        const curp = parts[4] || '';
                         players.push({
                             number: parts[0],
                             name: parts[1],
                             position: parts[2] || '',
-                            age: parseInt(parts[3]) || 0
+                            age: parseInt(parts[3]) || 0,
+                            curp,
+                            photo: curp && oldPhotosByCurp[curp] ? oldPhotosByCurp[curp] : undefined
                         });
                     }
                 });
@@ -1756,6 +1786,67 @@
             };
             reader.readAsText(file);
             event.target.value = '';
+        }
+
+        async function reuploadPhotosFromExcel(inputEl) {
+            const file = inputEl.files[0];
+            if (!file) return;
+            const statusEl = document.getElementById('reupload-photos-status');
+            const team = LINFAAAC_DATA.teams.find(t => t.id === editingTeamId);
+            if (!team) { statusEl.textContent = '❌ No se encontró el equipo.'; return; }
+
+            statusEl.textContent = 'Leyendo fotos del Excel...';
+            try {
+                const arrayBuffer = await file.arrayBuffer();
+                const photoMap = await extractPhotoMapFromXlsx(arrayBuffer);
+
+                // Reconstruir CURP -> foto usando las mismas posiciones fijas de la plantilla
+                const wb = XLSX.read(arrayBuffer, { type: 'array', cellDates: true });
+                const sheetName = wb.SheetNames.includes('linfaaac') ? 'linfaaac' : wb.SheetNames[0];
+                const ws = wb.Sheets[sheetName];
+                const cellVal = (ref) => (ws[ref] ? ws[ref].v : undefined);
+                const BAND_START = 12, BAND_HEIGHT = 10;
+                const cards = [{ photo: 'A', val: 'C' }, { photo: 'F', val: 'H' }, { photo: 'K', val: 'M' }];
+                const range = XLSX.utils.decode_range(ws['!ref']);
+                const maxRow = range.e.r + 1;
+
+                const photosByCurp = {};
+                for (let row = BAND_START; row <= maxRow; row += BAND_HEIGHT) {
+                    for (const c of cards) {
+                        const curp = (cellVal(`${c.val}${row + 4}`) || '').toString().trim();
+                        const photoRef = `${c.photo}${row}`;
+                        if (curp && photoMap[photoRef]) photosByCurp[curp] = photoMap[photoRef];
+                    }
+                }
+
+                // Solo faltantes: jugadores del equipo que ya tienen curp pero no tienen foto todavia
+                const missing = team.players.filter(p => p.curp && !p.photo && photosByCurp[p.curp]);
+                if (!missing.length) {
+                    statusEl.textContent = 'No hay fotos pendientes por subir para este equipo (o los CURP no coinciden).';
+                    return;
+                }
+                if (!githubConfig.token) {
+                    statusEl.textContent = '❌ Configura GitHub primero para poder subir fotos.';
+                    return;
+                }
+
+                statusEl.textContent = `Subiendo ${missing.length} fotos pendientes...`;
+                let ok = 0;
+                for (const p of missing) {
+                    const photo = photosByCurp[p.curp];
+                    const path = `fotos/${p.curp}.${photo.ext}`;
+                    const result = await uploadFileToGitHub(path, photo.base64, `Foto jugador ${p.curp}`);
+                    if (result.ok) { p.photo = path; ok++; saveToStorage(); }
+                    statusEl.textContent = `Subiendo... ${ok}/${missing.length} completadas.`;
+                    await sleep(900);
+                }
+                renderTeams();
+                statusEl.textContent = `✅ ${ok}/${missing.length} fotos subidas correctamente.`;
+                autoPublishToGitHub();
+            } catch (e) {
+                console.error(e);
+                statusEl.textContent = '❌ Error: ' + e.message;
+            }
         }
 
         // UTILITIES
@@ -2036,6 +2127,11 @@
                     <label>Jugadores (uno por línea: Número - Nombre - Posición - Edad)</label>
                     <textarea class="form-control" id="edit-team-players" rows="6" placeholder="10 - Juan Pérez - QB - 25
 15 - Carlos López - WR - 23"></textarea>
+                </div>
+                <div class="form-group" style="background:var(--dark,#0f1115);border:1px dashed var(--card-border,#333);border-radius:6px;padding:0.85rem;">
+                    <label style="margin-bottom:0.4rem;">📷 ¿Faltaron fotos por subir? Vuelve a cargar el mismo Excel</label>
+                    <input type="file" id="reupload-photos-input" accept=".xlsx" class="form-control" onchange="reuploadPhotosFromExcel(this)">
+                    <div id="reupload-photos-status" style="font-size:0.82rem;color:var(--text-muted,#888);margin-top:0.5rem;"></div>
                 </div>
             </div>
             <div class="modal-footer">
