@@ -133,6 +133,108 @@
           "curp": "LOTA071110MMCPRNA0"
         }
       ]
+    },
+    {
+      "id": "t_1784016734836",
+      "name": "IZCALLI TIGERS",
+      "abbr": "IT",
+      "category": "17 Femenil",
+      "color": "#3b82f6",
+      "casa": false,
+      "players": [
+        {
+          "number": "1",
+          "name": "CERVANTES CASTILLO ARELLY DANAE",
+          "position": "",
+          "age": 17,
+          "curp": "CECA090331MDFRSRA8",
+          "photo": "fotos/CECA090331MDFRSRA8.jpg"
+        },
+        {
+          "number": "3",
+          "name": "ALVARADO SANTOS ANA VICTORIA",
+          "position": "",
+          "age": 16,
+          "curp": "AASA090818MDFLNNA6"
+        },
+        {
+          "number": "5",
+          "name": "NAVA BELLO ELAN",
+          "position": "",
+          "age": 16,
+          "curp": "NABE091220MMCVLLA0"
+        },
+        {
+          "number": "8",
+          "name": "QUIROZ LEON KARLA",
+          "position": "",
+          "age": 17,
+          "curp": "QULJ090807MMCRNRA5"
+        },
+        {
+          "number": "9",
+          "name": "VALENCIA RODRIGUEZ ELISA MONSERRAT",
+          "position": "",
+          "age": 17,
+          "curp": "VARE090507MMCLDLA9"
+        },
+        {
+          "number": "10",
+          "name": "RIVERA LUNA ISABELLA",
+          "position": "",
+          "age": 16,
+          "curp": "RILI091009MDFVNSA8"
+        },
+        {
+          "number": "15",
+          "name": "ALVAREZ BAEZ ALEXA MICHEL",
+          "position": "",
+          "age": 16,
+          "curp": "AABA090820MMCLZLA5"
+        },
+        {
+          "number": "18",
+          "name": "GARCIA SANCHEZ SOFIA",
+          "position": "",
+          "age": 17,
+          "curp": "GASS090413MMCRNFA6"
+        },
+        {
+          "number": "20",
+          "name": "LOPEZ ALDERETE CAROL LORELEY",
+          "position": "",
+          "age": 16,
+          "curp": "LOAC091020MMCPLRA8"
+        },
+        {
+          "number": "23",
+          "name": "MERCADO GONZALEZ SHELLSY FATIMA",
+          "position": "",
+          "age": 16,
+          "curp": "MEGS090723MMCRNHA9"
+        },
+        {
+          "number": "26",
+          "name": "CISNEROS MORALES SOFIA ATALIA",
+          "position": "",
+          "age": 16,
+          "curp": "CISM090826MMCSRFA8"
+        },
+        {
+          "number": "32",
+          "name": "GONZALEZ MANZANO NATALIA GERALDINE",
+          "position": "",
+          "age": 16,
+          "curp": "GOMN091123MMCNNTA4"
+        },
+        {
+          "number": "98",
+          "name": "HERNANDEZ RIOS FATIMA",
+          "position": "",
+          "age": 16,
+          "curp": "HERF100607MMCRSTA2"
+        }
+      ]
     }
   ],
   "schedule": [],
