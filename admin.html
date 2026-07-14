@@ -1328,6 +1328,10 @@
             return { valid: formatOk && checksumOk, formatOk, checksumOk };
         }
 
+        function isStaffPlayer(p) {
+            return /^staff/i.test((p.position || '').trim());
+        }
+
         // Busca si un CURP ya está registrado en OTRO equipo (no se permite en 2 categorías)
         function findCurpElsewhere(curp, excludeTeamId) {
             if (!curp) return null;
@@ -1342,9 +1346,11 @@
 
         // Filtra una lista de jugadores recien parseados: separa validos de duplicados
         // (ya inscritos en otro equipo con ese mismo CURP), excluyendo el equipo actual.
+        // El STAFF sí puede repetirse en varias categorías (ej. el mismo coach en 2 equipos).
         function splitDuplicatePlayers(players, excludeTeamId) {
             const ok = [], duplicados = [];
             players.forEach(p => {
+                if (isStaffPlayer(p)) { ok.push(p); return; }
                 const dup = p.curp ? findCurpElsewhere(p.curp, excludeTeamId) : null;
                 if (dup) duplicados.push({ player: p, existingTeam: dup.team });
                 else ok.push(p);
@@ -1463,7 +1469,7 @@
                             if (!v.formatOk) curpFormatoMal.push(`${nombreCompleto} (${curp})`);
                             else if (!v.checksumOk) curpChecksumSospechoso.push(`${nombreCompleto} (${curp})`);
 
-                            const dup = findCurpElsewhere(curp, null);
+                            const dup = position !== 'STAFF' ? findCurpElsewhere(curp, null) : null;
                             if (dup) duplicadosEnOtroEquipo.push(`${nombreCompleto} — ya está en "${dup.team.name}" (${dup.team.category})`);
                         }
 
