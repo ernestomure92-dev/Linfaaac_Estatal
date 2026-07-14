@@ -1235,6 +1235,10 @@
         }
 
         // TEAMS
+        function countCurpWarnings(team) {
+            return (team.players || []).filter(p => p.curp && validateCurp(p.curp).valid === false).length;
+        }
+
         function renderTeams() {
             const tbody = document.getElementById('teams-table-body');
             if (LINFAAAC_DATA.teams.length === 0) {
@@ -1242,19 +1246,21 @@
                 return;
             }
 
-            tbody.innerHTML = LINFAAAC_DATA.teams.map(t => `
+            tbody.innerHTML = LINFAAAC_DATA.teams.map(t => {
+                const curpWarnings = countCurpWarnings(t);
+                return `
                 <tr>
                     <td><span style="display: inline-block; width: 24px; height: 24px; background: ${t.color}; border-radius: 4px; text-align: center; line-height: 24px; color: white; font-weight: 700; font-size: 0.75rem;">${t.abbr}</span></td>
                     <td style="font-weight: 600;">${t.name}</td>
                     <td>${t.category}</td>
                     <td>${t.casa ? '' : ''}</td>
-                    <td>${t.players ? t.players.length : 0}</td>
+                    <td>${t.players ? t.players.length : 0} ${curpWarnings ? `<span title="${curpWarnings} CURP a revisar" style="color:#f0ad4e;font-size:0.78rem;">⚠️ ${curpWarnings} CURP</span>` : ''}</td>
                     <td>
                         <button class="btn btn-sm btn-secondary" onclick="editTeam('${t.id}')">Editar</button>
                         <button class="btn btn-sm btn-danger" onclick="deleteTeam('${t.id}')">Eliminar</button>
                     </td>
                 </tr>
-            `).join('');
+            `;}).join('');
         }
 
         // ===================== IMPORTAR ROSTER DESDE EXCEL =====================
@@ -1293,6 +1299,57 @@
                 }
             });
             return best;
+        }
+
+        // ----- Validación de CURP (formato + dígito verificador oficial) -----
+        // OJO: esto solo valida que el CURP esté bien construido matemáticamente.
+        // NO confirma que exista una persona real registrada con ese CURP —
+        // eso requeriría acceso a la base de datos de RENAPO, que no es publica.
+        const CURP_REGEX = /^[A-Z][AEIOU][A-Z]{2}\d{2}(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])[HM](AS|BC|BS|CC|CS|CH|CL|CM|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QO|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS|NE)[B-DF-HJ-NP-TV-Z]{3}[A-Z0-9][0-9]$/;
+
+        function curpChecksumValid(curp) {
+            if (!curp || curp.length !== 18) return false;
+            const dic = '0123456789ABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
+            let sum = 0;
+            for (let i = 0; i < 17; i++) {
+                const val = dic.indexOf(curp[i]);
+                if (val < 0) return false;
+                sum += val * (18 - i);
+            }
+            const expected = (10 - (sum % 10)) % 10;
+            return expected === parseInt(curp[17]);
+        }
+
+        function validateCurp(curp) {
+            if (!curp) return { valid: null }; // no capturado, no se evalúa
+            const c = curp.toString().toUpperCase().trim();
+            const formatOk = CURP_REGEX.test(c);
+            const checksumOk = formatOk && curpChecksumValid(c);
+            return { valid: formatOk && checksumOk, formatOk, checksumOk };
+        }
+
+        // Busca si un CURP ya está registrado en OTRO equipo (no se permite en 2 categorías)
+        function findCurpElsewhere(curp, excludeTeamId) {
+            if (!curp) return null;
+            const target = curp.toString().toUpperCase().trim();
+            for (const t of LINFAAAC_DATA.teams) {
+                if (t.id === excludeTeamId) continue;
+                const p = (t.players || []).find(pl => (pl.curp || '').toUpperCase().trim() === target);
+                if (p) return { team: t, player: p };
+            }
+            return null;
+        }
+
+        // Filtra una lista de jugadores recien parseados: separa validos de duplicados
+        // (ya inscritos en otro equipo con ese mismo CURP), excluyendo el equipo actual.
+        function splitDuplicatePlayers(players, excludeTeamId) {
+            const ok = [], duplicados = [];
+            players.forEach(p => {
+                const dup = p.curp ? findCurpElsewhere(p.curp, excludeTeamId) : null;
+                if (dup) duplicados.push({ player: p, existingTeam: dup.team });
+                else ok.push(p);
+            });
+            return { ok, duplicados };
         }
 
         async function extractPhotoMapFromXlsx(arrayBuffer) {
@@ -1375,6 +1432,9 @@
                 const lines = [];
                 _importedPhotos = {};
                 let fotosEncontradas = 0;
+                const curpFormatoMal = [];
+                const curpChecksumSospechoso = [];
+                const duplicadosEnOtroEquipo = [];
 
                 for (let row = BAND_START; row <= maxRow; row += BAND_HEIGHT) {
                     for (const c of cards) {
@@ -1383,7 +1443,7 @@
                         const materno = cellVal(`${c.val}${row + 1}`) || '';
                         const nombre = cellVal(`${c.val}${row + 2}`) || '';
                         const fnac = cellVal(`${c.val}${row + 3}`);
-                        const curp = (cellVal(`${c.val}${row + 4}`) || '').toString().trim();
+                        const curp = (cellVal(`${c.val}${row + 4}`) || '').toString().trim().toUpperCase();
                         const roleType = cellVal(`${c.photo}${row + 6}`) || 'JUGADOR';
                         const roleCode = cellVal(`${c.extra}${row + 7}`);
 
@@ -1396,6 +1456,15 @@
                         if (curp && photoMap[photoRef]) {
                             _importedPhotos[curp] = photoMap[photoRef];
                             fotosEncontradas++;
+                        }
+
+                        if (curp) {
+                            const v = validateCurp(curp);
+                            if (!v.formatOk) curpFormatoMal.push(`${nombreCompleto} (${curp})`);
+                            else if (!v.checksumOk) curpChecksumSospechoso.push(`${nombreCompleto} (${curp})`);
+
+                            const dup = findCurpElsewhere(curp, null);
+                            if (dup) duplicadosEnOtroEquipo.push(`${nombreCompleto} — ya está en "${dup.team.name}" (${dup.team.category})`);
                         }
 
                         // Formato: numero - nombre - posicion - edad - CURP
@@ -1414,9 +1483,20 @@
                     document.getElementById('team-abbr').value = abbr;
                 }
 
+                let warnings = '';
+                if (duplicadosEnOtroEquipo.length) {
+                    warnings += `<div style="color:#e74c3c;margin-top:0.4rem;">🚫 ${duplicadosEnOtroEquipo.length} ya inscritos en otra categoría (se bloquearán al guardar):<br>${duplicadosEnOtroEquipo.join('<br>')}</div>`;
+                }
+                if (curpFormatoMal.length) {
+                    warnings += `<div style="color:#e74c3c;margin-top:0.4rem;">⚠️ CURP con formato inválido (revisa la captura):<br>${curpFormatoMal.join('<br>')}</div>`;
+                }
+                if (curpChecksumSospechoso.length) {
+                    warnings += `<div style="color:#f0ad4e;margin-top:0.4rem;">🔎 CURP con posible error de tecleo (el dígito verificador no cuadra, pero puede ser un falso positivo en CURPs antiguos):<br>${curpChecksumSospechoso.join('<br>')}</div>`;
+                }
+
                 statusEl.innerHTML = `✅ ${lines.length} personas importadas (${fotosEncontradas} con foto).` +
                     (catGuess ? '' : ' ⚠️ No se detectó la categoría automáticamente, selecciónala manualmente.') +
-                    ' Revisa el listado y ajusta lo que haga falta antes de guardar.';
+                    ' Revisa el listado y ajusta lo que haga falta antes de guardar.' + warnings;
             } catch (e) {
                 console.error(e);
                 statusEl.textContent = '❌ Error al leer el Excel: ' + e.message;
@@ -1532,6 +1612,12 @@
                 });
             }
 
+            const { ok: playersOk, duplicados } = splitDuplicatePlayers(players, null);
+            if (duplicados.length) {
+                showAlert(`⚠️ ${duplicados.length} persona(s) NO se agregaron por ya estar en otra categoría: ` +
+                    duplicados.map(d => `${d.player.name} (ya en ${d.existingTeam.name} - ${d.existingTeam.category})`).join('; '), 'error');
+            }
+
             const team = {
                 id: 't_' + Date.now(),
                 name,
@@ -1539,7 +1625,7 @@
                 category,
                 color,
                 casa,
-                players
+                players: playersOk
             };
 
             LINFAAAC_DATA.teams.push(team);
@@ -1585,8 +1671,39 @@
                 `${p.number} - ${p.name} - ${p.position} - ${p.age}${p.curp ? ' - ' + p.curp : ''}`
             ).join('\n');
             document.getElementById('edit-team-players').value = playersText;
+            renderCurpReview(team.players);
 
             openModal('editTeamModal');
+        }
+
+        function refreshCurpReviewFromTextarea() {
+            const text = document.getElementById('edit-team-players').value.trim();
+            const players = [];
+            if (text) {
+                text.split('\n').forEach(line => {
+                    const parts = line.split('-').map(p => p.trim());
+                    if (parts.length >= 2) players.push({ name: parts[1], curp: parts[4] || '' });
+                });
+            }
+            renderCurpReview(players);
+        }
+
+        function renderCurpReview(players) {
+            const box = document.getElementById('curp-review-box');
+            const list = document.getElementById('curp-review-list');
+            const withCurp = (players || []).filter(p => p.curp);
+            if (!withCurp.length) { box.style.display = 'none'; return; }
+
+            list.innerHTML = withCurp.map(p => {
+                const v = validateCurp(p.curp);
+                let icon = '✅', color = '#2ecc71', note = 'formato correcto';
+                if (!v.formatOk) { icon = '⚠️'; color = '#e74c3c'; note = 'formato inválido, revisar captura'; }
+                else if (!v.checksumOk) { icon = '🔎'; color = '#f0ad4e'; note = 'dígito verificador no cuadra (puede ser falso positivo)'; }
+                return `<div style="padding:0.3rem 0;border-bottom:1px solid var(--card-border,#333);color:${color};">
+                    ${icon} <strong>${p.name}</strong> — ${p.curp} <span style="color:var(--text-muted,#888);">(${note})</span>
+                </div>`;
+            }).join('');
+            box.style.display = 'block';
         }
 
         function saveEditedTeam() {
@@ -1626,12 +1743,18 @@
                 });
             }
 
+            const { ok: playersOk, duplicados } = splitDuplicatePlayers(players, team.id);
+            if (duplicados.length) {
+                showAlert(`⚠️ ${duplicados.length} persona(s) NO se guardaron por ya estar en otra categoría: ` +
+                    duplicados.map(d => `${d.player.name} (ya en ${d.existingTeam.name} - ${d.existingTeam.category})`).join('; '), 'error');
+            }
+
             team.name = name;
             team.abbr = abbr;
             team.category = category;
             team.color = color;
             team.casa = casa;
-            team.players = players;
+            team.players = playersOk;
 
             saveToStorage();
             closeModal('editTeamModal');
@@ -1847,6 +1970,62 @@
                 console.error(e);
                 statusEl.textContent = '❌ Error: ' + e.message;
             }
+        }
+
+        function fileToBase64(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = () => resolve(reader.result.split(',')[1]);
+                reader.onerror = reject;
+                reader.readAsDataURL(file);
+            });
+        }
+
+        async function uploadManualPhotos(inputEl) {
+            const files = Array.from(inputEl.files || []);
+            if (!files.length) return;
+            const statusEl = document.getElementById('manual-photos-status');
+            const team = LINFAAAC_DATA.teams.find(t => t.id === editingTeamId);
+            if (!team) { statusEl.textContent = '❌ No se encontró el equipo.'; return; }
+            if (!githubConfig.token) { statusEl.textContent = '❌ Configura GitHub primero para poder subir fotos.'; return; }
+
+            // Mapa de busqueda: CURP normalizado -> jugador, y numero -> jugador
+            const byCurp = {}, byNumber = {};
+            team.players.forEach(p => {
+                if (p.curp) byCurp[p.curp.toUpperCase().trim()] = p;
+                if (p.number) byNumber[p.number.toString().trim()] = p;
+            });
+
+            const matched = [];
+            const sinMatch = [];
+            for (const file of files) {
+                const baseName = file.name.replace(/\.[^.]+$/, '').trim();
+                const player = byCurp[baseName.toUpperCase()] || byNumber[baseName];
+                if (player) matched.push({ file, player });
+                else sinMatch.push(file.name);
+            }
+
+            if (!matched.length) {
+                statusEl.textContent = `❌ Ninguna foto coincidió con un CURP o número de este equipo. Revisa el nombre de los archivos: ${sinMatch.join(', ')}`;
+                return;
+            }
+
+            statusEl.textContent = `Subiendo ${matched.length} foto(s)...`;
+            let ok = 0;
+            for (const { file, player } of matched) {
+                const base64 = await fileToBase64(file);
+                const ext = (file.name.split('.').pop() || 'jpg').toLowerCase();
+                const key = player.curp ? player.curp.toUpperCase() : `num${player.number}_${team.id}`;
+                const path = `fotos/${key}.${ext}`;
+                const result = await uploadFileToGitHub(path, base64, `Foto ${player.name} (manual)`);
+                if (result.ok) { player.photo = path; ok++; saveToStorage(); }
+                statusEl.textContent = `Subiendo... ${ok}/${matched.length} completadas.`;
+                await sleep(900);
+            }
+            renderTeams();
+            statusEl.innerHTML = `✅ ${ok}/${matched.length} fotos subidas.` +
+                (sinMatch.length ? `<br>⚠️ Sin coincidencia: ${sinMatch.join(', ')}` : '');
+            autoPublishToGitHub();
         }
 
         // UTILITIES
@@ -2126,12 +2305,25 @@
                 <div class="form-group">
                     <label>Jugadores (uno por línea: Número - Nombre - Posición - Edad)</label>
                     <textarea class="form-control" id="edit-team-players" rows="6" placeholder="10 - Juan Pérez - QB - 25
-15 - Carlos López - WR - 23"></textarea>
+15 - Carlos López - WR - 23" onblur="refreshCurpReviewFromTextarea()"></textarea>
+                </div>
+                <div class="form-group" id="curp-review-box" style="display:none;background:var(--dark,#0f1115);border:1px solid var(--card-border,#333);border-radius:6px;padding:0.85rem;">
+                    <label style="margin-bottom:0.4rem;">🔎 Revisión de CURP</label>
+                    <div id="curp-review-list" style="font-size:0.82rem;"></div>
                 </div>
                 <div class="form-group" style="background:var(--dark,#0f1115);border:1px dashed var(--card-border,#333);border-radius:6px;padding:0.85rem;">
                     <label style="margin-bottom:0.4rem;">📷 ¿Faltaron fotos por subir? Vuelve a cargar el mismo Excel</label>
                     <input type="file" id="reupload-photos-input" accept=".xlsx" class="form-control" onchange="reuploadPhotosFromExcel(this)">
                     <div id="reupload-photos-status" style="font-size:0.82rem;color:var(--text-muted,#888);margin-top:0.5rem;"></div>
+                </div>
+                <div class="form-group" style="background:var(--dark,#0f1115);border:1px dashed var(--card-border,#333);border-radius:6px;padding:0.85rem;">
+                    <label style="margin-bottom:0.4rem;">🖼️ Carga manual de fotos (más simple/confiable)</label>
+                    <p style="font-size:0.78rem;color:var(--text-muted,#888);margin:0 0 0.5rem;">
+                        Selecciona varias fotos a la vez. Cada archivo debe llamarse igual al <strong>CURP</strong> del jugador
+                        (ej. <code>AATM020709HMCRLTA7.jpg</code>) o, si no tienes el CURP a la mano, al <strong>número de jersey</strong>.
+                    </p>
+                    <input type="file" id="manual-photos-input" accept="image/*" multiple class="form-control" onchange="uploadManualPhotos(this)">
+                    <div id="manual-photos-status" style="font-size:0.82rem;color:var(--text-muted,#888);margin-top:0.5rem;"></div>
                 </div>
             </div>
             <div class="modal-footer">
