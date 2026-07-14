@@ -559,9 +559,76 @@
         <section id="schedule" class="section">
             <div class="section-header">
                 <h2 class="section-title"> Gestión de Horarios</h2>
-                <button class="btn btn-primary" onclick="openModal('addMatchModal')">
+                <button class="btn btn-primary" onclick="openModal('quickMatchModal')">
                      Agregar Partido
                 </button>
+            </div>
+
+            <div class="card" style="margin-bottom: 1.5rem; border: 1px solid var(--accent, #3a7bd5);">
+                <div class="card-header">
+                    <span class="card-title">🤖 Generación Automática de Calendario</span>
+                </div>
+                <div class="card-body">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Categoría</label>
+                            <select class="form-control" id="autogen-category"></select>
+                        </div>
+                        <div class="form-group">
+                            <label>Día con 2 juegos</label>
+                            <select class="form-control" id="autogen-day1">
+                                <option value="1">Día 1</option>
+                                <option value="2">Día 2</option>
+                                <option value="3">Día 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Día con 1 juego</label>
+                            <select class="form-control" id="autogen-day2">
+                                <option value="1">Día 1</option>
+                                <option value="2" selected>Día 2</option>
+                                <option value="3">Día 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p style="font-size:0.8rem;color:var(--text-muted,#888);margin-bottom:0.75rem;">
+                        Genera 3 partidos por equipo (4 si el número de equipos es non), evitando que dos equipos "Casa" se enfrenten entre sí.
+                        Se reparten como 2 juegos en el primer día elegido y 1 en el segundo, usando los campos y horarios (08:00–18:00) configurados.
+                    </p>
+                    <button class="btn btn-primary" onclick="runAutoGenerateSchedule()">Generar calendario de esta categoría</button>
+                    <div id="autogen-status" style="font-size:0.85rem;margin-top:0.75rem;"></div>
+                </div>
+            </div>
+
+            <div class="card" style="margin-bottom: 1.5rem; border: 1px solid var(--accent, #3a7bd5);">
+                <div class="card-header">
+                    <span class="card-title">🏆 Generación Automática de Playoffs</span>
+                </div>
+                <div class="card-body">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Categoría</label>
+                            <select class="form-control" id="playoffgen-category"></select>
+                        </div>
+                        <div class="form-group">
+                            <label>Día de playoffs</label>
+                            <select class="form-control" id="playoffgen-day">
+                                <option value="1">Día 1</option>
+                                <option value="2" selected>Día 2</option>
+                                <option value="3">Día 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p style="font-size:0.8rem;color:var(--text-muted,#888);margin-bottom:0.75rem;">
+                        Toma el <strong>top 4</strong> de la tabla de posiciones de la categoría (según partidos ya finalizados: más victorias, luego diferencial de puntos)
+                        y genera Semifinal (1° vs 4°, 2° vs 3°). La Final se genera después, una vez tengas los resultados de semifinal.
+                    </p>
+                    <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                        <button class="btn btn-primary" onclick="runAutoGenerateSemifinal()">Generar Semifinal (Top 4)</button>
+                        <button class="btn btn-secondary" onclick="runAutoGenerateFinal()">Generar Final (con resultados de semis)</button>
+                    </div>
+                    <div id="playoffgen-status" style="font-size:0.85rem;margin-top:0.75rem;"></div>
+                </div>
             </div>
 
             <div class="tabs">
@@ -1332,13 +1399,17 @@
             return /^staff/i.test((p.position || '').trim());
         }
 
-        // Busca si un CURP ya está registrado en OTRO equipo (no se permite en 2 categorías)
+        // Busca si un CURP ya está registrado como JUGADOR en OTRO equipo (no se permite en 2 categorías).
+        // Las entradas de STAFF se ignoran aquí a propósito: un coach/staff SÍ puede repetirse
+        // en varios equipos; solo como jugador está limitado a uno solo.
         function findCurpElsewhere(curp, excludeTeamId) {
             if (!curp) return null;
             const target = curp.toString().toUpperCase().trim();
             for (const t of LINFAAAC_DATA.teams) {
                 if (t.id === excludeTeamId) continue;
-                const p = (t.players || []).find(pl => (pl.curp || '').toUpperCase().trim() === target);
+                const p = (t.players || []).find(pl =>
+                    (pl.curp || '').toUpperCase().trim() === target && !isStaffPlayer(pl)
+                );
                 if (p) return { team: t, player: p };
             }
             return null;
@@ -2034,6 +2105,255 @@
             autoPublishToGitHub();
         }
 
+        // ===================== GENERACIÓN AUTOMÁTICA DE CALENDARIO =====================
+        const AUTOGEN_TIMES = ['08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00'];
+
+        function generateMatchups(teams, attempts = 300) {
+            const n = teams.length;
+            if (n < 2) return { ok: false, error: 'Se necesitan al menos 2 equipos en la categoría.' };
+            const oddTeamOut = n % 2 !== 0 ? teams[Math.floor(Math.random() * n)] : null;
+
+            for (let attempt = 0; attempt < attempts; attempt++) {
+                const shuffled = [...teams].sort(() => Math.random() - 0.5);
+                const target = {};
+                shuffled.forEach(t => target[t.id] = (oddTeamOut && t.id === oddTeamOut.id) ? 4 : 3);
+                const degree = {}; const playedPairs = new Set();
+                shuffled.forEach(t => degree[t.id] = 0);
+                const pairKey = (a, b) => [a, b].sort().join('|');
+                const matches = []; let failed = false; let safety = 0;
+
+                while (shuffled.some(t => degree[t.id] < target[t.id]) && safety < 5000) {
+                    safety++;
+                    const needing = shuffled.filter(t => degree[t.id] < target[t.id]).sort(() => Math.random() - 0.5);
+                    if (needing.length < 2) { failed = true; break; }
+                    let pairedSomething = false;
+                    for (let i = 0; i < needing.length; i++) {
+                        const a = needing[i]; if (degree[a.id] >= target[a.id]) continue;
+                        for (let j = i + 1; j < needing.length; j++) {
+                            const b = needing[j]; if (degree[b.id] >= target[b.id]) continue;
+                            if (a.casa && b.casa) continue; // regla: casa nunca contra casa
+                            const key = pairKey(a.id, b.id); if (playedPairs.has(key)) continue;
+                            matches.push({ team1: a.id, team2: b.id }); playedPairs.add(key);
+                            degree[a.id]++; degree[b.id]++; pairedSomething = true; break;
+                        }
+                        if (pairedSomething) break;
+                    }
+                    if (!pairedSomething) { failed = true; break; }
+                }
+                if (!failed && shuffled.every(t => degree[t.id] === target[t.id])) {
+                    return { ok: true, matches };
+                }
+            }
+            return { ok: false, error: `No se pudo generar un calendario válido. Es posible que haya demasiados equipos "Casa" en proporción a los que no lo son en esta categoría.` };
+        }
+
+        function splitIntoDays(teams, matches, attempts = 300) {
+            const day1Target = {}, day2Target = {};
+            teams.forEach(t => {
+                const total = matches.filter(m => m.team1 === t.id || m.team2 === t.id).length;
+                day1Target[t.id] = Math.min(2, total);
+                day2Target[t.id] = total - day1Target[t.id];
+            });
+            for (let attempt = 0; attempt < attempts; attempt++) {
+                const order = [...matches].sort(() => Math.random() - 0.5);
+                const d1count = {}, d2count = {};
+                teams.forEach(t => { d1count[t.id] = 0; d2count[t.id] = 0; });
+                const assigned = []; let ok = true;
+                for (const m of order) {
+                    const canDay1 = d1count[m.team1] < day1Target[m.team1] && d1count[m.team2] < day1Target[m.team2];
+                    const canDay2 = d2count[m.team1] < day2Target[m.team1] && d2count[m.team2] < day2Target[m.team2];
+                    if (canDay1 && (!canDay2 || Math.random() < 0.6)) { assigned.push({ ...m, dayGroup: 1 }); d1count[m.team1]++; d1count[m.team2]++; }
+                    else if (canDay2) { assigned.push({ ...m, dayGroup: 2 }); d2count[m.team1]++; d2count[m.team2]++; }
+                    else { ok = false; break; }
+                }
+                if (ok) return { ok: true, matches: assigned };
+            }
+            return { ok: false, error: 'No se pudo repartir los partidos en los dos días. Intenta de nuevo.' };
+        }
+
+        function assignSlots(dayMatches, fields, times) {
+            const teamBusyAtTime = {}, fieldBusyAtTime = {};
+            const result = [], unassigned = [];
+            for (const m of dayMatches) {
+                let placed = false;
+                for (const time of times) {
+                    if (teamBusyAtTime[`${m.team1}|${time}`] || teamBusyAtTime[`${m.team2}|${time}`]) continue;
+                    const freeField = fields.find(f => !fieldBusyAtTime[`${f}|${time}`]);
+                    if (!freeField) continue;
+                    result.push({ ...m, time, field: freeField });
+                    teamBusyAtTime[`${m.team1}|${time}`] = true;
+                    teamBusyAtTime[`${m.team2}|${time}`] = true;
+                    fieldBusyAtTime[`${freeField}|${time}`] = true;
+                    placed = true;
+                    break;
+                }
+                if (!placed) unassigned.push(m);
+            }
+            return { result, unassigned };
+        }
+
+        function runAutoGenerateSchedule() {
+            const category = document.getElementById('autogen-category').value;
+            const day1 = parseInt(document.getElementById('autogen-day1').value);
+            const day2 = parseInt(document.getElementById('autogen-day2').value);
+            const statusEl = document.getElementById('autogen-status');
+
+            if (day1 === day2) { statusEl.innerHTML = '❌ El día de 2 juegos y el de 1 juego deben ser distintos.'; return; }
+
+            const teams = LINFAAAC_DATA.teams.filter(t => t.category === category);
+            if (teams.length < 2) { statusEl.innerHTML = '❌ Esta categoría necesita al menos 2 equipos.'; return; }
+
+            const gen = generateMatchups(teams);
+            if (!gen.ok) { statusEl.innerHTML = '❌ ' + gen.error; return; }
+
+            const split = splitIntoDays(teams, gen.matches);
+            if (!split.ok) { statusEl.innerHTML = '❌ ' + split.error; return; }
+
+            const fields = LINFAAAC_DATA.fields && LINFAAAC_DATA.fields.length ? LINFAAAC_DATA.fields : ['Campo 1'];
+            const group1 = split.matches.filter(m => m.dayGroup === 1);
+            const group2 = split.matches.filter(m => m.dayGroup === 2);
+            const a1 = assignSlots(group1, fields, AUTOGEN_TIMES);
+            const a2 = assignSlots(group2, fields, AUTOGEN_TIMES);
+
+            const newMatches = [...a1.result, ...a2.result].map((m, i) => ({
+                id: 'm_' + Date.now() + '_' + i,
+                day: m.dayGroup === 1 ? day1 : day2,
+                time: m.time,
+                category,
+                field: m.field,
+                team1: m.team1,
+                team2: m.team2,
+                score1: 0,
+                score2: 0,
+                status: 'scheduled',
+                winner: null
+            }));
+
+            LINFAAAC_DATA.schedule.push(...newMatches);
+            saveToStorage();
+            renderScheduleGrid();
+            renderScheduleList();
+            renderMatches();
+            updateDashboard();
+
+            const sinAsignar = a1.unassigned.length + a2.unassigned.length;
+            let msg = `✅ ${newMatches.length} partidos generados para "${category}".`;
+            if (sinAsignar) msg += ` ⚠️ ${sinAsignar} no encontraron horario/campo libre — agrega más campos o revisa manualmente.`;
+            statusEl.innerHTML = msg;
+            autoPublishToGitHub();
+        }
+
+        // ---- Tabla de posiciones (para playoffs) ----
+        function computeStandings(category) {
+            const teams = LINFAAAC_DATA.teams.filter(t => t.category === category);
+            const table = {};
+            teams.forEach(t => table[t.id] = { team: t, wins: 0, losses: 0, ties: 0, pf: 0, pa: 0 });
+
+            LINFAAAC_DATA.schedule
+                .filter(m => m.category === category && m.status === 'finished')
+                .forEach(m => {
+                    if (!table[m.team1] || !table[m.team2]) return;
+                    table[m.team1].pf += m.score1; table[m.team1].pa += m.score2;
+                    table[m.team2].pf += m.score2; table[m.team2].pa += m.score1;
+                    if (m.score1 > m.score2) { table[m.team1].wins++; table[m.team2].losses++; }
+                    else if (m.score2 > m.score1) { table[m.team2].wins++; table[m.team1].losses++; }
+                    else { table[m.team1].ties++; table[m.team2].ties++; }
+                });
+
+            return Object.values(table).sort((a, b) => {
+                if (b.wins !== a.wins) return b.wins - a.wins;
+                const diffA = a.pf - a.pa, diffB = b.pf - b.pa;
+                if (diffB !== diffA) return diffB - diffA;
+                return b.pf - a.pf;
+            });
+        }
+
+        function runAutoGenerateSemifinal() {
+            const category = document.getElementById('playoffgen-category').value;
+            const day = parseInt(document.getElementById('playoffgen-day').value);
+            const statusEl = document.getElementById('playoffgen-status');
+
+            const standings = computeStandings(category);
+            if (standings.length < 4) { statusEl.innerHTML = '❌ Se necesitan al menos 4 equipos con partidos finalizados en esta categoría.'; return; }
+
+            const top4 = standings.slice(0, 4);
+            const fields = LINFAAAC_DATA.fields && LINFAAAC_DATA.fields.length ? LINFAAAC_DATA.fields : ['Campo 1'];
+            const usedTimes = LINFAAAC_DATA.schedule.filter(m => m.day === day).map(m => m.time);
+            const freeTimes = AUTOGEN_TIMES.filter(t => !usedTimes.includes(t));
+            if (freeTimes.length < 1) { statusEl.innerHTML = '❌ No hay horarios libres ese día para las semifinales.'; return; }
+
+            const pairs = [
+                { team1: top4[0].team.id, team2: top4[3].team.id, label: '1° vs 4°' },
+                { team1: top4[1].team.id, team2: top4[2].team.id, label: '2° vs 3°' }
+            ];
+
+            const semiMatches = pairs.map((p, i) => ({
+                id: 'po_' + Date.now() + '_' + i,
+                day, time: freeTimes[i % freeTimes.length], category,
+                field: fields[i % fields.length],
+                team1: p.team1, team2: p.team2,
+                score1: 0, score2: 0, status: 'scheduled', winner: null,
+                isPlayoff: true, round: 'Semifinal'
+            }));
+
+            LINFAAAC_DATA.schedule.push(...semiMatches);
+
+            LINFAAAC_DATA.playoffs = (LINFAAAC_DATA.playoffs || []).filter(p => p.category !== category);
+            LINFAAAC_DATA.playoffs.push({
+                category,
+                rounds: [
+                    { round: 'Semifinal', matches: semiMatches.map(m => ({ id: m.id, team1: m.team1, team2: m.team2 })) },
+                    { round: 'Final', matches: [{ id: null, team1: null, team2: null }] }
+                ]
+            });
+
+            saveToStorage();
+            renderScheduleGrid(); renderScheduleList(); renderMatches(); renderPlayoffs(); updateDashboard();
+            statusEl.innerHTML = `✅ Semifinal generada: ${top4.map(t => t.team.name).join(', ')} (en ese orden de tabla).`;
+            autoPublishToGitHub();
+        }
+
+        function runAutoGenerateFinal() {
+            const category = document.getElementById('playoffgen-category').value;
+            const day = parseInt(document.getElementById('playoffgen-day').value);
+            const statusEl = document.getElementById('playoffgen-status');
+
+            const semis = LINFAAAC_DATA.schedule.filter(m => m.category === category && m.isPlayoff && m.round === 'Semifinal');
+            if (semis.length !== 2) { statusEl.innerHTML = '❌ No encuentro las 2 semifinales de esta categoría. Genera la semifinal primero.'; return; }
+            if (semis.some(m => m.status !== 'finished')) { statusEl.innerHTML = '❌ Ambas semifinales deben estar marcadas como "Finalizado" con marcador antes de generar la Final.'; return; }
+
+            const winners = semis.map(m => m.score1 > m.score2 ? m.team1 : m.team2);
+            if (winners[0] === winners[1]) { statusEl.innerHTML = '❌ Algo no cuadra: las dos semifinales dieron el mismo equipo ganador.'; return; }
+
+            const fields = LINFAAAC_DATA.fields && LINFAAAC_DATA.fields.length ? LINFAAAC_DATA.fields : ['Campo 1'];
+            const usedTimes = LINFAAAC_DATA.schedule.filter(m => m.day === day).map(m => m.time);
+            const freeTimes = AUTOGEN_TIMES.filter(t => !usedTimes.includes(t));
+            if (freeTimes.length < 1) { statusEl.innerHTML = '❌ No hay horarios libres ese día para la final.'; return; }
+
+            const finalMatch = {
+                id: 'po_final_' + Date.now(),
+                day, time: freeTimes[0], category, field: fields[0],
+                team1: winners[0], team2: winners[1],
+                score1: 0, score2: 0, status: 'scheduled', winner: null,
+                isPlayoff: true, round: 'Final'
+            };
+            LINFAAAC_DATA.schedule.push(finalMatch);
+
+            const bracket = (LINFAAAC_DATA.playoffs || []).find(p => p.category === category);
+            if (bracket) {
+                const finalRound = bracket.rounds.find(r => r.round === 'Final');
+                if (finalRound) finalRound.matches = [{ id: finalMatch.id, team1: finalMatch.team1, team2: finalMatch.team2 }];
+            }
+
+            saveToStorage();
+            renderScheduleGrid(); renderScheduleList(); renderMatches(); renderPlayoffs(); updateDashboard();
+            const t1 = LINFAAAC_DATA.teams.find(t => t.id === winners[0]);
+            const t2 = LINFAAAC_DATA.teams.find(t => t.id === winners[1]);
+            statusEl.innerHTML = `✅ Final generada: ${t1 ? t1.name : '?'} vs ${t2 ? t2.name : '?'}.`;
+            autoPublishToGitHub();
+        }
+        // ===================== FIN GENERACIÓN AUTOMÁTICA =====================
+
         // UTILITIES
         function getTeam(id) {
             return LINFAAAC_DATA.teams.find(t => t.id === id) || { 
@@ -2188,7 +2508,7 @@
         // === CATEGORIES ===
         function populateCategorySelects() {
             const cats = LINFAAAC_DATA.categories || [];
-            ['qm-category','team-category','edit-team-category'].forEach(id => {
+            ['qm-category','team-category','edit-team-category','autogen-category','playoffgen-category'].forEach(id => {
                 const s = document.getElementById(id); if (!s) return;
                 const cur = s.value;
                 s.innerHTML = cats.map(c => `<option value="${c}">${c}</option>`).join('');
