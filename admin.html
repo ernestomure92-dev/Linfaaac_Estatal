@@ -1470,7 +1470,7 @@
                             else if (!v.checksumOk) curpChecksumSospechoso.push(`${nombreCompleto} (${curp})`);
 
                             const dup = position !== 'STAFF' ? findCurpElsewhere(curp, null) : null;
-                            if (dup) duplicadosEnOtroEquipo.push(`${nombreCompleto} — ya está en "${dup.team.name}" (${dup.team.category})`);
+                            if (dup) duplicadosEnOtroEquipo.push(`${nombreCompleto} — ya está registrado en el equipo "${dup.team.name}" (${dup.team.category})`);
                         }
 
                         // Formato: numero - nombre - posicion - edad - CURP
@@ -1491,7 +1491,7 @@
 
                 let warnings = '';
                 if (duplicadosEnOtroEquipo.length) {
-                    warnings += `<div style="color:#e74c3c;margin-top:0.4rem;">🚫 ${duplicadosEnOtroEquipo.length} ya inscritos en otra categoría (se bloquearán al guardar):<br>${duplicadosEnOtroEquipo.join('<br>')}</div>`;
+                    warnings += `<div style="color:#e74c3c;margin-top:0.4rem;">🚫 ${duplicadosEnOtroEquipo.length} ya inscritos en otro equipo (se bloquearán al guardar):<br>${duplicadosEnOtroEquipo.join('<br>')}</div>`;
                 }
                 if (curpFormatoMal.length) {
                     warnings += `<div style="color:#e74c3c;margin-top:0.4rem;">⚠️ CURP con formato inválido (revisa la captura):<br>${curpFormatoMal.join('<br>')}</div>`;
@@ -1620,8 +1620,8 @@
 
             const { ok: playersOk, duplicados } = splitDuplicatePlayers(players, null);
             if (duplicados.length) {
-                showAlert(`⚠️ ${duplicados.length} persona(s) NO se agregaron por ya estar en otra categoría: ` +
-                    duplicados.map(d => `${d.player.name} (ya en ${d.existingTeam.name} - ${d.existingTeam.category})`).join('; '), 'error');
+                showAlert(`⚠️ ${duplicados.length} persona(s) NO se agregaron por ya estar registrados en otro equipo: ` +
+                    duplicados.map(d => `${d.player.name} (ya está en el equipo "${d.existingTeam.name}" - ${d.existingTeam.category})`).join('; '), 'error');
             }
 
             const team = {
@@ -1751,8 +1751,8 @@
 
             const { ok: playersOk, duplicados } = splitDuplicatePlayers(players, team.id);
             if (duplicados.length) {
-                showAlert(`⚠️ ${duplicados.length} persona(s) NO se guardaron por ya estar en otra categoría: ` +
-                    duplicados.map(d => `${d.player.name} (ya en ${d.existingTeam.name} - ${d.existingTeam.category})`).join('; '), 'error');
+                showAlert(`⚠️ ${duplicados.length} persona(s) NO se guardaron por ya estar registrados en otro equipo: ` +
+                    duplicados.map(d => `${d.player.name} (ya está en el equipo "${d.existingTeam.name}" - ${d.existingTeam.category})`).join('; '), 'error');
             }
 
             team.name = name;
