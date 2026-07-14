@@ -219,6 +219,122 @@
           "curp": "VAUD091114HMCRBGA3"
         }
       ]
+    },
+    {
+      "id": "t_1784014553944",
+      "name": "IZCALLI TIGERS",
+      "abbr": "IT",
+      "category": "Femenil Libre",
+      "color": "#3b82f6",
+      "casa": false,
+      "players": [
+        {
+          "number": "HC",
+          "name": "ALVAREZ TREJO MATTHEW",
+          "position": "STAFF",
+          "age": 23,
+          "curp": "AATM020709HMCRLTA7",
+          "photo": "fotos/AATM020709HMCRLTA7.jpg"
+        },
+        {
+          "number": "DC",
+          "name": "MARTINEZ LOZORNIO YAMIL ALBERTO",
+          "position": "STAFF",
+          "age": 20,
+          "curp": "MALY060327HMCRZMA7"
+        },
+        {
+          "number": "6",
+          "name": "ARENAS GALAN KARLA FERNANDA",
+          "position": "",
+          "age": 20,
+          "curp": "AEGK050915MMCRLRA7"
+        },
+        {
+          "number": "7",
+          "name": "OLEA RODRIGUEZ LUCIANA",
+          "position": "",
+          "age": 17,
+          "curp": "OERL081130MMCLDCA7"
+        },
+        {
+          "number": "8",
+          "name": "MARTINEZ GOYA NATALIA",
+          "position": "",
+          "age": 18,
+          "curp": "MAGN080228MMCRYTA3"
+        },
+        {
+          "number": "10",
+          "name": "MARTINEZ GOYA CECILIA",
+          "position": "",
+          "age": 16,
+          "curp": "MAGC100218MMCRYCA2"
+        },
+        {
+          "number": "11",
+          "name": "PIÑA ZARATE DANNA PAOLA",
+          "position": "",
+          "age": 21,
+          "curp": "PIZD040411MMCXRNA7"
+        },
+        {
+          "number": "12",
+          "name": "RUIZ BEDOLLA ISABELLA",
+          "position": "",
+          "age": 17,
+          "curp": "RUBI090324MDFZDSA1"
+        },
+        {
+          "number": "13",
+          "name": "CRUZ RIVERA ARIADNA ITZEL",
+          "position": "",
+          "age": 18,
+          "curp": "CURA080401MMCRVRA8"
+        },
+        {
+          "number": "16",
+          "name": "SANCHEZ ROMERO PAOLA ALEXANDRA",
+          "position": "",
+          "age": 17,
+          "curp": "SARP090519MMCNMLA9"
+        },
+        {
+          "number": "21",
+          "name": "LOZADA RUIZ VELASCO AUDREY ESTEFANIA",
+          "position": "",
+          "age": 22,
+          "curp": "LORA040625MMCZZDA1"
+        },
+        {
+          "number": "25",
+          "name": "CORONEL LOYO CAMILA",
+          "position": "",
+          "age": 18,
+          "curp": "COLC080701MDFRYMA0"
+        },
+        {
+          "number": "27",
+          "name": "ENCARNACION MARTINEZ MARIANA SHERLYN",
+          "position": "",
+          "age": 20,
+          "curp": "EAMM051017MMCNRRA3"
+        },
+        {
+          "number": "28",
+          "name": "CASTILLO CARCAMO MARIA FERNANDA",
+          "position": "",
+          "age": 18,
+          "curp": "CACF080528MDFSRRA8"
+        },
+        {
+          "number": "30",
+          "name": "LOPEZ TREVIÑO ANDREA",
+          "position": "",
+          "age": 18,
+          "curp": "LOTA071110MMCPRNA0"
+        }
+      ]
     }
   ],
   "schedule": [],
