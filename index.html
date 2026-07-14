@@ -270,6 +270,16 @@
         .player-info { flex: 1; }
         .player-name { font-weight: 600; color: white; font-size: 0.95rem; }
         .player-position { font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; font-weight: 500; }
+        .player-curp { font-size: 0.72rem; color: var(--text-muted); letter-spacing: 0.5px; margin-top: 0.15rem; }
+        .player-photo {
+            width: 44px; height: 44px; border-radius: 50%; object-fit: cover;
+            margin-right: 1rem; border: 1px solid var(--card-border); flex-shrink: 0; background: var(--dark);
+        }
+        .player-photo-placeholder {
+            width: 44px; height: 44px; border-radius: 50%; margin-right: 1rem; flex-shrink: 0;
+            background: var(--card-border); display: flex; align-items: center; justify-content: center;
+            color: var(--text-muted); font-size: 0.75rem;
+        }
         .player-stats { text-align: right; color: var(--text-muted); font-size: 0.85rem; font-weight: 500; }
 
         .day-tabs {
@@ -1158,10 +1168,15 @@
                         <div class="roster-players-inner roster-list">
                             ${(team.players || []).map(p => `
                                 <div class="player-row">
+                                    ${p.photo
+                                        ? `<img class="player-photo" src="${p.photo}" alt="" loading="lazy" onerror="this.outerHTML='<div class=&quot;player-photo-placeholder&quot;>${(p.name||'?').charAt(0)}</div>'">`
+                                        : `<div class="player-photo-placeholder">${(p.name||'?').charAt(0)}</div>`
+                                    }
                                     <div class="player-number">${p.number}</div>
                                     <div class="player-info">
                                         <div class="player-name">${p.name}</div>
                                         <div class="player-position">${p.position}</div>
+                                        ${p.curp ? `<div class="player-curp">CURP: ${p.curp}</div>` : ''}
                                     </div>
                                     <div class="player-stats">${p.age} años</div>
                                 </div>
