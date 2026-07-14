@@ -394,6 +394,8 @@
         .sync-error{background:rgba(220,38,38,0.15);color:#f87171;border:1px solid rgba(220,38,38,0.3)}
     </style>
 <base target="_blank">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 </head>
 <body>
     <div id="auth-gate" style="position:fixed;inset:0;background:var(--dark,#0f1115);z-index:99999;display:flex;align-items:center;justify-content:center;">
@@ -734,6 +736,11 @@
                 <button class="modal-close" onclick="closeModal('addTeamModal')">&times;</button>
             </div>
             <div class="modal-body">
+                <div class="form-group" style="background:var(--dark,#0f1115);border:1px dashed var(--card-border,#333);border-radius:6px;padding:0.85rem;">
+                    <label style="margin-bottom:0.4rem;">📥 Importar roster desde Excel (plantilla LINFAAAC)</label>
+                    <input type="file" id="roster-excel-input" accept=".xlsx" class="form-control" onchange="importRosterExcel(this)">
+                    <div id="roster-import-status" style="font-size:0.82rem;color:var(--text-muted,#888);margin-top:0.5rem;"></div>
+                </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label>Nombre del Equipo</label>
@@ -1250,6 +1257,228 @@
             `).join('');
         }
 
+        // ===================== IMPORTAR ROSTER DESDE EXCEL =====================
+        // Basado en la plantilla fija LINFAAAC: 3 tarjetas por fila, cada banda de
+        // 10 filas empezando en la fila 12. Las fotos vienen como "imagen en celda"
+        // (feature de Excel 365), vinculadas vía xl/richData.
+        let _importedPhotos = {}; // curp -> {mime, base64}
+
+        function normalizeStr(s) {
+            return (s || '').toString().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toUpperCase().trim();
+        }
+
+        function computeAge(fnac) {
+            if (!fnac) return 0;
+            let d;
+            if (fnac instanceof Date) { d = fnac; }
+            else if (typeof fnac === 'string' && fnac.includes('/')) {
+                const [dd, mm, yyyy] = fnac.split('/');
+                d = new Date(parseInt(yyyy), parseInt(mm) - 1, parseInt(dd));
+            } else { d = new Date(fnac); }
+            if (isNaN(d.getTime())) return 0;
+            const today = new Date();
+            let age = today.getFullYear() - d.getFullYear();
+            const m = today.getMonth() - d.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < d.getDate())) age--;
+            return age;
+        }
+
+        function guessCategory(categoriaRaw, ramaRaw) {
+            const norm = normalizeStr(categoriaRaw + ' ' + ramaRaw);
+            let best = '';
+            LINFAAAC_DATA.categories.forEach(c => {
+                const cNorm = normalizeStr(c);
+                if (norm.includes(cNorm) || cNorm.includes(normalizeStr(categoriaRaw))) {
+                    best = c;
+                }
+            });
+            return best;
+        }
+
+        async function extractPhotoMapFromXlsx(arrayBuffer) {
+            // Devuelve { cellRef: {mime, base64} } usando la cadena de richData
+            const photoMap = {};
+            try {
+                const zip = await JSZip.loadAsync(arrayBuffer);
+                const metaFile = zip.file('xl/metadata.xml');
+                if (!metaFile) return photoMap; // sin fotos en celda
+
+                const sheetXml = await zip.file('xl/worksheets/sheet1.xml').async('string');
+                const metaXml = await metaFile.async('string');
+                const rvXml = await zip.file('xl/richData/rdrichvalue.xml').async('string');
+                const relXml = await zip.file('xl/richData/richValueRel.xml').async('string');
+                const relRelsXml = await zip.file('xl/richData/_rels/richValueRel.xml.rels').async('string');
+
+                const cellVm = [...sheetXml.matchAll(/<c r="([A-Z]+\d+)"[^>]*\bvm="(\d+)"/g)]
+                    .map(m => ({ cellRef: m[1], vm: parseInt(m[2]) }));
+
+                const valueMetaBlock = metaXml.match(/<valueMetadata[^>]*>(.*?)<\/valueMetadata>/s)[1];
+                const vmToRvIndex = [...valueMetaBlock.matchAll(/<rc[^>]*\bv="(\d+)"/g)].map(m => parseInt(m[1]));
+
+                const rvEntries = [...rvXml.matchAll(/<rv[^>]*>(.*?)<\/rv>/gs)]
+                    .map(m => parseInt(m[1].match(/<v>(\d+)<\/v>/)[1]));
+
+                const relIds = [...relXml.matchAll(/<rel[^>]*r:id="(rId\d+)"/g)].map(m => m[1]);
+
+                const relTargets = {};
+                [...relRelsXml.matchAll(/<Relationship Id="(rId\d+)"[^>]*Target="([^"]+)"/g)]
+                    .forEach(m => relTargets[m[1]] = m[2].replace('../', 'xl/'));
+
+                for (const { cellRef, vm } of cellVm) {
+                    const rvIndex = vmToRvIndex[vm - 1];
+                    const relIndex = rvEntries[rvIndex];
+                    const rId = relIds[relIndex];
+                    const mediaPath = relTargets[rId];
+                    if (!mediaPath) continue;
+                    const fileObj = zip.file(mediaPath);
+                    if (!fileObj) continue;
+                    const base64 = await fileObj.async('base64');
+                    const ext = mediaPath.split('.').pop().toLowerCase();
+                    const mime = ext === 'png' ? 'image/png' : 'image/jpeg';
+                    photoMap[cellRef] = { mime, base64, ext: ext === 'png' ? 'png' : 'jpg' };
+                }
+            } catch (e) {
+                console.error('No se pudieron extraer fotos del Excel:', e);
+            }
+            return photoMap;
+        }
+
+        async function importRosterExcel(inputEl) {
+            const file = inputEl.files[0];
+            if (!file) return;
+            const statusEl = document.getElementById('roster-import-status');
+            statusEl.textContent = 'Leyendo archivo...';
+
+            try {
+                const arrayBuffer = await file.arrayBuffer();
+                const wb = XLSX.read(arrayBuffer, { type: 'array', cellDates: true });
+                const sheetName = wb.SheetNames.includes('linfaaac') ? 'linfaaac' : wb.SheetNames[0];
+                const ws = wb.Sheets[sheetName];
+                const cellVal = (ref) => (ws[ref] ? ws[ref].v : undefined);
+
+                const equipoNombre = cellVal('B6') || '';
+                const rama = cellVal('B8') || '';
+                const categoriaCell = cellVal('B10') || '';
+
+                statusEl.textContent = 'Buscando fotos...';
+                const photoMap = await extractPhotoMapFromXlsx(arrayBuffer);
+
+                const BAND_START = 12, BAND_HEIGHT = 10;
+                const cards = [
+                    { photo: 'A', val: 'C', extra: 'D' },
+                    { photo: 'F', val: 'H', extra: 'I' },
+                    { photo: 'K', val: 'M', extra: 'N' },
+                ];
+                const range = XLSX.utils.decode_range(ws['!ref']);
+                const maxRow = range.e.r + 1;
+
+                const lines = [];
+                _importedPhotos = {};
+                let fotosEncontradas = 0;
+
+                for (let row = BAND_START; row <= maxRow; row += BAND_HEIGHT) {
+                    for (const c of cards) {
+                        const paterno = cellVal(`${c.val}${row}`);
+                        if (!paterno) continue;
+                        const materno = cellVal(`${c.val}${row + 1}`) || '';
+                        const nombre = cellVal(`${c.val}${row + 2}`) || '';
+                        const fnac = cellVal(`${c.val}${row + 3}`);
+                        const curp = (cellVal(`${c.val}${row + 4}`) || '').toString().trim();
+                        const roleType = cellVal(`${c.photo}${row + 6}`) || 'JUGADOR';
+                        const roleCode = cellVal(`${c.extra}${row + 7}`);
+
+                        const nombreCompleto = `${paterno} ${materno} ${nombre}`.replace(/\s+/g, ' ').trim();
+                        const number = roleCode !== undefined ? roleCode.toString() : '';
+                        const position = /STAFF/i.test(roleType) ? 'STAFF' : '';
+                        const age = computeAge(fnac);
+
+                        const photoRef = `${c.photo}${row}`;
+                        if (curp && photoMap[photoRef]) {
+                            _importedPhotos[curp] = photoMap[photoRef];
+                            fotosEncontradas++;
+                        }
+
+                        // Formato: numero - nombre - posicion - edad - CURP
+                        lines.push(`${number} - ${nombreCompleto} - ${position} - ${age}${curp ? ' - ' + curp : ''}`);
+                    }
+                }
+
+                document.getElementById('team-players').value = lines.join('\n');
+                if (equipoNombre) document.getElementById('team-name').value = equipoNombre;
+
+                const catGuess = guessCategory(categoriaCell, rama);
+                if (catGuess) document.getElementById('team-category').value = catGuess;
+
+                if (equipoNombre) {
+                    const abbr = equipoNombre.split(/\s+/).map(w => w[0]).join('').substring(0, 3).toUpperCase();
+                    document.getElementById('team-abbr').value = abbr;
+                }
+
+                statusEl.innerHTML = `✅ ${lines.length} personas importadas (${fotosEncontradas} con foto).` +
+                    (catGuess ? '' : ' ⚠️ No se detectó la categoría automáticamente, selecciónala manualmente.') +
+                    ' Revisa el listado y ajusta lo que haga falta antes de guardar.';
+            } catch (e) {
+                console.error(e);
+                statusEl.textContent = '❌ Error al leer el Excel: ' + e.message;
+            }
+        }
+
+        async function uploadFileToGitHub(path, base64Content, message) {
+            if (!githubConfig.token || !githubConfig.owner || !githubConfig.repo) return false;
+            try {
+                let sha = null;
+                try {
+                    const getResp = await fetch(
+                        `https://api.github.com/repos/${githubConfig.owner}/${githubConfig.repo}/contents/${path}?ref=${githubConfig.branch}`,
+                        { headers: { 'Authorization': `token ${githubConfig.token}`, 'Accept': 'application/vnd.github.v3+json' } }
+                    );
+                    if (getResp.ok) { sha = (await getResp.json()).sha; }
+                } catch (e) { /* no existe aun, esta bien */ }
+
+                const body = { message, content: base64Content, branch: githubConfig.branch };
+                if (sha) body.sha = sha;
+
+                const resp = await fetch(
+                    `https://api.github.com/repos/${githubConfig.owner}/${githubConfig.repo}/contents/${path}`,
+                    {
+                        method: 'PUT',
+                        headers: {
+                            'Authorization': `token ${githubConfig.token}`,
+                            'Accept': 'application/vnd.github.v3+json',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(body)
+                    }
+                );
+                return resp.ok;
+            } catch (e) {
+                console.error('Error subiendo ' + path, e);
+                return false;
+            }
+        }
+
+        async function uploadImportedPhotosForTeam(team) {
+            const pending = team.players.filter(p => p.curp && _importedPhotos[p.curp]);
+            if (!pending.length) return;
+            if (!githubConfig.token) {
+                showAlert('Fotos no subidas: configura GitHub primero. Los datos del equipo sí se guardaron.', 'error');
+                return;
+            }
+            showAlert(`Subiendo ${pending.length} fotos a GitHub, esto puede tardar un poco...`, 'success');
+            let ok = 0;
+            for (const p of pending) {
+                const photo = _importedPhotos[p.curp];
+                const path = `fotos/${p.curp}.${photo.ext}`;
+                const success = await uploadFileToGitHub(path, photo.base64, `Foto jugador ${p.curp}`);
+                if (success) { p.photo = path; ok++; }
+            }
+            saveToStorage();
+            renderTeams();
+            showAlert(`${ok}/${pending.length} fotos subidas correctamente.`, ok === pending.length ? 'success' : 'error');
+            autoPublishToGitHub();
+        }
+        // ===================== FIN IMPORTAR ROSTER =====================
+
         function saveTeam() {
             const name = document.getElementById('team-name').value.trim();
             const abbr = document.getElementById('team-abbr').value.trim().toUpperCase();
@@ -1272,7 +1501,8 @@
                             number: parts[0],
                             name: parts[1],
                             position: parts[2] || '',
-                            age: parseInt(parts[3]) || 0
+                            age: parseInt(parts[3]) || 0,
+                            curp: parts[4] || ''
                         });
                     }
                 });
@@ -1295,6 +1525,10 @@
             renderTeams();
             populateTeamSelects();
             updateDashboard();
+            uploadImportedPhotosForTeam(team);
+            _importedPhotos = {};
+            document.getElementById('roster-import-status').textContent = '';
+            document.getElementById('roster-excel-input').value = '';
         }
 
         function deleteTeam(teamId) {
