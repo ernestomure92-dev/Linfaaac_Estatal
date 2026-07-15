@@ -2527,6 +2527,135 @@
           "curp": "AOGM101020HDFNRTA9"
         }
       ]
+    },
+    {
+      "id": "t_1784102674836",
+      "name": "UPIICSA A",
+      "abbr": "UA",
+      "category": "Femenil Libre",
+      "color": "#310599",
+      "casa": false,
+      "players": [
+        {
+          "number": "",
+          "name": "PIÑA MARTINEZ MARIO JOSAFAT",
+          "position": "STAFF",
+          "age": 32,
+          "curp": "PIMM921222HDFXRR07"
+        },
+        {
+          "number": "",
+          "name": "MENDEZ MARTINEZ DIEGO",
+          "position": "STAFF",
+          "age": 25,
+          "curp": "MEMD001217HDFNRGA0"
+        },
+        {
+          "number": "",
+          "name": "GONZALEZ TAFOLLA MONSERRAT",
+          "position": "",
+          "age": 24,
+          "curp": "GOTM020219MDFNFNA7"
+        },
+        {
+          "number": "",
+          "name": "TORRIJOS POMARES DANIELA MARIA",
+          "position": "",
+          "age": 24,
+          "curp": "TOPD010913MDFRMNA1"
+        },
+        {
+          "number": "",
+          "name": "MORENO CRUZ VALERIA KALI",
+          "position": "",
+          "age": 20,
+          "curp": "MOCV051105MDFRRLA2"
+        },
+        {
+          "number": "",
+          "name": "RAMIREZ SOLIS FATIMA",
+          "position": "",
+          "age": 19,
+          "curp": "RASF070427MDFMLTA8"
+        },
+        {
+          "number": "",
+          "name": "MOJICA SERRANO NASHLY BRICEIRI",
+          "position": "",
+          "age": 24,
+          "curp": "MOSN020303MMCJRSA8"
+        },
+        {
+          "number": "",
+          "name": "NIETO RAMIREZ SANDY NOVALY",
+          "position": "",
+          "age": 21,
+          "curp": "NIRS041108MDFTMNA6"
+        },
+        {
+          "number": "",
+          "name": "HERNANDEZ TACUBA JACQUELINNE",
+          "position": "",
+          "age": 27,
+          "curp": "HETJ980809MDFRCC01"
+        },
+        {
+          "number": "",
+          "name": "MOSQEDA DELGADO MONTSERRAT",
+          "position": "",
+          "age": 22,
+          "curp": "MODM031201MVZSLNA5"
+        },
+        {
+          "number": "",
+          "name": "TREJO BURGOS YANAT YUNUEN",
+          "position": "",
+          "age": 21,
+          "curp": "TEBX041021MDFRRNA5"
+        },
+        {
+          "number": "",
+          "name": "CARRILLO PEREZ DENISSE XIMENA",
+          "position": "",
+          "age": 22,
+          "curp": "CAPD031123MDFRRNA6"
+        },
+        {
+          "number": "",
+          "name": "GARCIA LOZADA LESLIE JAZMIN",
+          "position": "",
+          "age": 21,
+          "curp": "GALL041211MDFRZSA8"
+        },
+        {
+          "number": "",
+          "name": "GALICIA VEGA ALONDRA MICHELLE",
+          "position": "",
+          "age": 24,
+          "curp": "GAVA020422MDFLGLA3"
+        },
+        {
+          "number": "",
+          "name": "CRUZ MARTINEZ JOHANAN",
+          "position": "",
+          "age": 21,
+          "curp": "CUMC050205MDFRRHA3"
+        },
+        {
+          "number": "",
+          "name": "PEREZ SEGOVIA MELENIE AMIEL",
+          "position": "",
+          "age": 21,
+          "curp": "PESM050601MMCRGLB9"
+        },
+        {
+          "number": "",
+          "name": "ABOYTES SANCHEZ LUNA",
+          "position": "",
+          "age": 20,
+          "curp": "AOSL051214MDFBNNA8"
+        }
+      ]
     }
   ],
   "schedule": [],
