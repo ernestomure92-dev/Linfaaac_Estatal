@@ -1362,6 +1362,114 @@
           "curp": "GAMF100225MMCRDRA6"
         }
       ]
+    },
+    {
+      "id": "t_1784098423640",
+      "name": "DRAGONES NEGROS",
+      "abbr": "DN",
+      "category": "Femenil Libre",
+      "color": "#0a0a0a",
+      "casa": false,
+      "players": [
+        {
+          "number": "",
+          "name": "GUTIERREZ CORREA ENRRIQUE ALEJANDRO",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "CASTREJON ALLAN AXEL",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "ALONSO NUÑEZ MICHELLE YANETH",
+          "position": "",
+          "age": 17,
+          "curp": "AONY080208MDFLXNA7"
+        },
+        {
+          "number": "",
+          "name": "PANIAGUA TELLEZ DAIANA LINNET",
+          "position": "",
+          "age": 16,
+          "curp": "PATD100322MHGNLNA3"
+        },
+        {
+          "number": "",
+          "name": "TAPIA GONZALEZ KARLA ODETTE",
+          "position": "",
+          "age": 16,
+          "curp": "TAGK100305MMCPNRA4"
+        },
+        {
+          "number": "",
+          "name": "CHAVEZ GODINEZ PAULINA JOSSELIN",
+          "position": "",
+          "age": 16,
+          "curp": "CAGP100119MHGDKA1"
+        },
+        {
+          "number": "",
+          "name": "CASTREJON SANTOS ZYANYA NATASHA",
+          "position": "",
+          "age": 16,
+          "curp": "XASZ091015MMCSNYA2"
+        },
+        {
+          "number": "",
+          "name": "MORALES MARTINEZ VANESSA LIZETH",
+          "position": "",
+          "age": 16,
+          "curp": "MOMV090802MMCRRNA1"
+        },
+        {
+          "number": "",
+          "name": "DIAZ LEAL DAPHNE ARACELI",
+          "position": "",
+          "age": 20,
+          "curp": "DILD060121MDFZLPA2"
+        },
+        {
+          "number": "55",
+          "name": "LOPEZ GONZALEZ VALERIA ASTRID",
+          "position": "",
+          "age": 16,
+          "curp": "LOGV091207MMCPNLA0"
+        },
+        {
+          "number": "15",
+          "name": "CERVANTEZ HERNANDEZ KIMBERLY ASTRID",
+          "position": "",
+          "age": 16,
+          "curp": "CEHK100213MMCRRMA1"
+        },
+        {
+          "number": "",
+          "name": "COLUNGA VELAZQUEZ INGRID",
+          "position": "",
+          "age": 20,
+          "curp": "COVI060208MMCLLNA5"
+        },
+        {
+          "number": "",
+          "name": "CASTRO LUCAS ANGELA BERENICE",
+          "position": "",
+          "age": 25,
+          "curp": "CALA010625MHGSCNA1"
+        },
+        {
+          "number": "",
+          "name": "ORTEGA GUTIERREZ ALEXA MICHELLE",
+          "position": "",
+          "age": 16,
+          "curp": "OEGA090928MHGRTLA4"
+        }
+      ]
     }
   ],
   "schedule": [],
