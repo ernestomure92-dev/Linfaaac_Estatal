@@ -847,6 +847,86 @@
           "curp": "QUGF000214HMCNRRA5"
         }
       ]
+    },
+    {
+      "id": "t_1784095615434",
+      "name": "AGUILAS BLANCAS",
+      "abbr": "AB",
+      "category": "14 Varonil",
+      "color": "#36ba64",
+      "casa": false,
+      "players": [
+        {
+          "number": "",
+          "name": "CORCHADO GONZALEZ REBECA",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "OCAÑA CORCHADO REBECA",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "6",
+          "name": "MARTINEZ GARCIA SANTIAGO",
+          "position": "",
+          "age": 13,
+          "curp": "MAGS130306HMCRRNA0"
+        },
+        {
+          "number": "0",
+          "name": "AVALOS GODOY LEONARDO ZAID",
+          "position": "",
+          "age": 14,
+          "curp": "AAGL120411HDFVDNA8"
+        },
+        {
+          "number": "11",
+          "name": "AVALOS MENDEZ MATIAS",
+          "position": "",
+          "age": 13,
+          "curp": "AAMM120723HDFVNTA5"
+        },
+        {
+          "number": "14",
+          "name": "HERNANDEZ LERMA BRUNO JOB",
+          "position": "",
+          "age": 13,
+          "curp": "HELB130214HDFRRRA1"
+        },
+        {
+          "number": "30",
+          "name": "MIRANDA GUERRA IAN ALEJANDRO",
+          "position": "",
+          "age": 13,
+          "curp": "MIGI130105HDFRRNA5"
+        },
+        {
+          "number": "13",
+          "name": "MARQUEZ ESTRADA DIEGO SALVADOR",
+          "position": "",
+          "age": 12,
+          "curp": "MAED131004HDFRSGA3"
+        },
+        {
+          "number": "9",
+          "name": "PERALTA DEL MONTE VICTOR",
+          "position": "",
+          "age": 13,
+          "curp": "PEMV130122HDFRNCA5"
+        },
+        {
+          "number": "",
+          "name": "REYES HERNANDEZ LEONARDO",
+          "position": "",
+          "age": 12,
+          "curp": "REHL140703HDFYRNA8"
+        }
+      ]
     }
   ],
   "schedule": [
