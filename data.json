@@ -1915,13 +1915,13 @@
         },
         {
           "number": "6",
-          "name": "TAPIA MEDINA RICARDO SU",
-          "position": "LING",
-          "age": 0,
-          "curp": "47"
+          "name": "TAPIA MEDINA RICARDO SU LING",
+          "position": "JUGADOR",
+          "age": 47,
+          "curp": "TAMR790606HDFPDC08"
         },
         {
-          "number": "S/N",
+          "number": "",
           "name": "TREJO ESPINOSA RICARDO ALBERTO",
           "position": "JUGADOR",
           "age": 44,
@@ -1949,7 +1949,7 @@
           "curp": "FORF860924HDFLYR01"
         },
         {
-          "number": "S/N",
+          "number": "",
           "name": "MORALES DURAN OSCAR ORLANDO",
           "position": "JUGADOR",
           "age": 35,
