@@ -3289,6 +3289,15 @@
       "color": "#203e7e",
       "casa": false,
       "players": []
+    },
+    {
+      "id": "t_1784104099429",
+      "name": "PATOS ECATEPEC",
+      "abbr": "PE",
+      "category": "12 Mixto",
+      "color": "#3dae79",
+      "casa": false,
+      "players": []
     }
   ],
   "schedule": [],
