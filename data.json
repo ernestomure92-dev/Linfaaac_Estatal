@@ -440,6 +440,107 @@
           "curp": "HEHM890429HDFRRS04"
         }
       ]
+    },
+    {
+      "id": "t_1784091723885",
+      "name": "AGUILAS BLANCAS",
+      "abbr": "AB",
+      "category": "14 Femenil",
+      "color": "#3bc46f",
+      "casa": false,
+      "players": [
+        {
+          "number": "",
+          "name": "CORCHADO GONZALEZ REBECA",
+          "position": "STAFF",
+          "age": 0,
+          "curp": "__________________________"
+        },
+        {
+          "number": "",
+          "name": "OCAÑA CORCHADO REBECA",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "12",
+          "name": "MARTINEZ JUAREZ MARIA FERNANDA",
+          "position": "",
+          "age": 14,
+          "curp": "MAJF120221MDFRRRA1"
+        },
+        {
+          "number": "4",
+          "name": "GUILLEN ARREDONDO SOFIA",
+          "position": "",
+          "age": 13,
+          "curp": "AEGS130202MDFRLFFA2"
+        },
+        {
+          "number": "10",
+          "name": "HERNANDEZ VELAZCO DIANA AITANA",
+          "position": "",
+          "age": 12,
+          "curp": "HEVD131225MHGRLNA3"
+        },
+        {
+          "number": "1",
+          "name": "RIQUELME MORALES SARAH",
+          "position": "",
+          "age": 13,
+          "curp": "RIMS120801MDFQRRA8"
+        },
+        {
+          "number": "13",
+          "name": "CALZADILLA MORALES DIANA CAMILA",
+          "position": "",
+          "age": 14,
+          "curp": "CALD120711MDFLNNA4"
+        },
+        {
+          "number": "9",
+          "name": "HERNANDEZ MIXTEGA MEXTLI",
+          "position": "",
+          "age": 13,
+          "curp": "HEMM120723MDFRXXA5"
+        },
+        {
+          "number": "",
+          "name": "GUIZAR AGUILAR PAULINA",
+          "position": "",
+          "age": 14,
+          "curp": "RIMS120801MDFQRRA8"
+        },
+        {
+          "number": "",
+          "name": "JIMENEZ ONTIVEROS DANIELA PAULETTE",
+          "position": "",
+          "age": 13,
+          "curp": "JIOD111124MDFMNNA3"
+        },
+        {
+          "number": "",
+          "name": "QUINTERO ROMERO LUNA ALEJANDRA",
+          "position": "",
+          "age": 13,
+          "curp": "QURL121215MDFNNMNA5"
+        },
+        {
+          "number": "17",
+          "name": "ESPINOZA GOMORA PAULA LORETO",
+          "position": "",
+          "age": 12,
+          "curp": "EIGP130817MDFSMLA9"
+        },
+        {
+          "number": "94",
+          "name": "MARTINEZ MENDEZ ANDREA",
+          "position": "",
+          "age": 13,
+          "curp": "MAMA130409MDFRNNA6"
+        }
+      ]
     }
   ],
   "schedule": [],
