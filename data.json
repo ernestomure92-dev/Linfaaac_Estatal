@@ -1028,6 +1028,107 @@
           "curp": "MAMA130409MDFRNNA6"
         }
       ]
+    },
+    {
+      "id": "t_1784097485127",
+      "name": "AGUILAS BLANCAS",
+      "abbr": "AB",
+      "category": "12 Mixto",
+      "color": "#b21030",
+      "casa": false,
+      "players": [
+        {
+          "number": "",
+          "name": "CORCHADO GONZALEZ REBECA",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "OCAÑA CORCHADO REBECA",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "CRISTOBAL BERISTAIN EMMA ITZAE",
+          "position": "",
+          "age": 11,
+          "curp": "CIBE150502MMCRRMA0"
+        },
+        {
+          "number": "",
+          "name": "FLORES BAEZ DANNA MELANIA",
+          "position": "",
+          "age": 12,
+          "curp": "FOBD140314MDFLZNA4"
+        },
+        {
+          "number": "",
+          "name": "MORAN LEON DIEGO DOMINIK",
+          "position": "",
+          "age": 11,
+          "curp": "MOLD150617HMCRNGA8"
+        },
+        {
+          "number": "",
+          "name": "HERNANDEZ LERMA GUSS KENNETH",
+          "position": "",
+          "age": 11,
+          "curp": "HELG150608HMCRRSA2"
+        },
+        {
+          "number": "",
+          "name": "MIRAMONTES CEJUDO CONSTANZA ABISAI",
+          "position": "",
+          "age": 10,
+          "curp": "MICC150812MDFRJNA9"
+        },
+        {
+          "number": "",
+          "name": "MERCADO SIMON LEONARDO",
+          "position": "",
+          "age": 10,
+          "curp": "MESL151130HMCRMNA6"
+        },
+        {
+          "number": "",
+          "name": "DEL ORBE MOLINA BASTIAN MATEO",
+          "position": "",
+          "age": 11,
+          "curp": "OEMB150621HMCRLSA8"
+        },
+        {
+          "number": "",
+          "name": "CHAVARRIA RODRIGUEZ NADIA PATRICIA",
+          "position": "",
+          "age": 11,
+          "curp": "CARN150222MDFHDDA9"
+        },
+        {
+          "number": "",
+          "name": "RIQUELME MORALES KENDRA PAOLA",
+          "position": "",
+          "age": 11,
+          "curp": "RIMK140810MMCQRNA6"
+        },
+        {
+          "number": "",
+          "name": "NAVA RODRIGUEZ LUZ XIMENA",
+          "position": "",
+          "age": 11,
+          "curp": "NARL150409MMCVDZA7"
+        },
+        {
+          "number": "",
+          "name": "GUEVARA TORRES MIA VALENTINA",
+          "position": "",
+          "age": 10,
+          "curp": "GUTM151214MMCVRXA0"
+        }
+      ]
     }
   ],
   "schedule": [
