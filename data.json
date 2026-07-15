@@ -26,7 +26,75 @@
     "Campo 10",
     "Campo 11"
   ],
-  "teams": [],
+  "teams": [
+    {
+      "id": "t_1784093595681",
+      "name": "ÁLABAMA",
+      "abbr": "Á",
+      "category": "Master Varonil",
+      "color": "#c43b48",
+      "casa": false,
+      "players": [
+        {
+          "number": "",
+          "name": "Garcia Barajas Marco Antonio",
+          "position": "",
+          "age": 47,
+          "curp": "GABM790712HDFRRR03",
+          "photo": "fotos/GABM790712HDFRRR03.jpg"
+        },
+        {
+          "number": "",
+          "name": "Ramirez Becerra Emmanuel",
+          "position": "",
+          "age": 40,
+          "curp": "RABE851216HDFMCM04"
+        },
+        {
+          "number": "",
+          "name": "Cruz Cortes Edwin",
+          "position": "",
+          "age": 48,
+          "curp": "CUTE780513HDFRRDOS"
+        },
+        {
+          "number": "",
+          "name": "Garcia Barba Juan",
+          "position": "",
+          "age": 41,
+          "curp": "GABJ850201HDFRRN04"
+        },
+        {
+          "number": "",
+          "name": "Guerrero Morales Jose Antonio",
+          "position": "",
+          "age": 42,
+          "curp": "GUMA840119HDFRRN09"
+        },
+        {
+          "number": "",
+          "name": "Bernal Reyes Angel Alberto",
+          "position": "",
+          "age": 37,
+          "curp": "BERA88O8O6HDFRYNO2"
+        },
+        {
+          "number": "",
+          "name": "Yepez Cruz Hugo Antonio",
+          "position": "",
+          "age": 46,
+          "curp": "_YECH790612HPLPRG02_________"
+        },
+        {
+          "number": "",
+          "name": "Acevedo Martínez Raymundo Nicolas",
+          "position": "",
+          "age": 38,
+          "curp": "AEMR870924HGTCRY07"
+        }
+      ]
+    }
+  ],
   "schedule": [],
   "playoffs": []
 }
