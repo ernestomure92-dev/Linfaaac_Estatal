@@ -1129,6 +1129,86 @@
           "curp": "GUTM151214MMCVRXA0"
         }
       ]
+    },
+    {
+      "id": "t_1784097616042",
+      "name": "AGUILAS BLANCAS",
+      "abbr": "AB",
+      "category": "10 Mixto",
+      "color": "#b21030",
+      "casa": false,
+      "players": [
+        {
+          "number": "",
+          "name": "CORCHADO REBECA",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "OCAÑA CORCHADO REBECA",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "GALEANA ACEVEDO EMILIO",
+          "position": "",
+          "age": 7,
+          "curp": "GAAE181007HMCLCMA8"
+        },
+        {
+          "number": "",
+          "name": "MARQUEZ ESTRADA ISAAC ALEJANDRO",
+          "position": "",
+          "age": 7,
+          "curp": "MAEI181006HDFRSSA6"
+        },
+        {
+          "number": "",
+          "name": "JUAREZ HUITRON ANA SOFIA",
+          "position": "",
+          "age": 10,
+          "curp": "JUHA160430MDFRTNA7"
+        },
+        {
+          "number": "",
+          "name": "RODRIGUEZ FLORES LIA JULIETA",
+          "position": "",
+          "age": 8,
+          "curp": "ROFL170929MMCDLXA8"
+        },
+        {
+          "number": "",
+          "name": "SANCHEZ LOPEZ EMILIO JULIAN",
+          "position": "",
+          "age": 8,
+          "curp": "SALE170809HMCNPMA1"
+        },
+        {
+          "number": "",
+          "name": "GRAJALES REYES ANA CECILIA",
+          "position": "",
+          "age": 8,
+          "curp": "GARA170826MDFRYNA1"
+        },
+        {
+          "number": "",
+          "name": "ORTEGA VILLALON MATIAS RENE",
+          "position": "",
+          "age": 9,
+          "curp": "OEVM170410HDFRLTA0"
+        },
+        {
+          "number": "",
+          "name": "VILLASEÑOR TORRES CARLOS GAEL",
+          "position": "",
+          "age": 9,
+          "curp": "VITC160816HDFLRRA6"
+        }
+      ]
     }
   ],
   "schedule": [
