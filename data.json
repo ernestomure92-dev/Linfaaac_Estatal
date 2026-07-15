@@ -3034,18 +3034,60 @@
           "curp": "LOVL960130MDFPGC"
         },
         {
-          "number": "HC",
-          "name": "Morales Montalvo Luis Enrique",
-          "position": "STAFF",
-          "age": 30,
-          "curp": "MOML930516HMCRNS07"
+          "number": "0",
+          "name": "Santiago Patiño Marco Antonio",
+          "position": "JUGADOR",
+          "age": 12,
+          "curp": "SAPM131001HDFNTRA2"
         },
         {
-          "number": "COACH",
-          "name": "López Vega María del Lucero",
-          "position": "STAFF",
-          "age": 30,
-          "curp": "LOVL960130MDFPGC"
+          "number": "1",
+          "name": "Barrios González Emiliano Caleb",
+          "position": "JUGADOR",
+          "age": 14,
+          "curp": "BAGE111214HDFRNMA4"
+        },
+        {
+          "number": "4",
+          "name": "Ibarra Hernández Genaro Gael",
+          "position": "JUGADOR",
+          "age": 13,
+          "curp": "IAHG130504HDFBRNA7"
+        },
+        {
+          "number": "12",
+          "name": "Saenz Barrios Julian Baruk",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "SABJ110617HDFNRLA4"
+        },
+        {
+          "number": "15",
+          "name": "Peña Hernández Daniel",
+          "position": "JUGADOR",
+          "age": 14,
+          "curp": "PEHD111010HDFXRNA0"
+        },
+        {
+          "number": "43",
+          "name": "Tinoco Peña Miguel Osvaldo",
+          "position": "JUGADOR",
+          "age": 16,
+          "curp": "TIPNM100103HDFNXGB8"
+        },
+        {
+          "number": "47",
+          "name": "Moreno Galicia Jesús David",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "MOGJ101220HDFRLSA2"
+        },
+        {
+          "number": "69",
+          "name": "Espinisa Ramirez Naim Yamael",
+          "position": "JUGADOR",
+          "age": 13,
+          "curp": "EIRN130102HMCSMMA6"
         }
       ]
     }
