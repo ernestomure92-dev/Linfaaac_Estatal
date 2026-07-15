@@ -246,6 +246,93 @@
           "curp": "GOSX130810HMCMRVA2"
         }
       ]
+    },
+    {
+      "id": "t_1784094107536",
+      "name": "Dragones Negros Tizayuca",
+      "abbr": "DNT",
+      "category": "Master Femenil",
+      "color": "#100f0f",
+      "casa": false,
+      "players": [
+        {
+          "number": "10",
+          "name": "GUTIERREZ CORREA ENRIQUE ALEJANDRO",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "41",
+          "name": "SORIANO PEREZ JESSICA VIRIDIANA",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "18",
+          "name": "CONSTATNTINO SORIANO JULIA LARISSA",
+          "position": "",
+          "age": 14,
+          "curp": "COSJ120605MMCNRLA7"
+        },
+        {
+          "number": "28",
+          "name": "GARCIA CASTRO MELISSA",
+          "position": "",
+          "age": 14,
+          "curp": "GACM120116MMCRSLA4"
+        },
+        {
+          "number": "",
+          "name": "RAMIREZ PALACIOS DANNA XIMENA",
+          "position": "",
+          "age": 13,
+          "curp": "RAPD130606MMCMLNA7"
+        },
+        {
+          "number": "",
+          "name": "CERVANTEZ HERNANDEZ MIA LINSAY",
+          "position": "",
+          "age": 13,
+          "curp": "CEHM130611MDFRRXA5"
+        },
+        {
+          "number": "",
+          "name": "GARCIA OLVERA GENESSIS ALEXIA",
+          "position": "",
+          "age": 13,
+          "curp": "GAOG130513MDFRLNA5"
+        },
+        {
+          "number": "",
+          "name": "MEJIA CHAIRE CAMILA ODETTE",
+          "position": "",
+          "age": 12,
+          "curp": "MECC131020MDFJHMA3"
+        },
+        {
+          "number": "",
+          "name": "BAZAN MARTINEX XIMENA",
+          "position": "",
+          "age": 0,
+          "curp": "BAMX140805MDFZRMA6"
+        },
+        {
+          "number": "",
+          "name": "CONSTANTINO SORIANO MARIA FERNADA",
+          "position": "",
+          "age": 4,
+          "curp": "COSF150222MMCNRRA8"
+        },
+        {
+          "number": "",
+          "name": "PEREZ VAZQUEZ MARIA JOSE",
+          "position": "",
+          "age": 12,
+          "curp": "PEVJ140226MMCRZSA2"
+        }
+      ]
     }
   ],
   "schedule": [],
