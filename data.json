@@ -194,6 +194,58 @@
           "curp": "AAVD070220HGRDRRA3"
         }
       ]
+    },
+    {
+      "id": "t_1784093944410",
+      "name": "DRAGONES NEGROS",
+      "abbr": "DN",
+      "category": "14 Varonil",
+      "color": "#100f0f",
+      "casa": false,
+      "players": [
+        {
+          "number": "",
+          "name": "MARTINEZ PEREZ ALEJANDRA",
+          "position": "STAFF",
+          "age": 0,
+          "curp": "__________________________"
+        },
+        {
+          "number": "",
+          "name": "CARDENAS SANCHEZ SANTIAGO",
+          "position": "",
+          "age": 13,
+          "curp": "CASS130702HMCRNNA4"
+        },
+        {
+          "number": "",
+          "name": "SOLIS MACIAS FRANCO MATEO",
+          "position": "",
+          "age": 12,
+          "curp": "SOMF140131HMCLCRA1"
+        },
+        {
+          "number": "",
+          "name": "LOPEZ GONZALEZ MATIAS ABDIEL",
+          "position": "",
+          "age": 13,
+          "curp": "LOGM130214HMCPNTA6"
+        },
+        {
+          "number": "",
+          "name": "ALVAREZ ALVAREZ KEVIN ROLANDO",
+          "position": "",
+          "age": 15,
+          "curp": "AAAK110119HTSLLVA6"
+        },
+        {
+          "number": "",
+          "name": "GOMEZ SORIANO XAVIER",
+          "position": "",
+          "age": 12,
+          "curp": "GOSX130810HMCMRVA2"
+        }
+      ]
     }
   ],
   "schedule": [],
