@@ -93,6 +93,107 @@
           "curp": "AEMR870924HGTCRY07"
         }
       ]
+    },
+    {
+      "id": "t_1784093770562",
+      "name": "DRAGONES NEGROS",
+      "abbr": "DN",
+      "category": "Varonil Libre",
+      "color": "#100f0f",
+      "casa": false,
+      "players": [
+        {
+          "number": "",
+          "name": "GUTIERREZ CORREA ENRIQUE ALEJANDRO",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "GARCIA RAMOS DENISE ADRIANA",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "MARTINEZ ESPEJEL DIEGO ISRAEL",
+          "position": "",
+          "age": 17,
+          "curp": "MAED090228HDFRSGA3"
+        },
+        {
+          "number": "",
+          "name": "CAÑAMO GOMEZ EDGAR JESUS",
+          "position": "",
+          "age": 17,
+          "curp": "CAGE090409HHGXMDA8"
+        },
+        {
+          "number": "",
+          "name": "RENTERIA LEZAMA JUSTYN EDUARDO",
+          "position": "",
+          "age": 22,
+          "curp": "RELJ030715HMCNZSA8"
+        },
+        {
+          "number": "",
+          "name": "CHAVEZ ROMERO MARIO ALEJANDRO",
+          "position": "",
+          "age": 17,
+          "curp": "CARM090603HDFHMRA2"
+        },
+        {
+          "number": "24",
+          "name": "GUTIERREZ CORREA IAN YAEL.",
+          "position": "",
+          "age": 24,
+          "curp": "GUCI020624HDFTRNA7"
+        },
+        {
+          "number": "",
+          "name": "CASTREJON CORONADO ERICK GAEL",
+          "position": "",
+          "age": 23,
+          "curp": "CACE020827HDFSRRA7"
+        },
+        {
+          "number": "",
+          "name": "HERNANDEZ GARCIA KEALAN ABDIEL",
+          "position": "",
+          "age": 16,
+          "curp": "HEGK090717HDFRRLA1"
+        },
+        {
+          "number": "",
+          "name": "MANDUJANO FLORES ANGEL ERNESTO",
+          "position": "",
+          "age": 15,
+          "curp": "MAFA110711HMCNLNA7"
+        },
+        {
+          "number": "",
+          "name": "MARIN FRIAS ISAAC JESUS",
+          "position": "",
+          "age": 21,
+          "curp": "MAFI050111HDFRRSA3"
+        },
+        {
+          "number": "",
+          "name": "HIJAR PINTO ANDRE",
+          "position": "",
+          "age": 17,
+          "curp": "HIPA090502HDFJNNA9"
+        },
+        {
+          "number": "",
+          "name": "ADAME VARGAZ DARWIN JARHED",
+          "position": "",
+          "age": 19,
+          "curp": "AAVD070220HGRDRRA3"
+        }
+      ]
     }
   ],
   "schedule": [],
