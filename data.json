@@ -3747,6 +3747,87 @@
           "curp": ""
         }
       ]
+    },
+    {
+      "id": "t_1784140718752",
+      "name": "RAPTORS ODA  B",
+      "abbr": "RO",
+      "category": "Femenil Libre",
+      "color": "#7f4858",
+      "casa": false,
+      "players": [
+        {
+          "number": "Coach",
+          "name": "Rodríguez Cruz Drake Jordane",
+          "position": "STAFF",
+          "age": 0,
+          "curp": "ROCD070419HDFDRRA0"
+        },
+        {
+          "number": "Coach",
+          "name": "Cardoso García Miguel",
+          "position": "STAFF",
+          "age": 29,
+          "curp": "CAGM970704HMCRRG06",
+          "photo": "fotos/CAGM970704HMCRRG06.jpg"
+        },
+        {
+          "number": "87",
+          "name": "Barranco González Annick Giovanna",
+          "position": "",
+          "age": 15,
+          "curp": "BAGA100823MDFRNNA9",
+          "photo": "fotos/BAGA100823MDFRNNA9.jpg"
+        },
+        {
+          "number": "4",
+          "name": "Gutiérrez Tovar Melissa",
+          "position": "",
+          "age": 16,
+          "curp": "GUTM100702MDFTVLA8",
+          "photo": "fotos/GUTM100702MDFTVLA8.jpg"
+        },
+        {
+          "number": "19",
+          "name": "Angeles Antolino Viridiana",
+          "position": "",
+          "age": 15,
+          "curp": "AEAV100829MMCNNRA6",
+          "photo": "fotos/AEAV100829MMCNNRA6.jpg"
+        },
+        {
+          "number": "14",
+          "name": "Mota Rueda Azul",
+          "position": "",
+          "age": 0,
+          "curp": "MORA080402MDFTDZA8",
+          "photo": "fotos/MORA080402MDFTDZA8.jpg"
+        },
+        {
+          "number": "18",
+          "name": "Uriostegui Luna Valentina",
+          "position": "",
+          "age": 17,
+          "curp": "LUUV090630MDFNRLA9",
+          "photo": "fotos/LUUV090630MDFNRLA9.jpg"
+        },
+        {
+          "number": "17",
+          "name": "Cano Trejo Danna Paola",
+          "position": "",
+          "age": 19,
+          "curp": "CATD070204MMCNRNA2",
+          "photo": "fotos/CATD070204MMCNRNA2.jpg"
+        },
+        {
+          "number": "29",
+          "name": "Centeno Landa Valeria",
+          "position": "",
+          "age": 17,
+          "curp": "CELV081204MDFNNLA9",
+          "photo": "fotos/CELV081204MDFNNLA9.jpg"
+        }
+      ]
     }
   ],
   "schedule": [
