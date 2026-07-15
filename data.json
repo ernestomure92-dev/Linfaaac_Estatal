@@ -1550,6 +1550,100 @@
           "curp": "SADF751126MVZNML11"
         }
       ]
+    },
+    {
+      "id": "t_1784099087738",
+      "name": "FLAG VUDÚ",
+      "abbr": "FV",
+      "category": "16 Femenil",
+      "color": "#9a3279",
+      "casa": false,
+      "players": [
+        {
+          "number": "",
+          "name": "Granados Aguilar Gary Isay",
+          "position": "STAFF",
+          "age": 24,
+          "curp": "GAAG020102HMCRGRA7"
+        },
+        {
+          "number": "",
+          "name": "Morales Martínez Adair",
+          "position": "STAFF",
+          "age": 22,
+          "curp": "MOMA030901HHGRRDA8"
+        },
+        {
+          "number": "",
+          "name": "Matehuala Escobedo Sofia Regina",
+          "position": "",
+          "age": 16,
+          "curp": "MAES100128MMCT"
+        },
+        {
+          "number": "",
+          "name": "Garcia Diaz Natalia betzabe",
+          "position": "",
+          "age": 14,
+          "curp": "DIGN110825MDFZRTA0"
+        },
+        {
+          "number": "",
+          "name": "Hernández Martínez Yunisa Belebí",
+          "position": "",
+          "age": 13,
+          "curp": "HEMY120910MMCRRNA7"
+        },
+        {
+          "number": "",
+          "name": "Matehuala Escobedo Alejandra",
+          "position": "",
+          "age": 14,
+          "curp": "MAEA110814MMCTSLA8"
+        },
+        {
+          "number": "",
+          "name": "Silva Caballero Atena Renée",
+          "position": "",
+          "age": 14,
+          "curp": "SICA120625MDFLBTA3"
+        },
+        {
+          "number": "",
+          "name": "Pérez García Genesis Nefertiti",
+          "position": "",
+          "age": 14,
+          "curp": "PEGG111125MMCRRNA0"
+        },
+        {
+          "number": "",
+          "name": "Canales Ramírez Ayira Camila",
+          "position": "",
+          "age": 13,
+          "curp": "CARA121218MMCNMYA0"
+        },
+        {
+          "number": "",
+          "name": "García Soto Vanessa",
+          "position": "",
+          "age": 13,
+          "curp": "SOGV120906MDFTRNA6"
+        },
+        {
+          "number": "",
+          "name": "Yañez Zenteno Danna Elizabeth",
+          "position": "",
+          "age": 0,
+          "curp": "YAZD121119MMCXNNA2"
+        },
+        {
+          "number": "",
+          "name": "Serrano Adame ALIX CAMILA",
+          "position": "",
+          "age": 14,
+          "curp": "SEAA110731MMCRDLA0"
+        }
+      ]
     }
   ],
   "schedule": [],
