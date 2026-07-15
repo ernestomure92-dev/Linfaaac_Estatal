@@ -421,6 +421,121 @@
           "curp": "ROCF160416MMCDLRA9"
         }
       ]
+    },
+    {
+      "id": "t_1784094539919",
+      "name": "SPARTANS",
+      "abbr": "S",
+      "category": "14 Femenil",
+      "color": "#baaf36",
+      "casa": false,
+      "players": [
+        {
+          "number": "",
+          "name": "GALICIA LIMAS DANIELA ITZEL",
+          "position": "STAFF",
+          "age": 0,
+          "curp": "GALD040220MDFLMNA8"
+        },
+        {
+          "number": "",
+          "name": "GALICIA MARTÍNEZ SERGIO DANIEL",
+          "position": "STAFF",
+          "age": 49,
+          "curp": "GAMS760830HDFLRR03"
+        },
+        {
+          "number": "",
+          "name": "VARGAS GÓMEZ REYNA MICHELL",
+          "position": "",
+          "age": 14,
+          "curp": "VAGR120308MMCRMYA8"
+        },
+        {
+          "number": "",
+          "name": "SANCHEZ RAMIREZ KAMILA",
+          "position": "",
+          "age": 13,
+          "curp": "SARK121001MMCNMMA8"
+        },
+        {
+          "number": "",
+          "name": "CAMACHO ALVARADO ZOE ATZIRY",
+          "position": "",
+          "age": 13,
+          "curp": "CAAZ121218MMCMLXA0"
+        },
+        {
+          "number": "",
+          "name": "DEL ANGEL VIDAL ANGELICA NICOL",
+          "position": "",
+          "age": 14,
+          "curp": "AEVA120122MMCNDNA3"
+        },
+        {
+          "number": "",
+          "name": "CAMACHO LUNA PAULINA JAQUELINE",
+          "position": "",
+          "age": 13,
+          "curp": "CALP121010MMCMNLA9"
+        },
+        {
+          "number": "",
+          "name": "AZANI CETINA ALMA IRIEL",
+          "position": "",
+          "age": 12,
+          "curp": "AACA140428MMCZTLA1"
+        },
+        {
+          "number": "",
+          "name": "PÉREZ RANGEL MARIA JOSÉ",
+          "position": "",
+          "age": 14,
+          "curp": "PERJ120703MMCRNSA6"
+        },
+        {
+          "number": "",
+          "name": "MENDEZ MORENO DAMARIS INERI",
+          "position": "",
+          "age": 14,
+          "curp": "MEMD120207MMCNRMA9"
+        },
+        {
+          "number": "",
+          "name": "HERNANDEZ DOMINGUEZ VALENTINA",
+          "position": "",
+          "age": 13,
+          "curp": "HEDV121231MHGRMLA3"
+        },
+        {
+          "number": "",
+          "name": "VARGAS MIRANDA ANGELES AILYN",
+          "position": "",
+          "age": 14,
+          "curp": "VAMA120422MDFRRNA2"
+        },
+        {
+          "number": "",
+          "name": "DEL ANGEL CRUZ XIMENA",
+          "position": "",
+          "age": 14,
+          "curp": "AECX120409MMCNRMA0"
+        },
+        {
+          "number": "",
+          "name": "VALLE LUNA ANDREA MICHELLE",
+          "position": "",
+          "age": 13,
+          "curp": "VALA130307MMCLNNA1"
+        },
+        {
+          "number": "",
+          "name": "AGUILAR FIGUEROA MIRANDA",
+          "position": "",
+          "age": 12,
+          "curp": "AUFM130810MDFGGRA7"
+        }
+      ]
     }
   ],
   "schedule": [],
