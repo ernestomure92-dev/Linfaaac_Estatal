@@ -352,6 +352,15 @@
           "curp": "LOTA071110MMCPRNA0"
         }
       ]
+    },
+    {
+      "id": "t_1784073598044",
+      "name": "Tlalocs Flag Football",
+      "abbr": "TFF",
+      "category": "17 Varonil",
+      "color": "#3b82f6",
+      "casa": false,
+      "players": []
     }
   ],
   "schedule": [],
