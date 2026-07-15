@@ -1282,6 +1282,86 @@
           "curp": "AAMJ110827HMCLNLA3"
         }
       ]
+    },
+    {
+      "id": "t_1784098060692",
+      "name": "ONYX TEXCOCO",
+      "abbr": "OT",
+      "category": "Femenil Libre",
+      "color": "#726e6f",
+      "casa": false,
+      "players": [
+        {
+          "number": "HEAD COACH",
+          "name": "RODRIGUEZ AGUILAR EDUARDO ALDAIR",
+          "position": "STAFF",
+          "age": 31,
+          "curp": "ROAE950430HMCDGD06"
+        },
+        {
+          "number": "28",
+          "name": "DE LA O ROMERO CLAUDIA VALERIA",
+          "position": "",
+          "age": 30,
+          "curp": "OXRC960428MMCXML01"
+        },
+        {
+          "number": "2",
+          "name": "MENDOZA SANCHEZ ARLETH",
+          "position": "",
+          "age": 22,
+          "curp": "MESA030728MDFNNRA6"
+        },
+        {
+          "number": "29",
+          "name": "NIEVES PORTUGUEZ MIRANDA",
+          "position": "",
+          "age": 17,
+          "curp": "NIPM090429MMCVRRA4"
+        },
+        {
+          "number": "9",
+          "name": "DIEGO LOPEZ TANNIA SARAHI",
+          "position": "",
+          "age": 22,
+          "curp": "DILT040102MDFGPNA3"
+        },
+        {
+          "number": "20",
+          "name": "CONTRERAS REYNA ARANTZA YARELI",
+          "position": "",
+          "age": 17,
+          "curp": "CORA090328MDFNYRA3"
+        },
+        {
+          "number": "8",
+          "name": "TERRAZAS CARRILLO SAMANTHA",
+          "position": "",
+          "age": 20,
+          "curp": "TECS050824MMCRRMA6"
+        },
+        {
+          "number": "10",
+          "name": "HERNANDEZ RESENDIZ DENISE MONTSERRAT",
+          "position": "",
+          "age": 24,
+          "curp": "HERD011005MDFRSNA1"
+        },
+        {
+          "number": "55",
+          "name": "MACIEL GONZALEZ CELESTE YUNUEN",
+          "position": "",
+          "age": 19,
+          "curp": "MAGC070609MMCCNLA3"
+        },
+        {
+          "number": "10",
+          "name": "GARCIA MEDINA FERNANDA JULIETTE",
+          "position": "",
+          "age": 16,
+          "curp": "GAMF100225MMCRDRA6"
+        }
+      ]
     }
   ],
   "schedule": [],
