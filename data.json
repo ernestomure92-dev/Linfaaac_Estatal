@@ -3660,6 +3660,93 @@
           "curp": ""
         }
       ]
+    },
+    {
+      "id": "t_1784140543803",
+      "name": "OFL",
+      "abbr": "O",
+      "category": "14 Femenil",
+      "color": "#7f4858",
+      "casa": false,
+      "players": [
+        {
+          "number": "",
+          "name": "ESPERANTE SEVILLANO ROBERTO MAURICIO",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "INDA AVILA CHRISTIAN NAHUM",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "77",
+          "name": "REYES VERA ALEYAHA VALENTINA",
+          "position": "",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "7",
+          "name": "MENDOZA BLANCAS CAMILA",
+          "position": "",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "11",
+          "name": "GARCIA MONTES DE OCA CAMILA ZOE",
+          "position": "",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "66",
+          "name": "GONZALEZ JIMENEZ GRETHEL DANIELA",
+          "position": "",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "18",
+          "name": "ROBLES ROMERO MELISSA",
+          "position": "",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "4",
+          "name": "ORTIZ VILLA ALISON ANDREA",
+          "position": "",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "1",
+          "name": "VADILLO MACIAS ANDREA",
+          "position": "",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "13",
+          "name": "MARTINEZ RODRIGUEZ ZURI DANAI",
+          "position": "",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "30",
+          "name": "MORALES VALENZUELA ISABELLA",
+          "position": "",
+          "age": 0,
+          "curp": ""
+        }
+      ]
     }
   ],
   "schedule": [
