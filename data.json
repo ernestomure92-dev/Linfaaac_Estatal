@@ -2656,6 +2656,136 @@
           "curp": "AOSL051214MDFBNNA8"
         }
       ]
+    },
+    {
+      "id": "t_1784102753706",
+      "name": "UPIICSA B",
+      "abbr": "UB",
+      "category": "Femenil Libre",
+      "color": "#310599",
+      "casa": false,
+      "players": [
+        {
+          "number": "",
+          "name": "PIÑA MARTINEZ MARIO JOSAFAT",
+          "position": "STAFF",
+          "age": 33,
+          "curp": "PIMM921222HDFXRR07"
+        },
+        {
+          "number": "",
+          "name": "VAZQUEZ VILLEGAS FELIX",
+          "position": "STAFF",
+          "age": 41,
+          "curp": "VAVF850409ED3"
+        },
+        {
+          "number": "7",
+          "name": "SOTO HERNÁNDEZ LUCERO RUBÍ",
+          "position": "",
+          "age": 21,
+          "curp": "SOHL041221MDFTRCA6",
+          "photo": "fotos/SOHL041221MDFTRCA6.jpg"
+        },
+        {
+          "number": "4",
+          "name": "REYES OLVERA HANNA ANGELINE",
+          "position": "",
+          "age": 0,
+          "curp": "REOH041110MMCYLNA8"
+        },
+        {
+          "number": "19",
+          "name": "HERNANDEZ CASTRO DIANA BELEM",
+          "position": "",
+          "age": 20,
+          "curp": "HECD060406MMCRSNA6"
+        },
+        {
+          "number": "11",
+          "name": "JIMENEZ DOMINGUEZ CAROL ITZEL",
+          "position": "",
+          "age": 21,
+          "curp": "JIDC050519MMCMMRRA9"
+        },
+        {
+          "number": "55",
+          "name": "CARMONA PEREZ ADRYANA",
+          "position": "",
+          "age": 24,
+          "curp": "CAPA020119MDFRRDA2"
+        },
+        {
+          "number": "12",
+          "name": "NATIVITAS SANTOS JATZIRY ALI",
+          "position": "",
+          "age": 20,
+          "curp": "NASJU060413MDFTNTA9"
+        },
+        {
+          "number": "",
+          "name": "GRANILLO IBAÑEZ VALENTINA ESTEFANIA",
+          "position": "",
+          "age": 20,
+          "curp": "GAIV060214MMCRBLA9"
+        },
+        {
+          "number": "88",
+          "name": "RAMIREZ LOPEZ FATIMA ELIZABETH",
+          "position": "",
+          "age": 23,
+          "curp": "RALF020801MMCMPTA6"
+        },
+        {
+          "number": "23",
+          "name": "HERNANDEZ YAÑEZ BERENICE",
+          "position": "",
+          "age": 23,
+          "curp": "HEYB030610MDFRXRA9"
+        },
+        {
+          "number": "26",
+          "name": "HERNANDEZ FRUTOS XIMENA JEHIELI",
+          "position": "",
+          "age": 20,
+          "curp": "HEFX060513MDFRRMA1"
+        },
+        {
+          "number": "",
+          "name": "BUSTOS ROSALES NUBIA AZENETH",
+          "position": "",
+          "age": 19,
+          "curp": "BURNN070330MDFSSBA7"
+        },
+        {
+          "number": "25",
+          "name": "GALICIA LOPEZ DANA GEORGINA",
+          "position": "",
+          "age": 19,
+          "curp": "GALD060825MMCLPNA0"
+        },
+        {
+          "number": "22",
+          "name": "LOPEZ FRAGOSO RENATA",
+          "position": "",
+          "age": 19,
+          "curp": "LOFR050729MDFPRNA2"
+        },
+        {
+          "number": "17",
+          "name": "SALAZAR TEMOLTZIN PAOLA ODALYS",
+          "position": "",
+          "age": 19,
+          "curp": "SATP061005MMCLMLA5"
+        },
+        {
+          "number": "95",
+          "name": "MATEHUALA ROMAN SOFIA",
+          "position": "",
+          "age": 19,
+          "curp": "MARS07011MMCTMFA1"
+        }
+      ]
     }
   ],
   "schedule": [],
