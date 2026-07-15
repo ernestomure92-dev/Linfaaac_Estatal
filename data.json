@@ -3191,6 +3191,86 @@
           "curp": "MASF070804MDFTTRA9"
         }
       ]
+    },
+    {
+      "id": "t_1784103554061",
+      "name": "TLALOCS FLAG",
+      "abbr": "TF",
+      "category": "12 Mixto",
+      "color": "#6a7ca4",
+      "casa": false,
+      "players": [
+        {
+          "number": "HC",
+          "name": "Morales Montalvo Luis Enrique",
+          "position": "STAFF",
+          "age": 33,
+          "curp": "MOML930516HMCRNS07"
+        },
+        {
+          "number": "COACH",
+          "name": "Tinoco Peña Eva Xally",
+          "position": "STAFF",
+          "age": 22,
+          "curp": "TIPE031115MDFNXVA7"
+        },
+        {
+          "number": "01",
+          "name": "Navarrete Ledesma Regina",
+          "position": "JUGADOR",
+          "age": 8,
+          "curp": "NALR180127MDFVDGA1"
+        },
+        {
+          "number": "10",
+          "name": "Madrid López Fernanda Zoe",
+          "position": "JUGADOR",
+          "age": 11,
+          "curp": "MALF141017MDFDPRA2"
+        },
+        {
+          "number": "14",
+          "name": "Hernandez Moreno Ivanna",
+          "position": "JUGADOR",
+          "age": 12,
+          "curp": "HEMI140114MDFRRVA6"
+        },
+        {
+          "number": "19",
+          "name": "Chávez de Santiago Kevin Alexander",
+          "position": "JUGADOR",
+          "age": 12,
+          "curp": "CASK140103HDFHNVA6"
+        },
+        {
+          "number": "54",
+          "name": "Peña Bernal Erick de Jesús",
+          "position": "JUGADOR",
+          "age": 11,
+          "curp": "PEBE140919HDFXRRA9"
+        },
+        {
+          "number": "55",
+          "name": "Peña Hernández Atzin Elisabeth",
+          "position": "JUGADOR",
+          "age": 12,
+          "curp": "PHA140303MDFXRTA7"
+        },
+        {
+          "number": "65",
+          "name": "Saenz Barrios Frida Sofia",
+          "position": "JUGADOR",
+          "age": 12,
+          "curp": "ROLR140311MDFDDMA7"
+        },
+        {
+          "number": "77",
+          "name": "Rodríguez Ledesma Romina",
+          "position": "JUGADOR",
+          "age": 12,
+          "curp": "ROLR140311MDFDDMA7"
+        }
+      ]
     }
   ],
   "schedule": [],
