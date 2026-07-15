@@ -1470,6 +1470,86 @@
           "curp": "OEGA090928MHGRTLA4"
         }
       ]
+    },
+    {
+      "id": "t_1784098688721",
+      "name": "Blackshelbys",
+      "abbr": "B",
+      "category": "Master Femenil",
+      "color": "#329a93",
+      "casa": false,
+      "players": [
+        {
+          "number": "",
+          "name": "Ocaña García María Elena",
+          "position": "STAFF",
+          "age": 44,
+          "curp": "GAOE810824MDFRCL05"
+        },
+        {
+          "number": "",
+          "name": "Flores Ortiz Marlene Virginia",
+          "position": "STAFF",
+          "age": 59,
+          "curp": "FOOM660910MDFLRR06"
+        },
+        {
+          "number": "",
+          "name": "Carbajal Flores Rosa María",
+          "position": "",
+          "age": 39,
+          "curp": "CAFR860909MDFRLS06"
+        },
+        {
+          "number": "",
+          "name": "Camacho Correa Haydee Elisenda",
+          "position": "",
+          "age": 55,
+          "curp": "CACH710321MDFMRY00"
+        },
+        {
+          "number": "",
+          "name": "Consuelos Pérez Isela",
+          "position": "",
+          "age": 44,
+          "curp": "COPI811108MDFNSR02"
+        },
+        {
+          "number": "",
+          "name": "Peña Mejia Mariana",
+          "position": "",
+          "age": 41,
+          "curp": "PEMM850428MMSXJR05"
+        },
+        {
+          "number": "",
+          "name": "Nuñez Romero Cristina",
+          "position": "",
+          "age": 56,
+          "curp": "NURC690908MDFXMR00"
+        },
+        {
+          "number": "",
+          "name": "Morales Guzmán Liliana",
+          "position": "",
+          "age": 55,
+          "curp": "MOGL710206MDFRZL07"
+        },
+        {
+          "number": "",
+          "name": "Amezcua CAMARGO JOY",
+          "position": "",
+          "age": 42,
+          "curp": "AECJ840327MDFMMY05"
+        },
+        {
+          "number": "",
+          "name": "Santos DOMÍNGUEZ FLORICEL",
+          "position": "",
+          "age": 50,
+          "curp": "SADF751126MVZNML11"
+        }
+      ]
     }
   ],
   "schedule": [],
