@@ -798,7 +798,60 @@
         </div>
     </div>
 
-    <!-- Add Team Modal -->
+    <!-- Edit Match Modal -->
+    <div class="modal-overlay" id="editMatchModal">
+        <div class="modal">
+            <div class="modal-header">
+                <span class="modal-title">Editar Partido</span>
+                <button class="modal-close" onclick="closeModal('editMatchModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="em-id">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Día</label>
+                        <select class="form-control" id="em-day" onchange="filterEditMatchTeams()">
+                            <option value="1">Día 1</option>
+                            <option value="2">Día 2</option>
+                            <option value="3">Día 3</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Hora</label>
+                        <input type="time" class="form-control" id="em-time" onchange="filterEditMatchTeams()">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Categoría</label>
+                        <select class="form-control" id="em-category" onchange="filterEditMatchTeams()"></select>
+                    </div>
+                    <div class="form-group">
+                        <label>Campo</label>
+                        <select class="form-control" id="em-field" onchange="filterEditMatchTeams()"></select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Equipo 1</label>
+                        <select class="form-control" id="em-team1" onchange="filterEditMatchTeams()"></select>
+                    </div>
+                    <div class="form-group">
+                        <label>Equipo 2</label>
+                        <select class="form-control" id="em-team2" onchange="filterEditMatchTeams()"></select>
+                    </div>
+                </div>
+                <div id="em-conflict-warning" style="display:none;color:#f0ad4e;font-size:0.85rem;margin-top:0.5rem;"></div>
+            </div>
+            <div class="modal-footer" style="justify-content:space-between;">
+                <button class="btn btn-danger" onclick="deleteMatchFromModal()">Eliminar Partido</button>
+                <div>
+                    <button class="btn btn-secondary" onclick="closeModal('editMatchModal')">Cancelar</button>
+                    <button class="btn btn-primary" onclick="saveEditedMatch()">Guardar Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="modal-overlay" id="addTeamModal">
         <div class="modal">
             <div class="modal-header">
@@ -1141,8 +1194,101 @@
         }
 
         function editMatch(matchId) {
-            // For now, just allow score editing inline. Full edit can be added later.
-            showAlert('Usa los campos de marcador y presiona Guardar', 'info');
+            const match = LINFAAAC_DATA.schedule.find(m => m.id === matchId);
+            if (!match) { showAlert('No se encontró ese partido', 'error'); return; }
+
+            document.getElementById('em-id').value = match.id;
+            document.getElementById('em-day').value = match.day;
+            document.getElementById('em-time').value = match.time;
+            document.getElementById('em-field').value = match.field;
+
+            const catSel = document.getElementById('em-category');
+            catSel.value = match.category;
+
+            filterEditMatchTeams();
+            document.getElementById('em-team1').value = match.team1;
+            document.getElementById('em-team2').value = match.team2;
+
+            openModal('editMatchModal');
+        }
+
+        function filterEditMatchTeams() {
+            const category = document.getElementById('em-category').value;
+            const day = parseInt(document.getElementById('em-day').value);
+            const time = document.getElementById('em-time').value;
+            const matchId = document.getElementById('em-id').value;
+            const sel1 = document.getElementById('em-team1');
+            const sel2 = document.getElementById('em-team2');
+            const cur1 = sel1.value, cur2 = sel2.value;
+
+            let teams = LINFAAAC_DATA.teams;
+            if (category) teams = teams.filter(t => t.category === category);
+
+            // equipos ocupados en ese dia+hora, EXCLUYENDO el propio partido que se esta editando
+            const busy = new Set();
+            LINFAAAC_DATA.schedule.forEach(m => {
+                if (m.id === matchId) return;
+                if (m.day == day && m.time === time) { busy.add(m.team1); busy.add(m.team2); }
+            });
+
+            const options = teams.map(t => `<option value="${t.id}" ${busy.has(t.id) ? 'disabled' : ''}>${t.name}${busy.has(t.id) ? ' (ocupado)' : ''}</option>`).join('');
+            sel1.innerHTML = options;
+            sel2.innerHTML = options;
+            if (teams.some(t => t.id === cur1)) sel1.value = cur1;
+            if (teams.some(t => t.id === cur2)) sel2.value = cur2;
+
+            // aviso si el campo ya esta ocupado por otro partido en ese dia+hora
+            const fieldConflict = LINFAAAC_DATA.schedule.find(m =>
+                m.id !== matchId && m.day == day && m.time === time && m.field === document.getElementById('em-field').value
+            );
+            const warnEl = document.getElementById('em-conflict-warning');
+            if (fieldConflict) {
+                const t1 = getTeam(fieldConflict.team1), t2 = getTeam(fieldConflict.team2);
+                warnEl.style.display = 'block';
+                warnEl.textContent = `⚠️ Ese campo ya está ocupado a esa hora por ${t1 ? t1.name : '?'} vs ${t2 ? t2.name : '?'}. Puedes guardar de todos modos, pero revisa antes.`;
+            } else {
+                warnEl.style.display = 'none';
+            }
+        }
+
+        function saveEditedMatch() {
+            const id = document.getElementById('em-id').value;
+            const match = LINFAAAC_DATA.schedule.find(m => m.id === id);
+            if (!match) return;
+
+            const team1 = document.getElementById('em-team1').value;
+            const team2 = document.getElementById('em-team2').value;
+            if (team1 === team2) { showAlert('Un equipo no puede jugar contra sí mismo', 'error'); return; }
+
+            match.day = parseInt(document.getElementById('em-day').value);
+            match.time = document.getElementById('em-time').value;
+            match.category = document.getElementById('em-category').value;
+            match.field = document.getElementById('em-field').value;
+            match.team1 = team1;
+            match.team2 = team2;
+
+            saveToStorage();
+            closeModal('editMatchModal');
+            renderScheduleGrid();
+            renderScheduleList();
+            renderMatches();
+            updateDashboard();
+            showAlert('Partido actualizado', 'success');
+            autoPublishToGitHub();
+        }
+
+        function deleteMatchFromModal() {
+            const id = document.getElementById('em-id').value;
+            if (!confirm('¿Eliminar este partido? Esta acción no se puede deshacer.')) return;
+            LINFAAAC_DATA.schedule = LINFAAAC_DATA.schedule.filter(m => m.id !== id);
+            saveToStorage();
+            closeModal('editMatchModal');
+            renderScheduleGrid();
+            renderScheduleList();
+            renderMatches();
+            updateDashboard();
+            showAlert('Partido eliminado', 'success');
+            autoPublishToGitHub();
         }
 
         // SCHEDULE
@@ -2106,36 +2252,51 @@
         function generateMatchups(teams, attempts = 300) {
             const n = teams.length;
             if (n < 2) return { ok: false, error: 'Se necesitan al menos 2 equipos en la categoría.' };
-            const oddTeamOut = n % 2 !== 0 ? teams[Math.floor(Math.random() * n)] : null;
 
             for (let attempt = 0; attempt < attempts; attempt++) {
-                const shuffled = [...teams].sort(() => Math.random() - 0.5);
+                const oddTeamOut = n % 2 !== 0 ? teams[Math.floor(Math.random() * n)] : null;
+                const shuffledBase = [...teams].sort(() => Math.random() - 0.5);
                 const target = {};
-                shuffled.forEach(t => target[t.id] = (oddTeamOut && t.id === oddTeamOut.id) ? 4 : 3);
-                const degree = {}; const playedPairs = new Set();
-                shuffled.forEach(t => degree[t.id] = 0);
-                const pairKey = (a, b) => [a, b].sort().join('|');
-                const matches = []; let failed = false; let safety = 0;
+                shuffledBase.forEach(t => target[t.id] = (oddTeamOut && t.id === oddTeamOut.id) ? 4 : 3);
 
-                while (shuffled.some(t => degree[t.id] < target[t.id]) && safety < 5000) {
+                const degree = {}; shuffledBase.forEach(t => degree[t.id] = 0);
+                const pairCount = {};
+                const pairKey = (a, b) => [a, b].sort().join('|');
+                const matches = [];
+                let failed = false, safety = 0;
+
+                while (shuffledBase.some(t => degree[t.id] < target[t.id]) && safety < 8000) {
                     safety++;
-                    const needing = shuffled.filter(t => degree[t.id] < target[t.id]).sort(() => Math.random() - 0.5);
+                    // equipos que aun necesitan juegos, priorizando al que le falta mas (evita quedarse atorado)
+                    const needing = shuffledBase
+                        .filter(t => degree[t.id] < target[t.id])
+                        .sort((a, b) => (target[b.id] - degree[b.id]) - (target[a.id] - degree[a.id]) || (Math.random() - 0.5));
+
                     if (needing.length < 2) { failed = true; break; }
-                    let pairedSomething = false;
-                    for (let i = 0; i < needing.length; i++) {
-                        const a = needing[i]; if (degree[a.id] >= target[a.id]) continue;
-                        for (let j = i + 1; j < needing.length; j++) {
-                            const b = needing[j]; if (degree[b.id] >= target[b.id]) continue;
-                            if (a.casa && b.casa) continue; // regla: casa nunca contra casa
-                            const key = pairKey(a.id, b.id); if (playedPairs.has(key)) continue;
-                            matches.push({ team1: a.id, team2: b.id }); playedPairs.add(key);
-                            degree[a.id]++; degree[b.id]++; pairedSomething = true; break;
-                        }
-                        if (pairedSomething) break;
-                    }
-                    if (!pairedSomething) { failed = true; break; }
+
+                    const a = needing[0];
+                    const candidates = needing.slice(1).filter(b => !(a.casa && b.casa)); // regla: casa nunca contra casa
+
+                    if (candidates.length === 0) { failed = true; break; }
+
+                    // Preferir rival nuevo antes que una revancha. Solo se repite un rival
+                    // cuando no hay suficientes equipos distintos para cubrir los juegos garantizados
+                    // (ej. una categoria con solo 3 equipos, donde 3 juegos por equipo obliga a repetir).
+                    candidates.sort((x, y) => {
+                        const cx = pairCount[pairKey(a.id, x.id)] || 0;
+                        const cy = pairCount[pairKey(a.id, y.id)] || 0;
+                        if (cx !== cy) return cx - cy;
+                        return (target[y.id] - degree[y.id]) - (target[x.id] - degree[x.id]);
+                    });
+
+                    const b = candidates[0];
+                    const key = pairKey(a.id, b.id);
+                    matches.push({ team1: a.id, team2: b.id, rematch: (pairCount[key] || 0) > 0 });
+                    pairCount[key] = (pairCount[key] || 0) + 1;
+                    degree[a.id]++; degree[b.id]++;
                 }
-                if (!failed && shuffled.every(t => degree[t.id] === target[t.id])) {
+
+                if (!failed && shuffledBase.every(t => degree[t.id] === target[t.id])) {
                     return { ok: true, matches };
                 }
             }
@@ -2239,7 +2400,9 @@
             updateDashboard();
 
             const sinAsignar = a1.unassigned.length + a2.unassigned.length;
+            const revanchas = gen.matches.filter(m => m.rematch).length;
             let msg = `✅ ${newMatches.length} partidos generados para "${category}".`;
+            if (revanchas) msg += ` ℹ️ Como esta categoría tiene pocos equipos, ${revanchas} partido(s) son revancha de un rival ya jugado (era la única forma de completar los 3 juegos por equipo).`;
             if (sinAsignar) msg += ` ⚠️ ${sinAsignar} no encontraron horario/campo libre — agrega más campos o revisa manualmente.`;
             statusEl.innerHTML = msg;
             autoPublishToGitHub();
@@ -2510,7 +2673,7 @@
         // === CATEGORIES ===
         function populateCategorySelects() {
             const cats = LINFAAAC_DATA.categories || [];
-            ['qm-category','team-category','edit-team-category','autogen-category','playoffgen-category'].forEach(id => {
+            ['qm-category','team-category','edit-team-category','autogen-category','playoffgen-category','em-category'].forEach(id => {
                 const s = document.getElementById(id); if (!s) return;
                 const cur = s.value;
                 s.innerHTML = cats.map(c => `<option value="${c}">${c}</option>`).join('');
@@ -2547,10 +2710,12 @@
         // === FIELDS ===
         function populateFieldSelects() {
             const f = LINFAAAC_DATA.fields || [];
-            const s = document.getElementById('qm-field'); if (!s) return;
-            const cur = s.value;
-            s.innerHTML = f.map(x => `<option value="${x}">${x}</option>`).join('');
-            if (cur && f.includes(cur)) s.value = cur;
+            ['qm-field', 'em-field'].forEach(id => {
+                const s = document.getElementById(id); if (!s) return;
+                const cur = s.value;
+                s.innerHTML = f.map(x => `<option value="${x}">${x}</option>`).join('');
+                if (cur && f.includes(cur)) s.value = cur;
+            });
         }
         function renderFields() {
             const el = document.getElementById('fields-list'); if (!el) return;
