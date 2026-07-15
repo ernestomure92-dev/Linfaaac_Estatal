@@ -3010,6 +3010,44 @@
           "curp": "RARL970831MMCMDZ07"
         }
       ]
+    },
+    {
+      "id": "t_1784103213331",
+      "name": "TLALOCS FLAG",
+      "abbr": "TF",
+      "category": "16 Varonil",
+      "color": "#6a7ca4",
+      "casa": false,
+      "players": [
+        {
+          "number": "HC",
+          "name": "Morales Montalvo Luis Enrique",
+          "position": "STAFF",
+          "age": 30,
+          "curp": "MOML930516HMCRNS07"
+        },
+        {
+          "number": "COACH",
+          "name": "López Vega María del Lucero",
+          "position": "STAFF",
+          "age": 30,
+          "curp": "LOVL960130MDFPGC"
+        },
+        {
+          "number": "HC",
+          "name": "Morales Montalvo Luis Enrique",
+          "position": "STAFF",
+          "age": 30,
+          "curp": "MOML930516HMCRNS07"
+        },
+        {
+          "number": "COACH",
+          "name": "López Vega María del Lucero",
+          "position": "STAFF",
+          "age": 30,
+          "curp": "LOVL960130MDFPGC"
+        }
+      ]
     }
   ],
   "schedule": [],
