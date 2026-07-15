@@ -3828,6 +3828,187 @@
           "photo": "fotos/CELV081204MDFNNLA9.jpg"
         }
       ]
+    },
+    {
+      "id": "t_1784140764713",
+      "name": "RAPTORS ODA",
+      "abbr": "RO",
+      "category": "14 Femenil",
+      "color": "#7f4858",
+      "casa": false,
+      "players": [
+        {
+          "number": "Coach",
+          "name": "Cardoso García Miguel",
+          "position": "STAFF",
+          "age": 29,
+          "curp": "CAGM970704HMCRRG06",
+          "photo": "fotos/CAGM970704HMCRRG06.jpg"
+        },
+        {
+          "number": "12",
+          "name": "Soto Villa Natalia",
+          "position": "",
+          "age": 14,
+          "curp": "SOVN121206MDFTLTA7",
+          "photo": "fotos/SOVN121206MDFTLTA7.jpg"
+        },
+        {
+          "number": "22",
+          "name": "González hoyos Dianne Di Yoleth",
+          "position": "",
+          "age": 13,
+          "curp": "GOHD130318MHGNYNA7",
+          "photo": "fotos/GOHD130318MHGNYNA7.jpg"
+        },
+        {
+          "number": "29",
+          "name": "Medina Cruz Pamela",
+          "position": "",
+          "age": 13,
+          "curp": "MECP120929MVZDRMA5",
+          "photo": "fotos/MECP120929MVZDRMA5.jpg"
+        },
+        {
+          "number": "5",
+          "name": "Reyes Montoya Vania",
+          "position": "",
+          "age": 14,
+          "curp": "REMV120513MNEYNNA7",
+          "photo": "fotos/REMV120513MNEYNNA7.jpg"
+        },
+        {
+          "number": "81",
+          "name": "Fuentes Pacheco Emily Dayana",
+          "position": "",
+          "age": 12,
+          "curp": "FUPE131018MDFNCMA4",
+          "photo": "fotos/FUPE131018MDFNCMA4.jpg"
+        },
+        {
+          "number": "30",
+          "name": "Sánchez Campos Madeleine Julianne",
+          "position": "",
+          "age": 11,
+          "curp": "SACM141230MMCNMDA2",
+          "photo": "fotos/SACM141230MMCNMDA2.jpg"
+        },
+        {
+          "number": "11",
+          "name": "Águilar Maruri Alexa",
+          "position": "",
+          "age": 14,
+          "curp": "AUMA120421MMCGRLA1",
+          "photo": "fotos/AUMA120421MMCGRLA1.jpg"
+        },
+        {
+          "number": "33",
+          "name": "Mondragón Escamilla Giselle",
+          "position": "",
+          "age": 11,
+          "curp": "MOEG140724MDFNSSA1"
+        },
+        {
+          "number": "2",
+          "name": "Ramirez Hernández Heidy",
+          "position": "",
+          "age": 13,
+          "curp": "RAHH130117MMCMRDA9",
+          "photo": "fotos/RAHH130117MMCMRDA9.jpg"
+        },
+        {
+          "number": "9",
+          "name": "Borja García Sofia",
+          "position": "",
+          "age": 12,
+          "curp": "BOGS140701MMCRRFA5",
+          "photo": "fotos/BOGS140701MMCRRFA5.jpg"
+        },
+        {
+          "number": "4",
+          "name": "García González Maureen Zoe",
+          "position": "",
+          "age": 14,
+          "curp": "CAGM121101HMGRNRA7",
+          "photo": "fotos/CAGM121101HMGRNRA7.jpg"
+        },
+        {
+          "number": "4",
+          "name": "Rojas Chávez Frida Sofia",
+          "position": "",
+          "age": 11,
+          "curp": "ROCF141220MDFJHRA0",
+          "photo": "fotos/ROCF141220MDFJHRA0.jpg"
+        }
+      ]
+    },
+    {
+      "id": "t_1784140785564",
+      "name": "RAPTORS ODA",
+      "abbr": "RO",
+      "category": "17 Varonil",
+      "color": "#7f4858",
+      "casa": false,
+      "players": [
+        {
+          "number": "Coach",
+          "name": "Lazcano Hummel Elihu Yael",
+          "position": "STAFF",
+          "age": 19,
+          "curp": "LAHE060720HDFZMLA7",
+          "photo": "fotos/LAHE060720HDFZMLA7.jpg"
+        },
+        {
+          "number": "Coach",
+          "name": "Cardoso García Miguel",
+          "position": "STAFF",
+          "age": 29,
+          "curp": "CAGM970704HMCRRG06",
+          "photo": "fotos/CAGM970704HMCRRG06.jpg"
+        },
+        {
+          "number": "4",
+          "name": "Rueda Cerón Eduardo Tadeo",
+          "position": "",
+          "age": 16,
+          "curp": "RUCE100605HMCDRDA4"
+        },
+        {
+          "number": "67",
+          "name": "Atilano Lozano Angel",
+          "position": "",
+          "age": 17,
+          "curp": "AILA090113HMCTZNA8"
+        },
+        {
+          "number": "23",
+          "name": "Sánchez Campos Dylan Maximiliano",
+          "position": "",
+          "age": 15,
+          "curp": "SACD101225HMCNMYA8"
+        },
+        {
+          "number": "7",
+          "name": "Ochoa Oropeza Alan Uriel",
+          "position": "",
+          "age": 16,
+          "curp": "OOOA091023HDFCRLA7"
+        },
+        {
+          "number": "2",
+          "name": "Avilés Pérez Elias Zahid",
+          "position": "",
+          "age": 15,
+          "curp": "AIPZ110218HDFVRHA7"
+        },
+        {
+          "number": "30",
+          "name": "Torres Ramirez Mateo",
+          "position": "",
+          "age": 16,
+          "curp": "TORM100322HMCRMTA2"
+        }
+      ]
     }
   ],
   "schedule": [
