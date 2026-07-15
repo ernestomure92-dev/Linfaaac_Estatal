@@ -1876,6 +1876,86 @@
           "curp": "LOTA071110MMCPRNA0"
         }
       ]
+    },
+    {
+      "id": "t_1784100234450",
+      "name": "RUCKETS",
+      "abbr": "RU",
+      "category": "Master Varonil",
+      "color": "#d89455",
+      "casa": false,
+      "players": [
+        {
+          "number": "4",
+          "name": "MORELOS CASTRO ISAIN",
+          "position": "JUGADOR",
+          "age": 43,
+          "curp": "MOCI830518HDFRSS09"
+        },
+        {
+          "number": "14",
+          "name": "GARCIA GONZALEZ EDUARDO DANIEL",
+          "position": "JUGADOR",
+          "age": 40,
+          "curp": "GAGE860221HDFRND07"
+        },
+        {
+          "number": "S/N",
+          "name": "GONZALES CHAVEZ JHOVANY CRUZ",
+          "position": "JUGADOR",
+          "age": 40,
+          "curp": "GOCJ860503HMCNHH02"
+        },
+        {
+          "number": "S/N",
+          "name": "PEREZ ALONSO ALFREDO",
+          "position": "JUGADOR",
+          "age": 36,
+          "curp": "PEAA900320HMCRLL06"
+        },
+        {
+          "number": "6",
+          "name": "TAPIA MEDINA RICARDO SU",
+          "position": "LING",
+          "age": 0,
+          "curp": "47"
+        },
+        {
+          "number": "S/N",
+          "name": "TREJO ESPINOSA RICARDO ALBERTO",
+          "position": "JUGADOR",
+          "age": 44,
+          "curp": "TEER811001HDFRSC03"
+        },
+        {
+          "number": "S/N",
+          "name": "MAYEN RIVERA SAID",
+          "position": "JUGADOR",
+          "age": 35,
+          "curp": "MARS910402HMCYVD06"
+        },
+        {
+          "number": "21",
+          "name": "HERNANDEZ NAVARRETE ENRIQUE IVAN",
+          "position": "JUGADOR",
+          "age": 37,
+          "curp": "HENE880906HDFRVN05"
+        },
+        {
+          "number": "24",
+          "name": "FLORES REYES FRANCISCO JAVIER",
+          "position": "JUGADOR",
+          "age": 39,
+          "curp": "FORF860924HDFLYR01"
+        },
+        {
+          "number": "S/N",
+          "name": "MORALES DURAN OSCAR ORLANDO",
+          "position": "JUGADOR",
+          "age": 35,
+          "curp": "MODO900727HHGRR"
+        }
+      ]
     }
   ],
   "schedule": [],
