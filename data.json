@@ -2224,6 +2224,121 @@
           "curp": "HEHM890429HDFRRS04"
         }
       ]
+    },
+    {
+      "id": "t_1784101296028",
+      "name": "BUCANEROS COACALCO",
+      "abbr": "R",
+      "category": "16 Femenil",
+      "color": "#310599",
+      "casa": false,
+      "players": [
+        {
+          "number": "HC",
+          "name": "ORTEGA GONZALEZ JONATHAN ENRIQUE",
+          "position": "STAFF",
+          "age": 40,
+          "curp": "OEGJ851221HDFRNN03"
+        },
+        {
+          "number": "COACH",
+          "name": "RIVERA PEREZ JOSE MANUEL",
+          "position": "STAFF",
+          "age": 33,
+          "curp": "RIPM920724HPLVRN04"
+        },
+        {
+          "number": "S/N",
+          "name": "JUAREZ BALLINA SUSY ALITZEL",
+          "position": "JUGADOR",
+          "age": 14,
+          "curp": "JUBS120106MMCRLSA2"
+        },
+        {
+          "number": "S/N",
+          "name": "ORTEGA ZUÑIGA ZAYRETH YAMILET",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "OEZZ110708MDFRXYA2"
+        },
+        {
+          "number": "S/N",
+          "name": "MORENO MORALES JULIA GISELLE",
+          "position": "JUGADOR",
+          "age": 14,
+          "curp": "MOMJ111209MMCRRLA3"
+        },
+        {
+          "number": "S/N",
+          "name": "HERNANDEZ CONTRERAS REGINA AYARI",
+          "position": "JUGADOR",
+          "age": 12,
+          "curp": "HECR131117MMCRNGA3"
+        },
+        {
+          "number": "S/N",
+          "name": "GUTIERREZ GARCIA FRIDA SOFIA",
+          "position": "JUGADOR",
+          "age": 14,
+          "curp": "GAGF110825MDFRTRA0"
+        },
+        {
+          "number": "S/N",
+          "name": "VARGAS ARTEAGA YAMILET HATZIRY",
+          "position": "JUGADOR",
+          "age": 13,
+          "curp": "VAAH121221MMCRRTA2"
+        },
+        {
+          "number": "S/N",
+          "name": "PIÑA BLANCO ASHANTY",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "PIBZ110319MMCXLYA8"
+        },
+        {
+          "number": "S/N",
+          "name": "SANCHEZ FRAGOS KATHERINNE GISELL",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "SAFK110609MMCÑRTA5"
+        },
+        {
+          "number": "S/N",
+          "name": "GONZALEZ CRUZ REGINA ALTAIR",
+          "position": "JUGADOR",
+          "age": 13,
+          "curp": "GOCR120804MMCNEGA4"
+        },
+        {
+          "number": "S/N",
+          "name": "NUÑEZ BAUTISTA IVANA SOFIA",
+          "position": "JUGADOR",
+          "age": 14,
+          "curp": "NUBI120123MMCXTVA7"
+        },
+        {
+          "number": "S/N",
+          "name": "CORTES ORTIZ MADISON RUBI",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "COOM110604MMCRRDA7"
+        },
+        {
+          "number": "S/N",
+          "name": "FRANCO MORA SAMANTHA",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "FAZS110719MMCRMMA8"
+        },
+        {
+          "number": "S/N",
+          "name": "ALONSO RAMIREZ ANDREA ELISA",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "RAAA101108MDFMLNA7"
+        }
+      ]
     }
   ],
   "schedule": [],
