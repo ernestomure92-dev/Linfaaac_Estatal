@@ -630,6 +630,114 @@
           "curp": "JIPB101005HMCMRRA9"
         }
       ]
+    },
+    {
+      "id": "t_1784095139044",
+      "name": "TACHOS",
+      "abbr": "T",
+      "category": "Femenil Libre",
+      "color": "#baaf36",
+      "casa": false,
+      "players": [
+        {
+          "number": "",
+          "name": "MANZANILLA GONZALEZ CHRISTOPHER",
+          "position": "STAFF",
+          "age": 36,
+          "curp": "MAGC900105HDFNNH01"
+        },
+        {
+          "number": "",
+          "name": "DAVILA GODINEZ CEDRIC",
+          "position": "STAFF",
+          "age": 21,
+          "curp": "DAGA040820HDFVDMA2"
+        },
+        {
+          "number": "",
+          "name": "UC GUICHARD MARCO",
+          "position": "",
+          "age": 23,
+          "curp": "UXGM030213HDFCCRA1"
+        },
+        {
+          "number": "",
+          "name": "NAJERA ARIAS ALEJANDRO",
+          "position": "",
+          "age": 21,
+          "curp": "NAAA050114HDFJRLA7"
+        },
+        {
+          "number": "",
+          "name": "MARTINEZ MORENO LUIS",
+          "position": "",
+          "age": 22,
+          "curp": "MAML040705HMCRRSA2"
+        },
+        {
+          "number": "",
+          "name": "MARTINEZ CANTU FRANCISCO",
+          "position": "",
+          "age": 53,
+          "curp": "MACF721004HDFRNR02"
+        },
+        {
+          "number": "",
+          "name": "HERNANDEZ LERMA GAEL",
+          "position": "",
+          "age": 20,
+          "curp": "HELA053011HDFRRLA0"
+        },
+        {
+          "number": "",
+          "name": "LEJTIK MARTINEZ BERNARDO",
+          "position": "",
+          "age": 26,
+          "curp": "LEMB000211HDFJRRA8"
+        },
+        {
+          "number": "",
+          "name": "CUETO SANCHEZ JUSTIN",
+          "position": "",
+          "age": 21,
+          "curp": "CUSJ050404HDFTNSA7"
+        },
+        {
+          "number": "",
+          "name": "BERNAL MARTINEZ MIGUE",
+          "position": "",
+          "age": 37,
+          "curp": "BEMM890329HDFRRG02"
+        },
+        {
+          "number": "",
+          "name": "GUERRA VARGAS SANTIAGO",
+          "position": "",
+          "age": 19,
+          "curp": "GUVS070410HMCRRNA0"
+        },
+        {
+          "number": "",
+          "name": "FILORIO RUIZ ALEJANDRO",
+          "position": "",
+          "age": 35,
+          "curp": "FIRM910417HPLLZG09"
+        },
+        {
+          "number": "",
+          "name": "URESTY ROSALES EMURY",
+          "position": "",
+          "age": 33,
+          "curp": "UERE930703HDFRSM08"
+        },
+        {
+          "number": "",
+          "name": "GUADARRAMA ANDRACA EDUARDO",
+          "position": "",
+          "age": 41,
+          "curp": "GUAM841208HDFDNR07"
+        }
+      ]
     }
   ],
   "schedule": [
