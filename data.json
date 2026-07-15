@@ -4384,6 +4384,15 @@
       "color": "#06461f",
       "casa": false,
       "players": []
+    },
+    {
+      "id": "t_1784147337518",
+      "name": "MEDUSAS",
+      "abbr": "MED",
+      "category": "Femenil Libre",
+      "color": "#f73bbb",
+      "casa": false,
+      "players": []
     }
   ],
   "schedule": [
