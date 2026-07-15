@@ -2339,6 +2339,79 @@
           "curp": "RAAA101108MDFMLNA7"
         }
       ]
+    },
+    {
+      "id": "t_1784101526702",
+      "name": "BUCANEROS COACALCO",
+      "abbr": "R",
+      "category": "17 Varonil",
+      "color": "#310599",
+      "casa": false,
+      "players": [
+        {
+          "number": "HC",
+          "name": "RAMIREZ ZECUA IVAN RODOLFO",
+          "position": "STAFF",
+          "age": 32,
+          "curp": "RAEI940403TX8"
+        },
+        {
+          "number": "COACH",
+          "name": "MARTINEZ VALENCIA EINAR",
+          "position": "STAFF",
+          "age": 25,
+          "curp": "MAVE010117MMCRL07"
+        },
+        {
+          "number": "S/N",
+          "name": "ALVAREZ ESPINOSA IVAN IAAKOV",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "AAEI101203HMCISVA2"
+        },
+        {
+          "number": "S/N",
+          "name": "GONZALEZ ZECUA JOSE LEONARDO",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "GOZL110721HDFNCNA4"
+        },
+        {
+          "number": "S/N",
+          "name": "FABELA RODRIGUEZ JOBETH ALEJANDRO",
+          "position": "JUGADOR",
+          "age": 17,
+          "curp": "FARJ081104HMCBDBA2"
+        },
+        {
+          "number": "S/N",
+          "name": "GARCIA GASCA MIGUEL",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "GAGM110115HDFRSGA2"
+        },
+        {
+          "number": "S/N",
+          "name": "RIVERA RODRIGUEZ JOSE MANUEL",
+          "position": "JUGADOR",
+          "age": 17,
+          "curp": "RIRM090530HDFVDNA2"
+        },
+        {
+          "number": "S/N",
+          "name": "ORTEGA ZUÑIGA DIEGO SARITIEL",
+          "position": "JUGADOR",
+          "age": 17,
+          "curp": "OEZD090706HDFRXGA2"
+        },
+        {
+          "number": "S/N",
+          "name": "ESCALANTE SANTIAGO KEVIN MIGUEL",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "EASK110614HMCSNVA0"
+        }
+      ]
     }
   ],
   "schedule": [],
