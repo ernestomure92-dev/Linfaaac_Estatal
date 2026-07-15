@@ -1209,6 +1209,79 @@
           "curp": "VITC160816HDFLRRA6"
         }
       ]
+    },
+    {
+      "id": "t_1784097857732",
+      "name": "ONYX TEXCOCO",
+      "abbr": "OT",
+      "category": "Varonil Libre",
+      "color": "#b21030",
+      "casa": false,
+      "players": [
+        {
+          "number": "44",
+          "name": "RODRIGUEZ AGUILAR EDUARDO ALDAIR",
+          "position": "",
+          "age": 31,
+          "curp": "ROAE950430HMCDGD06"
+        },
+        {
+          "number": "57",
+          "name": "MACIEL GONZALEZ JAMES RICHARD",
+          "position": "",
+          "age": 29,
+          "curp": "MAGJ970613HMCCNM03"
+        },
+        {
+          "number": "16",
+          "name": "YESCAS ZAMUDIO EDUARDO",
+          "position": "",
+          "age": 19,
+          "curp": "YEZE060716HMCSMDA3"
+        },
+        {
+          "number": "13",
+          "name": "TERRAZAS CARRILLO ANGEL",
+          "position": "",
+          "age": 19,
+          "curp": "TECA061213HMCRRNA8"
+        },
+        {
+          "number": "17",
+          "name": "LOPEZ MARTINEZ JURGEN BAYRON",
+          "position": "",
+          "age": 19,
+          "curp": "LOMJ070715HDFPRRA4"
+        },
+        {
+          "number": "",
+          "name": "VARELA SALMERON JOSE ARTURO",
+          "position": "",
+          "age": 14,
+          "curp": "VASA110825HMCRLRA0"
+        },
+        {
+          "number": "27",
+          "name": "ARELLANO ORDOÑEZ LENIN JAVIER",
+          "position": "",
+          "age": 15,
+          "curp": "AEOL110327HMCRRNA1"
+        },
+        {
+          "number": "26",
+          "name": "BOJORQUEZ BARRERA RAUL",
+          "position": "",
+          "age": 20,
+          "curp": "BOBR060707HMCJRLA1"
+        },
+        {
+          "number": "33",
+          "name": "AVAREZ MONTAÑO JULIAN",
+          "position": "",
+          "age": 14,
+          "curp": "AAMJ110827HMCLNLA3"
+        }
+      ]
     }
   ],
   "schedule": [
