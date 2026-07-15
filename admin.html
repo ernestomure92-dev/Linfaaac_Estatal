@@ -699,10 +699,13 @@
         <section id="playoffs" class="section">
             <div class="section-header">
                 <h2 class="section-title"> Playoffs</h2>
-                <button class="btn btn-primary" onclick="openModal('addPlayoffModal')">
-                     Nueva Llave
+                <button class="btn btn-primary" onclick="showSection('schedule')">
+                     🏆 Generar Playoffs (Top 4)
                 </button>
             </div>
+            <p style="color:var(--text-muted,#888);font-size:0.85rem;margin-top:-0.5rem;margin-bottom:1rem;">
+                Las llaves ahora se generan automáticamente desde la sección Horarios, según la tabla de posiciones de cada categoría.
+            </p>
 
             <div id="playoffs-admin-list">
                 <div class="empty-state">
@@ -848,20 +851,6 @@
     </div>
 
     <!-- Edit Score Modal -->
-    <div class="modal-overlay" id="editScoreModal">
-        <div class="modal" style="max-width: 500px;">
-            <div class="modal-header">
-                <span class="modal-title">Editar Marcador</span>
-                <button class="modal-close" onclick="closeModal('editScoreModal')">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div id="edit-score-content"></div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" onclick="closeModal('editScoreModal')">Cancelar</button>
-                <button class="btn btn-success" onclick="saveScore()">Guardar Marcador</button>
-            </div>
-        </div>
     </div>
 
     <script>
@@ -978,7 +967,12 @@
             document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
             document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
             document.getElementById(section).classList.add('active');
-            event.target.closest('.nav-item').classList.add('active');
+            const navItem = window.event && window.event.target ? window.event.target.closest('.nav-item') : null;
+            if (navItem) { navItem.classList.add('active'); }
+            else {
+                const fallback = document.querySelector(`.nav-item[onclick*="'${section}'"]`);
+                if (fallback) fallback.classList.add('active');
+            }
 
             if (section === 'dashboard') updateDashboard();
             if (section === 'matches') renderMatches();
@@ -1634,8 +1628,9 @@
             }
         }
 
-        async function uploadImportedPhotosForTeam(team) {
-            const pending = team.players.filter(p => p.curp && _importedPhotos[p.curp]);
+        async function uploadImportedPhotosForTeam(team, photosMap) {
+            photosMap = photosMap || _importedPhotos;
+            const pending = team.players.filter(p => p.curp && photosMap[p.curp]);
             if (!pending.length) return;
             if (!githubConfig.token) {
                 showAlert('Fotos no subidas: configura GitHub primero. Los datos del equipo sí se guardaron.', 'error');
@@ -1645,7 +1640,7 @@
             let ok = 0;
             const fallos = [];
             for (const p of pending) {
-                const photo = _importedPhotos[p.curp];
+                const photo = photosMap[p.curp];
                 const path = `fotos/${p.curp}.${photo.ext}`;
                 const result = await uploadFileToGitHub(path, photo.base64, `Foto jugador ${p.curp}`);
                 if (result.ok) { p.photo = path; ok++; }
@@ -1712,7 +1707,7 @@
             renderTeams();
             populateTeamSelects();
             updateDashboard();
-            uploadImportedPhotosForTeam(team);
+            uploadImportedPhotosForTeam(team, { ..._importedPhotos });
             _importedPhotos = {};
             document.getElementById('roster-import-status').textContent = '';
             document.getElementById('roster-excel-input').value = '';
@@ -2203,11 +2198,18 @@
             const teams = LINFAAAC_DATA.teams.filter(t => t.category === category);
             if (teams.length < 2) { statusEl.innerHTML = '❌ Esta categoría necesita al menos 2 equipos.'; return; }
 
-            const gen = generateMatchups(teams);
-            if (!gen.ok) { statusEl.innerHTML = '❌ ' + gen.error; return; }
-
-            const split = splitIntoDays(teams, gen.matches);
-            if (!split.ok) { statusEl.innerHTML = '❌ ' + split.error; return; }
+            let gen, split;
+            let generado = false;
+            for (let outerAttempt = 0; outerAttempt < 20 && !generado; outerAttempt++) {
+                gen = generateMatchups(teams);
+                if (!gen.ok) continue;
+                split = splitIntoDays(teams, gen.matches);
+                if (split.ok) generado = true;
+            }
+            if (!generado) {
+                statusEl.innerHTML = '❌ No se pudo generar un calendario válido tras varios intentos. Es posible que haya demasiados equipos "Casa" en esta categoría, o inténtalo de nuevo.';
+                return;
+            }
 
             const fields = LINFAAAC_DATA.fields && LINFAAAC_DATA.fields.length ? LINFAAAC_DATA.fields : ['Campo 1'];
             const group1 = split.matches.filter(m => m.dayGroup === 1);
