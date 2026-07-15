@@ -4015,6 +4015,15 @@
           "photo": "fotos/TORM100322HMCRMTA2.jpg"
         }
       ]
+    },
+    {
+      "id": "t_1784145278721",
+      "name": "KUKULKANES",
+      "abbr": "RO",
+      "category": "14 Femenil",
+      "color": "#1db9ed",
+      "casa": false,
+      "players": []
     }
   ],
   "schedule": [
