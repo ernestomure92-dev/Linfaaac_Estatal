@@ -441,7 +441,7 @@
       "abbr": "PB",
       "category": "16 Varonil",
       "color": "#3bc46f",
-      "casa": false,
+      "casa": true,
       "players": []
     },
     {
