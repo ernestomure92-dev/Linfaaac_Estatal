@@ -2786,6 +2786,121 @@
           "curp": "MARS07011MMCTMFA1"
         }
       ]
+    },
+    {
+      "id": "t_1784102797679",
+      "name": "UPIICSA A",
+      "abbr": "UA",
+      "category": "Varonil Libre",
+      "color": "#310599",
+      "casa": false,
+      "players": [
+        {
+          "number": "",
+          "name": "PIÑA MARTINEZ MARIO JOSAFAT",
+          "position": "STAFF",
+          "age": 32,
+          "curp": "PIMM921222HDFXRR07"
+        },
+        {
+          "number": "",
+          "name": "VAZQUEZ VILLEGAS FELIX",
+          "position": "STAFF",
+          "age": 41,
+          "curp": "VAVF850409ED3"
+        },
+        {
+          "number": "",
+          "name": "ANTONIO GRANADOS JONATHAN",
+          "position": "",
+          "age": 22,
+          "curp": "AOGJ031209HDFNRNA7"
+        },
+        {
+          "number": "",
+          "name": "SALAS CORTEZ OSCAR",
+          "position": "",
+          "age": 23,
+          "curp": "SACO030503HPLLRSA2"
+        },
+        {
+          "number": "",
+          "name": "MARTINEZ OLVERA LEONARDO",
+          "position": "",
+          "age": 25,
+          "curp": "MAOL001009HMCRLNA1"
+        },
+        {
+          "number": "",
+          "name": "SANTIAGO ORTIZ CRISTIAN URIEL",
+          "position": "",
+          "age": 23,
+          "curp": "SAOC021006HDFNRRA8"
+        },
+        {
+          "number": "",
+          "name": "MENDEZ MARTINEZ DIEGO",
+          "position": "",
+          "age": 25,
+          "curp": "MEMD001217HDFNRGA0"
+        },
+        {
+          "number": "",
+          "name": "GARCIA RAMIREZ DENEB SEBASTIAN",
+          "position": "",
+          "age": 21,
+          "curp": "GARD050217HDFRMNA5"
+        },
+        {
+          "number": "",
+          "name": "ENRIQUEZ MARTINEZ PAUL ANDRE",
+          "position": "",
+          "age": 25,
+          "curp": "EIMP010513HDFNRLA8"
+        },
+        {
+          "number": "",
+          "name": "CARRILLO PEREZ MARCO ANTONIO",
+          "position": "",
+          "age": 15,
+          "curp": "CAPM100922HDFRRRA4"
+        },
+        {
+          "number": "",
+          "name": "SOSA HERNANDEZ CESAR MANUEL",
+          "position": "",
+          "age": 21,
+          "curp": "SOHC040925HDFSRSA4"
+        },
+        {
+          "number": "",
+          "name": "ARRIAGA CAMPOS YASAR MISAEL",
+          "position": "",
+          "age": 25,
+          "curp": "AICY010116HMCRMSA2"
+        },
+        {
+          "number": "",
+          "name": "JUSTO CAMARGO ERICK",
+          "position": "",
+          "age": 23,
+          "curp": "JUCE030206HDFSMRA0"
+        },
+        {
+          "number": "",
+          "name": "BARCENA HERNANDEZ JUAN SEBATIAN",
+          "position": "",
+          "age": 23,
+          "curp": "BAHJ030408HDFRRNA2"
+        },
+        {
+          "number": "",
+          "name": "HERNANDEZ REYES DIEGO",
+          "position": "",
+          "age": 19,
+          "curp": "HERD060920HDFRYGA1"
+        }
+      ]
     }
   ],
   "schedule": [],
