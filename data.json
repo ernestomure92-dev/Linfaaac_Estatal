@@ -360,6 +360,86 @@
           "curp": "LOTA071110MMCPRNA0"
         }
       ]
+    },
+    {
+      "id": "t_1784091616891",
+      "name": "RAVENS",
+      "abbr": "RAV",
+      "category": "Master Varonil",
+      "color": "#3bc46f",
+      "casa": false,
+      "players": [
+        {
+          "number": "",
+          "name": "SILVA RESENDIZ JESUS ESTEBAN",
+          "position": "STAFF",
+          "age": 39,
+          "curp": "SIRJ870406HMCLSS08"
+        },
+        {
+          "number": "",
+          "name": "BOLANOS JIMENEZ ROBERTO CARLOS",
+          "position": "STAFF",
+          "age": 48,
+          "curp": "BOJR780409HCLMB08"
+        },
+        {
+          "number": "",
+          "name": "GONZALEZ VILLAMIL ISRAEL",
+          "position": "",
+          "age": 46,
+          "curp": "GOVI791112HDFNLS06"
+        },
+        {
+          "number": "",
+          "name": "SAUZA ARROYO EDWIN CHRISTOPHER",
+          "position": "",
+          "age": 36,
+          "curp": "SAAE890902HDFZRD04"
+        },
+        {
+          "number": "",
+          "name": "BOEJA ROSAS OSCAR ARTURO",
+          "position": "",
+          "age": 37,
+          "curp": "BORO881009HMCRSS00"
+        },
+        {
+          "number": "",
+          "name": "PESQUERA ORTIZ MAURICIO JOB",
+          "position": "",
+          "age": 47,
+          "curp": "PEOM790314HDFSRR02"
+        },
+        {
+          "number": "",
+          "name": "DIAZ PACHECO DANIEL IRVING",
+          "position": "",
+          "age": 35,
+          "curp": "DIDP901129HDFZCN05"
+        },
+        {
+          "number": "",
+          "name": "PEREZ VEGA VICENTE",
+          "position": "",
+          "age": 40,
+          "curp": "PEVV860410HMCRGC06"
+        },
+        {
+          "number": "",
+          "name": "GARCIA CRUZ CRISTIAN OMAR",
+          "position": "",
+          "age": 47,
+          "curp": "GACC780828HDFRRR05"
+        },
+        {
+          "number": "",
+          "name": "HERNANDEZ HERNANDEZ MISAEL",
+          "position": "",
+          "age": 37,
+          "curp": "HEHM890429HDFRRS04"
+        }
+      ]
     }
   ],
   "schedule": [],
