@@ -3271,6 +3271,15 @@
           "curp": "ROLR140311MDFDDMA7"
         }
       ]
+    },
+    {
+      "id": "t_1784104027364",
+      "name": "ÁGUILAS TLALNEPANTRAL",
+      "abbr": "AT",
+      "category": "10 Mixto",
+      "color": "#203e7e",
+      "casa": false,
+      "players": []
     }
   ],
   "schedule": [],
