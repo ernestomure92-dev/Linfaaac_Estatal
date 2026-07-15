@@ -443,6 +443,15 @@
       "color": "#3bc46f",
       "casa": false,
       "players": []
+    },
+    {
+      "id": "t_1784083586068",
+      "name": "PRUEBA_2",
+      "abbr": "PB",
+      "category": "16 Femenil",
+      "color": "#3bc46f",
+      "casa": false,
+      "players": []
     }
   ],
   "schedule": [],
