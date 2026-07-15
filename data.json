@@ -434,6 +434,15 @@
           "curp": "EIRN130102HMCSMMA6"
         }
       ]
+    },
+    {
+      "id": "t_1784083572260",
+      "name": "PRUEBA",
+      "abbr": "PB",
+      "category": "16 Varonil",
+      "color": "#3bc46f",
+      "casa": false,
+      "players": []
     }
   ],
   "schedule": [],
