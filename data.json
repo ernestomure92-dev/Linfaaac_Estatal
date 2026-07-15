@@ -3380,6 +3380,120 @@
           "curp": ""
         }
       ]
+    },
+    {
+      "id": "t_1784138081134",
+      "name": "Raptors ODA",
+      "abbr": "RO",
+      "category": "Femenil Libre",
+      "color": "#7f4858",
+      "casa": false,
+      "players": [
+        {
+          "number": "Coach",
+          "name": "Ochoa Vila Jorge",
+          "position": "STAFF",
+          "age": 58,
+          "curp": "OOVJ670712HDFCLR03",
+          "photo": "fotos/OOVJ670712HDFCLR03.jpg"
+        },
+        {
+          "number": "Coach",
+          "name": "Cardoso García Miguel",
+          "position": "STAFF",
+          "age": 29,
+          "curp": "CAGM970704HMCRRG06",
+          "photo": "fotos/CAGM970704HMCRRG06.jpg"
+        },
+        {
+          "number": "26",
+          "name": "Cruz Nopal Lilian Sarahy",
+          "position": "",
+          "age": 17,
+          "curp": "CUNL090526MDFRPLA4",
+          "photo": "fotos/CUNL090526MDFRPLA4.jpg"
+        },
+        {
+          "number": "41",
+          "name": "Mondragón Escamilla Regina",
+          "position": "",
+          "age": 19,
+          "curp": "MOER070109MDFNSGA6",
+          "photo": "fotos/MOER070109MDFNSGA6.jpg"
+        },
+        {
+          "number": "13",
+          "name": "Yepez Mayorga Fátima",
+          "position": "",
+          "age": 17,
+          "curp": "YEMF090513MMCPYTA4",
+          "photo": "fotos/YEMF090513MMCPYTA4.jpg"
+        },
+        {
+          "number": "9",
+          "name": "Zavala Pérez Paula Miranda",
+          "position": "",
+          "age": 19,
+          "curp": "ZAPP061118MDFVRLA1",
+          "photo": "fotos/ZAPP061118MDFVRLA1.jpg"
+        },
+        {
+          "number": "10",
+          "name": "Sánchez Campos Ismairany Cristian",
+          "position": "",
+          "age": 19,
+          "curp": "SACI070308MDFNMSA3",
+          "photo": "fotos/SACI070308MDFNMSA3.jpg"
+        },
+        {
+          "number": "81",
+          "name": "Cabrera Hernández Evelyn",
+          "position": "",
+          "age": 18,
+          "curp": "CAHE070806MMCBRVA4",
+          "photo": "fotos/CAHE070806MMCBRVA4.jpg"
+        },
+        {
+          "number": "80",
+          "name": "Gaytán Olivares Naomi Ailin",
+          "position": "",
+          "age": 19,
+          "curp": "GAON070512MMCYLMA6",
+          "photo": "fotos/GAON070512MMCYLMA6.jpg"
+        },
+        {
+          "number": "7",
+          "name": "Miranda Rojas Yue Dasha",
+          "position": "",
+          "age": 17,
+          "curp": "MIRY090620MMCRJXA2",
+          "photo": "fotos/MIRY090620MMCRJXA2.jpg"
+        },
+        {
+          "number": "6",
+          "name": "Borja García Sarahí",
+          "position": "",
+          "age": 15,
+          "curp": "BOGS110617MMCRRRA2",
+          "photo": "fotos/BOGS110617MMCRRRA2.jpg"
+        },
+        {
+          "number": "66",
+          "name": "Mexia García Shanti",
+          "position": "",
+          "age": 17,
+          "curp": "MEGS090604MDFXRHA6",
+          "photo": "fotos/MEGS090604MDFXRHA6.jpg"
+        },
+        {
+          "number": "85",
+          "name": "Castañeda Casio Yaretzi Vanessa",
+          "position": "",
+          "age": 16,
+          "curp": "CACY090831MMCSSRA6",
+          "photo": "fotos/CACY090831MMCSSRA6.jpg"
+        }
+      ]
     }
   ],
   "schedule": [
