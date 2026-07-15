@@ -3494,6 +3494,71 @@
           "photo": "fotos/CACY090831MMCSSRA6.jpg"
         }
       ]
+    },
+    {
+      "id": "t_1784140311359",
+      "name": "Raptors ODA",
+      "abbr": "RO",
+      "category": "Varonil Libre",
+      "color": "#7f4858",
+      "casa": false,
+      "players": [
+        {
+          "number": "Coach",
+          "name": "Ochoa Vila Jorge",
+          "position": "STAFF",
+          "age": 58,
+          "curp": "OOVJ670712HDFCLR03"
+        },
+        {
+          "number": "Coach",
+          "name": "Cardoso García Miguel",
+          "position": "STAFF",
+          "age": 29,
+          "curp": "CAGM970704HMCRRG06",
+          "photo": "fotos/CAGM970704HMCRRG06.jpg"
+        },
+        {
+          "number": "24",
+          "name": "Morales Cervantes Ivan Elias",
+          "position": "",
+          "age": 125,
+          "curp": "MOCI080905HMCRRVA9",
+          "photo": "fotos/MOCI080905HMCRRVA9.jpg"
+        },
+        {
+          "number": "20",
+          "name": "Lazcano Hummel Elihu Yael",
+          "position": "",
+          "age": 19,
+          "curp": "LAHE060720HDFZMLA7",
+          "photo": "fotos/LAHE060720HDFZMLA7.jpg"
+        },
+        {
+          "number": "13",
+          "name": "Vazquez Zamora Elliot Joel",
+          "position": "",
+          "age": 24,
+          "curp": "VAZE020224HDFZMLA6",
+          "photo": "fotos/VAZE020224HDFZMLA6.jpg"
+        },
+        {
+          "number": "4",
+          "name": "Cardoso García Miguel",
+          "position": "",
+          "age": 29,
+          "curp": "CAGM970704HMCRRG06",
+          "photo": "fotos/CAGM970704HMCRRG06.jpg"
+        },
+        {
+          "number": "12",
+          "name": "Rodríguez Cruz Drake Jordane",
+          "position": "",
+          "age": 19,
+          "curp": "ROCD070419HDFDRRA0",
+          "photo": "fotos/ROCD070419HDFDRRA0.jpg"
+        }
+      ]
     }
   ],
   "schedule": [
