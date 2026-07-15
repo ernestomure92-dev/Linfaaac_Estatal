@@ -2412,6 +2412,121 @@
           "curp": "EASK110614HMCSNVA0"
         }
       ]
+    },
+    {
+      "id": "t_1784102404640",
+      "name": "UPIICSA",
+      "abbr": "U",
+      "category": "Varonil Libre",
+      "color": "#310599",
+      "casa": false,
+      "players": [
+        {
+          "number": "",
+          "name": "PIÑA MARTINEZ MARIO JOSAFAT",
+          "position": "STAFF",
+          "age": 33,
+          "curp": "PIMM921222HDFXRR07"
+        },
+        {
+          "number": "",
+          "name": "VAZQUEZ VILLEGAS FELIX",
+          "position": "STAFF",
+          "age": 41,
+          "curp": "VAVF850409ED3"
+        },
+        {
+          "number": "",
+          "name": "BOJALIL ALVAREZ LOGAN RUSELL",
+          "position": "",
+          "age": 20,
+          "curp": "BOAL051207HDFJLGA6"
+        },
+        {
+          "number": "9",
+          "name": "REYES HERNANDEZ NOÉ",
+          "position": "",
+          "age": 25,
+          "curp": "REHN010507HMXYRXB7"
+        },
+        {
+          "number": "77",
+          "name": "RAMIREZ RIVAS TOMAS YAEL",
+          "position": "",
+          "age": 21,
+          "curp": "PART040409HDFMVMA0"
+        },
+        {
+          "number": "",
+          "name": "ISLAS MARTÍNEZ LUIS FERNANDO",
+          "position": "",
+          "age": 29,
+          "curp": "IAML970211HMCSRS05"
+        },
+        {
+          "number": "85",
+          "name": "ESPAÑOL PERERZ JEREMI",
+          "position": "",
+          "age": 23,
+          "curp": "EAPJ020913HMCSRRA2"
+        },
+        {
+          "number": "",
+          "name": "MNORALES ALFARO JUAN ANDRES",
+          "position": "",
+          "age": 23,
+          "curp": "MOAJ020825HDFRLNA5"
+        },
+        {
+          "number": "23",
+          "name": "MORALES GUTIERREZ RODRIGO",
+          "position": "",
+          "age": 23,
+          "curp": "MOGR021108HDFRTDA6"
+        },
+        {
+          "number": "",
+          "name": "BARRON RIOS MARIO GAEL",
+          "position": "",
+          "age": 23,
+          "curp": "BARM030412HDFRSRA6"
+        },
+        {
+          "number": "",
+          "name": "BELTRAN MARES DANIEL ALEJANDRO",
+          "position": "",
+          "age": 19,
+          "curp": "BEMD061124HDFLRNA7"
+        },
+        {
+          "number": "5",
+          "name": "FLORES TOLEDO LUIS UZAI",
+          "position": "",
+          "age": 22,
+          "curp": "FOTL030913HDFLLSA2"
+        },
+        {
+          "number": "",
+          "name": "FLORES GONZALEZ JOSE ENRIQUE",
+          "position": "",
+          "age": 24,
+          "curp": "FOGE020218HDFLNNA6"
+        },
+        {
+          "number": "",
+          "name": "GOMEZ MARTINEZ OSCAR JARETH",
+          "position": "",
+          "age": 24,
+          "curp": "GOMO020320HDFMRSA5"
+        },
+        {
+          "number": "",
+          "name": "ANTONIO GRANADOS MATEO",
+          "position": "",
+          "age": 15,
+          "curp": "AOGM101020HDFNRTA9"
+        }
+      ]
     }
   ],
   "schedule": [],
