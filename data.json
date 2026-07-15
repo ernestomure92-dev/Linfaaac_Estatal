@@ -1956,6 +1956,93 @@
           "curp": "MODO900727HHGRR"
         }
       ]
+    },
+    {
+      "id": "t_1784100553035",
+      "name": "Hunters Tlalnepantla",
+      "abbr": "HT",
+      "category": "16 Varonil",
+      "color": "#3c71ec",
+      "casa": false,
+      "players": [
+        {
+          "number": "",
+          "name": "Quintero Perez Marco Antonio",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "Rosales García Irwin",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "Farrera Enriquez Andrés Said",
+          "position": "",
+          "age": 14,
+          "curp": "FAEA110918HDFRNNA0"
+        },
+        {
+          "number": "",
+          "name": "Bautista García AliJosafat",
+          "position": "",
+          "age": 13,
+          "curp": "BAGA130527HMCTRL12"
+        },
+        {
+          "number": "",
+          "name": "Camacho Coronilla Oliver Gerardo",
+          "position": "",
+          "age": 14,
+          "curp": "CXCO111122HMCMRLA4"
+        },
+        {
+          "number": "",
+          "name": "Alonso Suerez Jorge Humberto",
+          "position": "",
+          "age": 0,
+          "curp": "AOSJ110119HDFLRRA9"
+        },
+        {
+          "number": "",
+          "name": "Rubio Solano Anker Aron",
+          "position": "",
+          "age": 13,
+          "curp": "RUSA121019HDFBLNA7"
+        },
+        {
+          "number": "",
+          "name": "Licona Ruiz Emiliano",
+          "position": "",
+          "age": 15,
+          "curp": "LIRE110205HMCCZMA2"
+        },
+        {
+          "number": "",
+          "name": "Peñaloza Cabello Abdiel",
+          "position": "",
+          "age": 14,
+          "curp": "PECA111009HMCXBBA3"
+        },
+        {
+          "number": "",
+          "name": "Fuentes Solis Tecciztonal Emiliano",
+          "position": "",
+          "age": 15,
+          "curp": "FUST110311HMCNLCB1"
+        },
+        {
+          "number": "",
+          "name": "Garcia Arreola Maria Sol",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        }
+      ]
     }
   ],
   "schedule": [],
