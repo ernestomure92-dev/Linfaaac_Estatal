@@ -4285,6 +4285,15 @@
       "color": "#ef0bb2",
       "casa": false,
       "players": []
+    },
+    {
+      "id": "t_1784146698320",
+      "name": "FOGONERAS",
+      "abbr": "F",
+      "category": "Femenil Libre",
+      "color": "#ef0bb2",
+      "casa": false,
+      "players": []
     }
   ],
   "schedule": [
