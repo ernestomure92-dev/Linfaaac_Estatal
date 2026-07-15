@@ -2043,6 +2043,107 @@
           "curp": ""
         }
       ]
+    },
+    {
+      "id": "t_1784100766414",
+      "name": "HUNTERS TLALNEPANTLA",
+      "abbr": "HT",
+      "category": "Femenil Libre",
+      "color": "#3c71ec",
+      "casa": false,
+      "players": [
+        {
+          "number": "",
+          "name": "Quintero Perez Marco Antonio",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "Rosales Garcia Irwin",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "Hernández Sosa Valeria Monserrat",
+          "position": "",
+          "age": 16,
+          "curp": "HESV100615MMCRSLA6"
+        },
+        {
+          "number": "",
+          "name": "Rosales Flores Ingrid",
+          "position": "",
+          "age": 19,
+          "curp": "ROFI070511MDFSLNA1"
+        },
+        {
+          "number": "",
+          "name": "Salazar Cruz Dayri Shaday",
+          "position": "",
+          "age": 14,
+          "curp": "SACD110917MMCLRYA8"
+        },
+        {
+          "number": "",
+          "name": "Salazar Cruz Sahory Montserrat",
+          "position": "",
+          "age": 18,
+          "curp": "SACS071024MMCLRHA2"
+        },
+        {
+          "number": "",
+          "name": "Cabello Hernández Maria Antonia",
+          "position": "",
+          "age": 38,
+          "curp": "CAHA870727MMNBRO5"
+        },
+        {
+          "number": "",
+          "name": "Santos Hernández Ana Laura",
+          "position": "",
+          "age": 17,
+          "curp": "SAHA080905MMCNRA0"
+        },
+        {
+          "number": "",
+          "name": "Rios Solis Devi Sofia",
+          "position": "",
+          "age": 15,
+          "curp": "RISD100717MDFSLVA5"
+        },
+        {
+          "number": "",
+          "name": "Bautista García Maria Fernanda",
+          "position": "",
+          "age": 16,
+          "curp": "BAGF091112MMCTRRA5"
+        },
+        {
+          "number": "",
+          "name": "García Arreola Maria Sol",
+          "position": "",
+          "age": 0,
+          "curp": "GAAS910816MDFRRL04"
+        },
+        {
+          "number": "",
+          "name": "Camacho Coronilla Mayte Citlali",
+          "position": "",
+          "age": 16,
+          "curp": "CACM090928MDFMRYA0"
+        },
+        {
+          "number": "",
+          "name": "Cruz Ponce Fabiola Berenice",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        }
+      ]
     }
   ],
   "schedule": [],
