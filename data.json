@@ -3090,6 +3090,107 @@
           "curp": "EIRN130102HMCSMMA6"
         }
       ]
+    },
+    {
+      "id": "t_1784103381370",
+      "name": "TLALOCS FLAG",
+      "abbr": "TF",
+      "category": "16 Varonil",
+      "color": "#6a7ca4",
+      "casa": false,
+      "players": [
+        {
+          "number": "18",
+          "name": "Morales Montalvo Luis Enrique",
+          "position": "STAFF",
+          "age": 33,
+          "curp": "MOML930516HMCRNS07"
+        },
+        {
+          "number": "S/N",
+          "name": "STAFF SIN CAPTURAR",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "4",
+          "name": "Ramirez Arreola Quetzali Izel",
+          "position": "JUGADOR",
+          "age": 17,
+          "curp": "RAAQ090407MDFMRTA8"
+        },
+        {
+          "number": "7",
+          "name": "López Vega María del Lucero",
+          "position": "JUGADOR",
+          "age": 30,
+          "curp": "LOVL960130MDFPGC08"
+        },
+        {
+          "number": "13",
+          "name": "Linares Morales Andrea Celeste",
+          "position": "JUGADOR",
+          "age": 14,
+          "curp": "LIMA110727MDFNRNA4"
+        },
+        {
+          "number": "15",
+          "name": "Matamoros Sotelo Citlally Avril",
+          "position": "JUGADOR",
+          "age": 16,
+          "curp": "MASC091125MDFTTTA8"
+        },
+        {
+          "number": "17",
+          "name": "Bravo Saavedra Camila",
+          "position": "JUGADOR",
+          "age": 18,
+          "curp": "BASC080317MMCRVMA2"
+        },
+        {
+          "number": "20",
+          "name": "Medina Reyes Susan",
+          "position": "JUGADOR",
+          "age": 35,
+          "curp": "MERD891020MMCDYS08"
+        },
+        {
+          "number": "29",
+          "name": "Chávez de Santiago Dulce Amairani",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "CASD101129MDFHNLA0"
+        },
+        {
+          "number": "30",
+          "name": "León Palacios Fátima Rebeca",
+          "position": "JUGADOR",
+          "age": 18,
+          "curp": "LEPF001130MMCNLTA9"
+        },
+        {
+          "number": "41",
+          "name": "Peña Bernal Sofía",
+          "position": "JUGADOR",
+          "age": 45,
+          "curp": "PEBS810212MDFXRF04"
+        },
+        {
+          "number": "42",
+          "name": "Tinoco Peña Eva Xally",
+          "position": "JUGADOR",
+          "age": 22,
+          "curp": "TIPE031115MDFNXVA7"
+        },
+        {
+          "number": "85",
+          "name": "Matamoros Sotelo María Fernanda",
+          "position": "JUGADOR",
+          "age": 18,
+          "curp": "MASF070804MDFTTRA9"
+        }
+      ]
     }
   ],
   "schedule": [],
