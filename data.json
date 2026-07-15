@@ -333,6 +333,93 @@
           "curp": "PEVJ140226MMCRZSA2"
         }
       ]
+    },
+    {
+      "id": "t_1784094295742",
+      "name": "SPARTANS",
+      "abbr": "S",
+      "category": "10 Mixto",
+      "color": "#baaf36",
+      "casa": false,
+      "players": [
+        {
+          "number": "",
+          "name": "GALICIA MARTINEZ SERGIO DANIEL",
+          "position": "STAFF",
+          "age": 49,
+          "curp": "GAMS760830HDFLRRO3"
+        },
+        {
+          "number": "",
+          "name": "GALICIA LIMAS DANIEL ITZEL",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "LOPEZ CRUZ ERNESTO ALEJANDRO",
+          "position": "",
+          "age": 9,
+          "curp": "LOCE170714HMCPRRRA9"
+        },
+        {
+          "number": "",
+          "name": "ANDRADE CARRASCO AURORA SARAI",
+          "position": "",
+          "age": 9,
+          "curp": "AACA160830MMCNRRA5"
+        },
+        {
+          "number": "",
+          "name": "MARTINEZ ELIZALDE MATEO",
+          "position": "",
+          "age": 9,
+          "curp": "MAEM161212HMCRLTA0"
+        },
+        {
+          "number": "",
+          "name": "GALINDO ARQUETA DONOVAN",
+          "position": "",
+          "age": 10,
+          "curp": "GAAD160501HMCLRNA3"
+        },
+        {
+          "number": "",
+          "name": "HIGAREDA LEON ESTEBAN URIEL",
+          "position": "",
+          "age": 7,
+          "curp": "HILE190311HMCGNSA8"
+        },
+        {
+          "number": "",
+          "name": "FLORES MARTINEZ RODRIGO JESUS",
+          "position": "",
+          "age": 10,
+          "curp": "FOMR160415HMCLRDA7"
+        },
+        {
+          "number": "",
+          "name": "HERRERA RAMIREZ ZEUS",
+          "position": "",
+          "age": 8,
+          "curp": "HERZ170905HMCRMSA2"
+        },
+        {
+          "number": "",
+          "name": "GARCIA ESPARZA DANNA SOFIA",
+          "position": "",
+          "age": 8,
+          "curp": "GAED171030MDFRSNA4"
+        },
+        {
+          "number": "",
+          "name": "RODRIGUEZ CALZADILLA FERNANDA",
+          "position": "",
+          "age": 10,
+          "curp": "ROCF160416MMCDLRA9"
+        }
+      ]
     }
   ],
   "schedule": [],
