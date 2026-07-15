@@ -547,6 +547,11 @@
                         <option value="live">En curso</option>
                         <option value="finished">Finalizados</option>
                     </select>
+                    <select class="form-control" id="match-sort" onchange="renderMatches()" style="width: auto;">
+                        <option value="datetime">Ordenar: Día/Hora</option>
+                        <option value="category">Ordenar: Categoría</option>
+                        <option value="team">Ordenar: Equipo</option>
+                    </select>
                 </div>
             </div>
 
@@ -669,9 +674,15 @@
         <section id="teams" class="section">
             <div class="section-header">
                 <h2 class="section-title"> Equipos</h2>
-                <button class="btn btn-primary" onclick="openModal('addTeamModal')">
-                     Nuevo Equipo
-                </button>
+                <div style="display:flex; gap:0.5rem; align-items:center;">
+                    <select class="form-control" id="teams-sort" onchange="renderTeams()" style="width: auto;">
+                        <option value="category">Ordenar: Categoría</option>
+                        <option value="name">Ordenar: Nombre de equipo</option>
+                    </select>
+                    <button class="btn btn-primary" onclick="openModal('addTeamModal')">
+                         Nuevo Equipo
+                    </button>
+                </div>
             </div>
 
             <div class="card">
@@ -1084,7 +1095,18 @@
             if (dayFilter !== 'all') matches = matches.filter(m => m.day == dayFilter);
             if (statusFilter !== 'all') matches = matches.filter(m => m.status === statusFilter);
 
-            matches.sort((a, b) => a.day - b.day || a.time.localeCompare(b.time));
+            const sortBy = document.getElementById('match-sort') ? document.getElementById('match-sort').value : 'datetime';
+            if (sortBy === 'category') {
+                matches.sort((a, b) => a.category.localeCompare(b.category, 'es') || a.day - b.day || a.time.localeCompare(b.time));
+            } else if (sortBy === 'team') {
+                matches.sort((a, b) => {
+                    const n1a = getTeam(a.team1) ? getTeam(a.team1).name : '';
+                    const n1b = getTeam(b.team1) ? getTeam(b.team1).name : '';
+                    return n1a.localeCompare(n1b, 'es') || a.day - b.day || a.time.localeCompare(b.time);
+                });
+            } else {
+                matches.sort((a, b) => a.day - b.day || a.time.localeCompare(b.time));
+            }
 
             const container = document.getElementById('matches-list');
             if (matches.length === 0) {
@@ -1453,7 +1475,14 @@
                 return;
             }
 
-            tbody.innerHTML = LINFAAAC_DATA.teams.map(t => {
+            const sortBy = document.getElementById('teams-sort') ? document.getElementById('teams-sort').value : 'category';
+            const sorted = [...LINFAAAC_DATA.teams].sort((a, b) => {
+                if (sortBy === 'name') return a.name.localeCompare(b.name, 'es');
+                // por categoria, y dentro de la categoria por nombre de equipo
+                return a.category.localeCompare(b.category, 'es') || a.name.localeCompare(b.name, 'es');
+            });
+
+            tbody.innerHTML = sorted.map(t => {
                 const curpWarnings = countCurpWarnings(t);
                 return `
                 <tr>
