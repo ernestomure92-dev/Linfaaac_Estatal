@@ -5564,6 +5564,19 @@
       "score2": 0,
       "status": "scheduled",
       "winner": null
+    },
+    {
+      "id": "m_1784180022535",
+      "day": 2,
+      "time": "13:00:00",
+      "category": "Varonil Libre",
+      "field": "Campo 5",
+      "team1": "t_1784102404640",
+      "team2": "t_1784140311359",
+      "score1": 0,
+      "score2": 0,
+      "status": "scheduled",
+      "winner": null
     }
   ],
   "playoffs": []
