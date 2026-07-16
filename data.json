@@ -4353,6 +4353,15 @@
       "color": "#5b5d62",
       "casa": false,
       "players": []
+    },
+    {
+      "id": "t_1784169825993",
+      "name": "INMORTALES",
+      "abbr": "DN",
+      "category": "Master Varonil",
+      "color": "#5b5d62",
+      "casa": false,
+      "players": []
     }
   ],
   "schedule": [],
