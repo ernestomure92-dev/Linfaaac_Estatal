@@ -1378,11 +1378,27 @@
             } else {
                 const team1 = document.getElementById('em-team1').value;
                 const team2 = document.getElementById('em-team2').value;
-                if (team1 === team2) { showAlert('Un equipo no puede jugar contra sí mismo', 'error'); return; }
+                if (match.isPlayoff) {
+                    if (team1 && team2 && team1 === team2) { showAlert('Los dos equipos no pueden ser el mismo', 'error'); return; }
+                } else if (!team1 || !team2 || team1 === team2) {
+                    showAlert('Selecciona dos equipos diferentes', 'error');
+                    return;
+                }
                 match.category = document.getElementById('em-category').value;
                 match.field = document.getElementById('em-field').value;
-                match.team1 = team1;
-                match.team2 = team2;
+                match.team1 = team1 || null;
+                match.team2 = team2 || null;
+
+                if (match.isPlayoff) {
+                    const bracket = (LINFAAAC_DATA.playoffs || []).find(p => p.category === match.category);
+                    if (bracket) {
+                        const roundObj = bracket.rounds.find(r => r.round === match.round);
+                        if (roundObj) {
+                            const bm = roundObj.matches.find(x => x.id === match.id);
+                            if (bm) { bm.team1 = match.team1; bm.team2 = match.team2; }
+                        }
+                    }
+                }
             }
 
             saveToStorage();
@@ -1390,6 +1406,7 @@
             renderScheduleGrid();
             renderScheduleList();
             renderMatches();
+            renderPlayoffs();
             updateDashboard();
             showAlert('Partido actualizado', 'success');
             autoPublishToGitHub();
@@ -1465,7 +1482,7 @@
                         const t1 = getTeam(match.team1);
                         const t2 = getTeam(match.team2);
                         html += `<div class="field-slot occupied" onclick="editMatch('${match.id}')">
-                            <div class="slot-teams">${t1 ? t1.abbr : '?'} vs ${t2 ? t2.abbr : '?'}</div>
+                            <div class="slot-teams">${(!t1 && !t2) ? 'Por definir' : `${t1 ? t1.abbr : 'Por definir'} vs ${t2 ? t2.abbr : 'Por definir'}`}</div>
                             <div class="slot-category">${match.isPlayoff ? '🏆 ' + match.round + ' — ' : ''}${match.category}</div>
                         </div>`;
                     } else {
@@ -1532,8 +1549,8 @@
                                 <td>${m.time}</td>
                                 <td>${m.field}</td>
                                 <td>${catLabel}</td>
-                                <td><span style="color: ${t1 ? t1.color : '#888'};">■</span> ${t1 ? t1.name : '?'}</td>
-                                <td><span style="color: ${t2 ? t2.color : '#888'};">■</span> ${t2 ? t2.name : '?'}</td>
+                                <td><span style="color: ${t1 ? t1.color : '#888'};">■</span> ${t1 ? t1.name : 'Por definir'}</td>
+                                <td><span style="color: ${t2 ? t2.color : '#888'};">■</span> ${t2 ? t2.name : 'Por definir'}</td>
                                 <td>${statusText}</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" onclick="editMatch('${m.id}')">Editar</button>
@@ -1600,16 +1617,27 @@
             const category = document.getElementById('qm-category').value;
             const team1 = document.getElementById('qm-team1').value;
             const team2 = document.getElementById('qm-team2').value;
+            const isPlayoff = (type === 'Semifinal' || type === 'Final');
 
-            if (!team1 || !team2 || team1 === team2) {
+            if (isPlayoff) {
+                // En playoffs se permite dejar los equipos "por definir" (solo para apartar horario/campo)
+                if (team1 && team2 && team1 === team2) {
+                    showAlert('Los dos equipos no pueden ser el mismo', 'error');
+                    return;
+                }
+                if (!category) {
+                    showAlert('Selecciona la categoría del playoff', 'error');
+                    return;
+                }
+            } else if (!team1 || !team2 || team1 === team2) {
                 showAlert('Selecciona dos equipos diferentes', 'error');
                 return;
             }
 
-            const isPlayoff = (type === 'Semifinal' || type === 'Final');
             const match = {
                 id: (isPlayoff ? 'po_' : 'm_') + Date.now(),
-                day, time, category, field, team1, team2,
+                day, time, category, field,
+                team1: team1 || null, team2: team2 || null,
                 score1: 0, score2: 0, status: 'scheduled', winner: null,
                 ...(isPlayoff ? { isPlayoff: true, round: type } : {})
             };
@@ -1624,7 +1652,7 @@
                     LINFAAAC_DATA.playoffs.push(bracket);
                 }
                 const roundObj = bracket.rounds.find(r => r.round === type);
-                if (roundObj) roundObj.matches.push({ id: match.id, team1, team2 });
+                if (roundObj) roundObj.matches.push({ id: match.id, team1: match.team1, team2: match.team2 });
             }
 
             saveToStorage();
