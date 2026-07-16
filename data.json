@@ -5447,6 +5447,19 @@
       "score2": 0,
       "status": "scheduled",
       "winner": null
+    },
+    {
+      "id": "m_1784179425500",
+      "day": 2,
+      "time": "10:00:00",
+      "category": "Femenil Libre D",
+      "field": "Campo 7",
+      "team1": "t_1784138081134",
+      "team2": "t_1784146698320",
+      "score1": 0,
+      "score2": 0,
+      "status": "scheduled",
+      "winner": null
     }
   ],
   "playoffs": []
