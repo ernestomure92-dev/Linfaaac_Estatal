@@ -4900,6 +4900,19 @@
       "score2": 0,
       "status": "scheduled",
       "winner": null
+    },
+    {
+      "id": "m_1784173991188",
+      "day": 1,
+      "time": "15:00:00",
+      "category": "17 Femenil",
+      "field": "Campo 2",
+      "team1": "t_1784146230731",
+      "team2": "t_1784148924510",
+      "score1": 0,
+      "score2": 0,
+      "status": "scheduled",
+      "winner": null
     }
   ],
   "playoffs": []
