@@ -3220,76 +3220,12 @@
     },
     {
       "id": "t_1784137989764",
-      "name": "OFL C",
-      "abbr": "OC",
+      "name": "OFL B",
+      "abbr": "OB",
       "category": "14 Femenil",
       "color": "#7f4858",
       "casa": false,
-      "players": [
-        {
-          "number": "",
-          "name": "SAMPERIO DOMINGUEZ ARTURO SERAFIN",
-          "position": "STAFF",
-          "age": 0,
-          "curp": ""
-        },
-        {
-          "number": "",
-          "name": "INDA AVILA CHRISTIAN NAHUM",
-          "position": "STAFF",
-          "age": 0,
-          "curp": ""
-        },
-        {
-          "number": "12",
-          "name": "CAMPERO VILLANUEVA IVONNE DANAE",
-          "position": "",
-          "age": 0,
-          "curp": ""
-        },
-        {
-          "number": "14",
-          "name": "VALDEZ IPIÑA VANESSA",
-          "position": "",
-          "age": 0,
-          "curp": ""
-        },
-        {
-          "number": "19",
-          "name": "HERNANDEZ TAPIA THAILY ANDREA",
-          "position": "",
-          "age": 0,
-          "curp": ""
-        },
-        {
-          "number": "33",
-          "name": "FRAGOSO MONSALVO LUNA VALERIA",
-          "position": "",
-          "age": 0,
-          "curp": ""
-        },
-        {
-          "number": "4",
-          "name": "SAMPERIO MARTINEZ ROMINA AIMEE",
-          "position": "",
-          "age": 0,
-          "curp": ""
-        },
-        {
-          "number": "16",
-          "name": "GONZALEZ GARCIA ROMINA",
-          "position": "",
-          "age": 0,
-          "curp": ""
-        },
-        {
-          "number": "46",
-          "name": "SANTAMARIA PINEDA SOFIA PAULETT",
-          "position": "",
-          "age": 0,
-          "curp": ""
-        }
-      ]
+      "players": []
     },
     {
       "id": "t_1784138081134",
