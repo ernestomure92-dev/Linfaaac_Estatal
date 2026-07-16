@@ -6162,6 +6162,19 @@
       "score2": 0,
       "status": "scheduled",
       "winner": null
+    },
+    {
+      "id": "m_1784223106637",
+      "day": 2,
+      "time": "15:00:00",
+      "category": "Femenil Libre E",
+      "field": "Campo 7",
+      "team1": "t_1784146366220",
+      "team2": "t_1784146924724",
+      "score1": 0,
+      "score2": 0,
+      "status": "scheduled",
+      "winner": null
     }
   ],
   "playoffs": []
