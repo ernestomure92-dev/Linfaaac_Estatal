@@ -5550,6 +5550,36 @@
       "winner": null
     },
     {
+      "id": "ev_1784238465873",
+      "day": 2,
+      "time": "11:00:00",
+      "field": "Campo 6",
+      "isEvent": true,
+      "eventLabel": "Inauguración",
+      "category": "Evento",
+      "team1": null,
+      "team2": null,
+      "score1": 0,
+      "score2": 0,
+      "status": "scheduled",
+      "winner": null
+    },
+    {
+      "id": "ev_1784238470018",
+      "day": 2,
+      "time": "11:00:00",
+      "field": "Campo 7",
+      "isEvent": true,
+      "eventLabel": "Inauguración",
+      "category": "Evento",
+      "team1": null,
+      "team2": null,
+      "score1": 0,
+      "score2": 0,
+      "status": "scheduled",
+      "winner": null
+    },
+    {
       "id": "m_1784180014088",
       "day": 2,
       "time": "12:00",
