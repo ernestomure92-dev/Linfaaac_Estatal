@@ -4467,7 +4467,7 @@
       "category": "10 Mixto",
       "field": "Campo 4",
       "team1": "t_1784094295742",
-      "team2": "t_1784158191631",
+      "team2": "t_1784148723348",
       "score1": 0,
       "score2": 0,
       "status": "scheduled",
@@ -6216,19 +6216,6 @@
       "winner": null
     },
     {
-      "id": "m_1784184774826",
-      "day": 3,
-      "time": "12:00:00",
-      "category": "Femenil Libre A",
-      "field": "Campo 1",
-      "team1": "t_1784147337518",
-      "team2": "t_1784146671615",
-      "score1": 0,
-      "score2": 0,
-      "status": "scheduled",
-      "winner": null
-    },
-    {
       "id": "m_1784185175894",
       "day": 3,
       "time": "11:00:00",
@@ -6236,6 +6223,19 @@
       "field": "Campo 6",
       "team1": "t_1784095269134",
       "team2": "t_1784093770562",
+      "score1": 0,
+      "score2": 0,
+      "status": "scheduled",
+      "winner": null
+    },
+    {
+      "id": "m_1784184774826",
+      "day": 3,
+      "time": "12:00:00",
+      "category": "Femenil Libre A",
+      "field": "Campo 1",
+      "team1": "t_1784147337518",
+      "team2": "t_1784146671615",
       "score1": 0,
       "score2": 0,
       "status": "scheduled",
