@@ -778,7 +778,7 @@
                     </div>
                     <div class="form-group">
                         <label>Hora</label>
-                        <input type="time" class="form-control" id="qm-time" value="08:00" onchange="filterQuickMatchTeams()">
+                        <input type="time" class="form-control" id="qm-time" value="07:00" onchange="filterQuickMatchTeams()">
                     </div>
                 </div>
                 <div class="form-row">
@@ -1342,7 +1342,7 @@
             const dayMatches = LINFAAAC_DATA.schedule.filter(m => m.day === currentScheduleDay);
 
             const fields = LINFAAAC_DATA.fields || ['Campo 1'];
-            const times = ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00'];
+            const times = ['07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00'];
 
             let html = `<div class="field-schedule" style="grid-template-columns: 90px repeat(${fields.length}, 160px);">`;
             html += '<div class="field-schedule-header">Hora</div>';
@@ -2276,7 +2276,7 @@
         }
 
         // ===================== GENERACIÓN AUTOMÁTICA DE CALENDARIO =====================
-        const AUTOGEN_TIMES = ['08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00'];
+        const AUTOGEN_TIMES = ['07:00','08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00'];
 
         function generateMatchups(teams, attempts = 300) {
             const n = teams.length;
@@ -2356,8 +2356,9 @@
             return { ok: false, error: 'No se pudo repartir los partidos en los dos días. Intenta de nuevo.' };
         }
 
-        function assignSlots(dayMatches, fields, times) {
-            const teamBusyAtTime = {}, fieldBusyAtTime = {};
+        function assignSlots(dayMatches, fields, times, preBusy) {
+            const teamBusyAtTime = (preBusy && preBusy.team) ? { ...preBusy.team } : {};
+            const fieldBusyAtTime = (preBusy && preBusy.field) ? { ...preBusy.field } : {};
             const result = [], unassigned = [];
             for (const m of dayMatches) {
                 let placed = false;
@@ -2375,6 +2376,19 @@
                 if (!placed) unassigned.push(m);
             }
             return { result, unassigned };
+        }
+
+        // Construye los mapas de "ocupado" a partir de TODO lo que ya esta en el calendario
+        // ese dia (de cualquier categoria), para que categorias generadas despues no choquen
+        // de campo/horario con las que ya se generaron antes.
+        function buildBusyMapsForDay(day) {
+            const team = {}, field = {};
+            LINFAAAC_DATA.schedule.filter(m => m.day == day).forEach(m => {
+                team[`${m.team1}|${m.time}`] = true;
+                team[`${m.team2}|${m.time}`] = true;
+                field[`${m.field}|${m.time}`] = true;
+            });
+            return { team, field };
         }
 
         function runAutoGenerateSchedule() {
@@ -2404,8 +2418,8 @@
             const fields = LINFAAAC_DATA.fields && LINFAAAC_DATA.fields.length ? LINFAAAC_DATA.fields : ['Campo 1'];
             const group1 = split.matches.filter(m => m.dayGroup === 1);
             const group2 = split.matches.filter(m => m.dayGroup === 2);
-            const a1 = assignSlots(group1, fields, AUTOGEN_TIMES);
-            const a2 = assignSlots(group2, fields, AUTOGEN_TIMES);
+            const a1 = assignSlots(group1, fields, AUTOGEN_TIMES, buildBusyMapsForDay(day1));
+            const a2 = assignSlots(group2, fields, AUTOGEN_TIMES, buildBusyMapsForDay(day2));
 
             const newMatches = [...a1.result, ...a2.result].map((m, i) => ({
                 id: 'm_' + Date.now() + '_' + i,
