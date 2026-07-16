@@ -5147,6 +5147,19 @@
       "score2": 0,
       "status": "scheduled",
       "winner": null
+    },
+    {
+      "id": "m_1784175912609",
+      "day": 2,
+      "time": "09:00:00",
+      "category": "12 Mixto",
+      "field": "Campo 3",
+      "team1": "t_1784103554061",
+      "team2": "t_1784104136594",
+      "score1": 0,
+      "score2": 0,
+      "status": "scheduled",
+      "winner": null
     }
   ],
   "playoffs": []
