@@ -458,7 +458,7 @@
         <section id="dashboard" class="section active">
             <div class="section-header">
                 <h2 class="section-title"> Dashboard</h2>
-                <button class="btn btn-primary" onclick="openModal('quickMatchModal')">
+                <button class="btn btn-primary" onclick="openQuickMatchModal()">
                      Nuevo Partido
                 </button>
             </div>
@@ -564,7 +564,7 @@
         <section id="schedule" class="section">
             <div class="section-header">
                 <h2 class="section-title"> Gestión de Horarios</h2>
-                <button class="btn btn-primary" onclick="openModal('quickMatchModal')">
+                <button class="btn btn-primary" onclick="openQuickMatchModal()">
                      Agregar Partido
                 </button>
             </div>
@@ -644,7 +644,7 @@
             <div id="schedule-grid-view">
                 <div class="card">
                     <div class="card-header">
-                        <span class="card-title">Día 1 - Viernes 15 Mayo</span>
+                        <span class="card-title" id="schedule-day-title">Día 1 - Viernes 17 Julio</span>
                         <div class="match-actions">
                             <button class="btn btn-sm btn-secondary" onclick="changeScheduleDay(-1)">◀ Día anterior</button>
                             <span id="schedule-day-label" style="color: var(--text-secondary); font-weight: 600;">Día 1</span>
@@ -783,22 +783,41 @@
                 </div>
                 <div class="form-row">
                     <div class="form-group">
-                        <label>Categoría</label>
-                        <select class="form-control" id="qm-category"></select>
+                        <label>Tipo</label>
+                        <select class="form-control" id="qm-type" onchange="toggleQuickMatchType()">
+                            <option value="regular">Partido de temporada regular</option>
+                            <option value="Semifinal">Playoff — Semifinal</option>
+                            <option value="Final">Playoff — Final</option>
+                            <option value="event">Evento especial (sin equipos, ej. Inauguración)</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label>Campo</label>
                         <select class="form-control" id="qm-field"></select>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Equipo 1</label>
-                        <select class="form-control" id="qm-team1" onchange="filterQuickMatchTeams()"></select>
+                <div id="qm-team-fields">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Categoría</label>
+                            <select class="form-control" id="qm-category"></select>
+                        </div>
                     </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Equipo 1</label>
+                            <select class="form-control" id="qm-team1" onchange="filterQuickMatchTeams()"></select>
+                        </div>
+                        <div class="form-group">
+                            <label>Equipo 2</label>
+                            <select class="form-control" id="qm-team2" onchange="filterQuickMatchTeams()"></select>
+                        </div>
+                    </div>
+                </div>
+                <div id="qm-event-fields" style="display:none;">
                     <div class="form-group">
-                        <label>Equipo 2</label>
-                        <select class="form-control" id="qm-team2" onchange="filterQuickMatchTeams()"></select>
+                        <label>Nombre del evento</label>
+                        <input type="text" class="form-control" id="qm-event-label" placeholder="Ej: Inauguración, Ceremonia de premiación">
                     </div>
                 </div>
             </div>
@@ -832,24 +851,38 @@
                         <input type="time" class="form-control" id="em-time" onchange="filterEditMatchTeams()">
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Categoría</label>
-                        <select class="form-control" id="em-category" onchange="filterEditMatchTeams()"></select>
+                <div id="em-team-fields">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Categoría</label>
+                            <select class="form-control" id="em-category" onchange="filterEditMatchTeams()"></select>
+                        </div>
+                        <div class="form-group">
+                            <label>Campo</label>
+                            <select class="form-control" id="em-field" onchange="filterEditMatchTeams()"></select>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label>Campo</label>
-                        <select class="form-control" id="em-field" onchange="filterEditMatchTeams()"></select>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Equipo 1</label>
+                            <select class="form-control" id="em-team1" onchange="filterEditMatchTeams()"></select>
+                        </div>
+                        <div class="form-group">
+                            <label>Equipo 2</label>
+                            <select class="form-control" id="em-team2" onchange="filterEditMatchTeams()"></select>
+                        </div>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Equipo 1</label>
-                        <select class="form-control" id="em-team1" onchange="filterEditMatchTeams()"></select>
+                <div id="em-event-fields" style="display:none;">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Campo</label>
+                            <select class="form-control" id="em-field-event"></select>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label>Equipo 2</label>
-                        <select class="form-control" id="em-team2" onchange="filterEditMatchTeams()"></select>
+                        <label>Nombre del evento</label>
+                        <input type="text" class="form-control" id="em-event-label">
                     </div>
                 </div>
                 <div id="em-conflict-warning" style="display:none;color:#f0ad4e;font-size:0.85rem;margin-top:0.5rem;"></div>
@@ -961,8 +994,15 @@
         let editingTeamId = null;
 
         // INITIALIZATION
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', async () => {
+            const hadLocalData = !!localStorage.getItem('linfaaac_data');
             loadFromStorage();
+
+            // Dispositivo nuevo (sin datos locales) pero con GitHub ya configurado: trae los datos solo
+            if (!hadLocalData && githubConfig.token && githubConfig.owner && githubConfig.repo) {
+                await syncFromGitHub(true);
+            }
+
             updateDashboard();
             renderMatches();
             renderScheduleGrid();
@@ -976,6 +1016,48 @@
             const saved = localStorage.getItem('linfaaac_data');
             if (saved) {
                 LINFAAAC_DATA = JSON.parse(saved);
+            }
+        }
+
+        async function syncFromGitHub(silent) {
+            if (!githubConfig.token || !githubConfig.owner || !githubConfig.repo) {
+                if (!silent) showAlert('Primero configura tu token de GitHub.', 'error');
+                return false;
+            }
+            if (!silent && !confirm('Esto va a reemplazar los datos que ves ahora mismo en este dispositivo con la última versión publicada en GitHub. ¿Continuar?')) return false;
+
+            try {
+                const path = githubConfig.path || 'data.json';
+                const branch = githubConfig.branch || 'main';
+                const resp = await fetch(
+                    `https://raw.githubusercontent.com/${githubConfig.owner}/${githubConfig.repo}/${branch}/${path}?t=${Date.now()}`
+                );
+                if (!resp.ok) {
+                    if (!silent) showAlert('No se pudo descargar data.json desde GitHub (revisa owner/repo/rama).', 'error');
+                    return false;
+                }
+                const remoteData = await resp.json();
+                LINFAAAC_DATA = remoteData;
+                localStorage.setItem('linfaaac_data', JSON.stringify(LINFAAAC_DATA));
+
+                updateDashboard();
+                renderMatches();
+                renderScheduleGrid();
+                renderScheduleList();
+                renderTeams();
+                renderPlayoffs();
+                renderFields();
+                renderCategories();
+                populateTeamSelects();
+                populateCategorySelects();
+                populateFieldSelects();
+
+                if (!silent) { closeModal('githubConfigModal'); showAlert('✅ Datos sincronizados desde GitHub.', 'success'); }
+                return true;
+            } catch (e) {
+                console.error(e);
+                if (!silent) showAlert('Error al sincronizar: ' + e.message, 'error');
+                return false;
             }
         }
 
@@ -1054,7 +1136,7 @@
 
             // Upcoming matches
             const upcoming = LINFAAAC_DATA.schedule
-                .filter(m => m.status === 'scheduled')
+                .filter(m => m.status === 'scheduled' && !m.isEvent)
                 .sort((a, b) => a.day - b.day || a.time.localeCompare(b.time))
                 .slice(0, 5);
 
@@ -1091,7 +1173,7 @@
             const dayFilter = document.getElementById('match-day-filter').value;
             const statusFilter = document.getElementById('match-status-filter').value;
 
-            let matches = LINFAAAC_DATA.schedule;
+            let matches = LINFAAAC_DATA.schedule.filter(m => !m.isEvent);
             if (dayFilter !== 'all') matches = matches.filter(m => m.day == dayFilter);
             if (statusFilter !== 'all') matches = matches.filter(m => m.status === statusFilter);
 
@@ -1222,14 +1304,21 @@
             document.getElementById('em-id').value = match.id;
             document.getElementById('em-day').value = match.day;
             document.getElementById('em-time').value = match.time;
-            document.getElementById('em-field').value = match.field;
 
-            const catSel = document.getElementById('em-category');
-            catSel.value = match.category;
-
-            filterEditMatchTeams();
-            document.getElementById('em-team1').value = match.team1;
-            document.getElementById('em-team2').value = match.team2;
+            if (match.isEvent) {
+                document.getElementById('em-team-fields').style.display = 'none';
+                document.getElementById('em-event-fields').style.display = 'block';
+                document.getElementById('em-field-event').value = match.field;
+                document.getElementById('em-event-label').value = match.eventLabel || '';
+            } else {
+                document.getElementById('em-team-fields').style.display = 'block';
+                document.getElementById('em-event-fields').style.display = 'none';
+                document.getElementById('em-field').value = match.field;
+                document.getElementById('em-category').value = match.category;
+                filterEditMatchTeams();
+                document.getElementById('em-team1').value = match.team1;
+                document.getElementById('em-team2').value = match.team2;
+            }
 
             openModal('editMatchModal');
         }
@@ -1278,16 +1367,23 @@
             const match = LINFAAAC_DATA.schedule.find(m => m.id === id);
             if (!match) return;
 
-            const team1 = document.getElementById('em-team1').value;
-            const team2 = document.getElementById('em-team2').value;
-            if (team1 === team2) { showAlert('Un equipo no puede jugar contra sí mismo', 'error'); return; }
-
             match.day = parseInt(document.getElementById('em-day').value);
             match.time = document.getElementById('em-time').value;
-            match.category = document.getElementById('em-category').value;
-            match.field = document.getElementById('em-field').value;
-            match.team1 = team1;
-            match.team2 = team2;
+
+            if (match.isEvent) {
+                const label = document.getElementById('em-event-label').value.trim();
+                if (!label) { showAlert('Escribe el nombre del evento', 'error'); return; }
+                match.field = document.getElementById('em-field-event').value;
+                match.eventLabel = label;
+            } else {
+                const team1 = document.getElementById('em-team1').value;
+                const team2 = document.getElementById('em-team2').value;
+                if (team1 === team2) { showAlert('Un equipo no puede jugar contra sí mismo', 'error'); return; }
+                match.category = document.getElementById('em-category').value;
+                match.field = document.getElementById('em-field').value;
+                match.team1 = team1;
+                match.team2 = team2;
+            }
 
             saveToStorage();
             closeModal('editMatchModal');
@@ -1329,11 +1425,19 @@
             }
         }
 
+        const SCHEDULE_DAY_LABELS = {
+            1: 'Día 1 - Viernes 17 Julio',
+            2: 'Día 2 - Sábado 18 Julio',
+            3: 'Día 3 - Domingo 19 Julio'
+        };
+
         function changeScheduleDay(delta) {
             currentScheduleDay += delta;
             if (currentScheduleDay < 1) currentScheduleDay = 1;
             if (currentScheduleDay > 3) currentScheduleDay = 3;
             document.getElementById('schedule-day-label').textContent = `Día ${currentScheduleDay}`;
+            const titleEl = document.getElementById('schedule-day-title');
+            if (titleEl) titleEl.textContent = SCHEDULE_DAY_LABELS[currentScheduleDay] || `Día ${currentScheduleDay}`;
             renderScheduleGrid();
         }
 
@@ -1352,12 +1456,17 @@
                 html += `<div class="time-slot">${time}</div>`;
                 fields.forEach(field => {
                     const match = dayMatches.find(m => m.field === field && m.time.startsWith(time));
-                    if (match) {
+                    if (match && match.isEvent) {
+                        html += `<div class="field-slot occupied" style="background: rgba(240,173,78,0.15); border-color:#f0ad4e;" onclick="editMatch('${match.id}')">
+                            <div class="slot-teams">🎉 ${match.eventLabel}</div>
+                            <div class="slot-category">Evento especial</div>
+                        </div>`;
+                    } else if (match) {
                         const t1 = getTeam(match.team1);
                         const t2 = getTeam(match.team2);
                         html += `<div class="field-slot occupied" onclick="editMatch('${match.id}')">
-                            <div class="slot-teams">${t1.abbr} vs ${t2.abbr}</div>
-                            <div class="slot-category">${match.category}</div>
+                            <div class="slot-teams">${t1 ? t1.abbr : '?'} vs ${t2 ? t2.abbr : '?'}</div>
+                            <div class="slot-category">${match.isPlayoff ? '🏆 ' + match.round + ' — ' : ''}${match.category}</div>
                         </div>`;
                     } else {
                         html += `<div class="field-slot" onclick="openQuickMatch(${currentScheduleDay}, '${time}', '${field}')">
@@ -1396,18 +1505,35 @@
                     </thead>
                     <tbody>
                         ${matches.map(m => {
-                            const t1 = getTeam(m.team1);
-                            const t2 = getTeam(m.team2);
                             let statusText = 'Programado';
                             if (m.status === 'live') statusText = 'En Curso';
                             if (m.status === 'finished') statusText = 'Finalizado';
+
+                            if (m.isEvent) {
+                                return `<tr>
+                                    <td>Día ${m.day}</td>
+                                    <td>${m.time}</td>
+                                    <td>${m.field}</td>
+                                    <td>Evento especial</td>
+                                    <td colspan="2">🎉 ${m.eventLabel}</td>
+                                    <td>${statusText}</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-secondary" onclick="editMatch('${m.id}')">Editar</button>
+                                        <button class="btn btn-sm btn-danger" onclick="deleteMatch('${m.id}')">Eliminar</button>
+                                    </td>
+                                </tr>`;
+                            }
+
+                            const t1 = getTeam(m.team1);
+                            const t2 = getTeam(m.team2);
+                            const catLabel = m.isPlayoff ? `🏆 ${m.round} — ${m.category}` : m.category;
                             return `<tr>
                                 <td>Día ${m.day}</td>
                                 <td>${m.time}</td>
                                 <td>${m.field}</td>
-                                <td>${m.category}</td>
-                                <td><span style="color: ${t1.color};">■</span> ${t1.name}</td>
-                                <td><span style="color: ${t2.color};">■</span> ${t2.name}</td>
+                                <td>${catLabel}</td>
+                                <td><span style="color: ${t1 ? t1.color : '#888'};">■</span> ${t1 ? t1.name : '?'}</td>
+                                <td><span style="color: ${t2 ? t2.color : '#888'};">■</span> ${t2 ? t2.name : '?'}</td>
                                 <td>${statusText}</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" onclick="editMatch('${m.id}')">Editar</button>
@@ -1420,19 +1546,58 @@
             </div>`;
         }
 
+        function openQuickMatchModal() {
+            document.getElementById('qm-type').value = 'regular';
+            toggleQuickMatchType();
+            filterQuickMatchTeams();
+            openModal('quickMatchModal');
+        }
+
         function openQuickMatch(day, time, field) {
             document.getElementById('qm-day').value = day;
             document.getElementById('qm-time').value = time + ':00';
             document.getElementById('qm-field').value = field;
+            document.getElementById('qm-type').value = 'regular';
+            toggleQuickMatchType();
             filterQuickMatchTeams();
             openModal('quickMatchModal');
+        }
+
+        function toggleQuickMatchType() {
+            const type = document.getElementById('qm-type').value;
+            const isEvent = type === 'event';
+            document.getElementById('qm-team-fields').style.display = isEvent ? 'none' : 'block';
+            document.getElementById('qm-event-fields').style.display = isEvent ? 'block' : 'none';
         }
 
         function saveQuickMatch() {
             const day = parseInt(document.getElementById('qm-day').value);
             const time = document.getElementById('qm-time').value;
-            const category = document.getElementById('qm-category').value;
             const field = document.getElementById('qm-field').value;
+            const type = document.getElementById('qm-type').value;
+
+            if (type === 'event') {
+                const label = document.getElementById('qm-event-label').value.trim();
+                if (!label) { showAlert('Escribe el nombre del evento', 'error'); return; }
+                const event = {
+                    id: 'ev_' + Date.now(),
+                    day, time, field,
+                    isEvent: true,
+                    eventLabel: label,
+                    category: 'Evento',
+                    team1: null, team2: null,
+                    score1: 0, score2: 0, status: 'scheduled', winner: null
+                };
+                LINFAAAC_DATA.schedule.push(event);
+                saveToStorage();
+                closeModal('quickMatchModal');
+                showAlert('Evento agregado correctamente', 'success');
+                renderScheduleGrid(); renderScheduleList(); updateDashboard();
+                autoPublishToGitHub();
+                return;
+            }
+
+            const category = document.getElementById('qm-category').value;
             const team1 = document.getElementById('qm-team1').value;
             const team2 = document.getElementById('qm-team2').value;
 
@@ -1441,26 +1606,32 @@
                 return;
             }
 
+            const isPlayoff = (type === 'Semifinal' || type === 'Final');
             const match = {
-                id: 'm_' + Date.now(),
-                day,
-                time,
-                category,
-                field,
-                team1,
-                team2,
-                score1: 0,
-                score2: 0,
-                status: 'scheduled',
-                winner: null
+                id: (isPlayoff ? 'po_' : 'm_') + Date.now(),
+                day, time, category, field, team1, team2,
+                score1: 0, score2: 0, status: 'scheduled', winner: null,
+                ...(isPlayoff ? { isPlayoff: true, round: type } : {})
             };
 
             LINFAAAC_DATA.schedule.push(match);
+
+            if (isPlayoff) {
+                let bracket = (LINFAAAC_DATA.playoffs || []).find(p => p.category === category);
+                if (!bracket) {
+                    bracket = { category, rounds: [{ round: 'Semifinal', matches: [] }, { round: 'Final', matches: [] }] };
+                    LINFAAAC_DATA.playoffs = LINFAAAC_DATA.playoffs || [];
+                    LINFAAAC_DATA.playoffs.push(bracket);
+                }
+                const roundObj = bracket.rounds.find(r => r.round === type);
+                if (roundObj) roundObj.matches.push({ id: match.id, team1, team2 });
+            }
+
             saveToStorage();
             closeModal('quickMatchModal');
             showAlert('Partido agregado correctamente', 'success');
-            renderScheduleGrid();
-            updateDashboard();
+            renderScheduleGrid(); renderScheduleList(); renderMatches(); renderPlayoffs(); updateDashboard();
+            autoPublishToGitHub();
         }
 
         // TEAMS
@@ -1503,7 +1674,95 @@
         // Basado en la plantilla fija LINFAAAC: 3 tarjetas por fila, cada banda de
         // 10 filas empezando en la fila 12. Las fotos vienen como "imagen en celda"
         // (feature de Excel 365), vinculadas vía xl/richData.
-        let _importedPhotos = {}; // curp -> {mime, base64}
+        let _importedPhotos = {}; // curp -> {mime, base64}, usado al AGREGAR un equipo nuevo
+        let _importedPhotosEdit = {}; // idem, pero al EDITAR un equipo existente
+
+        async function reimportRosterExcelForEdit(inputEl) {
+            const file = inputEl.files[0];
+            if (!file) return;
+            const statusEl = document.getElementById('reimport-roster-status');
+            statusEl.textContent = 'Leyendo archivo...';
+
+            try {
+                const arrayBuffer = await file.arrayBuffer();
+                const wb = XLSX.read(arrayBuffer, { type: 'array', cellDates: true });
+                const sheetName = wb.SheetNames.includes('linfaaac') ? 'linfaaac' : wb.SheetNames[0];
+                const ws = wb.Sheets[sheetName];
+                const cellVal = (ref) => (ws[ref] ? ws[ref].v : undefined);
+
+                const equipoNombre = cellVal('B6') || '';
+                const rama = cellVal('B8') || '';
+                const categoriaCell = cellVal('B10') || '';
+
+                statusEl.textContent = 'Buscando fotos...';
+                const photoMap = await extractPhotoMapFromXlsx(arrayBuffer);
+
+                const BAND_START = 12, BAND_HEIGHT = 10;
+                const cards = [
+                    { photo: 'A', val: 'C', extra: 'D' },
+                    { photo: 'F', val: 'H', extra: 'I' },
+                    { photo: 'K', val: 'M', extra: 'N' },
+                ];
+                const range = XLSX.utils.decode_range(ws['!ref']);
+                const maxRow = range.e.r + 1;
+
+                const lines = [];
+                _importedPhotosEdit = {};
+                let fotosEncontradas = 0;
+                const editingId = editingTeamId;
+                const curpFormatoMal = [], curpChecksumSospechoso = [], duplicadosEnOtroEquipo = [];
+
+                for (let row = BAND_START; row <= maxRow; row += BAND_HEIGHT) {
+                    for (const c of cards) {
+                        const paterno = cellVal(`${c.val}${row}`);
+                        if (!paterno) continue;
+                        const materno = cellVal(`${c.val}${row + 1}`) || '';
+                        const nombre = cellVal(`${c.val}${row + 2}`) || '';
+                        const fnac = cellVal(`${c.val}${row + 3}`);
+                        const curp = (cellVal(`${c.val}${row + 4}`) || '').toString().trim().toUpperCase();
+                        const roleType = cellVal(`${c.photo}${row + 6}`) || 'JUGADOR';
+                        const roleCode = cellVal(`${c.extra}${row + 7}`);
+
+                        const nombreCompleto = `${paterno} ${materno} ${nombre}`.replace(/\s+/g, ' ').trim();
+                        const number = roleCode !== undefined ? roleCode.toString() : '';
+                        const position = /STAFF/i.test(roleType) ? 'STAFF' : '';
+                        const age = computeAge(fnac);
+
+                        const photoRef = `${c.photo}${row}`;
+                        if (curp && photoMap[photoRef]) { _importedPhotosEdit[curp] = photoMap[photoRef]; fotosEncontradas++; }
+
+                        if (curp) {
+                            const v = validateCurp(curp);
+                            if (!v.formatOk) curpFormatoMal.push(`${nombreCompleto} (${curp})`);
+                            else if (!v.checksumOk) curpChecksumSospechoso.push(`${nombreCompleto} (${curp})`);
+                            if (position !== 'STAFF') {
+                                const dup = findCurpElsewhere(curp, editingId);
+                                if (dup) duplicadosEnOtroEquipo.push(`${nombreCompleto} — ya está registrado en el equipo "${dup.team.name}" (${dup.team.category})`);
+                            }
+                        }
+
+                        lines.push(`${number} - ${nombreCompleto} - ${position} - ${age}${curp ? ' - ' + curp : ''}`);
+                    }
+                }
+
+                document.getElementById('edit-team-players').value = lines.join('\n');
+                if (equipoNombre) document.getElementById('edit-team-name').value = equipoNombre;
+                const catGuess = guessCategory(categoriaCell, rama);
+                if (catGuess) document.getElementById('edit-team-category').value = catGuess;
+
+                refreshCurpReviewFromTextarea();
+
+                let warnings = '';
+                if (duplicadosEnOtroEquipo.length) warnings += `<div style="color:#e74c3c;margin-top:0.4rem;">🚫 ${duplicadosEnOtroEquipo.length} ya inscritos en otro equipo:<br>${duplicadosEnOtroEquipo.join('<br>')}</div>`;
+                if (curpFormatoMal.length) warnings += `<div style="color:#e74c3c;margin-top:0.4rem;">⚠️ CURP con formato inválido:<br>${curpFormatoMal.join('<br>')}</div>`;
+                if (curpChecksumSospechoso.length) warnings += `<div style="color:#f0ad4e;margin-top:0.4rem;">🔎 CURP con posible error de tecleo:<br>${curpChecksumSospechoso.join('<br>')}</div>`;
+
+                statusEl.innerHTML = `✅ ${lines.length} personas reemplazadas (${fotosEncontradas} con foto detectada). Revisa el listado y presiona "Guardar Cambios" para confirmar.${warnings}`;
+            } catch (e) {
+                console.error(e);
+                statusEl.textContent = '❌ Error al leer el Excel: ' + e.message;
+            }
+        }
 
         function normalizeStr(s) {
             return (s || '').toString().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toUpperCase().trim();
@@ -2013,6 +2272,15 @@
             // Re-render matches and schedule in case team name/color changed
             renderMatches();
             renderScheduleGrid();
+
+            if (Object.keys(_importedPhotosEdit).length) {
+                uploadImportedPhotosForTeam(team, { ..._importedPhotosEdit });
+                _importedPhotosEdit = {};
+                const reimportInput = document.getElementById('reimport-roster-input');
+                if (reimportInput) reimportInput.value = '';
+                const reimportStatus = document.getElementById('reimport-roster-status');
+                if (reimportStatus) reimportStatus.textContent = '';
+            }
         }
 
         function populateTeamSelects() {
@@ -2086,13 +2354,13 @@
                                     const t2 = getTeam(m.team2);
                                     return `<div class="match-admin-card" style="grid-template-columns: 1fr auto 1fr;">
                                         <div class="team-side">
-                                            <div class="team-abbr" style="background: ${t1.color};">${t1.abbr}</div>
-                                            <div class="team-name">${t1.name}</div>
+                                            <div class="team-abbr" style="background: ${t1 ? t1.color : '#555'};">${t1 ? t1.abbr : '?'}</div>
+                                            <div class="team-name">${t1 ? t1.name : 'Por definir'}</div>
                                         </div>
                                         <div class="vs">VS</div>
                                         <div class="team-side">
-                                            <div class="team-abbr" style="background: ${t2.color};">${t2.abbr}</div>
-                                            <div class="team-name">${t2.name}</div>
+                                            <div class="team-abbr" style="background: ${t2 ? t2.color : '#555'};">${t2 ? t2.abbr : '?'}</div>
+                                            <div class="team-name">${t2 ? t2.name : 'Por definir'}</div>
                                         </div>
                                     </div>`;
                                 }).join('')}
@@ -2753,7 +3021,7 @@
         // === FIELDS ===
         function populateFieldSelects() {
             const f = LINFAAAC_DATA.fields || [];
-            ['qm-field', 'em-field'].forEach(id => {
+            ['qm-field', 'em-field', 'em-field-event'].forEach(id => {
                 const s = document.getElementById(id); if (!s) return;
                 const cur = s.value;
                 s.innerHTML = f.map(x => `<option value="${x}">${x}</option>`).join('');
@@ -2812,6 +3080,15 @@
                 <button class="modal-close" onclick="closeModal('editTeamModal')">&times;</button>
             </div>
             <div class="modal-body">
+                <div class="form-group" style="background:var(--dark,#0f1115);border:1px solid #3a7bd5;border-radius:6px;padding:0.85rem;">
+                    <label style="margin-bottom:0.4rem;">🔄 ¿El equipo mandó un Excel corregido? Reemplaza todos los datos aquí</label>
+                    <p style="font-size:0.78rem;color:var(--text-muted,#888);margin:0 0 0.5rem;">
+                        Esto vuelve a leer el archivo completo (nombres, CURP, edades y fotos) y <strong>reemplaza</strong> la lista de jugadores de abajo.
+                        No se guarda nada todavía — revisa el resultado y presiona "Guardar Cambios" al final para confirmar.
+                    </p>
+                    <input type="file" id="reimport-roster-input" accept=".xlsx" class="form-control" onchange="reimportRosterExcelForEdit(this)">
+                    <div id="reimport-roster-status" style="font-size:0.82rem;color:var(--text-muted,#888);margin-top:0.5rem;"></div>
+                </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label>Nombre del Equipo</label>
@@ -2909,9 +3186,16 @@
                     </div>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" onclick="closeModal('githubConfigModal')">Cancelar</button>
-                <button class="btn btn-primary" onclick="saveGitHubConfig()">Guardar Configuracion</button>
+            <div class="alert alert-info" style="margin: 0 1.5rem 1rem;">
+                <strong>📱 ¿Usando el panel en un dispositivo nuevo (celular, iPad, otra compu)?</strong><br>
+                Guarda tu configuración y luego presiona "Sincronizar desde GitHub" para traer los equipos, horarios y marcadores ya existentes a este dispositivo.
+            </div>
+            <div class="modal-footer" style="justify-content: space-between;">
+                <button class="btn btn-secondary" onclick="syncFromGitHub()">🔄 Sincronizar desde GitHub</button>
+                <div>
+                    <button class="btn btn-secondary" onclick="closeModal('githubConfigModal')">Cancelar</button>
+                    <button class="btn btn-primary" onclick="saveGitHubConfig()">Guardar Configuracion</button>
+                </div>
             </div>
         </div>
     </div>
