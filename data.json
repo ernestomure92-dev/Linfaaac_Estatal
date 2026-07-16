@@ -4916,6 +4916,19 @@
       "winner": null
     },
     {
+      "id": "m_1784173827009",
+      "day": 1,
+      "time": "15:00",
+      "category": "16 Femenil",
+      "field": "Campo 1",
+      "team1": "t_1784145797092",
+      "team2": "t_1784145726096",
+      "score1": 0,
+      "score2": 0,
+      "status": "scheduled",
+      "winner": null
+    },
+    {
       "id": "m_1784174089852",
       "day": 1,
       "time": "15:00:00",
@@ -4936,19 +4949,6 @@
       "field": "Campo 2",
       "team1": "t_1784146195483",
       "team2": "t_1784146230731",
-      "score1": 0,
-      "score2": 0,
-      "status": "scheduled",
-      "winner": null
-    },
-    {
-      "id": "m_1784173827009",
-      "day": 1,
-      "time": "16:00",
-      "category": "16 Femenil",
-      "field": "Campo 1",
-      "team1": "t_1784145797092",
-      "team2": "t_1784145726096",
       "score1": 0,
       "score2": 0,
       "status": "scheduled",
