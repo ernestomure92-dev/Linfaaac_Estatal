@@ -4978,6 +4978,19 @@
       "score2": 0,
       "status": "scheduled",
       "winner": null
+    },
+    {
+      "id": "m_1784175383094",
+      "day": 2,
+      "time": "08:00:00",
+      "category": "14 Varonil",
+      "field": "Campo 2",
+      "team1": "t_1784095615434",
+      "team2": "t_1784145688774",
+      "score1": 0,
+      "score2": 0,
+      "status": "scheduled",
+      "winner": null
     }
   ],
   "playoffs": []
