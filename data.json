@@ -4216,12 +4216,104 @@
     },
     {
       "id": "t_1784146767063",
-      "name": "GAM",
+      "name": "AGUILAS GAM",
       "abbr": "GAM",
       "category": "Varonil Libre",
       "color": "#480bef",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "VALADEZ BECERRIL PABLO",
+          "position": "STAFF",
+          "age": 31,
+          "curp": "VABP940801HDFLCB00"
+        },
+        {
+          "number": "",
+          "name": "RODRIGUEZ MARTINEZ DAVID",
+          "position": "STAFF",
+          "age": 31,
+          "curp": "ROML941118HDFDRS00"
+        },
+        {
+          "number": "",
+          "name": "IBARRA GONZALEZ IKER",
+          "position": "",
+          "age": 19,
+          "curp": "IAGI070610HDFBNKA9"
+        },
+        {
+          "number": "",
+          "name": "ORTIZ OLVERA GAEL",
+          "position": "",
+          "age": 21,
+          "curp": "OIOG041103HDFRLLA8"
+        },
+        {
+          "number": "",
+          "name": "LOPEZ GONZALEZ IGNACIO",
+          "position": "",
+          "age": 27,
+          "curp": "LOGA981001HDFPND02"
+        },
+        {
+          "number": "",
+          "name": "OROZCO ORTEGA SANTIAGO",
+          "position": "",
+          "age": 19,
+          "curp": "OOOS061220HDFRRNA0"
+        },
+        {
+          "number": "",
+          "name": "IBARRA IBARRA ERICK",
+          "position": "",
+          "age": 32,
+          "curp": "VAEE940616HDFZSR05"
+        },
+        {
+          "number": "",
+          "name": "RODRIGUEZ CABALLERO EDUARDP",
+          "position": "",
+          "age": 38,
+          "curp": "ROCE880213HDFDBD09"
+        },
+        {
+          "number": "",
+          "name": "MENDEZ AMADOR DIEGO",
+          "position": "",
+          "age": 14,
+          "curp": "MEAD120301HDFNMGA1"
+        },
+        {
+          "number": "",
+          "name": "MENDEZ RODRIGUEZ MIGUEL",
+          "position": "",
+          "age": 46,
+          "curp": "MERM790727HDFNDG01"
+        },
+        {
+          "number": "",
+          "name": "PRIETO SOSA JORGE",
+          "position": "",
+          "age": 34,
+          "curp": "PISJ900714HDFRSR01"
+        },
+        {
+          "number": "",
+          "name": "VALADEZ BECERRIL ABRAHAM",
+          "position": "",
+          "age": 33,
+          "curp": "VABA930715HDFLCB08"
+        },
+        {
+          "number": "",
+          "name": "HERNANDEZ BASURTO JOSHUA",
+          "position": "",
+          "age": 18,
+          "curp": "HEBJ080407HDFRSSA4"
+        }
+      ]
     },
     {
       "id": "t_1784146785017",
