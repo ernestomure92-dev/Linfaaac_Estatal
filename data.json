@@ -5017,6 +5017,19 @@
       "score2": 0,
       "status": "scheduled",
       "winner": null
+    },
+    {
+      "id": "m_1784175468505",
+      "day": 2,
+      "time": "07:00:00",
+      "category": "14 Femenil",
+      "field": "Campo 3",
+      "team1": "t_1784097143666",
+      "team2": "t_1784137989764",
+      "score1": 0,
+      "score2": 0,
+      "status": "scheduled",
+      "winner": null
     }
   ],
   "playoffs": []
