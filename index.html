@@ -580,13 +580,13 @@
             </div>
             <div class="day-tabs">
                 <button class="day-tab active" onclick="filterDay(1)">
-                    Día 1<span class="date">Viernes 17 Julio</span>
+                    Día 1<span class="date">Viernes 15 Mayo</span>
                 </button>
                 <button class="day-tab" onclick="filterDay(2)">
-                    Día 2<span class="date">Sábado 18 Julio</span>
+                    Día 2<span class="date">Sábado 16 Mayo</span>
                 </button>
                 <button class="day-tab" onclick="filterDay(3)">
-                    Día 3<span class="date">Domingo 19 Julio</span>
+                    Día 3<span class="date">Domingo 17 Mayo</span>
                 </button>
             </div>
             <div id="schedule-grid" class="grid">
@@ -827,6 +827,20 @@
             }
 
             grid.innerHTML = matches.map(match => {
+                if (match.isEvent) {
+                    return `<div class="card match-card">
+                        <div class="match-header">
+                            <div class="match-time"><i class="fas fa-clock"></i> ${match.time}</div>
+                            <span class="match-category">Evento especial</span>
+                        </div>
+                        <div class="match-teams" style="justify-content:center; text-align:center; padding: 1rem 0;">
+                            <div class="team-name" style="font-size:1.1rem;">🎉 ${match.eventLabel}</div>
+                        </div>
+                        <div class="match-field">
+                            <span class="field-label"><i class="fas fa-map-marker-alt"></i> ${match.field}</span>
+                        </div>
+                    </div>`;
+                }
                 const t1 = getTeam(match.team1);
                 const t2 = getTeam(match.team2);
                 const isLive = match.status === 'live';
@@ -843,7 +857,7 @@
                 return `<div class="card match-card">
                     <div class="match-header">
                         <div class="match-time"><i class="fas fa-clock"></i> ${match.time}</div>
-                        <span class="match-category">${match.category}</span>
+                        <span class="match-category">${match.isPlayoff ? '🏆 ' + match.round + ' — ' : ''}${match.category}</span>
                     </div>
                     <div class="match-teams">
                         <div class="team ${isFinished && match.score1 > match.score2 ? 'winner' : ''}">
