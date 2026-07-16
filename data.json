@@ -5735,19 +5735,6 @@
       "winner": null
     },
     {
-      "id": "m_1784181908661",
-      "day": 2,
-      "time": "14:00:00",
-      "category": "Femenil Libre B",
-      "field": "Campo 6",
-      "team1": "t_1784098060692",
-      "team2": "t_1784146502361",
-      "score1": 0,
-      "score2": 0,
-      "status": "scheduled",
-      "winner": null
-    },
-    {
       "id": "m_1784181916406",
       "day": 2,
       "time": "14:00:00",
@@ -5872,6 +5859,19 @@
       "field": "Campo 3",
       "team1": "t_1784150820688",
       "team2": "t_1784147337518",
+      "score1": 0,
+      "score2": 0,
+      "status": "scheduled",
+      "winner": null
+    },
+    {
+      "id": "m_1784181908661",
+      "day": 2,
+      "time": "17:00",
+      "category": "Femenil Libre B",
+      "field": "Campo 6",
+      "team1": "t_1784098060692",
+      "team2": "t_1784146502361",
       "score1": 0,
       "score2": 0,
       "status": "scheduled",
