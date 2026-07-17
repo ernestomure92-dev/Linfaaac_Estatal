@@ -5281,7 +5281,86 @@
       "category": "Femenil Libre D",
       "color": "#ef0bb2",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "13",
+          "name": "Casas Mejía Daniela Yanine",
+          "position": "STAFF",
+          "age": 19,
+          "curp": "CAMD070603MDFSJNA6",
+          "photo": "fotos/CAMD070603MDFSJNA6.png"
+        },
+        {
+          "number": "3",
+          "name": "Estrada Hernandez Paulina Fernanda",
+          "position": "STAFF",
+          "age": 19,
+          "curp": "EAHP070115MMCSRLA7",
+          "photo": "fotos/EAHP070115MMCSRLA7.png"
+        },
+        {
+          "number": "16",
+          "name": "Ramirez Noguez Danna Sofía",
+          "position": "",
+          "age": 17,
+          "curp": "RAND081115MMCMGNA6",
+          "photo": "fotos/RAND081115MMCMGNA6.png"
+        },
+        {
+          "number": "31",
+          "name": "Piña Gallardo Karla Irania",
+          "position": "",
+          "age": 18,
+          "curp": "PIGK071031MMCXLRA8",
+          "photo": "fotos/PIGK071031MMCXLRA8.png"
+        },
+        {
+          "number": "16",
+          "name": "Nuñez Estrada Camila",
+          "position": "",
+          "age": 22,
+          "curp": "NUEC040621MDFXSMA9",
+          "photo": "fotos/NUEC040621MDFXSMA9.jpg"
+        },
+        {
+          "number": "",
+          "name": "Cardenas Nolasco Michelle Anahi",
+          "position": "",
+          "age": 18,
+          "curp": "CANM071213MMCRLCA2",
+          "photo": "fotos/CANM071213MMCRLCA2.png"
+        },
+        {
+          "number": "6",
+          "name": "Juárez Ramos María Ximena",
+          "position": "",
+          "age": 22,
+          "curp": "JURX040523MDFRMMA8",
+          "photo": "fotos/JURX040523MDFRMMA8.png"
+        },
+        {
+          "number": "5",
+          "name": "Landa Espiritu Karla Valeria",
+          "position": "",
+          "age": 20,
+          "curp": "LAEK060422MPLNSRA9",
+          "photo": "fotos/LAEK060422MPLNSRA9.png"
+        },
+        {
+          "number": "88",
+          "name": "Cervantes Mora Mariel",
+          "position": "",
+          "age": 22,
+          "curp": "CEMM040223MDFRRRA0"
+        },
+        {
+          "number": "17",
+          "name": "GIL CANTERA SUNY XIMENA",
+          "position": "",
+          "age": 23,
+          "curp": "GICS030214MMCLNNA4"
+        }
+      ]
     },
     {
       "id": "t_1784146753451",
