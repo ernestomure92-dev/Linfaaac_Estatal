@@ -4267,7 +4267,92 @@
       "category": "14 Femenil",
       "color": "#1db9ed",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "COACH",
+          "name": "RAMIREZ GALLARDO ANGEL AXEL",
+          "position": "STAFF",
+          "age": 32,
+          "curp": "RAGA931220HMCMLN14"
+        },
+        {
+          "number": "COACH",
+          "name": "ROMERO RAMIREZ JOSE PEDRO",
+          "position": "STAFF",
+          "age": 20,
+          "curp": "RORP051229HDFMMDA9"
+        },
+        {
+          "number": "24",
+          "name": "BAUTISTA SANCHEZ JULIE ROMINA",
+          "position": "JUGADOR",
+          "age": 11,
+          "curp": "BASJ150504MDFTNLA1"
+        },
+        {
+          "number": "33",
+          "name": "ESPEJEL JAIMES JAMILA QUETZALI",
+          "position": "JUGADOR",
+          "age": 13,
+          "curp": "EEJJ130309MMCSMMA3"
+        },
+        {
+          "number": "S/N",
+          "name": "GUTIERREZ PALAFOX LESLY GERALDINE",
+          "position": "JUGADOR",
+          "age": 12,
+          "curp": "GUPL130727MMCTLSA8"
+        },
+        {
+          "number": "S/N",
+          "name": "NAVA PEREZ MELLANIE ATZIRY",
+          "position": "JUGADOR",
+          "age": 13,
+          "curp": "NAPN121105MMCVRLA5"
+        },
+        {
+          "number": "S/N",
+          "name": "MARTINEZ ESPARZA JANISE AILIN",
+          "position": "JUGADOR",
+          "age": 13,
+          "curp": "MAEJ120911MDFRSNA5"
+        },
+        {
+          "number": "8",
+          "name": "CORDOBA AREYANO QUETZALLY ITZAYANA",
+          "position": "JUGADOR",
+          "age": 13,
+          "curp": "COAQ120925MDFRRTA1"
+        },
+        {
+          "number": "20",
+          "name": "VAZQUEZ OLIVARES ABRIL NALLELY",
+          "position": "JUGADOR",
+          "age": 13,
+          "curp": "VAOA121022MDFZLBA0"
+        },
+        {
+          "number": "47",
+          "name": "SANCHEZ VERGARA NEYDY DANIELA",
+          "position": "JUGADOR",
+          "age": 13,
+          "curp": "SAVN120829MDFRYA3"
+        },
+        {
+          "number": "S/N",
+          "name": "ZERMEÑO MUÑOZ LIZETH GUADALUPE",
+          "position": "JUGADOR",
+          "age": 13,
+          "curp": "ZEML121129MDFRXZA2"
+        },
+        {
+          "number": "29",
+          "name": "MURILLO MARTINEZ VICTORIA NAZARETH",
+          "position": "JUGADOR",
+          "age": 12,
+          "curp": "MUMV131208MMCRRCA6"
+        }
+      ]
     },
     {
       "id": "t_1784145310788",
