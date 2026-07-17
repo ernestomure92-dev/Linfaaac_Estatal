@@ -5251,7 +5251,106 @@
       "category": "Varonil Libre",
       "color": "#480bef",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "MENDEZ MARTINEZ DANIELA",
+          "position": "STAFF",
+          "age": 31,
+          "curp": "MEMD950106MMCNRN05"
+        },
+        {
+          "number": "",
+          "name": "MENDEZ MENDOZA CONSTANZA",
+          "position": "STAFF",
+          "age": 17,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "GUTIERREZ GARCIA MARLON CALEB",
+          "position": "",
+          "age": 0,
+          "curp": "GUGM110610HMCTRRA8"
+        },
+        {
+          "number": "",
+          "name": "ESPINOZA AGUILAR AXEL ALEJANDRO",
+          "position": "",
+          "age": 18,
+          "curp": "EIIAA070412HDFSGXA1"
+        },
+        {
+          "number": "",
+          "name": "GABRIEL GONZALEZ LUIS MARIO",
+          "position": "",
+          "age": 19,
+          "curp": "GAGL061101HMCBNSA5"
+        },
+        {
+          "number": "",
+          "name": "MORALES MARTINEZ ADAIR",
+          "position": "",
+          "age": 22,
+          "curp": "MOMA030901HHGRRDA8"
+        },
+        {
+          "number": "",
+          "name": "GRANADOS AGUILAR GARY ISAY",
+          "position": "",
+          "age": 24,
+          "curp": "GAAG020102HMCRGRA7"
+        },
+        {
+          "number": "",
+          "name": "PACHECO GOMEZ AXEL EDUARDO",
+          "position": "",
+          "age": 16,
+          "curp": "PAGA091031HDFCMXA"
+        },
+        {
+          "number": "",
+          "name": "PEREZ GARCIA ANUBIS ARAMIS",
+          "position": "",
+          "age": 18,
+          "curp": "PEGA070816HMCRRNA2"
+        },
+        {
+          "number": "",
+          "name": "COLOCIA PEÑA JONATHAN GAEL",
+          "position": "",
+          "age": 16,
+          "curp": "COPJ0909HDFLXNA4"
+        },
+        {
+          "number": "",
+          "name": "MEZA PABLO IAN EMMANUEL",
+          "position": "",
+          "age": 18,
+          "curp": "MEPI071231HMCZBNA1"
+        },
+        {
+          "number": "",
+          "name": "ZAMORA RIVERO DANIEL",
+          "position": "",
+          "age": 19,
+          "curp": "ZARD071104HDFMVNA5"
+        },
+        {
+          "number": "",
+          "name": "VILLAR CABALLERO JOSUE",
+          "position": "",
+          "age": 14,
+          "curp": "VICJ111024HMCLBSA8"
+        },
+        {
+          "number": "",
+          "name": "CONTRERAS PEREZ ALAN FABIAN",
+          "position": "",
+          "age": 23,
+          "curp": "COPA030310HMCNRLA9"
+        }
+      ]
     },
     {
       "id": "t_1784146805876",
