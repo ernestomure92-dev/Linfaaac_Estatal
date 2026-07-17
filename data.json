@@ -5939,7 +5939,106 @@
       "category": "Femenil Libre E",
       "color": "#ef0bb2",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "COACH",
+          "name": "RAMIREZ GALLARDO ANGEL AXEL",
+          "position": "STAFF",
+          "age": 32,
+          "curp": "RAGA911220HMCMLN14"
+        },
+        {
+          "number": "COACH",
+          "name": "ROMERO RAMIREZ JOSE PEDRO",
+          "position": "STAFF",
+          "age": 20,
+          "curp": "ROORP051229HDFMMDA9"
+        },
+        {
+          "number": "9",
+          "name": "GARDUÑO AQUINO AILANY SOPHIA",
+          "position": "JUGADOR",
+          "age": 19,
+          "curp": "GAAA061127MMCRQLA5"
+        },
+        {
+          "number": "0",
+          "name": "CRUZ CRUZ MIA YAMILE",
+          "position": "JUGADOR",
+          "age": 17,
+          "curp": "CUCM090515MMDFRRXA7"
+        },
+        {
+          "number": "11",
+          "name": "SANDOVAL LOPEZ VANIA GUADALUPE",
+          "position": "JUGADOR",
+          "age": 18,
+          "curp": "SALV080618MMCNPNA0"
+        },
+        {
+          "number": "7",
+          "name": "JANTES LOPEZ MARIA JOSE",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "JALJ100730MMCNPSA8"
+        },
+        {
+          "number": "73",
+          "name": "MARTINEZ ARREDONDO JOYCE SAHILY",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "MAAJ100516MMCRRYA7"
+        },
+        {
+          "number": "24",
+          "name": "CEDILLO HERNANDEZ PADME DAYANA",
+          "position": "JUGADOR",
+          "age": 21,
+          "curp": "CEHP060824MMCDRDA4"
+        },
+        {
+          "number": "2",
+          "name": "BUENDIA TINOCO YOLANDA",
+          "position": "JUGADOR",
+          "age": 26,
+          "curp": "BUTY991208MMCNNL09"
+        },
+        {
+          "number": "14",
+          "name": "FLORES ARRIAGA KAREN LISETH",
+          "position": "JUGADOR",
+          "age": 18,
+          "curp": "FOAK071014MMCLRRA3"
+        },
+        {
+          "number": "1",
+          "name": "GUZMAN OCHOA DANIELA IVETH",
+          "position": "JUGADOR",
+          "age": 20,
+          "curp": "GUOD060215MCHZCNA6"
+        },
+        {
+          "number": "12",
+          "name": "AVILA ALCALA JESSICA ALESSANDRA",
+          "position": "JUGADOR",
+          "age": 22,
+          "curp": "AIAJ040526MDFVLSA0"
+        },
+        {
+          "number": "10",
+          "name": "BAEZ FLORES ALLISON",
+          "position": "JUGADOR",
+          "age": 16,
+          "curp": "BAFA100203MMCZLLA0"
+        },
+        {
+          "number": "88",
+          "name": "ROMERO RAMIREZ VANESSA",
+          "position": "JUGADOR",
+          "age": 17,
+          "curp": "RORV090426MMSMMNA7"
+        }
+      ]
     },
     {
       "id": "t_1784146421560",
