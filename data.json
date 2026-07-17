@@ -4426,7 +4426,64 @@
       "category": "16 Femenil",
       "color": "#5c7a84",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "3",
+          "name": "Contreras Reyes Citlali Mariana",
+          "position": "STAFF",
+          "age": 15,
+          "curp": "CORM110303MDFNYRA8"
+        },
+        {
+          "number": "13",
+          "name": "Casas Mejía Renata Alexandra",
+          "position": "STAFF",
+          "age": 15,
+          "curp": "CAMR110214MDFSJNA0"
+        },
+        {
+          "number": "15",
+          "name": "Matamorros Mendez Constanza",
+          "position": "",
+          "age": 14,
+          "curp": "MAMC120215MDFTNNA7"
+        },
+        {
+          "number": "33",
+          "name": "Matadamas Puente Melany",
+          "position": "",
+          "age": 14,
+          "curp": "MAPM120314MDFTNLA7"
+        },
+        {
+          "number": "53",
+          "name": "Gonzalez Rivas Sofia",
+          "position": "",
+          "age": 13,
+          "curp": "GORS121001MDFNVFA8"
+        },
+        {
+          "number": "80",
+          "name": "Montiel Ruiz Regina",
+          "position": "",
+          "age": 15,
+          "curp": "MORR110410MDFNZGA6"
+        },
+        {
+          "number": "21",
+          "name": "Guzmán Islas Violeta",
+          "position": "",
+          "age": 14,
+          "curp": "GUIV111211MDFZSLA1"
+        },
+        {
+          "number": "31",
+          "name": "Padilla Jiménez Thamara Jaziel",
+          "position": "",
+          "age": 15,
+          "curp": "PAJT110104MDFDMHA2"
+        }
+      ]
     },
     {
       "id": "t_1784145845972",
