@@ -5288,11 +5288,68 @@
     {
       "id": "t_1784146408360",
       "name": "APACHES",
-      "abbr": "T",
+      "abbr": "AP",
       "category": "Femenil Libre E",
       "color": "#ef0bb2",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "HC",
+          "name": "Resendiz Cano Jose Antonio",
+          "position": "STAFF",
+          "age": 54,
+          "curp": "RECA711003HDFSNN04"
+        },
+        {
+          "number": "COACH",
+          "name": "Resendiz Sotelo Andres",
+          "position": "STAFF",
+          "age": 24,
+          "curp": "RESA010917HMCSTNA3"
+        },
+        {
+          "number": "5",
+          "name": "Resendiz Sotelo Viridiana",
+          "position": "JUGADOR",
+          "age": 28,
+          "curp": "RESV970827MMCSTR05"
+        },
+        {
+          "number": "1",
+          "name": "Garcia Castelan Magnolia Rubi",
+          "position": "JUGADOR",
+          "age": 26,
+          "curp": "GACM991001MDFRSG05"
+        },
+        {
+          "number": "27",
+          "name": "Romero Aguilar Dulce Nelly",
+          "position": "JUGADOR",
+          "age": 42,
+          "curp": "ROAD800615MMCMGL04"
+        },
+        {
+          "number": "83",
+          "name": "Rodriguez Ayala Vanessa",
+          "position": "JUGADOR",
+          "age": 42,
+          "curp": "ROAV831216MDFDYN01"
+        },
+        {
+          "number": "3",
+          "name": "Morgado Hernandez Rosa Marina",
+          "position": "JUGADOR",
+          "age": 37,
+          "curp": "MOHR890507MDFRRS04"
+        },
+        {
+          "number": "6",
+          "name": "Rodriguez Guzman Valeria Sofia",
+          "position": "JUGADOR",
+          "age": 20,
+          "curp": "ROGV070622MDFDZLA1"
+        }
+      ]
     },
     {
       "id": "t_1784146417104",
