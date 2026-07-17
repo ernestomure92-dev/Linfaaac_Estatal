@@ -4246,12 +4246,97 @@
     },
     {
       "id": "t_1784145754276",
-      "name": "BULLDOGS BENM",
+      "name": "BENM",
       "abbr": "BB",
       "category": "16 Femenil",
       "color": "#5c7a84",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "GÓMEZ ESCAMILLA DANNA VALERIA",
+          "position": "STAFF",
+          "age": 16,
+          "curp": "GOED100707MMCMSNA7"
+        },
+        {
+          "number": "",
+          "name": "PACHECO ROJAS PAULINA SOPHIA",
+          "position": "STAFF",
+          "age": 14,
+          "curp": "PARP111210MMCCJLA2"
+        },
+        {
+          "number": "",
+          "name": "MORA MOMPALA SURY RENATA",
+          "position": "",
+          "age": 15,
+          "curp": "MOMS110527MDFRMRA8"
+        },
+        {
+          "number": "",
+          "name": "CERRILLO SALAZAR RENATA ISABELLA",
+          "position": "",
+          "age": 14,
+          "curp": "CESR111005MDFRLNA8"
+        },
+        {
+          "number": "",
+          "name": "IÑIGUEZ GRACIA KATE",
+          "position": "",
+          "age": 14,
+          "curp": "IIGK110919MDFXRTA8"
+        },
+        {
+          "number": "",
+          "name": "CASTRO MARTÍNEZ MARÍA JOSÉ",
+          "position": "",
+          "age": 15,
+          "curp": "CAMJ101214MDFSRSA2"
+        },
+        {
+          "number": "",
+          "name": "GOMEZ ZARAGOZA MILDRED ALEXA",
+          "position": "",
+          "age": 15,
+          "curp": "GOZM110221MMCMRLA6"
+        },
+        {
+          "number": "",
+          "name": "FERNANDEZ OSORIO ALISON REGINA",
+          "position": "",
+          "age": 16,
+          "curp": "FEOA100503MDFRSLA0"
+        },
+        {
+          "number": "",
+          "name": "MARRÓN VARGAS ISABELLA CAMILA",
+          "position": "",
+          "age": 15,
+          "curp": "MAVI101215MDFRRSA3"
+        },
+        {
+          "number": "",
+          "name": "OLVERA ALVAREZ LUA FERNANDA",
+          "position": "",
+          "age": 14,
+          "curp": "OEAL110729MDFLLXA4"
+        },
+        {
+          "number": "",
+          "name": "Ruiz Rueda Sofia",
+          "position": "",
+          "age": 14,
+          "curp": "RURS111125MDFZDFA7"
+        },
+        {
+          "number": "",
+          "name": "ESPINOSA MUNGUIA LIA RENATA",
+          "position": "",
+          "age": 15,
+          "curp": "EIML100819MDFSNXA6"
+        }
+      ]
     },
     {
       "id": "t_1784145778796",
