@@ -5607,12 +5607,111 @@
     },
     {
       "id": "t_1784146456421",
-      "name": "PATOS ECATEPEC A",
+      "name": "PATOS ECATEPEC",
       "abbr": "PE",
       "category": "Femenil Libre A",
       "color": "#ef0bb2",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "JIMENEZ TIRADO SAMUEL ELI",
+          "position": "STAFF",
+          "age": 31,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "MARTINEZ GARCIA CRISTINA",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "7",
+          "name": "NAJERA BOLAÑOS ZOE YARETZY",
+          "position": "",
+          "age": 17,
+          "curp": "NABZ090202MMCJLXA0"
+        },
+        {
+          "number": "6",
+          "name": "AGUILAR ROMERO REGINA",
+          "position": "",
+          "age": 17,
+          "curp": "AURR080726MDFGMGA7"
+        },
+        {
+          "number": "9",
+          "name": "DE LUNA DIAZ VALENTINA YETLANEZI",
+          "position": "",
+          "age": 16,
+          "curp": "LUDV090822MDFNZLA5"
+        },
+        {
+          "number": "16",
+          "name": "ALCOCER GALLARDO DANIELA",
+          "position": "",
+          "age": 18,
+          "curp": "AOGD080216MMCLLNA4"
+        },
+        {
+          "number": "5",
+          "name": "BETANCOURT AGUILAR ALLISSON",
+          "position": "",
+          "age": 18,
+          "curp": "BEAA071129MMCTGLA0"
+        },
+        {
+          "number": "18",
+          "name": "Flores Jimenez Nancy Atziri",
+          "position": "",
+          "age": 27,
+          "curp": "FOJN981219MMCLMN07"
+        },
+        {
+          "number": "23",
+          "name": "García Martínez Danna Paola",
+          "position": "",
+          "age": 16,
+          "curp": "GAMD060523MMCRRNA2"
+        },
+        {
+          "number": "",
+          "name": "Isidro Lopez Irene",
+          "position": "",
+          "age": 0,
+          "curp": "IILI950316MTCSPR05"
+        },
+        {
+          "number": "",
+          "name": "Zavala Castro Diana",
+          "position": "",
+          "age": 27,
+          "curp": "ZACD990207MDFVSN05"
+        },
+        {
+          "number": "21",
+          "name": "Ramírez Morales Karina",
+          "position": "",
+          "age": 25,
+          "curp": "RAMK000717MDFMRRA1"
+        },
+        {
+          "number": "",
+          "name": "Cano Estrada Cinthia Pamela",
+          "position": "",
+          "age": 19,
+          "curp": "CAEC060921MMCNSNA2"
+        },
+        {
+          "number": "",
+          "name": "anaya Zúñiga Karla Emily",
+          "position": "",
+          "age": 0,
+          "curp": "AAZK071108MDFNXRA6"
+        }
+      ]
     },
     {
       "id": "t_1784146461096",
