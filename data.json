@@ -5885,7 +5885,71 @@
       "category": "Varonil Libre",
       "color": "#480bef",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "COACH",
+          "name": "RESENDIZ SOTELO VIRIDIANA",
+          "position": "STAFF",
+          "age": 28,
+          "curp": "RESV970827MMCSTR05"
+        },
+        {
+          "number": "COACH ASISTENTE",
+          "name": "LEYVA QUEZADA CESAR PAULO",
+          "position": "STAFF",
+          "age": 48,
+          "curp": "LEQP780624HDFYZL09"
+        },
+        {
+          "number": "6",
+          "name": "LEYVA ROMERO GERSON ALDAIR",
+          "position": "JUGADOR",
+          "age": 19,
+          "curp": "LERG061106HDFYMRA7"
+        },
+        {
+          "number": "7",
+          "name": "LOPEZ CORNEJO CRISTIAN SALVADOR",
+          "position": "JUGADOR",
+          "age": 43,
+          "curp": "LOCC830107HDFPRR07"
+        },
+        {
+          "number": "8",
+          "name": "MIRANDA TORRES JUAN MANUEL",
+          "position": "JUGADOR",
+          "age": 31,
+          "curp": "MITJ941008HDFRRN03"
+        },
+        {
+          "number": "11",
+          "name": "RESENDIZ SOTELO ANDRES",
+          "position": "JUGADOR",
+          "age": 24,
+          "curp": "RESA010917HMCSTNA3"
+        },
+        {
+          "number": "23",
+          "name": "RODRIGUEZ AYALA SANTIAGO",
+          "position": "JUGADOR",
+          "age": 17,
+          "curp": "ROAS081023HMCDYNA7"
+        },
+        {
+          "number": "80",
+          "name": "RESENDIZ CANO JOSE ANTONIO",
+          "position": "JUGADOR",
+          "age": 54,
+          "curp": "RECA711003HDFSNN04"
+        },
+        {
+          "number": "X",
+          "name": "LOPEZ PRUDENCIO DIEGO",
+          "position": "JUGADOR",
+          "age": 22,
+          "curp": "LOPD040227HMCPRGA7"
+        }
+      ]
     },
     {
       "id": "t_1784146767063",
