@@ -4405,7 +4405,64 @@
       "category": "16 Femenil",
       "color": "#5c7a84",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "COACH",
+          "name": "RESENDIZ CANO JOSE ANTONIO",
+          "position": "STAFF",
+          "age": 54,
+          "curp": "ROAZ100603MHGDYXA6"
+        },
+        {
+          "number": "COACH",
+          "name": "RESENDIZ SOTELO ANDRES",
+          "position": "STAFF",
+          "age": 24,
+          "curp": "RESA010917HMCSNTA3"
+        },
+        {
+          "number": "13",
+          "name": "RODRIGUEZ AYALA ZOE DANIELA",
+          "position": "JUGADOR",
+          "age": 16,
+          "curp": "ROAZ100603MHGDYXA6"
+        },
+        {
+          "number": "15",
+          "name": "LEYVA ROMERO PAOLA SARAHI",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "LERP100914MDFYMLA4"
+        },
+        {
+          "number": "9",
+          "name": "ARGUETA MORALES ASHLEY VALENTINA",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "AEMA120121MMCRRSA9"
+        },
+        {
+          "number": "19",
+          "name": "GARCIA SANCHEZ DULCE CAMILA",
+          "position": "JUGADOR",
+          "age": 16,
+          "curp": "GASD100219MMCRNLA9"
+        },
+        {
+          "number": "2",
+          "name": "PINEDA ZARIÑAN CAMILA YARETZY",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "PIZC100621MMCNRMA6"
+        },
+        {
+          "number": "S/N",
+          "name": "LOPEZ PRUDENCIO KIRIA VANESSA",
+          "position": "JUGADOR",
+          "age": 14,
+          "curp": "LOPK111130MMCPRYA2"
+        }
+      ]
     },
     {
       "id": "t_1784145740696",
