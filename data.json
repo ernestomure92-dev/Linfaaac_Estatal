@@ -5715,12 +5715,97 @@
     },
     {
       "id": "t_1784146461096",
-      "name": "PATOS ECATEPEC B",
+      "name": "PATOS ECATEPEC",
       "abbr": "PE",
       "category": "Femenil Libre C",
       "color": "#ef0bb2",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "JIMENEZ TIRADO SAMUEL ELI",
+          "position": "STAFF",
+          "age": 31,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "MARTINEZ GARCIA CRISTINA",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "19",
+          "name": "MARTINEZ MALDONADO MARIA ANGELES",
+          "position": "",
+          "age": 26,
+          "curp": "MAMA991101MDFRLN07"
+        },
+        {
+          "number": "9",
+          "name": "MENDEZ CERVANTES DAFNE MARIEL",
+          "position": "",
+          "age": 22,
+          "curp": "MECD040618MDFNRFA0"
+        },
+        {
+          "number": "28",
+          "name": "NERI LUCERO EVELYN DE JESUS",
+          "position": "",
+          "age": 28,
+          "curp": "NELE980428MMCRCV00"
+        },
+        {
+          "number": "14",
+          "name": "PEDRAZA ROMO TANIA ABRIL",
+          "position": "",
+          "age": 17,
+          "curp": "PERT090428MDFDMNA4"
+        },
+        {
+          "number": "10",
+          "name": "ROMO VANEGAS ARA BRISEIDI",
+          "position": "",
+          "age": 18,
+          "curp": "ROVA080309MMCMNRA3"
+        },
+        {
+          "number": "2",
+          "name": "GUTIERREZ GARCIA ANDREA",
+          "position": "",
+          "age": 19,
+          "curp": "GUGA070210MDFTRNA8"
+        },
+        {
+          "number": "49",
+          "name": "RODRIGUEZ MENDIOLA YALI EUGENIA",
+          "position": "",
+          "age": 20,
+          "curp": "ROMY050904MMCDNLA2"
+        },
+        {
+          "number": "77",
+          "name": "Dávila Gallardo Paola",
+          "position": "",
+          "age": 0,
+          "curp": "DAGP020807MDFVLLA9"
+        },
+        {
+          "number": "21",
+          "name": "Dávila Gallardo Dafne Jaelene",
+          "position": "",
+          "age": 28,
+          "curp": "DAGD971115MDFVLF12"
+        },
+        {
+          "number": "",
+          "name": "Jasso Moya Alessandra",
+          "position": "",
+          "age": 26,
+          "curp": "JAMA000217MDFSYLA6"
+        }
+      ]
     },
     {
       "id": "t_1784146464905",
