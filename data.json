@@ -5340,7 +5340,92 @@
       "category": "Femenil Libre C",
       "color": "#ef0bb2",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "QUIROZ OLMEDO TANIA",
+          "position": "STAFF",
+          "age": 31,
+          "curp": "QUOT950225MDFRLN09"
+        },
+        {
+          "number": "",
+          "name": "MELENDEZ ZUÑIGA VANESA",
+          "position": "STAFF",
+          "age": 14,
+          "curp": "MEZV120427MMCLXNA1"
+        },
+        {
+          "number": "",
+          "name": "VAZQUEZ SANCHEZ SARED",
+          "position": "",
+          "age": 28,
+          "curp": "VASK970925MDFZNR06"
+        },
+        {
+          "number": "",
+          "name": "MENDOZA VIGIL ALINE",
+          "position": "",
+          "age": 28,
+          "curp": "MEVA971121MDFNGL06"
+        },
+        {
+          "number": "",
+          "name": "MERINO FLORES JADE",
+          "position": "",
+          "age": 17,
+          "curp": "MEFJ090519MDFRLDA8"
+        },
+        {
+          "number": "",
+          "name": "BACILIO AMARO ARIADNA",
+          "position": "",
+          "age": 19,
+          "curp": "BAAA070716MDFCMRA1"
+        },
+        {
+          "number": "",
+          "name": "CASIANO DEL VALLE VALERIA",
+          "position": "",
+          "age": 17,
+          "curp": "CAVV090624MDFSLLA4"
+        },
+        {
+          "number": "",
+          "name": "CASIANO DEL VALLE FERNANDA",
+          "position": "",
+          "age": 15,
+          "curp": "CAVF100723MDFSLRA9"
+        },
+        {
+          "number": "",
+          "name": "FLORES IBARRA DANNA",
+          "position": "",
+          "age": 22,
+          "curp": "FOID040710MDFLBNA8"
+        },
+        {
+          "number": "",
+          "name": "ORTEGA HERNANDEZ FERNANDA",
+          "position": "",
+          "age": 21,
+          "curp": "OEHF041218MMCRRRA9"
+        },
+        {
+          "number": "",
+          "name": "HERRERA AMEZCUA VALENTINA",
+          "position": "",
+          "age": 21,
+          "curp": "HEAV041229MDFRMLA1"
+        },
+        {
+          "number": "",
+          "name": "VALENCIA NAYELI",
+          "position": "",
+          "age": 0,
+          "curp": ""
+        }
+      ]
     },
     {
       "id": "t_1784146408360",
