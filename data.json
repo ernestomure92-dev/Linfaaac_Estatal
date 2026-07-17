@@ -6410,12 +6410,118 @@
     },
     {
       "id": "t_1784150820688",
-      "name": "GAM",
+      "name": "AGUILAS GAM",
       "abbr": "GAM",
       "category": "Femenil Libre A",
       "color": "#158422",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "S/N",
+          "name": "Valadez Medina Pablo",
+          "position": "STAFF",
+          "age": 54,
+          "curp": "VABA930715HDFLCB08"
+        },
+        {
+          "number": "S/N",
+          "name": "Valadez Becerril Abraham",
+          "position": "STAFF",
+          "age": 33,
+          "curp": "VABA930715HDFLCB08"
+        },
+        {
+          "number": "19",
+          "name": "Rodríguez Mata Alexa Linnete",
+          "position": "JUGADOR",
+          "age": 16,
+          "curp": "ROMA091019MDFDTLA4"
+        },
+        {
+          "number": "7",
+          "name": "Hernández Basurto Rebeca",
+          "position": "JUGADOR",
+          "age": 16,
+          "curp": "HEBA090107MDFRSLA9"
+        },
+        {
+          "number": "12",
+          "name": "Aguilar Ciprés Cynthia Melissa",
+          "position": "JUGADOR",
+          "age": 13,
+          "curp": "AUCC090912MDFGPYA1"
+        },
+        {
+          "number": "25",
+          "name": "Rodríguez Guzmán Karen",
+          "position": "JUGADOR",
+          "age": 35,
+          "curp": "ROGR910625MDFDZB06"
+        },
+        {
+          "number": "1",
+          "name": "Vázquez Contreras Mara Paola",
+          "position": "JUGADOR",
+          "age": 19,
+          "curp": "VACM071028MDFZNRA5"
+        },
+        {
+          "number": "2",
+          "name": "Bortot Rodríguez Misha",
+          "position": "JUGADOR",
+          "age": 14,
+          "curp": "BORM120412MDFRDSA1"
+        },
+        {
+          "number": "3",
+          "name": "Garduño Espinosa Aiko Daniela",
+          "position": "JUGADOR",
+          "age": 21,
+          "curp": "GAEA050505MDFRSKA0"
+        },
+        {
+          "number": "4",
+          "name": "Franco Quezada Mildreth Johana",
+          "position": "JUGADOR",
+          "age": 19,
+          "curp": "QUFM061106MMCZRLA5"
+        },
+        {
+          "number": "13",
+          "name": "Vázquez Ibarra Ana Karen",
+          "position": "JUGADOR",
+          "age": 29,
+          "curp": "IAVA970531MDFBZN08"
+        },
+        {
+          "number": "3",
+          "name": "Ramírez Flores Gabriela",
+          "position": "JUGADOR",
+          "age": 26,
+          "curp": "FORG990820MDFLMB03"
+        },
+        {
+          "number": "11",
+          "name": "Flores Ramírez Lesly Katyuska",
+          "position": "JUGADOR",
+          "age": 28,
+          "curp": "FORL970723MMCLMS09"
+        },
+        {
+          "number": "26",
+          "name": "Vieyra González Yolanda Victoria",
+          "position": "JUGADOR",
+          "age": 28,
+          "curp": "VIGY980226MDFYNL04"
+        },
+        {
+          "number": "14",
+          "name": "Cruz Guerrero Gisselle Abigail",
+          "position": "JUGADOR",
+          "age": 25,
+          "curp": "CUGG001113MMCRRSA0"
+        }
+      ]
     },
     {
       "id": "t_1784158191631",
