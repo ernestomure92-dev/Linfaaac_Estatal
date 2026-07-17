@@ -4246,7 +4246,57 @@
       "category": "14 Varonil",
       "color": "#1db9ed",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "MENDEZ MARTINEZ RICARDO",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "MENDEZ MARTINEZ DANIELA",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "MENDEZ MENDOZA ANTONIO",
+          "position": "",
+          "age": 12,
+          "curp": "MEMA140408HDFNNNA9"
+        },
+        {
+          "number": "",
+          "name": "MARTINEZ OLVERA MATEO",
+          "position": "",
+          "age": 13,
+          "curp": "MAOM130222HDFRLTA0"
+        },
+        {
+          "number": "",
+          "name": "TORRES RAMIREZ MARCO",
+          "position": "",
+          "age": 12,
+          "curp": "TORM131002HMCRMRA0"
+        },
+        {
+          "number": "",
+          "name": "DIAZ PACHECO ANGEL KEVIN",
+          "position": "",
+          "age": 0,
+          "curp": "DIPA130929HDFZCNA7"
+        },
+        {
+          "number": "",
+          "name": "ALVIZO GAMBOA ANGEL MIGUEL",
+          "position": "",
+          "age": 13,
+          "curp": "AIGA130417HMCLMNA4"
+        }
+      ]
     },
     {
       "id": "t_1784145726096",
