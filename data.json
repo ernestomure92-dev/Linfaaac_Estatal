@@ -4300,7 +4300,92 @@
       "category": "16 Varonil",
       "color": "#719217",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "GONZALEZ GUZMAN LUIS MIGUELL",
+          "position": "STAFF",
+          "age": 14,
+          "curp": "GOGL111220HDFNZSA2"
+        },
+        {
+          "number": "",
+          "name": "CANEDO MONTERO MAO",
+          "position": "STAFF",
+          "age": 15,
+          "curp": "CAMM101121HDFNNXA0"
+        },
+        {
+          "number": "",
+          "name": "QUINTERO PEREZ EMILIANO",
+          "position": "",
+          "age": 15,
+          "curp": "QUPE100509HMCNRMA6"
+        },
+        {
+          "number": "",
+          "name": "ORTIZ DIAZ CARLOS GAEL",
+          "position": "",
+          "age": 15,
+          "curp": "OIDC101112HMCRZRA1"
+        },
+        {
+          "number": "",
+          "name": "NAVARRO QUINTANAR IAN ENRIQUE",
+          "position": "",
+          "age": 15,
+          "curp": "NAQI100726HDFVNNA1"
+        },
+        {
+          "number": "",
+          "name": "SALDIVAR PLATA MAXIMO ALEJANDRO",
+          "position": "",
+          "age": 16,
+          "curp": "SAPM100319HMCLLXA1"
+        },
+        {
+          "number": "",
+          "name": "VELAZQUEZ CHAVEZ IKER",
+          "position": "",
+          "age": 15,
+          "curp": "VECI110710HMCLHKA5"
+        },
+        {
+          "number": "",
+          "name": "OLVERA LEON PARIS SEBASTIAN",
+          "position": "",
+          "age": 16,
+          "curp": "OELP100628HMCLNRA1"
+        },
+        {
+          "number": "",
+          "name": "CAMPOS FONSECA MATEO SEBASTIAN",
+          "position": "",
+          "age": 16,
+          "curp": "CAFM110304HDFMNTA9"
+        },
+        {
+          "number": "",
+          "name": "MOSQUEDA GONZALEZ MATEO",
+          "position": "",
+          "age": 14,
+          "curp": "MOGM110917HMCSNTA5"
+        },
+        {
+          "number": "",
+          "name": "DE LA CRUZ CASARES ANDRE",
+          "position": "",
+          "age": 14,
+          "curp": "CUCA111221HDFRZNA5"
+        },
+        {
+          "number": "",
+          "name": "PEREZ HERNANDEZ MIGUEL ANGEL",
+          "position": "",
+          "age": 17,
+          "curp": "PEHM090604HDFRRGA6"
+        }
+      ]
     },
     {
       "id": "t_1784146145055",
