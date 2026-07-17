@@ -4405,12 +4405,69 @@
     },
     {
       "id": "t_1784146164079",
-      "name": "AZTEKS",
+      "name": "AZT3KS",
       "abbr": "AZ",
       "category": "16 Varonil",
       "color": "#719217",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "AVILA MARTINEZ DIEGO EMMANUEL",
+          "position": "STAFF",
+          "age": 12,
+          "curp": "AIMD130719HHGVRGA5"
+        },
+        {
+          "number": "",
+          "name": "LUNA MAXON ISRAEL",
+          "position": "STAFF",
+          "age": 13,
+          "curp": "LUMI130130HHGNXSA0"
+        },
+        {
+          "number": "",
+          "name": "NUÑEZ AGUILAR MARTIN",
+          "position": "",
+          "age": 13,
+          "curp": "NUAM121009HMCXGRA6"
+        },
+        {
+          "number": "",
+          "name": "GONZALES MAR ABEL",
+          "position": "",
+          "age": 14,
+          "curp": "GOMA111225HHGNRBA8"
+        },
+        {
+          "number": "",
+          "name": "ALABARDA MEDINA ANDRE",
+          "position": "",
+          "age": 16,
+          "curp": "AAMA100603HHGLBNA4"
+        },
+        {
+          "number": "",
+          "name": "NUÑEZ AGUILAR MARCO ANTONIO",
+          "position": "",
+          "age": 15,
+          "curp": "NUAM110701HMCXGRA6"
+        },
+        {
+          "number": "",
+          "name": "PEREZ ISLAS KILIAN SANTIAGO",
+          "position": "",
+          "age": 11,
+          "curp": "PEIK141027HHGRSLA5"
+        },
+        {
+          "number": "",
+          "name": "KONASHENKO FLORES BENJAMÍN",
+          "position": "",
+          "age": 15,
+          "curp": "KOFB101230HHGNLNA3"
+        }
+      ]
     },
     {
       "id": "t_1784146195483",
