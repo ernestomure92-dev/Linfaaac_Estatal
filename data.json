@@ -4659,7 +4659,120 @@
       "category": "16 Femenil",
       "color": "#5c7a84",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "JIMENEZ TIRADO SAMUEL ELI",
+          "position": "STAFF",
+          "age": 31,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "Rios Trejo Carlos Alejandro",
+          "position": "STAFF",
+          "age": 31,
+          "curp": "RITC941124HDFSRR05"
+        },
+        {
+          "number": "4",
+          "name": "Reynoso Caldeón Bárbara",
+          "position": "",
+          "age": 15,
+          "curp": "RECB110504MMCYLRA8"
+        },
+        {
+          "number": "",
+          "name": "Rosas Hidalgo Isabela",
+          "position": "",
+          "age": 16,
+          "curp": "ROHI100328MDFSDSA9"
+        },
+        {
+          "number": "",
+          "name": "Ceron Sánchez Ingrid Linet",
+          "position": "",
+          "age": 15,
+          "curp": "CESI101125MMCRNNA7"
+        },
+        {
+          "number": "6",
+          "name": "Pineda Pérez Evelin Yamileth",
+          "position": "",
+          "age": 15,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "Espinoza Hernández Fernanda",
+          "position": "",
+          "age": 15,
+          "curp": "EIHF110223MMCSRRA6"
+        },
+        {
+          "number": "",
+          "name": "Ceron Sánchez Luz Natalia",
+          "position": "",
+          "age": 13,
+          "curp": "CESL130323MMCRNZA2"
+        },
+        {
+          "number": "22",
+          "name": "Garcia Romero Romina Mayte",
+          "position": "",
+          "age": 14,
+          "curp": "GARR120322MMCRMMA7"
+        },
+        {
+          "number": "777",
+          "name": "Suarez Pineda Ailany Ximena",
+          "position": "",
+          "age": 13,
+          "curp": "_SUPA120727MMCRNLA8"
+        },
+        {
+          "number": "10",
+          "name": "Morquecho Vivian Andy Yazmin",
+          "position": "",
+          "age": 12,
+          "curp": "MOVA131203MMCRVNA4"
+        },
+        {
+          "number": "30",
+          "name": "Núñez Aceves Camila Zoe",
+          "position": "",
+          "age": 14,
+          "curp": ""
+        },
+        {
+          "number": "22",
+          "name": "Zendejas Pineda Emily Roshel",
+          "position": "",
+          "age": 14,
+          "curp": "ZEPE120710MMCNNMA6"
+        },
+        {
+          "number": "222",
+          "name": "Zendejas Pineda Yaretzi Nicole",
+          "position": "",
+          "age": 12,
+          "curp": "ZEPY140223MHGNNRA6"
+        },
+        {
+          "number": "",
+          "name": "Reyes García Ximena Montserrat",
+          "position": "",
+          "age": 0,
+          "curp": "REGX110616MDFYRMA5"
+        },
+        {
+          "number": "",
+          "name": "Arbós Longines Kiara Valentina",
+          "position": "",
+          "age": 14,
+          "curp": "AOLK111227MMCRNRA7"
+        }
+      ]
     },
     {
       "id": "t_1784145797092",
