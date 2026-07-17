@@ -5809,12 +5809,104 @@
     },
     {
       "id": "t_1784146464905",
-      "name": "PATOS ECATEPEC C",
+      "name": "PATOS ECATEPEC",
       "abbr": "PE",
       "category": "Femenil Libre D",
       "color": "#ef0bb2",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "JIMENEZ TIRADO SAMUEL ELI",
+          "position": "STAFF",
+          "age": 31,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "MARTINEZ GARCIA CRISTINA",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "19",
+          "name": "CURIEL HERRERA SHARON",
+          "position": "",
+          "age": 19,
+          "curp": "CUHS070308MDFRRHA4"
+        },
+        {
+          "number": "23",
+          "name": "GAITAN VALLEJO JENNIFER",
+          "position": "",
+          "age": 27,
+          "curp": "GAVJ981103MMCTLN0"
+        },
+        {
+          "number": "8",
+          "name": "LEMUS GARCIA RENATA SARAHI",
+          "position": "",
+          "age": 17,
+          "curp": "LEGR090708MDFMRNA4"
+        },
+        {
+          "number": "26",
+          "name": "LEDEZMA LEON IVANA",
+          "position": "",
+          "age": 17,
+          "curp": "LELI090226MDFDVA5"
+        },
+        {
+          "number": "11",
+          "name": "SANCHEZ CALDERON SHARON ARLAETH",
+          "position": "",
+          "age": 19,
+          "curp": "SACS070112MMCNLHA9"
+        },
+        {
+          "number": "17",
+          "name": "MARTINEZ PAZ LIZETH",
+          "position": "",
+          "age": 20,
+          "curp": "MAPL060417MMCRZZA4"
+        },
+        {
+          "number": "31",
+          "name": "RUIZ CALDERON EMILY NATALIA",
+          "position": "",
+          "age": 19,
+          "curp": "RUCE070531MMCZLMA0"
+        },
+        {
+          "number": "",
+          "name": "García Ulibarri Jimena",
+          "position": "",
+          "age": 0,
+          "curp": "GAUJ080102MMCRLMA6"
+        },
+        {
+          "number": "11",
+          "name": "Ruiz Calderón María Itzel",
+          "position": "",
+          "age": 25,
+          "curp": "RUCI010711MMCZLTA2"
+        },
+        {
+          "number": "88",
+          "name": "Cervantes Cervantes Karina",
+          "position": "",
+          "age": 0,
+          "curp": "CECK030607MDFRRRA3"
+        },
+        {
+          "number": "",
+          "name": "Hernández Ferrel :Allisson Daniela",
+          "position": "",
+          "age": 117,
+          "curp": "HEFA090205MMCRRLA5"
+        }
+      ]
     },
     {
       "id": "t_1784146502361",
