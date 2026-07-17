@@ -4702,12 +4702,111 @@
     },
     {
       "id": "t_1784146276844",
-      "name": "VIRREYES",
-      "abbr": "F",
+      "name": "LOS VIRREYES",
+      "abbr": "V",
       "category": "17 Varonil",
       "color": "#719217",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "LOPEZ MORALES ENRIQUE",
+          "position": "STAFF",
+          "age": 0,
+          "curp": "LOME740115HMCPRN06"
+        },
+        {
+          "number": "",
+          "name": "LOPEZ ARCE JUAN ENRIQUE",
+          "position": "STAFF",
+          "age": 27,
+          "curp": "LOAJ980926HMCPRNO6"
+        },
+        {
+          "number": "",
+          "name": "ROMERO BAUTISTA BRAYAN VICENTE",
+          "position": "",
+          "age": 17,
+          "curp": "ROBB090508HMCMTRA0"
+        },
+        {
+          "number": "",
+          "name": "VAZQUEZ COVARRUBIAS JOSE ROBERTO",
+          "position": "",
+          "age": 14,
+          "curp": "VACR111109HMCZVBA8"
+        },
+        {
+          "number": "",
+          "name": "DE ANDA VAZQUEZ SEBASTIAN",
+          "position": "",
+          "age": 15,
+          "curp": "AAVS110501HMCNZBA8"
+        },
+        {
+          "number": "",
+          "name": "SANTOS LOPEZ EMILIANO SAID",
+          "position": "",
+          "age": 15,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "FIGUEROA RICO EDUARDO",
+          "position": "",
+          "age": 16,
+          "curp": "FIRE091109HMCGCDA9"
+        },
+        {
+          "number": "",
+          "name": "ESCOBAR BLANCAS JOEL",
+          "position": "",
+          "age": 16,
+          "curp": "EOBJ100622HMCSLLA0"
+        },
+        {
+          "number": "",
+          "name": "CONTRERAS AGUILAR RICARDO SEBASTIAN",
+          "position": "",
+          "age": 15,
+          "curp": "COAR100925HZSNGCA4"
+        },
+        {
+          "number": "",
+          "name": "NOLASCO MARTINEZ SANTIAGO",
+          "position": "",
+          "age": 16,
+          "curp": "NOMS091020HQTLRNA4"
+        },
+        {
+          "number": "",
+          "name": "ROSAS JUAREZ ANGEL DEL JESUS",
+          "position": "",
+          "age": 0,
+          "curp": "ROJA100427HPLSRNAU6"
+        },
+        {
+          "number": "",
+          "name": "MEJIA CRUZ LUIS DANIEL",
+          "position": "",
+          "age": 17,
+          "curp": "MECL090226HMCJRSA0"
+        },
+        {
+          "number": "",
+          "name": "LOPEZ CADENA SAUL AARON",
+          "position": "",
+          "age": 0,
+          "curp": "LOCS090131HMCPDLA6"
+        },
+        {
+          "number": "",
+          "name": "CAMPOS GIL OMAR EMMANUEL",
+          "position": "",
+          "age": 16,
+          "curp": "CXGO100105HDFMLMA8"
+        }
+      ]
     },
     {
       "id": "t_1784146352780",
