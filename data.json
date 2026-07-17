@@ -5784,7 +5784,92 @@
       "category": "17 Varonil",
       "color": "#158422",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "GALICIA LIMAS SERGIO DIEGO",
+          "position": "STAFF",
+          "age": 20,
+          "curp": "GALS051231HDFLMRA9"
+        },
+        {
+          "number": "",
+          "name": "GALICIA MARTINEZ SERGIO DANIEL",
+          "position": "STAFF",
+          "age": 49,
+          "curp": "GAMS760830HDFLRR03"
+        },
+        {
+          "number": "",
+          "name": "HERRERA DE LA CRUZ CESAR URIEL ALFONSO",
+          "position": "",
+          "age": 15,
+          "curp": "ITECC101109HMCRRSA5"
+        },
+        {
+          "number": "",
+          "name": "GARCIA GOMES AXEL ALI",
+          "position": "",
+          "age": 16,
+          "curp": "GAGA091112HMCRMXA6"
+        },
+        {
+          "number": "",
+          "name": "ARCE ORTEGA ADRIAN TADEO",
+          "position": "",
+          "age": 14,
+          "curp": "AEOA110930HMCRRDA3"
+        },
+        {
+          "number": "",
+          "name": "BAUTISTA CARRASCO IAN GABRIEL",
+          "position": "",
+          "age": 16,
+          "curp": "BAGI100908HMCTRNA9"
+        },
+        {
+          "number": "",
+          "name": "SANCHEZ RAMIREZ YUSETH",
+          "position": "",
+          "age": 15,
+          "curp": "SARE110305HMCNMTA0"
+        },
+        {
+          "number": "",
+          "name": "SANCHEZ RESENDIZ AXEL GABRIEL",
+          "position": "",
+          "age": 17,
+          "curp": "SARA090503HMCNSXA6"
+        },
+        {
+          "number": "",
+          "name": "DIAZ GARCIA IKER FABIAN",
+          "position": "",
+          "age": 11,
+          "curp": "DIGI140802HMCRKA8"
+        },
+        {
+          "number": "",
+          "name": "OERTEGA CATARINO CRISTIAN URIEL",
+          "position": "",
+          "age": 14,
+          "curp": "OECC111101HMCRTRA5"
+        },
+        {
+          "number": "",
+          "name": "DEL ANGEL CRUZ DANIEL",
+          "position": "",
+          "age": 17,
+          "curp": "AECD090120HMCNRNA9"
+        },
+        {
+          "number": "",
+          "name": "JIMENEZ PARRA BRUNO ESAU",
+          "position": "",
+          "age": 16,
+          "curp": "JIPB091005HMCMRRA9"
+        }
+      ]
     },
     {
       "id": "t_1784150820688",
