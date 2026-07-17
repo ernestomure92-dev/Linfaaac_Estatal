@@ -5944,11 +5944,89 @@
     {
       "id": "t_1784146421560",
       "name": "KUKULKANES B",
-      "abbr": "T",
+      "abbr": "K",
       "category": "Femenil Libre C",
       "color": "#ef0bb2",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "COACH",
+          "name": "RAMIREZ GALLARDO ANGEL AXEL",
+          "position": "STAFF",
+          "age": 32,
+          "curp": "RAGA911229HMCMLN14"
+        },
+        {
+          "number": "COACH",
+          "name": "ROMERO RAMIREZ JOSE PEDRO",
+          "position": "STAFF",
+          "age": 20,
+          "curp": "ROORP05Q229HDFMMDA9"
+        },
+        {
+          "number": "19",
+          "name": "SERRANO REYES GABRIELA",
+          "position": "JUGADOR",
+          "age": 16,
+          "curp": "SERG091227MMCRYBA3"
+        },
+        {
+          "number": "65",
+          "name": "CORNEJO BERNABE LINDA NAOMI",
+          "position": "JUGADOR",
+          "age": 17,
+          "curp": "COBL081001MNERRNA1"
+        },
+        {
+          "number": "17",
+          "name": "ALARCON CARRILLO IAN VALENTINA",
+          "position": "JUGADOR",
+          "age": 17,
+          "curp": "AACV090605MQTLRLA5"
+        },
+        {
+          "number": "3",
+          "name": "ESPEJEL JAIMES FATIMA YARETZY",
+          "position": "JUGADOR",
+          "age": 14,
+          "curp": "EEJF111215MMCSMTA0"
+        },
+        {
+          "number": "1",
+          "name": "LEON VIZCARRA XIMENA MONSERRAT",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "LEVX101215MMCNZMA2"
+        },
+        {
+          "number": "19",
+          "name": "IBARRA QUINTERO SARA",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "IAQS100911MMCVNRA4"
+        },
+        {
+          "number": "S/N",
+          "name": "ZAVALA GALIOTE ARLEY MIRANDA",
+          "position": "JUGADOR",
+          "age": 14,
+          "curp": "ZAGA110828MMCVLRA9"
+        },
+        {
+          "number": "99",
+          "name": "NIETO SERRANO ALYNE ESMERALDA",
+          "position": "JUGADOR",
+          "age": 18,
+          "curp": "NISA071217MMCTRLA1"
+        },
+        {
+          "number": "40",
+          "name": "HARO URRUTIA RENATA MICHEL",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "HAUR101031MDFRRNA5"
+        }
+      ]
     },
     {
       "id": "t_1784146446176",
