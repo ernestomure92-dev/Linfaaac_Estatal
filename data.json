@@ -6469,12 +6469,76 @@
     },
     {
       "id": "t_1784146924724",
-      "name": "PATOS ECATEPEC",
+      "name": "PATOS ECATEPEC M",
       "abbr": "PE",
-      "category": "Femenil Libre E",
+      "category": "Master Femenil",
       "color": "#731c9c",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "Jimenez Tirado Samuel Eli",
+          "position": "STAFF",
+          "age": 31,
+          "curp": "JITS940723HDFMRM00"
+        },
+        {
+          "number": "",
+          "name": "Martinez Garcia Cristina",
+          "position": "STAFF",
+          "age": 29,
+          "curp": "MAGC960816MMCRRR04"
+        },
+        {
+          "number": "5",
+          "name": "AGUILAR RANGEL JUANA",
+          "position": "",
+          "age": 40,
+          "curp": "AURJ850917MDFGNN03"
+        },
+        {
+          "number": "7",
+          "name": "BADILLO GUTIERREZ MONICA",
+          "position": "",
+          "age": 42,
+          "curp": "BAGM840207MDFDTN06"
+        },
+        {
+          "number": "17",
+          "name": "CASTILLO FRAGOSO ESTEFANI GUADALUPE",
+          "position": "",
+          "age": 40,
+          "curp": "CAFE851217MDFSRS09"
+        },
+        {
+          "number": "37",
+          "name": "BALDERAS FLORES IVETTE JAEL",
+          "position": "",
+          "age": 42,
+          "curp": "BAFI840426MDFLLV08"
+        },
+        {
+          "number": "23",
+          "name": "CONTRERAS ZEPEDA ZYANYA",
+          "position": "",
+          "age": 39,
+          "curp": "COZZ860822MDFNPY06"
+        },
+        {
+          "number": "9",
+          "name": "BELTRAN VILLANUEVA ERIKA KARINA",
+          "position": "",
+          "age": 46,
+          "curp": "BEVE800207MDFLLR05"
+        },
+        {
+          "number": "",
+          "name": "Vanegas Paramo Suheil",
+          "position": "",
+          "age": 45,
+          "curp": "VAPS810606MDFNRH03"
+        }
+      ]
     },
     {
       "id": "t_1784147059065",
