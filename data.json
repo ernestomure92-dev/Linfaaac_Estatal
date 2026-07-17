@@ -9142,8 +9142,8 @@
       "team2": "t_1784099087738",
       "score1": 7,
       "score2": 32,
-      "status": "live",
-      "winner": null
+      "status": "finished",
+      "winner": "t_1784099087738"
     },
     {
       "id": "m_1784173801032",
