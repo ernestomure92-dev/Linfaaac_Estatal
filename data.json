@@ -4420,7 +4420,113 @@
       "category": "14 Femenil",
       "color": "#1db9ed",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "GUADARRAMA ANDRACA MARIO EDUARDO",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "PEREZ VERTTI RAMIREZ GERARDO ALEJANDRO",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "5",
+          "name": "CORREA BALLEZA CAMILA",
+          "position": "",
+          "age": 0,
+          "curp": "COBC230305MMCRLMA3"
+        },
+        {
+          "number": "22",
+          "name": "VIDAL HERNANDEZ DANAE",
+          "position": "",
+          "age": 0,
+          "curp": "VIHD121019MDFDRNA5"
+        },
+        {
+          "number": "16",
+          "name": "RIVERA BERMUDEZ NICOLE",
+          "position": "",
+          "age": 0,
+          "curp": "RIBN140524MDFVRCA7"
+        },
+        {
+          "number": "2",
+          "name": "RAMIREZ ALVAREZ REGINA ISABELA",
+          "position": "",
+          "age": 0,
+          "curp": "RAAR120202MDFMLGA7"
+        },
+        {
+          "number": "10",
+          "name": "ARVIZU TRUJILLO REGINA",
+          "position": "",
+          "age": 0,
+          "curp": "AITR131030MDFRRGA2"
+        },
+        {
+          "number": "18",
+          "name": "TORRES ARAGON NASYA ROMINA",
+          "position": "",
+          "age": 0,
+          "curp": "TOAN120916MMCRRSA6"
+        },
+        {
+          "number": "15",
+          "name": "HERANDEZ DUARTE SOFIA KYLA",
+          "position": "",
+          "age": 0,
+          "curp": "HEDS130608MMCRRFA3"
+        },
+        {
+          "number": "9",
+          "name": "ANGEL CARBAJAL ARLETH",
+          "position": "",
+          "age": 0,
+          "curp": "AECA130713MMCNNRA0"
+        },
+        {
+          "number": "7",
+          "name": "LUNA QUINTAR ANGELICA YARET",
+          "position": "",
+          "age": 0,
+          "curp": "LUQA130329MDFNNNA3"
+        },
+        {
+          "number": "33",
+          "name": "MARTINEZ MATA JENNEVY ZOE",
+          "position": "",
+          "age": 0,
+          "curp": "MAMJ130712MDFRTNA3"
+        },
+        {
+          "number": "35",
+          "name": "RIVAS ESTRADA ANA VICTORIA",
+          "position": "",
+          "age": 0,
+          "curp": "RIEA130115MDFVSNA5"
+        },
+        {
+          "number": "23",
+          "name": "ESPINOZA OLIVER SOFIA ANTONELLA",
+          "position": "",
+          "age": 0,
+          "curp": "EIOS120705MDFSLFA4"
+        },
+        {
+          "number": "13",
+          "name": "RODRIGUEZ ISLAS XIMENA",
+          "position": "",
+          "age": 0,
+          "curp": "ROIX121113MMCDSMA4"
+        }
+      ]
     },
     {
       "id": "t_1784145514105",
