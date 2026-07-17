@@ -4331,12 +4331,97 @@
     },
     {
       "id": "t_1784146446176",
-      "name": "BULLDOGS BENM",
+      "name": "BENM",
       "abbr": "T",
       "category": "Femenil Libre A",
       "color": "#ef0bb2",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "VALDEZ MEDINA MARIA RENATA",
+          "position": "STAFF",
+          "age": 16,
+          "curp": "VAMR080714MDFLDNA2"
+        },
+        {
+          "number": "",
+          "name": "MENDEZ HERNÁNDEZ SAMANTHA CAROLINA",
+          "position": "STAFF",
+          "age": 31,
+          "curp": "MEHS940830MMCNRM01"
+        },
+        {
+          "number": "",
+          "name": "NARANJO CABRERA ZYANYA NASHELY",
+          "position": "",
+          "age": 18,
+          "curp": "NACN080118MDFRSA4"
+        },
+        {
+          "number": "",
+          "name": "RUVALCABA ESPINOZA VALENTINA",
+          "position": "",
+          "age": 17,
+          "curp": "RUEV081213MDFVSLA4"
+        },
+        {
+          "number": "",
+          "name": "VALDEZ RAMAYO ROMINA",
+          "position": "",
+          "age": 17,
+          "curp": "VARR080929MDFLMMA6"
+        },
+        {
+          "number": "",
+          "name": "SANCHEZ REYES MARIAM NOEMI",
+          "position": "",
+          "age": 18,
+          "curp": "SARM080531MVZNYRA7"
+        },
+        {
+          "number": "",
+          "name": "DAVILA VIDAL ERIKA MONSERRAT",
+          "position": "",
+          "age": 19,
+          "curp": "DAVE070513MDFVDRA8"
+        },
+        {
+          "number": "",
+          "name": "HERNÁNDEZ MAITE",
+          "position": "",
+          "age": 19,
+          "curp": "HEXM060823MNERXTA2"
+        },
+        {
+          "number": "",
+          "name": "VELAZQUEZ RODRIGUEZ LUISA ALEJANDRAA",
+          "position": "",
+          "age": 20,
+          "curp": "VERL060316MMCLDSA2"
+        },
+        {
+          "number": "",
+          "name": "GUTIERREZ JARAMILLO JESSICA",
+          "position": "",
+          "age": 35,
+          "curp": "GUJJ910203MDFTRS02"
+        },
+        {
+          "number": "",
+          "name": "ESTRADA ZEPEDA JOHANA CAMILA",
+          "position": "",
+          "age": 16,
+          "curp": "CUSY090904MMCVNZA4"
+        },
+        {
+          "number": "",
+          "name": "DUARTE SALAZAR SARA DANAE",
+          "position": "",
+          "age": 22,
+          "curp": "DUSS031018MDFRLRA2"
+        }
+      ]
     },
     {
       "id": "t_1784146456421",
