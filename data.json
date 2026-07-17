@@ -4948,7 +4948,85 @@
       "category": "16 Varonil",
       "color": "#719217",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "JIMENEZ TIRADO SAMUEL ELI",
+          "position": "STAFF",
+          "age": 31,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "Rios Trejo Carlos Alejandro",
+          "position": "STAFF",
+          "age": 31,
+          "curp": "RITC941124HDFSRR05"
+        },
+        {
+          "number": "3",
+          "name": "BERBER BALDERAS RENE",
+          "position": "",
+          "age": 14,
+          "curp": "BEBR110926HDFRLNA8"
+        },
+        {
+          "number": "10",
+          "name": "MALDONADO CARBAJAL BRUNO",
+          "position": "",
+          "age": 15,
+          "curp": "MACB110410HMCLRRA3"
+        },
+        {
+          "number": "12",
+          "name": "ESTRADA FLORES ADRIAN",
+          "position": "",
+          "age": 16,
+          "curp": "EAFA100128HDFSLDA6"
+        },
+        {
+          "number": "17",
+          "name": "ESTRADA FLORES DANIEL",
+          "position": "",
+          "age": 14,
+          "curp": "EAFD120217HDFSLNA3"
+        },
+        {
+          "number": "47",
+          "name": "AGUILAR ROMERO NICOLAS",
+          "position": "",
+          "age": 16,
+          "curp": "AURN100122HDFGMCA6"
+        },
+        {
+          "number": "101",
+          "name": "PINEDA MALAGON DYLAN JOSEPH",
+          "position": "",
+          "age": 16,
+          "curp": "PIMD100110HMCNLYA8"
+        },
+        {
+          "number": "13",
+          "name": "ROMO VANEGAS ZAYD IVAN",
+          "position": "",
+          "age": 13,
+          "curp": "ROVZ130713HMCMNYA3"
+        },
+        {
+          "number": "11",
+          "name": "CURIEL MARTINEZ RENATO",
+          "position": "",
+          "age": 0,
+          "curp": "CUMR121005HDFRRNA0"
+        },
+        {
+          "number": "",
+          "name": "FLORES HIDALGO ADRIAN",
+          "position": "",
+          "age": 12,
+          "curp": "FOHA130907HMCLDDA0"
+        }
+      ]
     },
     {
       "id": "t_1784146164079",
