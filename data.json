@@ -4006,7 +4006,57 @@
       "category": "14 Femenil",
       "color": "#1db9ed",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "RODRÍGUEZ AGUILAR REGINA VELENTINA",
+          "position": "STAFF",
+          "age": 0,
+          "curp": "SUN NOV 18 2012 00:00:36 GMT"
+        },
+        {
+          "number": "",
+          "name": "MEJÍA LÓPEZ LÍA VICTORIA",
+          "position": "STAFF",
+          "age": 13,
+          "curp": "MELL120824MMCJPXA8"
+        },
+        {
+          "number": "",
+          "name": "OTÍZ DÍAZ JADE OLLINKA",
+          "position": "",
+          "age": 13,
+          "curp": "OIDJ130402MDFRZDA6"
+        },
+        {
+          "number": "",
+          "name": "GONZALEZ MEDINA FRIDA CAMILA",
+          "position": "",
+          "age": 13,
+          "curp": "GOMF130118MMCNDRA1"
+        },
+        {
+          "number": "",
+          "name": "OTERO RIOS AMERICA VICTORIA",
+          "position": "",
+          "age": 13,
+          "curp": "OERA120801MDFTSMA8"
+        },
+        {
+          "number": "",
+          "name": "GODINEZ DEL TORO ALEJANDRA VALENTINA",
+          "position": "",
+          "age": 12,
+          "curp": "GOTA130907MMCDRLA0"
+        },
+        {
+          "number": "",
+          "name": "SALDIVAR PLATA VALENTINA",
+          "position": "",
+          "age": 13,
+          "curp": "SAPV130420MDFLLLA6"
+        }
+      ]
     },
     {
       "id": "t_1784145434338",
