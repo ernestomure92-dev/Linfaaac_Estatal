@@ -6792,7 +6792,120 @@
       "category": "Varonil Libre",
       "color": "#480bef",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "S/N",
+          "name": "AYALA MONTES MARISOL",
+          "position": "STAFF",
+          "age": 41,
+          "curp": ""
+        },
+        {
+          "number": "7",
+          "name": "ALCANTARA AYALA VICTOR LEONEL",
+          "position": "JUGADOR",
+          "age": 18,
+          "curp": "AAAV071207HDFLYCA4"
+        },
+        {
+          "number": "2",
+          "name": "ALCANTARA AYALA NOE ALDAIR",
+          "position": "JUGADOR",
+          "age": 20,
+          "curp": "AAAN050917HDFLYXA4"
+        },
+        {
+          "number": "18",
+          "name": "CRUZ DURAN ARIEL",
+          "position": "JUGADOR",
+          "age": 25,
+          "curp": "CUDA010318HMCRRRA3"
+        },
+        {
+          "number": "62",
+          "name": "BARAJAS LUVIANOS JORGE AHMED",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": ""
+        },
+        {
+          "number": "81",
+          "name": "PEÑALOZA CACERES CARLOS ABIEL",
+          "position": "JUGADOR",
+          "age": 18,
+          "curp": ""
+        },
+        {
+          "number": "19",
+          "name": "DIAZ CRUZ CRISTHOFER ABRAHAM",
+          "position": "JUGADOR",
+          "age": 24,
+          "curp": "DICC020317HMCZRRA8"
+        },
+        {
+          "number": "95",
+          "name": "DIAZ CRUZ JOSEPH",
+          "position": "JUGADOR",
+          "age": 21,
+          "curp": "DICJ040910HMCZRSA1"
+        },
+        {
+          "number": "4",
+          "name": "MORALES CRUZ HAGGEO ALDAIR",
+          "position": "JUGADOR",
+          "age": 23,
+          "curp": "MOCH020803HMCRRGA9"
+        },
+        {
+          "number": "14",
+          "name": "GONZALEZ PEREZ DANTE ALDHAIR",
+          "position": "JUGADOR",
+          "age": 20,
+          "curp": "GOPD050222HDFNRNA8"
+        },
+        {
+          "number": "34",
+          "name": "RUEDA CERON HAZIEL TONANTZIN",
+          "position": "JUGADOR",
+          "age": 18,
+          "curp": "RUCH070811HMCDRZA7"
+        },
+        {
+          "number": "13",
+          "name": "GUZMAN SOLIS HECTOR",
+          "position": "JUGADOR",
+          "age": 29,
+          "curp": "GUSH960812HMCZLC04"
+        },
+        {
+          "number": "19",
+          "name": "FLORES RAMIREZ MARIO",
+          "position": "JUGADOR",
+          "age": 26,
+          "curp": "FORM000119HDFLMRA1"
+        },
+        {
+          "number": "6",
+          "name": "SERRANO ORTIZ LEONARDO",
+          "position": "JUGADOR",
+          "age": 19,
+          "curp": "SEOL060809HDFRRNA0"
+        },
+        {
+          "number": "77",
+          "name": "GONZALEZ LEMUS MIGUEL ANGEL",
+          "position": "JUGADOR",
+          "age": 18,
+          "curp": "GOLM070831HDFNMGA5"
+        },
+        {
+          "number": "35",
+          "name": "ROSAS HERRERA JOSEPH NAIM",
+          "position": "JUGADOR",
+          "age": 17,
+          "curp": "ROHJ090518HMCSRSA4"
+        }
+      ]
     },
     {
       "id": "t_1784146832723",
