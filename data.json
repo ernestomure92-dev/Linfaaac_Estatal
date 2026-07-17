@@ -5747,12 +5747,69 @@
     },
     {
       "id": "t_1784158191631",
-      "name": "DRAGONES NEGROS",
+      "name": "Dragones Negros Tizayuca",
       "abbr": "DN",
       "category": "10 Mixto",
       "color": "#5b5d62",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "10",
+          "name": "MARTINEZ PEREZ ALEJANDRA",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "41",
+          "name": "SORIANO PEREZ ARANTXA",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "11",
+          "name": "CARBAJAL FLORES CHIRISTIAN AIDAN",
+          "position": "",
+          "age": 0,
+          "curp": "10"
+        },
+        {
+          "number": "18",
+          "name": "GUTIERREZ MARTINEZ LAILA",
+          "position": "",
+          "age": 7,
+          "curp": "GUML171218MDFTRLA5"
+        },
+        {
+          "number": "28",
+          "name": "JIMENEZ VARGAZ THAMARA ZOE",
+          "position": "",
+          "age": 10,
+          "curp": "JIVT160131MDFMRHA8"
+        },
+        {
+          "number": "",
+          "name": "GOMEZ SORIANO CARLOS ALONSO",
+          "position": "",
+          "age": 9,
+          "curp": "GOSC170113HMCMRRA2"
+        },
+        {
+          "number": "",
+          "name": "CASTREJON SANTOS ALEXANDER",
+          "position": "",
+          "age": 8,
+          "curp": "CASA170225HMCSNLA6"
+        },
+        {
+          "number": "",
+          "name": "NAVARRTE ROCHA ISAC ELIAS",
+          "position": "",
+          "age": 9,
+          "curp": "NARI161019HDFVCSA1"
+        }
+      ]
     },
     {
       "id": "t_1784169825993",
