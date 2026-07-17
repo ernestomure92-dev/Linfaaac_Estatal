@@ -4641,7 +4641,85 @@
       "category": "16 Femenil",
       "color": "#5c7a84",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "COACH",
+          "name": "RAMIREZ GALLARDO ANGEL AXEL",
+          "position": "STAFF",
+          "age": 32,
+          "curp": "RAGA931220HMCMLN14"
+        },
+        {
+          "number": "COACH",
+          "name": "ROMERO RAMIREZ JOSE PEDRO",
+          "position": "STAFF",
+          "age": 20,
+          "curp": "RORP051229HDFMMDA9"
+        },
+        {
+          "number": "27",
+          "name": "REYES PEREZ HARANZA ZABDI",
+          "position": "JUGADOR",
+          "age": 13,
+          "curp": "REPH121101MMCYRRA2"
+        },
+        {
+          "number": "9",
+          "name": "GUTIERREZ OROZCO AZUL AMAIRANY",
+          "position": "JUGADOR",
+          "age": 13,
+          "curp": "GUOA120907MMCTRZA1"
+        },
+        {
+          "number": "0",
+          "name": "MENDOZA RODRIGUEZ JULIETHA ATZIRY",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "MERJ110525MMCNDLA4"
+        },
+        {
+          "number": "16",
+          "name": "SILVA ROSAS KATHERINE AILINE",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "SIRK110510MDFLSTA4"
+        },
+        {
+          "number": "29",
+          "name": "PACHECO MENESES MARIA DANIELA",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "PAMD110629MMCCNNA8"
+        },
+        {
+          "number": "1",
+          "name": "LUNA CHAVEZ ANGELYN",
+          "position": "JUGADOR",
+          "age": 14,
+          "curp": "LUCA111104MMCNHNA3"
+        },
+        {
+          "number": "7",
+          "name": "AVILA ALCALAR PERLA SOFIA",
+          "position": "JUGADOR",
+          "age": 14,
+          "curp": "AIAP120620MDFVLRA3"
+        },
+        {
+          "number": "24",
+          "name": "CURIEL SOSA SARA NICOLE",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "CUSS770324MMCRSRA0"
+        },
+        {
+          "number": "2",
+          "name": "PEREZ SANCHEZ SOFIA",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "PESS100927MMCRNFA0"
+        }
+      ]
     },
     {
       "id": "t_1784145754276",
