@@ -4390,7 +4390,92 @@
       "category": "17 Femenil",
       "color": "#719217",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "VAZQUEZ TOLEDO MARÍA CRISTINA",
+          "position": "STAFF",
+          "age": 16,
+          "curp": "VATC091026MDFZLRA6"
+        },
+        {
+          "number": "",
+          "name": "MENDOZA ORTEGA VALENTINA",
+          "position": "STAFF",
+          "age": 16,
+          "curp": "MEOV090813MDFNRLA7"
+        },
+        {
+          "number": "",
+          "name": "DIAZ MORALES CAMILA",
+          "position": "",
+          "age": 16,
+          "curp": "DIMC091015MDFZRMA9"
+        },
+        {
+          "number": "",
+          "name": "SAMPERIO RIOS SARAH FERNANDA",
+          "position": "",
+          "age": 0,
+          "curp": "4"
+        },
+        {
+          "number": "",
+          "name": "RAMIREZ MALDONADO MARIA FERNANDA",
+          "position": "",
+          "age": 17,
+          "curp": "RAMF090513MCSMLRA8"
+        },
+        {
+          "number": "",
+          "name": "MADRID MARTINEZ ERIKA MARIANA",
+          "position": "",
+          "age": 17,
+          "curp": "MXME090328MDFDRRA4"
+        },
+        {
+          "number": "",
+          "name": "MUNGUIA RAMIREZ EDELINE AMAIRANI",
+          "position": "",
+          "age": 16,
+          "curp": "MURE091030MDFNMDA1"
+        },
+        {
+          "number": "",
+          "name": "JIMENEZ FABILA MIA SARAHI",
+          "position": "",
+          "age": 17,
+          "curp": "JIMF090225MDFMBXA5"
+        },
+        {
+          "number": "",
+          "name": "GONZALEZ VILLANUEVA XIMENA",
+          "position": "",
+          "age": 17,
+          "curp": "GOVX090423MMCNLMA0"
+        },
+        {
+          "number": "",
+          "name": "BONILLA SALAZAR REGINA",
+          "position": "",
+          "age": 16,
+          "curp": "BOSR090919MDFNLGA2"
+        },
+        {
+          "number": "",
+          "name": "RUIZ ALVARADO RENATA SOPHIA",
+          "position": "",
+          "age": 17,
+          "curp": "RUAR090528MMCZLNA0"
+        },
+        {
+          "number": "",
+          "name": "Hermandez Hermandez Zabai Zaret",
+          "position": "",
+          "age": 25,
+          "curp": "HEHZ090923MDFRRBA9"
+        }
+      ]
     },
     {
       "id": "t_1784146230731",
