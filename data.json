@@ -4439,42 +4439,48 @@
           "name": "Casas Mejía Renata Alexandra",
           "position": "STAFF",
           "age": 15,
-          "curp": "CAMR110214MDFSJNA0"
+          "curp": "CAMR110214MDFSJNA0",
+          "photo": "fotos/CAMR110214MDFSJNA0.png"
         },
         {
           "number": "15",
           "name": "Matamorros Mendez Constanza",
           "position": "",
           "age": 14,
-          "curp": "MAMC120215MDFTNNA7"
+          "curp": "MAMC120215MDFTNNA7",
+          "photo": "fotos/MAMC120215MDFTNNA7.png"
         },
         {
           "number": "33",
           "name": "Matadamas Puente Melany",
           "position": "",
           "age": 14,
-          "curp": "MAPM120314MDFTNLA7"
+          "curp": "MAPM120314MDFTNLA7",
+          "photo": "fotos/MAPM120314MDFTNLA7.png"
         },
         {
           "number": "53",
           "name": "Gonzalez Rivas Sofia",
           "position": "",
           "age": 13,
-          "curp": "GORS121001MDFNVFA8"
+          "curp": "GORS121001MDFNVFA8",
+          "photo": "fotos/GORS121001MDFNVFA8.png"
         },
         {
           "number": "80",
           "name": "Montiel Ruiz Regina",
           "position": "",
           "age": 15,
-          "curp": "MORR110410MDFNZGA6"
+          "curp": "MORR110410MDFNZGA6",
+          "photo": "fotos/MORR110410MDFNZGA6.png"
         },
         {
           "number": "21",
           "name": "Guzmán Islas Violeta",
           "position": "",
           "age": 14,
-          "curp": "GUIV111211MDFZSLA1"
+          "curp": "GUIV111211MDFZSLA1",
+          "photo": "fotos/GUIV111211MDFZSLA1.png"
         },
         {
           "number": "31",
