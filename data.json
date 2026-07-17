@@ -6914,7 +6914,113 @@
       "category": "Varonil Libre",
       "color": "#480bef",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "JIMENEZ TIRADO SAMUEL ELI",
+          "position": "STAFF",
+          "age": 31,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "MARTINEZ GARCIA CRISTINA",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "21",
+          "name": "MORALES FRIAS EDGAR SAUL",
+          "position": "",
+          "age": 29,
+          "curp": "MOFE970323HDFRRD04"
+        },
+        {
+          "number": "48",
+          "name": "GUTIERREZ GARCIA ADRIAN",
+          "position": "",
+          "age": 22,
+          "curp": "GUGA030804HDFTRDA8"
+        },
+        {
+          "number": "80",
+          "name": "REYES AMEZQUITA DANIEL ARTURO",
+          "position": "",
+          "age": 20,
+          "curp": "READ060519HMCYMNA5"
+        },
+        {
+          "number": "0",
+          "name": "MONTES OCHOA JOSE MANUEL",
+          "position": "",
+          "age": 22,
+          "curp": "MOOM040609HMCNCNA6"
+        },
+        {
+          "number": "94",
+          "name": "NERI LUCERO AXEL URIEL",
+          "position": "",
+          "age": 24,
+          "curp": "NELA011228HMCRCXA1"
+        },
+        {
+          "number": "53",
+          "name": "Cerón Sánchez Diego Armando",
+          "position": "",
+          "age": 18,
+          "curp": "CESD080210HMCRNGA9"
+        },
+        {
+          "number": "",
+          "name": "Rico Hernández Leonardo",
+          "position": "",
+          "age": 18,
+          "curp": "RIHL080425HDFCRNA2"
+        },
+        {
+          "number": "1",
+          "name": "Rodríguez Rocha Víctor Geovany",
+          "position": "",
+          "age": 35,
+          "curp": "_RORV090721HMCDCCA9"
+        },
+        {
+          "number": "",
+          "name": "Rios Trejo Carlos Alejandro",
+          "position": "",
+          "age": 31,
+          "curp": "RITC941124HDFSRR05"
+        },
+        {
+          "number": "",
+          "name": "MENDEZ CERVANTES DIEGO MARTIN",
+          "position": "",
+          "age": 22,
+          "curp": "MECD030807HMCNRGA2"
+        },
+        {
+          "number": "5",
+          "name": "GONZALEZ ROCHA EDGAR ADRIAN",
+          "position": "",
+          "age": 23,
+          "curp": "GORE021128HDFNCDA9"
+        },
+        {
+          "number": "26",
+          "name": "ALBERTO GUADARRAMA LEONARDO",
+          "position": "",
+          "age": 25,
+          "curp": "AEGL010302HMCLDNA9"
+        },
+        {
+          "number": "",
+          "name": "Sánchez Sánchez Marlon Elías",
+          "position": "",
+          "age": 27,
+          "curp": "SASM990417HDFNNR06"
+        }
+      ]
     },
     {
       "id": "t_1784146875788",
