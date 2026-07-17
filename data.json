@@ -6465,7 +6465,78 @@
       "category": "Master Varonil",
       "color": "#1c9c35",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "Martinez Garcia Cristina",
+          "position": "STAFF",
+          "age": 29,
+          "curp": "MAGC960816MMCRRR04"
+        },
+        {
+          "number": "",
+          "name": "Jimenez Tirado Samuel Eli",
+          "position": "STAFF",
+          "age": 31,
+          "curp": "JITS940723HDFMRM00"
+        },
+        {
+          "number": "21",
+          "name": "PEDRAZA GAMA ARTURO",
+          "position": "",
+          "age": 52,
+          "curp": "PEGA731218HDFDMR01"
+        },
+        {
+          "number": "27",
+          "name": "GUTIERREZ RAMIREZ MARCO ANTONIO",
+          "position": "",
+          "age": 52,
+          "curp": "GURM740716HDFTMR07"
+        },
+        {
+          "number": "83",
+          "name": "ANGULO CARRILLO JOEL",
+          "position": "",
+          "age": 43,
+          "curp": "AUCJ830713HDFNRL04"
+        },
+        {
+          "number": "29",
+          "name": "NIEVES MEJIA HECTOR ENRIQUE",
+          "position": "",
+          "age": 47,
+          "curp": "NIMH790106HDFVJC04"
+        },
+        {
+          "number": "17",
+          "name": "ROJO CUELLAR DIEGO",
+          "position": "",
+          "age": 40,
+          "curp": "ROCD851106HDFJLG06"
+        },
+        {
+          "number": "80",
+          "name": "MALDONADO GRANADA FERNANDO HUMBERTO",
+          "position": "",
+          "age": 46,
+          "curp": "MAGF800513HDFLRR01"
+        },
+        {
+          "number": "69",
+          "name": "FLORES ALCIVAR JOSE LUIS",
+          "position": "",
+          "age": 46,
+          "curp": "FOAL800714HDFLLS02"
+        },
+        {
+          "number": "",
+          "name": "Estrada Guerrero Adrian",
+          "position": "",
+          "age": 49,
+          "curp": "EAGA770304HDFSRD01"
+        }
+      ]
     },
     {
       "id": "t_1784146924724",
