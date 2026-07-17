@@ -4762,7 +4762,95 @@
       "category": "17 Femenil",
       "color": "#719217",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "12",
+          "name": "Pérez Ramírez Alondra",
+          "position": "STAFF",
+          "age": 15,
+          "curp": "PERA100910MMCRMLA0",
+          "photo": "fotos/PERA100910MMCRMLA0.png"
+        },
+        {
+          "number": "26",
+          "name": "Oropeza Razo Claudia Citlalli",
+          "position": "STAFF",
+          "age": 16,
+          "curp": "OORC100226MDFRZLA3",
+          "photo": "fotos/OORC100226MDFRZLA3.png"
+        },
+        {
+          "number": "54",
+          "name": "Hernández Arana Aline Raphaella",
+          "position": "",
+          "age": 16,
+          "curp": "HEAA100628MDFRRLA2",
+          "photo": "fotos/HEAA100628MDFRRLA2.png"
+        },
+        {
+          "number": "7",
+          "name": "Reyes Flores Ximena Trinidad",
+          "position": "",
+          "age": 15,
+          "curp": "REFX110202MDFYLM9",
+          "photo": "fotos/REFX110202MDFYLM9.png"
+        },
+        {
+          "number": "23",
+          "name": "Solis Garcia Maya Nicte",
+          "position": "HA",
+          "age": 0,
+          "curp": "16"
+        },
+        {
+          "number": "28",
+          "name": "Rojas Rodriguez Flor Citlalli",
+          "position": "",
+          "age": 17,
+          "curp": "RORF090703MDFJDLA0",
+          "photo": "fotos/RORF090703MDFJDLA0.png"
+        },
+        {
+          "number": "",
+          "name": "Sánchez Botello Maria Elizabeth",
+          "position": "",
+          "age": 16,
+          "curp": "SABE090721MDFNTLA4",
+          "photo": "fotos/SABE090721MDFNTLA4.png"
+        },
+        {
+          "number": "99",
+          "name": "Gil Cantera Sofia Nereyda",
+          "position": "",
+          "age": 15,
+          "curp": "GICS110418MMCLNFA2",
+          "photo": "fotos/GICS110418MMCLNFA2.png"
+        },
+        {
+          "number": "9",
+          "name": "Cortés Ibarrola Valeria",
+          "position": "",
+          "age": 16,
+          "curp": "COIV091107MDFRBLA4",
+          "photo": "fotos/COIV091107MDFRBLA4.png"
+        },
+        {
+          "number": "55",
+          "name": "Arzate Rodriguez Sarahi",
+          "position": "",
+          "age": 17,
+          "curp": "AARS090126MSRRDRA2",
+          "photo": "fotos/AARS090126MSRRDRA2.png"
+        },
+        {
+          "number": "13",
+          "name": "Hernández Casillas Casillas Avril",
+          "position": "",
+          "age": 16,
+          "curp": "HECA091215MMCRSVA4",
+          "photo": "fotos/HECA091215MMCRSVA4.png"
+        }
+      ]
     },
     {
       "id": "t_1784146276844",
