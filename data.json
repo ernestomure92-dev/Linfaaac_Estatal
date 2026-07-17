@@ -5153,7 +5153,120 @@
       "category": "Femenil Libre E",
       "color": "#ef0bb2",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "CASTAÑEDA SOLIS HELEN CELESTE",
+          "position": "STAFF",
+          "age": 1,
+          "curp": "CASH140205MMCSLLA8"
+        },
+        {
+          "number": "",
+          "name": "MEZA ARELLANO NATALIA GRISELY",
+          "position": "STAFF",
+          "age": 17,
+          "curp": "MEAN081217MMCZRTA6"
+        },
+        {
+          "number": "",
+          "name": "FEREGRINO ANAYA NATHALIA MONSERRAT",
+          "position": "",
+          "age": 16,
+          "curp": "FEAN100213MMCRNTA0"
+        },
+        {
+          "number": "",
+          "name": "ALVARDO LINARES VANIA IVON",
+          "position": "",
+          "age": 17,
+          "curp": "AALV090212MDFLNNA4"
+        },
+        {
+          "number": "",
+          "name": "LIRA GONZALEZ MELISSA",
+          "position": "",
+          "age": 20,
+          "curp": "LIGM060402MMCRNLA3"
+        },
+        {
+          "number": "",
+          "name": "DE LA ROSA MATIAS VALENTINA",
+          "position": "",
+          "age": 16,
+          "curp": "ROMV090921MMCSTLA4"
+        },
+        {
+          "number": "",
+          "name": "MEZA ARELLAMO SARAH KALED",
+          "position": "",
+          "age": 16,
+          "curp": "MXAS100510MMCZRRA4"
+        },
+        {
+          "number": "",
+          "name": "DIAZ BECERRIL MARIA FERNANDA",
+          "position": "",
+          "age": 21,
+          "curp": "DIBF050616MMCZCRA0"
+        },
+        {
+          "number": "",
+          "name": "MARTINEZ DIAZ XIMENA DESIREE",
+          "position": "",
+          "age": 1,
+          "curp": "MADX091024MMCRZMA9"
+        },
+        {
+          "number": "",
+          "name": "RIVERA HERNANDEZ IKA VALENTINA",
+          "position": "",
+          "age": 14,
+          "curp": "RIHA120915MMCVRLA7"
+        },
+        {
+          "number": "",
+          "name": "RAMIREZ GARCIA ALEXA YULIANA",
+          "position": "",
+          "age": 24,
+          "curp": "RAGA060602MMCMRLA1"
+        },
+        {
+          "number": "",
+          "name": "VALDIVIEDSO GARCIA MARIA FERNANDA",
+          "position": "",
+          "age": 17,
+          "curp": "VAGF090623MDFLRRA5"
+        },
+        {
+          "number": "",
+          "name": "RODRIGUEZ MARTINEZ DANIELA CATALINA",
+          "position": "",
+          "age": 14,
+          "curp": "ROMD111216MMCDRNA1"
+        },
+        {
+          "number": "",
+          "name": "SANCHEZ OLVERA BENJAMIN",
+          "position": "",
+          "age": 39,
+          "curp": "SAOB861123HDFNLN08"
+        },
+        {
+          "number": "",
+          "name": "RENDON RUIZ RUIZ ISRAEL ALFREDO",
+          "position": "",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "REYNA SANDOVAL KARINA AZAI",
+          "position": "",
+          "age": 17,
+          "curp": "RESK090709MMCYNRA6"
+        }
+      ]
     },
     {
       "id": "t_1784146393528",
