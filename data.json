@@ -4661,12 +4661,97 @@
     },
     {
       "id": "t_1784146352780",
-      "name": "AGUILAS TLALNEPANTLA",
+      "name": "AGUILAS DE TLALNEPANTLA",
       "abbr": "AT",
       "category": "Femenil Libre B",
       "color": "#ef0bb2",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "MENDEZ MARTINEZ RICARDO",
+          "position": "STAFF",
+          "age": 25,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "MENDEZ MONROY JUSTO EDUARDO",
+          "position": "STAFF",
+          "age": 51,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "MENDEZ MENDOZA CONSTANZA",
+          "position": "",
+          "age": 17,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "CERÓN JIMENEZ SHARON",
+          "position": "",
+          "age": 22,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "FLORES VAZQUEZ VALERIA ELIZABETH",
+          "position": "",
+          "age": 25,
+          "curp": "IMSS"
+        },
+        {
+          "number": "",
+          "name": "ESPINOSA AGUILAR ALISON",
+          "position": "",
+          "age": 0,
+          "curp": "THU MAR 18 2004 00:00:36 GMT"
+        },
+        {
+          "number": "",
+          "name": "HERNANDEZ RODRIGUEZ VALERIA",
+          "position": "",
+          "age": 20,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "ALMARAZ PALOMINO VALERIA MICHELLE",
+          "position": "",
+          "age": 14,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "MENDEZ MARTINEZ DANIELA",
+          "position": "",
+          "age": 30,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "VILLAR CABALLERO DANIELA",
+          "position": "",
+          "age": 20,
+          "curp": "VICD090105MMCLBNA8"
+        },
+        {
+          "number": "",
+          "name": "GARCIA GARCIA ESTRELLA MONSERRAT",
+          "position": "",
+          "age": 14,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "ARIAS HERNANDEZ MARIA JOSE",
+          "position": "",
+          "age": 14,
+          "curp": "AIHJ111108MMCRRSA4"
+        }
+      ]
     },
     {
       "id": "t_1784146366220",
