@@ -5500,12 +5500,104 @@
     },
     {
       "id": "t_1784146657935",
-      "name": "GLADIADORAS",
+      "name": "GLADIADORES LAS AMERICAS",
       "abbr": "G",
       "category": "Femenil Libre B",
       "color": "#ef0bb2",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "S/N",
+          "name": "Ayala Montes Marisol",
+          "position": "STAFF",
+          "age": 41,
+          "curp": ""
+        },
+        {
+          "number": "18",
+          "name": "Peñaloza Cáceres Julieta Shareny",
+          "position": "JUGADOR",
+          "age": 22,
+          "curp": "PECJ031118CXCLA0"
+        },
+        {
+          "number": "26",
+          "name": "Alcaraz Muñoz Ximena",
+          "position": "JUGADOR",
+          "age": 19,
+          "curp": "AAMX070726MMCLXMA7"
+        },
+        {
+          "number": "5",
+          "name": "Calzada Solis Brenda Dinora",
+          "position": "JUGADOR",
+          "age": 35,
+          "curp": "CASB910114MDFLLR09"
+        },
+        {
+          "number": "01",
+          "name": "Calzada Solis María José",
+          "position": "JUGADOR",
+          "age": 16,
+          "curp": "CASJ091229MDFLLSA0"
+        },
+        {
+          "number": "06",
+          "name": "González Maceda Andrea Jaqueline",
+          "position": "JUGADOR",
+          "age": 22,
+          "curp": "GOMA040306MDFNCNA7"
+        },
+        {
+          "number": "23",
+          "name": "Martínez Carrillo Danna Jatziri",
+          "position": "JUGADOR",
+          "age": 23,
+          "curp": "MACD021212MMCRRNA6"
+        },
+        {
+          "number": "02",
+          "name": "Estrada Teahulos Natalia",
+          "position": "JUGADOR",
+          "age": 21,
+          "curp": "EATN041201MMCSHTA3"
+        },
+        {
+          "number": "19",
+          "name": "Rodríguez Neri Leslie Alejandra",
+          "position": "JUGADOR",
+          "age": 20,
+          "curp": "RONL050919MMCDRSA7"
+        },
+        {
+          "number": "11",
+          "name": "Aldana Romero María Fernanda",
+          "position": "JUGADOR",
+          "age": 18,
+          "curp": "AARF070811MMCLMRA0"
+        },
+        {
+          "number": "12",
+          "name": "Fabila Salazar Mariana",
+          "position": "JUGADOR",
+          "age": 18,
+          "curp": "FASM071112MDFBLRA4"
+        },
+        {
+          "number": "99",
+          "name": "Cataño Iturbide Regina Angeline",
+          "position": "JUGADOR",
+          "age": 16,
+          "curp": "CAIR100522MDFTTGA4"
+        },
+        {
+          "number": "10",
+          "name": "Pérez Medina Fátima Giovanna",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "PEMF110709MMCRDTA8"
+        }
+      ]
     },
     {
       "id": "t_1784146671615",
