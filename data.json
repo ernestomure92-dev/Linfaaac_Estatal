@@ -6273,11 +6273,68 @@
     {
       "id": "t_1784147059065",
       "name": "APACHES",
-      "abbr": "A",
+      "abbr": "AP",
       "category": "16 Varonil",
       "color": "#06461f",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "HC",
+          "name": "RESENDIZ SOTELO JOSE ANTONIO",
+          "position": "STAFF",
+          "age": 54,
+          "curp": "RECA711003HDFSNN04"
+        },
+        {
+          "number": "COACH",
+          "name": "RESENDIZ SOTELO ANDRES",
+          "position": "STAFF",
+          "age": 24,
+          "curp": "RESA010917HMCSTNA3"
+        },
+        {
+          "number": "20",
+          "name": "LEYVA ROMERO ALDO DIDER",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "LERA100914HDFYMLA4"
+        },
+        {
+          "number": "15",
+          "name": "CHAVEZ JIMENEZ ERICK MAEL",
+          "position": "JUGADOR",
+          "age": 12,
+          "curp": "CAJE130915HMCHMRA4"
+        },
+        {
+          "number": "23",
+          "name": "RIVERO MARTINEZ RAMSES",
+          "position": "JUGADOR",
+          "age": 12,
+          "curp": "RIMR121123HDFVRMA3"
+        },
+        {
+          "number": "80",
+          "name": "PEREZ GUERRERO ZAID JEZRAEL",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "PEGZ101229HMCRRDA6"
+        },
+        {
+          "number": "13",
+          "name": "TAPIA MONTIEL RICARDO SAID",
+          "position": "JUGADOR",
+          "age": 13,
+          "curp": "TAMR120815HMCPNCA5"
+        },
+        {
+          "number": "24",
+          "name": "PACHECO SANCHEZ MATIAS SANTIAGO",
+          "position": "JUGADOR",
+          "age": 14,
+          "curp": "PASM110827HMCCNTA6"
+        }
+      ]
     },
     {
       "id": "t_1784147337518",
