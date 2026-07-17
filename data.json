@@ -4459,12 +4459,132 @@
     },
     {
       "id": "t_1784146875788",
-      "name": "VIRREYES",
+      "name": "LOS VIRREYES",
       "abbr": "V",
       "category": "Varonil Libre",
       "color": "#480bef",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "23",
+          "name": "LOPEZ ARCE JUAN ENRIQUE",
+          "position": "STAFF",
+          "age": 27,
+          "curp": "LOAJ980926HMCPRNO6"
+        },
+        {
+          "number": "32",
+          "name": "LOPEZ MORALES ENRIQUE",
+          "position": "STAFF",
+          "age": 0,
+          "curp": "LOME740115HMCPRN06"
+        },
+        {
+          "number": "23",
+          "name": "LOPEZ ARCE JUAN ENRIQUE",
+          "position": "",
+          "age": 27,
+          "curp": "LOAJ980926HMCPRNO6"
+        },
+        {
+          "number": "32",
+          "name": "LOPEZ MORALES ENRIQUE",
+          "position": "",
+          "age": 0,
+          "curp": "LOME740115HMCPRN06"
+        },
+        {
+          "number": "",
+          "name": "CRUZADO ORTIZ DIEGO",
+          "position": "",
+          "age": 19,
+          "curp": "CUDD061030HDFRRGA5"
+        },
+        {
+          "number": "",
+          "name": "HERNANDEZ FELICIANO EFREN",
+          "position": "",
+          "age": 0,
+          "curp": "HEFE070802HHGRLFA9"
+        },
+        {
+          "number": "",
+          "name": "GARCIA MALIACHI MARCUS ALEXANDER",
+          "position": "",
+          "age": 18,
+          "curp": "GAMM071111HMCRLRA"
+        },
+        {
+          "number": "",
+          "name": "LOPEZ HERNANDEZ BRANDOM ALEXIS",
+          "position": "",
+          "age": 17,
+          "curp": "LOHB080909HMCPRRA8"
+        },
+        {
+          "number": "",
+          "name": "ORTIZ RAMIREZ EMILIANO",
+          "position": "",
+          "age": 0,
+          "curp": "OIRE070413HMCRMMA8"
+        },
+        {
+          "number": "",
+          "name": "SANCHEZ MIRANDA ALEXIS EMILIANO",
+          "position": "",
+          "age": 19,
+          "curp": "SAMA070327HMCNRLA7"
+        },
+        {
+          "number": "",
+          "name": "SANTIAGO RUIZ CHIRISTIAN JOVANY",
+          "position": "",
+          "age": 0,
+          "curp": "SARC060815HMCNZHA/"
+        },
+        {
+          "number": "",
+          "name": "LINARES VALENTIN JULIAN",
+          "position": "",
+          "age": 56,
+          "curp": "LIVJ010213HDFNLLA8"
+        },
+        {
+          "number": "",
+          "name": "ACOSTA FRANCO JHACOP DONOVAN",
+          "position": "",
+          "age": 56,
+          "curp": "AOFJ080322HDFCRHA5"
+        },
+        {
+          "number": "",
+          "name": "VAZQUEZ FLORES TADEO ALEJANDRO",
+          "position": "",
+          "age": 0,
+          "curp": "VAFT070104HMCZLDA1"
+        },
+        {
+          "number": "",
+          "name": "ALVAREZ BASURTO IVAN LEOPOLDO",
+          "position": "",
+          "age": 0,
+          "curp": "AABI030103HMCLSVA8"
+        },
+        {
+          "number": "",
+          "name": "SERRANO ARRIAZA PATRICIO YAEL",
+          "position": "",
+          "age": 0,
+          "curp": "SEAP020815HDFRRTA2"
+        },
+        {
+          "number": "",
+          "name": "RAMOS RAMIREZ JOSE ANGEL",
+          "position": "",
+          "age": 0,
+          "curp": "RARA090110HMCMNA1"
+        }
+      ]
     },
     {
       "id": "t_1784146904308",
