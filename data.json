@@ -3198,7 +3198,71 @@
       "category": "12 Mixto",
       "color": "#203e7e",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "FISCAL CONTRERAS MARÍA JOSÉ",
+          "position": "STAFF",
+          "age": 12,
+          "curp": "FICA140414MDFSNBA9"
+        },
+        {
+          "number": "",
+          "name": "MARTINEZ TORRES ITZAE",
+          "position": "STAFF",
+          "age": 11,
+          "curp": "MATI140919MDFRRTA9"
+        },
+        {
+          "number": "",
+          "name": "CAMPUZANO HERNÁNDEZ LYA NATALIA",
+          "position": "",
+          "age": 12,
+          "curp": "CAHL140415MDFMRYA8"
+        },
+        {
+          "number": "",
+          "name": "RAMIREZ GUTIERREZ VALENTINA SOPHIE",
+          "position": "",
+          "age": 12,
+          "curp": "RAGV140314MDFMYLA5"
+        },
+        {
+          "number": "",
+          "name": "GONZALEZ URIBE JUAN MANUEL",
+          "position": "",
+          "age": 12,
+          "curp": "GOUJ140614HMCNRNA0"
+        },
+        {
+          "number": "",
+          "name": "SÁNCHEZ REYES KEREN MARIANA",
+          "position": "",
+          "age": 12,
+          "curp": "SARK140128MDFNYRA5"
+        },
+        {
+          "number": "",
+          "name": "OLASCOAGA HERNENDEZ RENATA",
+          "position": "",
+          "age": 12,
+          "curp": "OAHR151023MDFLRNA7"
+        },
+        {
+          "number": "",
+          "name": "BERROSPE REYES DAVID",
+          "position": "",
+          "age": 12,
+          "curp": "BERD140304HDFRYVA3"
+        },
+        {
+          "number": "",
+          "name": "SERNA GARCIA ALEK",
+          "position": "",
+          "age": 12,
+          "curp": "SEGA140113HDFRRLA8"
+        }
+      ]
     },
     {
       "id": "t_1784104099429",
