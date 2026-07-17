@@ -6946,7 +6946,106 @@
       "category": "Varonil Libre",
       "color": "#480bef",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "0",
+          "name": "RAMIREZ GALLARDO ANGEL AXEL",
+          "position": "STAFF",
+          "age": 32,
+          "curp": "RAGA931220HMCMLN14"
+        },
+        {
+          "number": "80",
+          "name": "NUÑEZ CHIRINOS JULIO CESAR",
+          "position": "JUGADOR",
+          "age": 17,
+          "curp": "NUCJ081008HMCXHLA1"
+        },
+        {
+          "number": "26",
+          "name": "BAUTISTA ORTEGA ROMAN",
+          "position": "JUGADOR",
+          "age": 31,
+          "curp": "BAOR940125HDFTRM03"
+        },
+        {
+          "number": "16",
+          "name": "PEREZ MONROY ETHAN JOSUE",
+          "position": "JUGADOR",
+          "age": 16,
+          "curp": "PEME100219HMCRNTA1"
+        },
+        {
+          "number": "25",
+          "name": "MARTINEZ SERRATO JESUS SENEN",
+          "position": "JUGADOR",
+          "age": 26,
+          "curp": "MASJ000211HMCRRSA3"
+        },
+        {
+          "number": "95",
+          "name": "MORALES TORRES FERNANDO DANIEL",
+          "position": "JUGADOR",
+          "age": 30,
+          "curp": "MOTF950721HDFRRR04"
+        },
+        {
+          "number": "64",
+          "name": "CORDOBA AREYANO EDER DE JESUS",
+          "position": "JUGADOR",
+          "age": 12,
+          "curp": "COAE140115HDFRRDA9"
+        },
+        {
+          "number": "60",
+          "name": "RIVERA SANCHEZ AXEL AMAURY",
+          "position": "JUGADOR",
+          "age": 16,
+          "curp": "RISA100610HMCVNXA0"
+        },
+        {
+          "number": "88",
+          "name": "ROMERO RAMIREZ JOSE PEDRO",
+          "position": "JUGADOR",
+          "age": 20,
+          "curp": "RORP051229HDFMMDA9"
+        },
+        {
+          "number": "49",
+          "name": "GARDUÑO AQUINO ALEXANDER ADOLFO",
+          "position": "JUGADOR",
+          "age": 17,
+          "curp": "GAAA090303HMCRCLO2"
+        },
+        {
+          "number": "5",
+          "name": "GUTIERREZ OROZCO SANTIAGO AMAURY",
+          "position": "JUGADOR",
+          "age": 17,
+          "curp": "GUOS090704HMCTRNA7"
+        },
+        {
+          "number": "42",
+          "name": "AVALOS RODRIGUEZ RIGOBERTO",
+          "position": "JUGADOR",
+          "age": 45,
+          "curp": "AARR810407HDFVDG03"
+        },
+        {
+          "number": "56",
+          "name": "ARTEAGA MORENO ANDREE DAVID",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "AEMA110301HMCRRNA8"
+        },
+        {
+          "number": "4",
+          "name": "DE LA CRUZ MALDONADO HECTOR MIGUEL",
+          "position": "JUGADOR",
+          "age": 21,
+          "curp": "CUMH040730HDFRLCA4"
+        }
+      ]
     },
     {
       "id": "t_1784146819739",
