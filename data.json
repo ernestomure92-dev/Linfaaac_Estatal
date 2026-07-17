@@ -3364,7 +3364,92 @@
       "category": "12 Mixto",
       "color": "#3dae79",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "MARTINEZ GARCIA CRISTINA",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "ROJO CUELLAR DIEGO",
+          "position": "STAFF",
+          "age": 40,
+          "curp": ""
+        },
+        {
+          "number": "1",
+          "name": "NIEVES AGUILAR DANNA SOFIA",
+          "position": "",
+          "age": 10,
+          "curp": "NIAD160422MMCVGNA6"
+        },
+        {
+          "number": "4",
+          "name": "ROSARIO MONRROY IAN MICHEL",
+          "position": "",
+          "age": 9,
+          "curp": "ROMI170404HMCSNNA6"
+        },
+        {
+          "number": "11",
+          "name": "REYNOSO CALDERON MATIAS",
+          "position": "",
+          "age": 10,
+          "curp": "RECM151111HMCYLTA4"
+        },
+        {
+          "number": "13",
+          "name": "ANGULO BADILLO JIMENA MARIEL",
+          "position": "",
+          "age": 11,
+          "curp": "AUBJ150313MMCNDMA8"
+        },
+        {
+          "number": "17",
+          "name": "ROJO CASTILLO AXEL LEONARDO",
+          "position": "",
+          "age": 9,
+          "curp": "ROCA170313HMCJSXA9"
+        },
+        {
+          "number": "43",
+          "name": "JIMENEZ MARTINEZ SAM EFRAIN",
+          "position": "",
+          "age": 9,
+          "curp": "JIMS160812HDFMRMA2"
+        },
+        {
+          "number": "23",
+          "name": "ASCENCION JUAREZ REBECA XIMENA",
+          "position": "",
+          "age": 11,
+          "curp": "AEJR150323MMCSRBA7"
+        },
+        {
+          "number": "18",
+          "name": "JUAREZ ARREOLA ZAID MAXIMILIANO",
+          "position": "",
+          "age": 0,
+          "curp": "JUAZ170718HMCRRDA4"
+        },
+        {
+          "number": "6",
+          "name": "MUÑOZ COVARRUBIAS LAKSHMI INDRA KIARA",
+          "position": "",
+          "age": 10,
+          "curp": "MUCL160502MMCXVKA5"
+        },
+        {
+          "number": "8",
+          "name": "MUÑOZ COVARRUBIAS GANESHA INDARA JANAKI",
+          "position": "",
+          "age": 8,
+          "curp": "MUCG180112MDFXVNA4"
+        }
+      ]
     },
     {
       "id": "t_1784104136594",
