@@ -3365,7 +3365,99 @@
       "category": "12 Mixto",
       "color": "#c82609",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "S/N",
+          "name": "Castañeda Hernandez Vianey",
+          "position": "STAFF",
+          "age": 32,
+          "curp": ""
+        },
+        {
+          "number": "S/N",
+          "name": "Calixto Garcia Christian Guersom",
+          "position": "STAFF",
+          "age": 35,
+          "curp": ""
+        },
+        {
+          "number": "25",
+          "name": "Zavala Hernandez Ailin Citlali",
+          "position": "JUGADOR",
+          "age": 11,
+          "curp": ""
+        },
+        {
+          "number": "47",
+          "name": "Diaz Arteaga Allison Camila",
+          "position": "JUGADOR",
+          "age": 11,
+          "curp": ""
+        },
+        {
+          "number": "5",
+          "name": "Landin Sanchez Mariel",
+          "position": "JUGADOR",
+          "age": 11,
+          "curp": ""
+        },
+        {
+          "number": "3",
+          "name": "Montiel Silva Santiago",
+          "position": "JUGADOR",
+          "age": 11,
+          "curp": ""
+        },
+        {
+          "number": "17",
+          "name": "Calixto Hernandez Matias Abdull",
+          "position": "JUGADOR",
+          "age": 10,
+          "curp": ""
+        },
+        {
+          "number": "45",
+          "name": "Barrera Castañeda Allison Zoe",
+          "position": "JUGADOR",
+          "age": 10,
+          "curp": ""
+        },
+        {
+          "number": "9",
+          "name": "Ambriz Milla Andrey",
+          "position": "JUGADOR",
+          "age": 12,
+          "curp": ""
+        },
+        {
+          "number": "67",
+          "name": "Garduño Lopez Leilani Kasandra",
+          "position": "JUGADOR",
+          "age": 6,
+          "curp": ""
+        },
+        {
+          "number": "29",
+          "name": "Moreno Estrada Tabatha Samay",
+          "position": "JUGADOR",
+          "age": 11,
+          "curp": ""
+        },
+        {
+          "number": "41",
+          "name": "Vazquez Duran Cesar Alejandro",
+          "position": "JUGADOR",
+          "age": 9,
+          "curp": ""
+        },
+        {
+          "number": "S/N",
+          "name": "Delgado Ravelo Maria Fernanda",
+          "position": "JUGADOR",
+          "age": 10,
+          "curp": ""
+        }
+      ]
     },
     {
       "id": "t_1784137989764",
