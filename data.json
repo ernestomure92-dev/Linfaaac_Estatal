@@ -8000,7 +8000,113 @@
       "category": "Femenil Libre A",
       "color": "#f73bbb",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "HC",
+          "name": "RAMOS HERNANDEZ JOSE",
+          "position": "STAFF",
+          "age": 43,
+          "curp": "RAHJ830204HMCMRS09"
+        },
+        {
+          "number": "1",
+          "name": "VELAZQUEZ GALVAN PAOLA",
+          "position": "JUGADOR",
+          "age": 23,
+          "curp": "VEGP030315MMCLLLA9"
+        },
+        {
+          "number": "5",
+          "name": "ARZATE ESPINOSA ZOE MIA",
+          "position": "JUGADOR",
+          "age": 20,
+          "curp": "AAEZ060620MMCRSXA2"
+        },
+        {
+          "number": "7",
+          "name": "RAMOS RAMIREZ JESSICA MAYTE",
+          "position": "JUGADOR",
+          "age": 19,
+          "curp": "RARJ060920MMCMMSA9"
+        },
+        {
+          "number": "10",
+          "name": "ESQUIVEL GOMEZ NAOMI",
+          "position": "JUGADOR",
+          "age": 17,
+          "curp": "EUGN090124MMCSMMA5"
+        },
+        {
+          "number": "11",
+          "name": "ESQUIVEL GOMEZ MIA ALELI",
+          "position": "JUGADOR",
+          "age": 20,
+          "curp": "EUGM051227MMCSMXA6"
+        },
+        {
+          "number": "12",
+          "name": "AVENDAÑO BEJARANO CORINA",
+          "position": "JUGADOR",
+          "age": 17,
+          "curp": "AEBC090314MMCVJRA8"
+        },
+        {
+          "number": "13",
+          "name": "ROSILES MENDOZA NORMA HELENA",
+          "position": "JUGADOR",
+          "age": 19,
+          "curp": "ROMN060821MMCSNRA6"
+        },
+        {
+          "number": "19",
+          "name": "HERNANDEZ MORENO SAMANTHA SHAMACH",
+          "position": "JUGADOR",
+          "age": 26,
+          "curp": "HEMS991118MDFRRM06"
+        },
+        {
+          "number": "21",
+          "name": "SEBASTIAN PABLO ANA IRARY",
+          "position": "JUGADOR",
+          "age": 15,
+          "curp": "SEPA110123MMCBBNA9"
+        },
+        {
+          "number": "27",
+          "name": "BUENDIA MORENO ZAASHILA MAHELET",
+          "position": "JUGADOR",
+          "age": 14,
+          "curp": "BUMZ120627MMCNRSA8"
+        },
+        {
+          "number": "33",
+          "name": "VARGAS PAZ ARELY SOARY",
+          "position": "JUGADOR",
+          "age": 16,
+          "curp": "VAPA091230MMCRZRA7"
+        },
+        {
+          "number": "70",
+          "name": "RAMIREZ TADEO VANESA",
+          "position": "JUGADOR",
+          "age": 22,
+          "curp": "RATV031119MDFMDNA5"
+        },
+        {
+          "number": "29",
+          "name": "BRAVO DELGADILLO VALERIA DENISE",
+          "position": "JUGADOR",
+          "age": 20,
+          "curp": "BADV051008MDFRLLA1"
+        },
+        {
+          "number": "0",
+          "name": "RIOS MUÑOZ MIRANDA ROMINA",
+          "position": "JUGADOR",
+          "age": 16,
+          "curp": "RIMM100427MMCSXRA"
+        }
+      ]
     },
     {
       "id": "t_1784148723348",
