@@ -4504,12 +4504,76 @@
     },
     {
       "id": "t_1784148723348",
-      "name": "VIRREYES",
+      "name": "LOS VIRREYES",
       "abbr": "V",
       "category": "10 Mixto",
       "color": "#158422",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "RAMIREZ GONZALEZ PAOLA",
+          "position": "STAFF",
+          "age": 0,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "RAMIREZ GONZALEZ DIEGO MARCELINO",
+          "position": "",
+          "age": 9,
+          "curp": "RAGD170613HDFMNGA0"
+        },
+        {
+          "number": "",
+          "name": "LEGORRETA GUERRERO MATEO",
+          "position": "",
+          "age": 8,
+          "curp": "LEGM180307HMCGRTA0"
+        },
+        {
+          "number": "",
+          "name": "RICO MURILLO Ever Itzae",
+          "position": "",
+          "age": 7,
+          "curp": "RIME180930HMCCRVA1"
+        },
+        {
+          "number": "",
+          "name": "ORIA GUERRERO ENIA ZAREEN",
+          "position": "",
+          "age": 9,
+          "curp": "OIGE161203MMCRRNA2"
+        },
+        {
+          "number": "",
+          "name": "MORENO CADENA ANA PAULA",
+          "position": "",
+          "age": 10,
+          "curp": "MOCA160609MMCRDNA5"
+        },
+        {
+          "number": "",
+          "name": "AGUILAR LEON DERECK LEONARDO",
+          "position": "",
+          "age": 10,
+          "curp": "AULD160502HMCGNRA9"
+        },
+        {
+          "number": "",
+          "name": "CAMACHO ALVARADO JOSHUA ELIUD",
+          "position": "",
+          "age": 9,
+          "curp": "CAAH161007HMCMLSA9"
+        },
+        {
+          "number": "",
+          "name": "CANO COELLO BRUNO AKBAL",
+          "position": "",
+          "age": 7,
+          "curp": "COCB180725HMCNLRA2"
+        }
+      ]
     },
     {
       "id": "t_1784148757434",
