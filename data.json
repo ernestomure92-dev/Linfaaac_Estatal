@@ -5868,7 +5868,120 @@
       "category": "Master Varonil",
       "color": "#5b5d62",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "S/N",
+          "name": "Cerón Martinez Martha Elena",
+          "position": "STAFF",
+          "age": 44,
+          "curp": "CEMM810723MDFRRR02"
+        },
+        {
+          "number": "S/N",
+          "name": "Cabello Hernandez Maria Antonieta",
+          "position": "STAFF",
+          "age": 38,
+          "curp": "CAHA870727MMNBRN05"
+        },
+        {
+          "number": "S/N",
+          "name": "Gómez Senil Tania Lizbeth",
+          "position": "STAFF",
+          "age": 43,
+          "curp": "GOST821113MDFMNN07"
+        },
+        {
+          "number": "43",
+          "name": "Bocanegra Navarrete Mauri Giovanni",
+          "position": "JUGADOR",
+          "age": 35,
+          "curp": "BONM910204HDFCVR03"
+        },
+        {
+          "number": "85",
+          "name": "Garcia Sosa Horacio Augusto",
+          "position": "JUGADOR",
+          "age": 39,
+          "curp": "GASH861020HDFRSR04"
+        },
+        {
+          "number": "36",
+          "name": "Guerrero Rincon Mario Alberto",
+          "position": "JUGADOR",
+          "age": 36,
+          "curp": "RIGM900209HDFNRR07"
+        },
+        {
+          "number": "95",
+          "name": "Prieto Muñoz Baltasar Osami",
+          "position": "JUGADOR",
+          "age": 44,
+          "curp": "PIMB811127HDFRXL02"
+        },
+        {
+          "number": "18",
+          "name": "Botello Perez Mayolo",
+          "position": "JUGADOR",
+          "age": 45,
+          "curp": "BOPM820510HDFTRY04"
+        },
+        {
+          "number": "46",
+          "name": "Hidalgo Borges Marco Antonio",
+          "position": "JUGADOR",
+          "age": 38,
+          "curp": "HIBM880607HMCDRR04"
+        },
+        {
+          "number": "72",
+          "name": "Villagómez Garcia Jashua Alejandro",
+          "position": "JUGADOR",
+          "age": 38,
+          "curp": "VIGJ870723HMCLRS04"
+        },
+        {
+          "number": "99",
+          "name": "Rueda Torres Diego Roberto",
+          "position": "JUGADOR",
+          "age": 44,
+          "curp": "RUTD820118HDFDRD01"
+        },
+        {
+          "number": "1",
+          "name": "Briseño Alcántara Jesus Alejandro",
+          "position": "JUGADOR",
+          "age": 35,
+          "curp": "BIAJ901016HMCRLS06"
+        },
+        {
+          "number": "38",
+          "name": "Gonzalez Romero Gonzalo Ezequiel",
+          "position": "JUGADOR",
+          "age": 49,
+          "curp": "GORG770530HASNMN03"
+        },
+        {
+          "number": "20",
+          "name": "Peñaloza Vargas Juan Carlos",
+          "position": "JUGADOR",
+          "age": 45,
+          "curp": "PEVJ810424HMCXRN09"
+        },
+        {
+          "number": "17",
+          "name": "Bocanegra López Mauricio",
+          "position": "JUGADOR",
+          "age": 60,
+          "curp": "BOLM650410HDFCPR03"
+        },
+        {
+          "number": "9",
+          "name": "Resendiz Zamora José Antonio",
+          "position": "JUGADOR",
+          "age": 36,
+          "curp": "REZA890831HMCSMN02"
+        }
+      ]
     }
   ],
   "schedule": [
