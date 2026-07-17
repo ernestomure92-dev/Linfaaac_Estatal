@@ -3191,12 +3191,90 @@
     },
     {
       "id": "t_1784104027364",
-      "name": "ÁGUILAS TLALNEPANTLA",
+      "name": "AGUILAS DE TLALNEPANTLA",
       "abbr": "AT",
       "category": "12 Mixto",
       "color": "#203e7e",
       "casa": false,
-      "players": []
+      "players": [
+        {
+          "number": "",
+          "name": "MENDEZ MARTINEZ DANIELA",
+          "position": "STAFF",
+          "age": 30,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "BADILLO MONDRAGÓN SOFIA ABIGAIL",
+          "position": "",
+          "age": 10,
+          "curp": "BAMS150818MQTDNFA9"
+        },
+        {
+          "number": "",
+          "name": "ALMARAZ PALOMINO IAN MARIANO",
+          "position": "",
+          "age": 7,
+          "curp": "AAPI181013HDFLLNA2"
+        },
+        {
+          "number": "",
+          "name": "BADILLO MONDRAGON DIEGO EMILIO",
+          "position": "",
+          "age": 8,
+          "curp": "BAMD171103MMCRRLA4"
+        },
+        {
+          "number": "",
+          "name": "ARIAS VERA REGINA GUADALUPE",
+          "position": "",
+          "age": 9,
+          "curp": "ANR161205MMCRRGA9"
+        },
+        {
+          "number": "",
+          "name": "TAIRI MARTINEZ CAMILA",
+          "position": "",
+          "age": 11,
+          "curp": ""
+        },
+        {
+          "number": "",
+          "name": "AVENDAÑO NUÑEZ KENIA",
+          "position": "",
+          "age": 12,
+          "curp": "AENK140117MDFVXNA2"
+        },
+        {
+          "number": "",
+          "name": "VICTORIA SANCHEZ PABLo MISAEL",
+          "position": "",
+          "age": 12,
+          "curp": "VISP140409MDFCNBA1"
+        },
+        {
+          "number": "",
+          "name": "ORTIZ GONZALEZ LUNA ARIDAY",
+          "position": "",
+          "age": 11,
+          "curp": "OIGL150522MMCRNNA8"
+        },
+        {
+          "number": "",
+          "name": "QUINTANILLA BARRAGAN DEVANY GETSEMANI",
+          "position": "",
+          "age": 10,
+          "curp": "QUBD160422MMCNRVA7"
+        },
+        {
+          "number": "",
+          "name": "QUINTANILLA BARRAGAN EVAN SANTIAGO",
+          "position": "",
+          "age": 9,
+          "curp": "QUB170516MMCNRVA2"
+        }
+      ]
     },
     {
       "id": "t_1784104062175",
