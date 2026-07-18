@@ -9955,7 +9955,7 @@
       "team2": "t_1784097857732",
       "score1": 0,
       "score2": 0,
-      "status": "scheduled",
+      "status": "live",
       "winner": null
     },
     {
@@ -9968,7 +9968,7 @@
       "team2": "t_1784146408360",
       "score1": 0,
       "score2": 0,
-      "status": "scheduled",
+      "status": "live",
       "winner": null
     },
     {
@@ -9996,7 +9996,7 @@
       "team2": "t_1784103554061",
       "score1": 0,
       "score2": 0,
-      "status": "scheduled",
+      "status": "live",
       "winner": null,
       "isPlayoff": true,
       "round": "Final"
@@ -10011,7 +10011,7 @@
       "team2": "t_1784145310788",
       "score1": 0,
       "score2": 0,
-      "status": "scheduled",
+      "status": "live",
       "winner": null,
       "isPlayoff": true,
       "round": "Final"
@@ -10026,7 +10026,7 @@
       "team2": "t_1784145688774",
       "score1": 0,
       "score2": 0,
-      "status": "scheduled",
+      "status": "live",
       "winner": null,
       "isPlayoff": true,
       "round": "Final"
@@ -10041,7 +10041,7 @@
       "team2": "t_1784099087738",
       "score1": 0,
       "score2": 0,
-      "status": "scheduled",
+      "status": "live",
       "winner": null,
       "isPlayoff": true,
       "round": "Final"
@@ -10056,7 +10056,7 @@
       "team2": "t_1784146145055",
       "score1": 0,
       "score2": 0,
-      "status": "scheduled",
+      "status": "live",
       "winner": null,
       "isPlayoff": true,
       "round": "Final"
@@ -10071,7 +10071,7 @@
       "team2": "t_1784146195483",
       "score1": 0,
       "score2": 0,
-      "status": "scheduled",
+      "status": "live",
       "winner": null,
       "isPlayoff": true,
       "round": "Final"
@@ -10086,7 +10086,7 @@
       "team2": "t_1784146276844",
       "score1": 0,
       "score2": 0,
-      "status": "scheduled",
+      "status": "live",
       "winner": null,
       "isPlayoff": true,
       "round": "Final"
