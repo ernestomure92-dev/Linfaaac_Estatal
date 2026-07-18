@@ -9688,8 +9688,8 @@
       "team2": "t_1784104099429",
       "score1": 28,
       "score2": 6,
-      "status": "live",
-      "winner": null
+      "status": "finished",
+      "winner": "t_1784097485127"
     },
     {
       "id": "m_1784176362085",
