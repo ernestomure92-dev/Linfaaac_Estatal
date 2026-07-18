@@ -10075,6 +10075,21 @@
       "winner": null
     },
     {
+      "id": "po_1784395641671",
+      "day": 2,
+      "time": "12:00:00",
+      "category": "17 Femenil",
+      "field": "Campo 7",
+      "team1": "t_1784146230731",
+      "team2": "t_1784146195483",
+      "score1": 0,
+      "score2": 0,
+      "status": "scheduled",
+      "winner": null,
+      "isPlayoff": true,
+      "round": "Final"
+    },
+    {
       "id": "m_1784181848549",
       "day": 2,
       "time": "13:00",
@@ -10900,6 +10915,25 @@
               "id": "po_1784395035098",
               "team1": "t_1784145845972",
               "team2": "t_1784146145055"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "17 Femenil",
+      "rounds": [
+        {
+          "round": "Semifinal",
+          "matches": []
+        },
+        {
+          "round": "Final",
+          "matches": [
+            {
+              "id": "po_1784395641671",
+              "team1": "t_1784146230731",
+              "team2": "t_1784146195483"
             }
           ]
         }
