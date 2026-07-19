@@ -10863,6 +10863,21 @@
       "winner": null,
       "isPlayoff": true,
       "round": "Semifinal"
+    },
+    {
+      "id": "po_1784477550529",
+      "day": 3,
+      "time": "13:00:00",
+      "category": "Varonil Libre",
+      "field": "Campo 1",
+      "team1": null,
+      "team2": null,
+      "score1": 0,
+      "score2": 0,
+      "status": "scheduled",
+      "winner": null,
+      "isPlayoff": true,
+      "round": "Final"
     }
   ],
   "playoffs": [
@@ -11076,7 +11091,13 @@
         },
         {
           "round": "Final",
-          "matches": []
+          "matches": [
+            {
+              "id": "po_1784477550529",
+              "team1": null,
+              "team2": null
+            }
+          ]
         }
       ]
     }
