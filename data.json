@@ -10845,7 +10845,7 @@
       "team2": null,
       "score1": 0,
       "score2": 0,
-      "status": "live",
+      "status": "finished",
       "winner": null,
       "isPlayoff": true,
       "round": "Semifinal"
@@ -10860,7 +10860,7 @@
       "team2": null,
       "score1": 0,
       "score2": 0,
-      "status": "live",
+      "status": "finished",
       "winner": null,
       "isPlayoff": true,
       "round": "Semifinal"
@@ -10875,7 +10875,7 @@
       "team2": null,
       "score1": 0,
       "score2": 0,
-      "status": "live",
+      "status": "finished",
       "winner": null,
       "isPlayoff": true,
       "round": "Semifinal"
@@ -10890,7 +10890,7 @@
       "team2": null,
       "score1": 0,
       "score2": 0,
-      "status": "live",
+      "status": "finished",
       "winner": null,
       "isPlayoff": true,
       "round": "Semifinal"
@@ -10905,7 +10905,7 @@
       "team2": null,
       "score1": 0,
       "score2": 0,
-      "status": "live",
+      "status": "finished",
       "winner": null,
       "isPlayoff": true,
       "round": "Final"
