@@ -10881,6 +10881,21 @@
       "round": "Semifinal"
     },
     {
+      "id": "po_1784477742958",
+      "day": 3,
+      "time": "12:00:00",
+      "category": "Femenil Libre",
+      "field": "Campo 6",
+      "team1": null,
+      "team2": null,
+      "score1": 0,
+      "score2": 0,
+      "status": "scheduled",
+      "winner": null,
+      "isPlayoff": true,
+      "round": "Semifinal"
+    },
+    {
       "id": "po_1784477550529",
       "day": 3,
       "time": "13:00:00",
@@ -11140,6 +11155,11 @@
           "matches": [
             {
               "id": "po_1784477734076",
+              "team1": null,
+              "team2": null
+            },
+            {
+              "id": "po_1784477742958",
               "team1": null,
               "team2": null
             }
