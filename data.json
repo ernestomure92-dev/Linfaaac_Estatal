@@ -10820,21 +10820,6 @@
       "winner": null,
       "isPlayoff": true,
       "round": "Final"
-    },
-    {
-      "id": "po_1784419870038",
-      "day": 3,
-      "time": "12:00:00",
-      "category": "Master Femenil",
-      "field": "Campo 3",
-      "team1": null,
-      "team2": null,
-      "score1": 0,
-      "score2": 0,
-      "status": "scheduled",
-      "winner": null,
-      "isPlayoff": true,
-      "round": "Final"
     }
   ],
   "playoffs": [
