@@ -10112,10 +10112,10 @@
       "field": "Campo 9",
       "team1": "t_1784099723645",
       "team2": "t_1784146393528",
-      "score1": 0,
-      "score2": 0,
+      "score1": 14,
+      "score2": 31,
       "status": "finished",
-      "winner": null
+      "winner": "t_1784146393528"
     },
     {
       "id": "m_1784179884884",
