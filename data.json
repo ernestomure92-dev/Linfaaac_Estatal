@@ -10398,10 +10398,10 @@
       "field": "Campo 2",
       "team1": "t_1784102928840",
       "team2": "t_1784140718752",
-      "score1": 0,
-      "score2": 0,
+      "score1": 6,
+      "score2": 2,
       "status": "finished",
-      "winner": null
+      "winner": "t_1784102928840"
     },
     {
       "id": "m_1784182002205",
