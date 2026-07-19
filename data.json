@@ -10805,6 +10805,21 @@
       "score2": 0,
       "status": "scheduled",
       "winner": null
+    },
+    {
+      "id": "po_1784419858620",
+      "day": 3,
+      "time": "12:00:00",
+      "category": "Master Varonil",
+      "field": "Campo 2",
+      "team1": null,
+      "team2": null,
+      "score1": 0,
+      "score2": 0,
+      "status": "scheduled",
+      "winner": null,
+      "isPlayoff": true,
+      "round": "Final"
     }
   ],
   "playoffs": [
@@ -10955,6 +10970,25 @@
               "id": "po_1784395680096",
               "team1": "t_1784140785564",
               "team2": "t_1784146276844"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Master Varonil",
+      "rounds": [
+        {
+          "round": "Semifinal",
+          "matches": []
+        },
+        {
+          "round": "Final",
+          "matches": [
+            {
+              "id": "po_1784419858620",
+              "team1": null,
+              "team2": null
             }
           ]
         }
